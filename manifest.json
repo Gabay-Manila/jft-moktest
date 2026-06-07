@@ -1,0 +1,17 @@
+{
+  "short_name": "JFT_CBT",
+  "name": "JFT-Basic CBT 模擬試験",
+  "description": "JFT-Basic A1 Level CBT Mock Exam System",
+  "icons": [
+    { "src": "icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+  ],
+  "start_url": "./index.html",
+  "scope": "./",
+  "background_color": "#0f0f1a",
+  "theme_color": "#1a1a2e",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "ja",
+  "categories": ["education"]
+}
