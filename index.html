@@ -527,6 +527,46 @@
   /* ruby display */
   ruby rt { font-size: .55em; color: var(--purple); }
 
+  /* LEVEL SELECTOR */
+  .level-selector {
+    display: flex; gap: 10px; margin-bottom: 28px; justify-content: center;
+  }
+  .level-card {
+    flex: 1; max-width: 200px;
+    background: var(--card); border: 2px solid var(--border);
+    border-radius: var(--radius); padding: 16px 12px;
+    cursor: pointer; text-align: center;
+    transition: all var(--transition); position: relative; overflow: hidden;
+  }
+  .level-card::before {
+    content: ''; position: absolute; inset: 0;
+    opacity: 0; transition: opacity var(--transition);
+  }
+  .level-card.a1::before { background: radial-gradient(ellipse at 50% 0%, rgba(59,130,246,.15) 0%, transparent 70%); }
+  .level-card.a2::before { background: radial-gradient(ellipse at 50% 0%, rgba(233,69,96,.15) 0%, transparent 70%); }
+  .level-card.active { border-width: 2px; }
+  .level-card.a1.active { border-color: var(--blue); }
+  .level-card.a2.active { border-color: var(--accent); }
+  .level-card.active::before { opacity: 1; }
+  .level-card:hover { transform: translateY(-2px); }
+  .level-card .lv-icon { font-size: 28px; margin-bottom: 6px; }
+  .level-card .lv-badge {
+    display: inline-block; font-size: 18px; font-weight: 900;
+    letter-spacing: .04em; margin-bottom: 4px;
+  }
+  .level-card.a1 .lv-badge { color: var(--blue); }
+  .level-card.a2 .lv-badge { color: var(--accent); }
+  .level-card .lv-name { font-size: 11px; color: var(--text2); }
+  .level-card .lv-check {
+    position: absolute; top: 8px; right: 8px;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--blue); color: #fff;
+    font-size: 10px; font-weight: 900;
+    display: none; align-items: center; justify-content: center;
+  }
+  .level-card.a2 .lv-check { background: var(--accent); }
+  .level-card.active .lv-check { display: flex; }
+
   /* Responsive */
   @media (max-width: 480px) {
     .start-stats { grid-template-columns: repeat(3,1fr); gap: 8px; }
@@ -557,22 +597,35 @@
 </head>
 <body>
 
-<!-- Loading -->
 <div id="loading">
   <div class="loader-ring"></div>
   <p style="color:var(--text2);font-size:13px;">問題データを読み込んでいます…</p>
 </div>
 
-<!-- ── START SCREEN ─────────────────────────────── -->
 <div id="screen-start" class="screen">
   <div class="start-inner">
-    <div class="start-badge">🇯🇵 JFT-Basic A1 Level</div>
+    <div class="start-badge" id="start-badge">🇯🇵 JFT-Basic A1 Level</div>
     <h1 class="start-title">CBT <span>模擬試験</span></h1>
     <p class="start-subtitle">日本語基礎テスト（JFT-Basic）を完全再現した本番形式の模擬テストです</p>
 
+    <div class="level-selector">
+      <div class="level-card a1 active" id="lvcard-a1" onclick="selectLevel('A1')">
+        <div class="lv-check">✓</div>
+        <div class="lv-icon">📘</div>
+        <div class="lv-badge">A1</div>
+        <div class="lv-name">JFT-Basic<br>スターター〜初級1</div>
+      </div>
+      <div class="level-card a2" id="lvcard-a2" onclick="selectLevel('A2')">
+        <div class="lv-check">✓</div>
+        <div class="lv-icon">📗</div>
+        <div class="lv-badge">A2</div>
+        <div class="lv-name">いろどり初級2<br>初中級</div>
+      </div>
+    </div>
+
     <div class="start-stats">
       <div class="stat-card">
-        <div class="num">40</div><div class="lbl">出題数</div>
+        <div class="num" id="stat-questions">40</div><div class="lbl">出題数</div>
       </div>
       <div class="stat-card">
         <div class="num">60</div><div class="lbl">分（制限）</div>
@@ -582,35 +635,18 @@
       </div>
     </div>
 
-    <div class="sections-grid">
-      <div class="section-chip">
-        <div class="dot dot-vocab"></div>
-        <div class="info"><div class="name section-color-vocab">文字・語彙</div><div class="detail">25問中10問出題 / 足切:6問</div></div>
+    <div class="sections-grid" id="section-chips-container">
       </div>
-      <div class="section-chip">
-        <div class="dot dot-conv"></div>
-        <div class="info"><div class="name section-color-conv">会話・表現</div><div class="detail">25問中10問出題 / 足切:6問</div></div>
-      </div>
-      <div class="section-chip">
-        <div class="dot dot-listen"></div>
-        <div class="info"><div class="name section-color-listen">聴解</div><div class="detail">25問中12問出題 / 足切:8問</div></div>
-      </div>
-      <div class="section-chip">
-        <div class="dot dot-read"></div>
-        <div class="info"><div class="name section-color-read">読解</div><div class="detail">25問中8問出題 / 足切:5問</div></div>
-      </div>
-    </div>
 
-    <button class="btn-primary" id="btn-start">試験を開始する　→</button>
+    <button class="btn-primary" id="btn-start">試験を開始する →</button>
     <button class="btn-secondary hidden" id="btn-resume">前回の続きから再開する</button>
   </div>
 </div>
 
-<!-- ── EXAM SCREEN ──────────────────────────────── -->
 <div id="screen-exam" class="screen">
   <header class="exam-header">
     <div class="exam-header-top">
-      <div class="exam-logo">JFT-CBT</div>
+      <div class="exam-logo" id="exam-logo">JFT-CBT</div>
       <div class="timer-display" id="timer">60:00</div>
       <div class="section-badge-header" id="section-badge"></div>
     </div>
@@ -619,9 +655,7 @@
     </nav>
   </header>
 
-  <main class="exam-main" id="exam-main">
-    <!-- Question rendered here -->
-  </main>
+  <main class="exam-main" id="exam-main"></main>
 
   <footer class="exam-footer">
     <button class="btn-nav" id="btn-prev">← 前へ</button>
@@ -631,16 +665,11 @@
   </footer>
 </div>
 
-<!-- ── RESULT SCREEN ────────────────────────────── -->
 <div id="screen-result" class="screen">
   <div class="result-inner">
-    <!-- Verdict -->
     <div class="result-verdict" id="result-verdict"></div>
-    <!-- Section scores -->
     <div class="section-scores" id="section-scores"></div>
-    <!-- Untested message -->
     <div class="untested-box" id="untested-box"></div>
-    <!-- Review -->
     <div class="review-header">
       <h2>復習モード</h2>
       <button class="ruby-toggle" id="ruby-toggle">
@@ -649,7 +678,6 @@
       </button>
     </div>
     <div class="review-cards" id="review-cards"></div>
-    <!-- CTA -->
     <div class="result-cta">
       <button class="btn-primary" id="btn-retry">もう一度受験する</button>
     </div>
@@ -658,72 +686,171 @@
 
 <script>
 // ════════════════════════════════════════════════════════
-//  JFT-Basic CBT System  ·  Engine v1.0 [🔧 配管修正・完全同期版]
+//  JFT-Basic CBT System  ·  Engine v2.0
+//  STEP1: 親子配管完全修正 / STEP2-3: Web Speech API音声エンジン
+//  STEP4: A1/A2レベル選択UI
 // ════════════════════════════════════════════════════════
 
-const LS_KEY = 'jft_cbt_session';
-const SECTION_CONFIG = {
-  '文字・語彙': { count: 10, cutoff: 6,  color: 'vocab',  label: '文字・語彙' },
-  '会話・表現': { count: 10, cutoff: 6,  color: 'conv',   label: '会話・表現' },
-  '聴解':       { count: 12, cutoff: 8,  color: 'listen', label: '聴解' },
-  '読解':       { count: 8,  cutoff: 5,  color: 'read',   label: '読解' },
-};
-const TOTAL_Q    = 40;
-const TOTAL_TIME = 60 * 60; // seconds
-const PASS_SCORE = 26;
-
-let allQuestions = [];
-let examQuestions = [];
-let answers = {};
-let currentIdx = 0;
-let timeRemaining = TOTAL_TIME;
-let timerInterval = null;
-let rubyOn = false;
-let reviewLangState = {};
-let playCounts = {};
-
-(async function init() {
-  try {
-    const res = await fetch('questions.json');
-    allQuestions = await res.json();
-    allQuestions = allQuestions.map(q => ({
-      ...q,
-      is_parent: q.is_parent === true || q.is_parent === 'True' || q.is_parent === 'true',
-      parent_text: (q.parent_text === 'None' || q.parent_text === null || q.parent_text === 'null') ? null : q.parent_text,
-      correct_answer: Number(q.correct_answer),
-    }));
-    buildGroupPassageMap();
-    hide('loading');
-    checkResume();
-    show('screen-start', 'flex');
-  } catch(e) {
-    document.getElementById('loading').innerHTML =
-      `<p style="color:var(--accent); padding:20px;">⚠ questions.json の読み込みに失敗しました。<br>同じフォルダに正しい形式の questions.json を配置してください。</p>`;
+// ── VoiceEngine (Web Speech API) ─────────────────────
+const VoiceEngine = (() => {
+  function speak(text, lang = 'ja-JP', rate = 0.80, onStart, onEnd) {
+    if (!('speechSynthesis' in window)) {
+      if (onEnd) onEnd();
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = lang;
+    u.rate = rate;
+    u.onstart = () => { if (onStart) onStart(); };
+    u.onend   = () => { if (onEnd)   onEnd();   };
+    u.onerror = () => { if (onEnd)   onEnd();   };
+    window.speechSynthesis.speak(u);
   }
+
+  function cancel() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+  }
+
+  return { speak, cancel };
 })();
 
-const groupPassageMap = {};
-function buildGroupPassageMap() {
+// ── CONSTANTS ────────────────────────────────────────
+const LS_KEY     = 'jft_cbt_session';
+const TOTAL_TIME = 60 * 60;
+const PASS_SCORE = 26;
+
+// Level configs
+const LEVEL_CONFIG = {
+  A1: {
+    dataUrl: 'public/data/questions.json',
+    label:   'A1 Level',
+    sections: {
+      '文字・語彙': { count: 10, cutoff: 6,  color: 'vocab',  total: 25 },
+      '会話・表現': { count: 10, cutoff: 6,  color: 'conv',   total: 25 },
+      '聴解':       { count: 12, cutoff: 8,  color: 'listen', total: 25 },
+      '読解':       { count: 8,  cutoff: 5,  color: 'read',   total: 25 },
+    },
+  },
+  A2: {
+    dataUrl: 'public/data/questions_a2.json',
+    label:   'A2 Level',
+    sections: {
+      '文字・語彙': { count: 8,  cutoff: 5,  color: 'vocab',  total: 27 },
+      '文法':       { count: 8,  cutoff: 5,  color: 'conv',   total: 26 },
+      '会話・表現': { count: 6,  cutoff: 4,  color: 'listen', total: 16 },
+      '読解':       { count: 8,  cutoff: 5,  color: 'read',   total: 19 },
+    },
+  },
+};
+
+// ── STATE ────────────────────────────────────────────
+let currentLevel    = 'A1';
+let allQuestions    = [];      // raw loaded data
+let parentTextCache = {};      // group_id -> parent_text
+let examPool        = [];      // questions only (is_parent=false)
+let examQuestions   = [];      // 40-item exam set
+let answers         = {};
+let currentIdx      = 0;
+let timeRemaining   = TOTAL_TIME;
+let timerInterval   = null;
+let rubyOn          = false;
+let reviewLangState = {};
+let playCounts      = {};
+
+// ── BOOT ─────────────────────────────────────────────
+(async function init() {
+  renderSectionChips('A1');
+  checkResume();
+  show('screen-start', 'flex');
+  hide('loading');
+})();
+
+// ── LEVEL SELECTION ──────────────────────────────────
+function selectLevel(lv) {
+  currentLevel = lv;
+  document.getElementById('lvcard-a1').classList.toggle('active', lv === 'A1');
+  document.getElementById('lvcard-a2').classList.toggle('active', lv === 'A2');
+  document.getElementById('start-badge').textContent =
+    lv === 'A1' ? '🇯🇵 JFT-Basic A1 Level' : '🇯🇵 JFT-Basic A2 Level';
+  renderSectionChips(lv);
+  
+  const saved = loadSession();
+  if (saved && saved.level !== lv) {
+    document.getElementById('btn-resume').classList.add('hidden');
+  } else {
+    checkResume();
+  }
+}
+
+function renderSectionChips(lv) {
+  const cfg = LEVEL_CONFIG[lv].sections;
+  const container = document.getElementById('section-chips-container');
+  container.innerHTML = Object.entries(cfg).map(([sec, c]) => `
+    <div class="section-chip">
+      <div class="dot dot-${c.color}"></div>
+      <div class="info">
+        <div class="name section-color-${c.color}">${sec}</div>
+        <div class="detail">${c.total}問中${c.count}問出題 / 足切:${c.cutoff}問</div>
+      </div>
+    </div>`).join('');
+  const total = Object.values(cfg).reduce((s, c) => s + c.count, 0);
+  document.getElementById('stat-questions').textContent = total;
+}
+
+// ── LOAD QUESTIONS ───────────────────────────────────
+async function loadQuestions() {
+  const url = LEVEL_CONFIG[currentLevel].dataUrl;
+  const res  = await fetch(url);
+  const raw  = await res.json();
+
+  allQuestions = raw.map(q => ({
+    ...q,
+    is_parent:      q.is_parent === true || q.is_parent === 'True' || q.is_parent === 'true',
+    parent_text:    (q.parent_text === 'None' || q.parent_text === null || q.parent_text === 'null')
+                    ? null : q.parent_text,
+    correct_answer: Number(q.correct_answer),
+  }));
+
+  // ── STEP1: 親テキストキャッシュ ─────────────────────
+  parentTextCache = {};
+  examPool = [];
   allQuestions.forEach(q => {
-    if (q.section === '読解' && q.group_id && q.parent_text && q.parent_text.trim() !== '') {
-      groupPassageMap[q.group_id] = q.parent_text;
+    if (q.is_parent) {
+      if (q.group_id && q.parent_text) {
+        parentTextCache[q.group_id] = q.parent_text;
+      }
+    } else {
+      examPool.push(q);
+    }
+  });
+
+  allQuestions.forEach(q => {
+    if (!q.is_parent && q.group_id && q.parent_text) {
+      if (!parentTextCache[q.group_id]) {
+        parentTextCache[q.group_id] = q.parent_text;
+      }
     }
   });
 }
+
+// ── GET PASSAGE ──────────────────────────
 function getPassage(q) {
   if (!q.group_id) return '';
-  return groupPassageMap[q.group_id] || '';
+  return parentTextCache[q.group_id] || '';
 }
 
-// ── RESUME CHECK ─────────────────────────────────────────
+// ── CHECK RESUME ─────────────────────────────────────
 function checkResume() {
   const saved = loadSession();
-  if (saved && saved.examQuestions && saved.answers !== undefined) {
+  if (saved && saved.examQuestions && saved.level === currentLevel) {
     document.getElementById('btn-resume').classList.remove('hidden');
+  } else {
+    document.getElementById('btn-resume').classList.add('hidden');
   }
 }
 
-// ── FISHER-YATES SHUFFLE ─────────────────────────────────
+// ── FISHER-YATES ─────────────────────────────────────
 function shuffle(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -733,47 +860,51 @@ function shuffle(arr) {
   return a;
 }
 
-// ── QUESTION SAMPLING ────────────────────────────────────
+// ── SAMPLING ─────────────────────────────────────────
 function sampleQuestions() {
+  const cfg = LEVEL_CONFIG[currentLevel].sections;
   const result = [];
 
-  // ① 文字・語彙 — 10 random from 25
-  const vocab = allQuestions.filter(q => q.section === '文字・語彙');
-  result.push(...shuffle(vocab).slice(0, 10));
+  for (const [sec, c] of Object.entries(cfg)) {
+    if (sec === '読解') continue; 
+    const pool = examPool.filter(q => q.section === sec);
+    result.push(...shuffle(pool).slice(0, c.count));
+  }
 
-  // ② 会話・表現 — 10 random from 25
-  const conv = allQuestions.filter(q => q.section === '会話・表現');
-  result.push(...shuffle(conv).slice(0, 10));
-
-  // ③ 聴解 — 12 random from 25
-  const listen = allQuestions.filter(q => q.section === '聴解');
-  result.push(...shuffle(listen).slice(0, 12));
-
-  // ④ 読解 — grouped sampling to reach 8
-  const readingSelected = sampleReading(8);
-  result.push(...readingSelected);
+  const readingCfg = cfg['読解'];
+  if (readingCfg) {
+    result.push(...sampleReading(readingCfg.count));
+  }
 
   return result;
 }
 
 function sampleReading(targetCount) {
-  const allReading = allQuestions.filter(q => q.section === '読解');
-  const parents = allReading.filter(q => q.is_parent);
-  const shuffledParents = shuffle(parents);
+  const readingPool = examPool.filter(q => q.section === '読解');
+  const groups = {};
+  readingPool.forEach(q => {
+    if (q.group_id) {
+      if (!groups[q.group_id]) groups[q.group_id] = [];
+      groups[q.group_id].push(q);
+    }
+  });
+
+  const groupIds = shuffle(Object.keys(groups));
   const selected = [];
-  for (const parent of shuffledParents) {
+  for (const gid of groupIds) {
     if (selected.length >= targetCount) break;
-    selected.push(parent);
-    const children = allReading.filter(q => q.group_id === parent.group_id && !q.is_parent);
-    selected.push(...children);
+    selected.push(...groups[gid]);
   }
   return selected.slice(0, targetCount);
 }
 
-// ── SESSION PERSISTENCE ──────────────────────────────────
+// ── SESSION ──────────────────────────────────────────
 function saveSession() {
-  const data = { examQuestions, answers, currentIdx, timeRemaining };
-  try { localStorage.setItem(LS_KEY, JSON.stringify(data)); } catch(e) {}
+  try {
+    localStorage.setItem(LS_KEY, JSON.stringify({
+      level: currentLevel, examQuestions, answers, currentIdx, timeRemaining
+    }));
+  } catch(e) {}
 }
 function loadSession() {
   try { return JSON.parse(localStorage.getItem(LS_KEY)); } catch(e) { return null; }
@@ -782,30 +913,45 @@ function clearSession() {
   try { localStorage.removeItem(LS_KEY); } catch(e) {}
 }
 
-// ── START EXAM ───────────────────────────────────────────
-document.getElementById('btn-start').addEventListener('click', () => {
-  examQuestions = sampleQuestions();
-  answers = {};
-  currentIdx = 0;
-  timeRemaining = TOTAL_TIME;
-  playCounts = {};
-  reviewLangState = {};
-  saveSession();
-  launchExam();
+// ── START / RESUME ───────────────────────────────────
+document.getElementById('btn-start').addEventListener('click', async () => {
+  document.getElementById('loading').style.display = 'flex';
+  try {
+    await loadQuestions();
+    examQuestions   = sampleQuestions();
+    answers         = {};
+    currentIdx      = 0;
+    timeRemaining   = TOTAL_TIME;
+    playCounts      = {};
+    reviewLangState = {};
+    saveSession();
+    hide('loading');
+    launchExam();
+  } catch(e) {
+    document.getElementById('loading').innerHTML =
+      `<p style="color:var(--accent);padding:20px;">⚠ ${LEVEL_CONFIG[currentLevel].dataUrl} の読み込みに失敗しました。</p>`;
+  }
 });
 
-document.getElementById('btn-resume').addEventListener('click', () => {
+document.getElementById('btn-resume').addEventListener('click', async () => {
   const saved = loadSession();
-  examQuestions = saved.examQuestions;
-  answers = saved.answers || {};
-  currentIdx = saved.currentIdx || 0;
-  timeRemaining = saved.timeRemaining !== undefined ? saved.timeRemaining : TOTAL_TIME;
-  playCounts = {};
-  reviewLangState = {};
-  launchExam();
+  if (!saved) return;
+  document.getElementById('loading').style.display = 'flex';
+  try {
+    await loadQuestions();
+    examQuestions   = saved.examQuestions;
+    answers         = saved.answers || {};
+    currentIdx      = saved.currentIdx || 0;
+    timeRemaining   = saved.timeRemaining ?? TOTAL_TIME;
+    playCounts      = {};
+    reviewLangState = {};
+    hide('loading');
+    launchExam();
+  } catch(e) { hide('loading'); }
 });
 
 function launchExam() {
+  document.getElementById('exam-logo').textContent = `JFT-CBT ${currentLevel}`;
   hide('screen-start');
   show('screen-exam', 'flex');
   buildNavDots();
@@ -813,7 +959,7 @@ function launchExam() {
   startTimer();
 }
 
-// ── TIMER ────────────────────────────────────────────────
+// ── TIMER ────────────────────────────────────────────
 function startTimer() {
   if (timerInterval) clearInterval(timerInterval);
   updateTimerDisplay();
@@ -821,128 +967,114 @@ function startTimer() {
     timeRemaining--;
     saveSession();
     updateTimerDisplay();
-    if (timeRemaining <= 0) {
-      clearInterval(timerInterval);
-      finishExam(true);
-    }
+    if (timeRemaining <= 0) { clearInterval(timerInterval); finishExam(true); }
   }, 1000);
 }
 function updateTimerDisplay() {
   const el = document.getElementById('timer');
-  const m = Math.floor(timeRemaining / 60).toString().padStart(2,'0');
-  const s = (timeRemaining % 60).toString().padStart(2,'0');
+  const m  = Math.floor(timeRemaining / 60).toString().padStart(2,'0');
+  const s  = (timeRemaining % 60).toString().padStart(2,'0');
   el.textContent = `${m}:${s}`;
   el.classList.toggle('urgent', timeRemaining <= 300);
 }
 
-// ── NAV DOTS ─────────────────────────────────────────────
+// ── NAV DOTS ─────────────────────────────────────────
 function buildNavDots() {
-  const container = document.getElementById('progress-nav-inner');
-  container.innerHTML = '';
+  const c = document.getElementById('progress-nav-inner');
+  c.innerHTML = '';
   examQuestions.forEach((q, i) => {
     const d = document.createElement('button');
     d.className = 'nav-dot unanswered';
     d.textContent = i + 1;
     d.title = `Q${i+1}: ${q.section}`;
     d.addEventListener('click', () => { currentIdx = i; renderQuestion(); });
-    container.appendChild(d);
+    c.appendChild(d);
   });
 }
 function updateNavDots() {
-  const dots = document.querySelectorAll('.nav-dot');
-  dots.forEach((d, i) => {
+  document.querySelectorAll('.nav-dot').forEach((d, i) => {
     d.classList.remove('unanswered','answered','current');
     d.classList.add(answers[i] != null ? 'answered' : 'unanswered');
     if (i === currentIdx) d.classList.add('current');
   });
-  // Scroll current dot into view
-  dots[currentIdx]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+  document.querySelectorAll('.nav-dot')[currentIdx]
+    ?.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
 }
 
+// ── RENDER QUESTION ──────────────────────────────────
 function renderQuestion() {
   if (!examQuestions[currentIdx]) return;
-  const q = examQuestions[currentIdx];
-  const main = document.getElementById('exam-main');
-  const cfg = SECTION_CONFIG[q.section] || { color: 'vocab' };
+  const q   = examQuestions[currentIdx];
+  const cfg = LEVEL_CONFIG[currentLevel].sections;
+  const sc  = cfg[q.section] || { color: 'vocab' };
+
   const badge = document.getElementById('section-badge');
-  badge.textContent = q.section;
-  badge.className = `section-badge-header section-color-${cfg.color}`;
-  badge.style.border = '1px solid currentColor';
-  badge.style.borderRadius = '99px';
-  badge.style.padding = '3px 10px';
-  badge.style.fontSize = '11px';
-  badge.style.fontWeight = '700';
+  badge.textContent   = q.section;
+  badge.className     = `section-badge-header section-color-${sc.color}`;
+
   document.getElementById('btn-prev').disabled = currentIdx === 0;
   const isLast = currentIdx === examQuestions.length - 1;
   document.getElementById('btn-next').classList.toggle('hidden', isLast);
   document.getElementById('btn-finish').classList.toggle('hidden', !isLast);
   document.getElementById('q-progress-text').textContent = `${currentIdx + 1} / ${examQuestions.length}`;
+
   updateNavDots();
-  const layout = q.layout_type;
-  if (layout === 'split_2screen') {
-    renderSplit(q, main);
-  } else if (layout === 'cbt_card') {
-    renderCbtCard(q, main);
-  } else {
-    renderStandard(q, main);
-  }
+
+  const main = document.getElementById('exam-main');
+  if      (q.layout_type === 'split_2screen') renderSplit(q, main);
+  else if (q.layout_type === 'cbt_card')       renderCbtCard(q, main);
+  else                                         renderStandard(q, main);
 }
 
 function getChoices(q) {
-  return [q.choice_1, q.choice_2, q.choice_3, q.choice_4].filter(c => c && c.trim() !== '');
+  return [q.choice_1, q.choice_2, q.choice_3, q.choice_4]
+    .filter(c => c && c.trim() !== '');
 }
 
 function renderChoices(q, container) {
   const choices = getChoices(q);
-  const labels = ['①','②','③','④'];
-  const choicesDiv = document.createElement('div');
-  choicesDiv.className = 'choices';
+  const labels  = ['①','②','③','④'];
+  const div     = document.createElement('div');
+  div.className = 'choices';
   choices.forEach((c, i) => {
     const btn = document.createElement('button');
     btn.className = 'choice-btn' + (answers[currentIdx] === i+1 ? ' selected' : '');
-    if (q.section === '聴解') {
-      btn.disabled = (playCounts[currentIdx] || 0) === 0;
-    }
+    if (q.section === '聴解') btn.disabled = (playCounts[currentIdx] || 0) === 0;
     btn.innerHTML = `<span class="choice-label">${labels[i]}</span><span>${c}</span>`;
     btn.addEventListener('click', () => {
       answers[currentIdx] = i + 1;
       saveSession();
       renderQuestion();
     });
-    choicesDiv.appendChild(btn);
+    div.appendChild(btn);
   });
-  container.appendChild(choicesDiv);
+  container.appendChild(div);
 }
 
 function renderStandard(q, container) {
   container.innerHTML = '';
   const wrap = document.createElement('div');
   wrap.className = 'question-standard';
-
-  // Meta
-  const meta = document.createElement('div');
-  meta.className = 'q-meta';
-  meta.innerHTML = `<span class="q-num">Q${currentIdx+1}</span><span class="q-section-tag">${q.section} · ${q.source_lesson}</span>`;
-  wrap.appendChild(meta);
-
-  // Instruction
   if (q.instruction) {
     const instr = document.createElement('div');
     instr.className = 'q-instruction';
     instr.textContent = q.instruction;
     wrap.appendChild(instr);
   }
-
-  // Question text
+  const meta = document.createElement('div');
+  meta.className = 'q-meta';
+  meta.innerHTML = `<span class="q-num">Q${currentIdx+1}</span>
+    <span class="q-section-tag">${q.section} · ${q.source_lesson}</span>`;
+  wrap.appendChild(meta);
   const qt = document.createElement('div');
   qt.className = 'q-text';
   qt.textContent = q.question_text || q.instruction;
   wrap.appendChild(qt);
-
   renderChoices(q, wrap);
   container.appendChild(wrap);
 }
 
+// ── STEP2-3: CbtCard with Web Speech API ─────────────
 function renderCbtCard(q, container) {
   container.innerHTML = '';
   const wrap = document.createElement('div');
@@ -950,44 +1082,81 @@ function renderCbtCard(q, container) {
 
   const meta = document.createElement('div');
   meta.className = 'q-meta';
-  meta.innerHTML = `<span class="q-num">Q${currentIdx+1}</span><span class="q-section-tag">聴解 · ${q.source_lesson}</span>`;
+  meta.innerHTML = `<span class="q-num">Q${currentIdx+1}</span>
+    <span class="q-section-tag">聴解 · ${q.source_lesson}</span>`;
   wrap.appendChild(meta);
 
   if (q.instruction) {
     const instr = document.createElement('div');
     instr.className = 'q-instruction';
-    // Extract script from instruction [音声スクリプト:...]
-    const scriptMatch = q.instruction.match(/【音声スクリプト：(.*?)】/s);
-    const scriptText = scriptMatch ? scriptMatch[1] : '';
-    const mainInstr = q.instruction.replace(/【音声スクリプト：.*?】/s, '').trim();
-    instr.textContent = mainInstr;
+    instr.textContent = q.instruction.replace(/【音声スクリプト：.*?】/s,'').trim();
     wrap.appendChild(instr);
+  }
 
-    // Audio player box
-    const cnt = playCounts[currentIdx] || 0;
-    const remaining = 2 - cnt;
-    const audioBox = document.createElement('div');
-    audioBox.className = 'audio-player-box';
-    audioBox.innerHTML = `
-      <div class="audio-icon">🎧</div>
-      ${scriptText ? `<div class="audio-script">📝 スクリプト：${scriptText}</div>` : ''}
-      <div class="audio-controls">
-        <button class="btn-play" id="btn-play-${currentIdx}" ${remaining <= 0 ? 'disabled' : ''}>
-          ${remaining <= 0 ? '再生完了' : `▶ 音声を再生 (残り${remaining}回)`}
-        </button>
-        <span class="play-count">${cnt}/2</span>
-      </div>`;
-    wrap.appendChild(audioBox);
+  const cnt       = playCounts[currentIdx] || 0;
+  const remaining = 2 - cnt;
+  const scriptText = q.media_file || q.question_text || '';
 
-    const playBtn = audioBox.querySelector(`#btn-play-${currentIdx}`);
-    playBtn.addEventListener('click', () => {
-      if (!playCounts[currentIdx]) playCounts[currentIdx] = 0;
-      if (playCounts[currentIdx] < 2) {
+  const audioBox = document.createElement('div');
+  audioBox.className = 'audio-player-box';
+
+  const controls = document.createElement('div');
+  controls.className = 'audio-controls';
+
+  const playBtn = document.createElement('button');
+  playBtn.className = 'btn-play';
+  playBtn.id = `play-btn-${currentIdx}`;
+  if (remaining <= 0) {
+    playBtn.textContent = '✓ 再生完了';
+    playBtn.disabled = true;
+  } else {
+    playBtn.textContent = `▶ 音声を再生（残り${remaining}回）`;
+  }
+
+  const countSpan = document.createElement('span');
+  countSpan.className = 'play-count';
+  countSpan.textContent = `${cnt}/2`;
+
+  // ── STEP2-3: 音声イベント配管 ────────────────────
+  playBtn.addEventListener('click', () => {
+    if ((playCounts[currentIdx] || 0) >= 2) return;
+
+    playBtn.disabled  = true;
+    playBtn.textContent = '⏳ 音声準備中...';
+    playBtn.style.opacity = '0.6';
+
+    const textToSpeak = scriptText;
+
+    VoiceEngine.speak(
+      textToSpeak,
+      'ja-JP',
+      0.80,
+      () => {
+        playBtn.textContent = '🔊 再生中（連打禁止）';
+        playBtn.style.opacity = '1';
+      },
+      () => {
+        if (!playCounts[currentIdx]) playCounts[currentIdx] = 0;
         playCounts[currentIdx]++;
+        const newRemaining = 2 - playCounts[currentIdx];
+        if (newRemaining > 0) {
+          playBtn.textContent = `▶ 音声を再生（残り${newRemaining}回）`;
+          playBtn.disabled = false;
+          playBtn.style.opacity = '1';
+        } else {
+          playBtn.textContent = '✓ 再生完了';
+          playBtn.disabled = true;
+        }
+        countSpan.textContent = `${playCounts[currentIdx]}/2`;
         renderQuestion();
       }
-    });
-  }
+    );
+  });
+
+  controls.appendChild(playBtn);
+  controls.appendChild(countSpan);
+  audioBox.appendChild(controls);
+  wrap.appendChild(audioBox);
 
   const qt = document.createElement('div');
   qt.className = 'q-text';
@@ -998,32 +1167,34 @@ function renderCbtCard(q, container) {
   container.appendChild(wrap);
 }
 
+// ── STEP1: renderSplit with fixed passage lookup ──────
 function renderSplit(q, container) {
   container.innerHTML = '';
   const wrap = document.createElement('div');
   wrap.className = 'question-split';
 
-  // Left: passage
-  const left = document.createElement('div');
+  const left    = document.createElement('div');
   left.className = 'split-left';
-  const passage = getPassage(q);
-  const passageLabel = document.createElement('div');
-  passageLabel.className = 'passage-label';
-  passageLabel.textContent = '📄 案内文・本文';
-  left.appendChild(passageLabel);
-  const passageText = document.createElement('div');
-  passageText.className = 'passage-text';
-  passageText.textContent = passage || '（本文データ準備中）';
-  left.appendChild(passageText);
+  const passage  = getPassage(q);
 
-  // Right: question + choices
+  const passLabel = document.createElement('div');
+  passLabel.className = 'passage-label';
+  passLabel.textContent = '📄 案内文・本文';
+  left.appendChild(passLabel);
+
+  const passText = document.createElement('div');
+  passText.className = 'passage-text';
+  passText.textContent = passage || '（本文データ読み込み中…）';
+  left.appendChild(passText);
+
   const right = document.createElement('div');
   right.className = 'split-right';
 
   const meta = document.createElement('div');
   meta.className = 'q-meta';
   meta.style.marginBottom = '12px';
-  meta.innerHTML = `<span class="q-num">Q${currentIdx+1}</span><span class="q-section-tag">読解 · ${q.source_lesson}</span>`;
+  meta.innerHTML = `<span class="q-num">Q${currentIdx+1}</span>
+    <span class="q-section-tag">読解 · ${q.source_lesson}</span>`;
   right.appendChild(meta);
 
   if (q.instruction) {
@@ -1041,12 +1212,12 @@ function renderSplit(q, container) {
   right.appendChild(qt);
 
   renderChoices(q, right);
-
   wrap.appendChild(left);
   wrap.appendChild(right);
   container.appendChild(wrap);
 }
 
+// ── NAVIGATION ───────────────────────────────────────
 function nextQuestion() {
   if (currentIdx < examQuestions.length - 1) { currentIdx++; renderQuestion(); }
 }
@@ -1056,38 +1227,35 @@ document.getElementById('btn-prev').addEventListener('click', () => {
 });
 document.getElementById('btn-finish').addEventListener('click', () => {
   const unanswered = examQuestions.length - Object.keys(answers).length;
-  if (unanswered > 0) {
-    if (!confirm(`まだ ${unanswered} 問が未解答です。試験を終了しますか？`)) return;
-  }
+  if (unanswered > 0 && !confirm(`まだ${unanswered}問が未解答です。終了しますか？`)) return;
   finishExam(false);
 });
 
-// ── FINISH & SCORING ─────────────────────────────────────
+// ── FINISH & SCORE ───────────────────────────────────
 function finishExam(timedOut) {
   clearInterval(timerInterval);
+  VoiceEngine.cancel();
   clearSession();
   hide('screen-exam');
 
-  // Score by section
+  const cfg = LEVEL_CONFIG[currentLevel].sections;
   const sectionScores = {};
-  Object.keys(SECTION_CONFIG).forEach(s => { sectionScores[s] = { correct: 0, total: 0 }; });
+  Object.keys(cfg).forEach(s => { sectionScores[s] = { correct: 0, total: 0 }; });
   let totalCorrect = 0;
 
   examQuestions.forEach((q, i) => {
-    const sec = q.section;
-    if (sectionScores[sec]) {
-      sectionScores[sec].total++;
+    if (sectionScores[q.section]) {
+      sectionScores[q.section].total++;
       if (answers[i] === q.correct_answer) {
-        sectionScores[sec].correct++;
+        sectionScores[q.section].correct++;
         totalCorrect++;
       }
     }
   });
 
-  // Determine verdict
   let failedSection = null;
-  for (const [sec, cfg] of Object.entries(SECTION_CONFIG)) {
-    if (sectionScores[sec].correct < cfg.cutoff) { failedSection = sec; break; }
+  for (const [sec, c] of Object.entries(cfg)) {
+    if ((sectionScores[sec]?.correct || 0) < c.cutoff) { failedSection = sec; break; }
   }
   const passed = !failedSection && totalCorrect >= PASS_SCORE;
 
@@ -1096,72 +1264,71 @@ function finishExam(timedOut) {
   window.scrollTo(0, 0);
 }
 
-// ── RENDER RESULT ────────────────────────────────────────
+// ── RENDER RESULT ────────────────────────────────────
 function renderResult({ sectionScores, totalCorrect, passed, failedSection, timedOut }) {
+  const cfg = LEVEL_CONFIG[currentLevel].sections;
+  const TOTAL_Q = Object.values(cfg).reduce((s,c) => s + c.count, 0);
+
   const verdictEl = document.getElementById('result-verdict');
   let reasonText = '';
   if (!passed) {
-    if (failedSection) {
-      reasonText = `「${failedSection}」セクションの足切り基準（${SECTION_CONFIG[failedSection].cutoff}問）未満による一発不合格`;
-    } else {
-      reasonText = `総得点不足による不合格（合格基準: ${PASS_SCORE}問 / 40問）`;
-    }
+    reasonText = failedSection
+      ? `「${failedSection}」セクションの足切り基準（${cfg[failedSection].cutoff}問）未満`
+      : `総得点不足（合格基準: ${PASS_SCORE}問 / ${TOTAL_Q}問）`;
   }
   if (timedOut) reasonText = '⏱ 制限時間終了 · ' + reasonText;
   const pct = Math.round(totalCorrect / TOTAL_Q * 100);
+
   verdictEl.innerHTML = `
     <div class="verdict-icon">${passed ? '🎉' : '📚'}</div>
-    <div class="verdict-label">総合判定</div>
+    <div class="verdict-label">総合判定 · ${currentLevel}</div>
     <div class="verdict-text ${passed ? 'pass' : 'fail'}">${passed ? '合 格' : '不合格'}</div>
     ${reasonText ? `<div class="verdict-reason" style="color:var(--accent);font-weight:700;margin-top:8px;">${reasonText}</div>` : ''}
     <div class="verdict-score">
       <span class="big" style="color:${passed?'var(--green)':'var(--accent)'}">${totalCorrect}</span>
-      <span class="slash">/</span>
-      <span class="small">${TOTAL_Q}</span>
+      <span class="slash">/</span><span class="small">${TOTAL_Q}</span>
       <span class="pct">${pct}%</span>
     </div>`;
 
   const scoresEl = document.getElementById('section-scores');
   scoresEl.innerHTML = '';
-  for (const [sec, cfg] of Object.entries(SECTION_CONFIG)) {
-    const { correct, total } = sectionScores[sec];
-    const isPass = correct >= cfg.cutoff;
-    const sPct = total ? Math.round(correct / total * 100) : 0;
-    const cutoffPct = Math.round(cfg.cutoff / total * 100);
-    const card = document.createElement('div');
+  for (const [sec, c] of Object.entries(cfg)) {
+    const sc    = sectionScores[sec] || { correct:0, total:c.count };
+    const isPass = sc.correct >= c.cutoff;
+    const sPct   = sc.total ? Math.round(sc.correct / sc.total * 100) : 0;
+    const cPct   = Math.round(c.cutoff / c.count * 100);
+    const card   = document.createElement('div');
     card.className = 'section-score-card';
     card.innerHTML = `
       <div class="section-score-header">
-        <span class="section-score-name section-color-${cfg.color}">${sec}</span>
-        <span class="section-score-nums ${isPass?'pass':'fail'}">${correct}/${total} (${sPct}%) ${isPass ? '✓ クリア' : '✗ 足切警告'}</span>
+        <span class="section-score-name section-color-${c.color}">${sec}</span>
+        <span class="section-score-nums ${isPass?'pass':'fail'}">${sc.correct}/${sc.total} (${sPct}%) ${isPass?'✓ クリア':'✗ 足切警告'}</span>
       </div>
       <div class="score-bar-track">
-        <div class="score-bar-fill ${isPass?'pass':'fail'} bar-${cfg.color}" style="width:0%" data-target="${sPct}%"></div>
-        <div class="cutoff-marker" style="left:${cutoffPct}%">
-          <div class="cutoff-label">足切(${cfg.cutoff}問)</div>
+        <div class="score-bar-fill ${isPass?'pass':'fail'} bar-${c.color}" style="width:0%" data-target="${sPct}%"></div>
+        <div class="cutoff-marker" style="left:${cPct}%">
+          <div class="cutoff-label">足切(${c.cutoff}問)</div>
         </div>
       </div>`;
     scoresEl.appendChild(card);
   }
   requestAnimationFrame(() => {
-    document.querySelectorAll('.score-bar-fill').forEach(b => {
-      b.style.width = b.dataset.target;
-    });
+    document.querySelectorAll('.score-bar-fill').forEach(b => { b.style.width = b.dataset.target; });
   });
 
   const testedIds = new Set(examQuestions.map(q => q.question_id));
-  const untested = allQuestions.filter(q => !testedIds.has(q.question_id));
+  const untested  = examPool.filter(q => !testedIds.has(q.question_id));
   const untestedBox = document.getElementById('untested-box');
   if (untested.length > 0) {
-    const sample = shuffle(untested).slice(0, 3);
+    const sample  = shuffle(untested).slice(0, 3);
     const lessons = [...new Set(sample.map(q => q.source_lesson))].slice(0, 2);
-    const ids = sample.map(q => q.question_id).join('・');
+    const ids     = sample.map(q => q.question_id).join('・');
     untestedBox.style.display = 'block';
     untestedBox.innerHTML = `
       <h3>📦 プールにはまだ解いていない問題が眠っています！</h3>
-      <p>今回出題されなかった <strong style="color:var(--gold)">${untested.length}問</strong> がデータベースに残っています。<br>
-      例えば、まだあなたが挑戦していない「${lessons.join('・')}」の問題（${ids} など）があります。<br>
-      繰り返し挑戦して、出題プール完全制覇を目指しましょう！💪</p>`;
+      <p>今回未出題の <strong style="color:var(--gold)">${untested.length}問</strong> がプールに残っています。<br>
+      例えば「${lessons.join('・')}」の問題（${ids} など）はまだ未挑戦です。<br>
+      完全制覇を目指してもう一度挑戦しましょう！💪</p>`;
   } else {
     untestedBox.style.display = 'none';
   }
@@ -1169,34 +1336,33 @@ function renderResult({ sectionScores, totalCorrect, passed, failedSection, time
   renderReviewCards();
 }
 
-// ── REVIEW CARDS ─────────────────────────────────────────
+// ── REVIEW ───────────────────────────────────────────
 function renderReviewCards() {
-  const container = document.getElementById('review-cards');
-  container.innerHTML = '';
-  examQuestions.forEach((q, i) => {
-    container.appendChild(buildReviewCard(q, i));
-  });
+  const c = document.getElementById('review-cards');
+  c.innerHTML = '';
+  examQuestions.forEach((q, i) => c.appendChild(buildReviewCard(q, i)));
 }
 
 function buildReviewCard(q, idx) {
   const userAnswer = answers[idx];
-  const correct = q.correct_answer;
-  const isCorrect = userAnswer === correct;
-  const choices = getChoices(q);
-  const labels = ['①','②','③','④'];
-  const lang = reviewLangState[idx] || 'jp';
+  const correct    = q.correct_answer;
+  const isCorrect  = userAnswer === correct;
+  const choices    = getChoices(q);
+  const labels     = ['①','②','③','④'];
+  const lang       = reviewLangState[idx] || 'jp';
+  const cfg        = LEVEL_CONFIG[currentLevel].sections;
+  const sc         = cfg[q.section] || { color:'vocab' };
 
   const card = document.createElement('div');
   card.className = 'review-card';
   card.style.animationDelay = `${idx * 0.03}s`;
-  card.dataset.idx = idx;
 
   const header = document.createElement('div');
   header.className = 'review-card-header';
   header.innerHTML = `
     <span class="review-result-icon">${isCorrect ? '✅' : '❌'}</span>
     <span class="review-q-id">${q.question_id} · Q${idx+1}</span>
-    <span class="review-section-tag section-color-${SECTION_CONFIG[q.section]?.color || 'vocab'}">${q.section}</span>
+    <span class="review-section-tag section-color-${sc.color}">${q.section}</span>
     ${!isCorrect && userAnswer ? `<span style="font-size:11px;color:var(--accent);margin-left:auto">あなたの回答: ${labels[userAnswer-1]}</span>` : ''}
     ${!userAnswer ? `<span style="font-size:11px;color:var(--text3);margin-left:auto">未解答</span>` : ''}`;
   card.appendChild(header);
@@ -1207,7 +1373,7 @@ function buildReviewCard(q, idx) {
   if (q.instruction) {
     const instr = document.createElement('div');
     instr.className = 'review-instruction';
-    instr.textContent = q.instruction.replace(/【音声スクリプト：.*?】/s, '').trim();
+    instr.textContent = q.instruction.replace(/【音声スクリプト：.*?】/s,'').trim();
     body.appendChild(instr);
   }
 
@@ -1221,26 +1387,23 @@ function buildReviewCard(q, idx) {
 
   const qtDiv = document.createElement('div');
   qtDiv.className = 'review-q-text';
-  const displayPlain = q.question_text || q.instruction || '';
-  qtDiv.dataset.plain = displayPlain;
-  qtDiv.dataset.ruby = q.question_text_ruby || '';
-  // Ruby fallback: only use ruby if field is non-empty
+  const plain = q.question_text || q.instruction || '';
+  qtDiv.dataset.plain = plain;
+  qtDiv.dataset.ruby  = q.question_text_ruby || '';
   qtDiv.innerHTML = (rubyOn && q.question_text_ruby && q.question_text_ruby.trim() !== '')
-    ? q.question_text_ruby
-    : displayPlain;
+    ? q.question_text_ruby : plain;
   body.appendChild(qtDiv);
 
   const choicesDiv = document.createElement('div');
   choicesDiv.className = 'review-choices';
   choices.forEach((c, i) => {
     const div = document.createElement('div');
-    const isCorrectChoice = (i + 1) === correct;
-    const isUserChoice = (i + 1) === userAnswer;
-    let cls = 'review-choice neutral';
-    if (isCorrectChoice) cls = 'review-choice correct-answer';
-    else if (isUserChoice && !isCorrect) cls = 'review-choice user-wrong';
-    div.className = cls;
-    div.innerHTML = `<span>${labels[i]}</span><span>${c}</span>${isCorrectChoice ? '<span style="margin-left:auto;font-size:11px">✓ 正解</span>' : ''}`;
+    const isCorrectChoice = (i+1) === correct;
+    const isUserChoice    = (i+1) === userAnswer;
+    div.className = 'review-choice ' +
+      (isCorrectChoice ? 'correct-answer' : isUserChoice ? 'user-wrong' : 'neutral');
+    div.innerHTML = `<span>${labels[i]}</span><span>${c}</span>
+      ${isCorrectChoice ? '<span style="margin-left:auto;font-size:11px">✓ 正解</span>' : ''}`;
     choicesDiv.appendChild(div);
   });
   body.appendChild(choicesDiv);
@@ -1271,48 +1434,43 @@ function buildReviewCard(q, idx) {
 }
 
 function getExplanation(q, lang) {
-  const baseExpl = q.explanation || '（解説データなし）';
-  if (lang === 'jp') {
-    return baseExpl;
-  } else if (lang === 'en') {
-    if (q.explanation_en && q.explanation_en.trim() !== '') return q.explanation_en;
-    return `<span class="expl-pending">[Translation pending]</span><br><span style="opacity:0.7">${baseExpl}</span>`;
-  } else if (lang === 'tl') {
-    if (q.explanation_tl && q.explanation_tl.trim() !== '') return q.explanation_tl;
-    return `<span class="expl-pending">[Pagsasalin sa paglaon]</span><br><span style="opacity:0.7">${baseExpl}</span>`;
-  }
+  const base = q.explanation || '（解説データなし）';
+  if (lang === 'jp') return base;
+  if (lang === 'en') return q.explanation_en?.trim() ? q.explanation_en : `<span class="expl-pending">[Translation pending]</span><br><span style="opacity:.7">${base}</span>`;
+  if (lang === 'tl') return q.explanation_tl?.trim() ? q.explanation_tl : `<span class="expl-pending">[Pagsasalin sa paglaon]</span><br><span style="opacity:.7">${base}</span>`;
   return '';
 }
 
+// ── RUBY TOGGLE ──────────────────────────────────────
 document.getElementById('ruby-toggle').addEventListener('click', () => {
   rubyOn = !rubyOn;
   document.getElementById('ruby-toggle').classList.toggle('active', rubyOn);
   document.querySelectorAll('.review-q-text').forEach(el => {
-    const ruby = el.dataset.ruby;
-    const plain = el.dataset.plain;
-    if (rubyOn && ruby && ruby.trim() !== '') {
-      el.innerHTML = ruby;
-    } else {
-      el.textContent = plain;
-    }
+    const ruby = el.dataset.ruby, plain = el.dataset.plain;
+    el.innerHTML = (rubyOn && ruby && ruby.trim() !== '') ? ruby : plain;
   });
 });
 
-// ── RETRY ────────────────────────────────────────────────
-document.getElementById('btn-retry').addEventListener('click', () => {
+// ── RETRY ────────────────────────────────────────────
+document.getElementById('btn-retry').addEventListener('click', async () => {
   hide('screen-result');
   clearSession();
-  examQuestions = sampleQuestions();
-  answers = {};
-  currentIdx = 0;
-  timeRemaining = TOTAL_TIME;
-  playCounts = {};
-  reviewLangState = {};
-  saveSession();
-  launchExam();
+  document.getElementById('loading').style.display = 'flex';
+  try {
+    await loadQuestions();
+    examQuestions   = sampleQuestions();
+    answers         = {};
+    currentIdx      = 0;
+    timeRemaining   = TOTAL_TIME;
+    playCounts      = {};
+    reviewLangState = {};
+    saveSession();
+    hide('loading');
+    launchExam();
+  } catch(e) { hide('loading'); }
 });
 
-// ── HELPERS ──────────────────────────────────────────────
+// ── HELPERS ──────────────────────────────────────────
 function show(id, display='block') {
   const el = document.getElementById(id);
   if (el) { el.style.display = display; el.classList.add('active'); }
