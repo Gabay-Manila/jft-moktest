@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JFT-Basic CBT 模擬試験</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1a1a2e">
+<style>
+  /* ── DESIGN TOKENS ─────────────────────────────── */
+  :root {
+    --bg:        #0f0f1a;
+    --surface:   #1a1a2e;
+    --surface2:  #16213e;
+    --card:      #1e1e35;
+    --border:    rgba(255,255,255,.08);
+    --accent:    #e94560;
+    --accent2:   #0f3460;
+    --gold:      #f5a623;
+    --green:     #22c55e;
+    --blue:      #3b82f6;
+    --purple:    #a78bfa;
+    --text:      #f1f1f5;
+    --text2:     #9ca3af;
+    --text3:     #6b7280;
+    --radius:    12px;
+    --radius-sm: 8px;
+    --shadow:    0 8px 32px rgba(0,0,0,.4);
+    --transition: .2s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* ── RESET ─────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { height: 100%; }
+  body {
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Meiryo', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── LOADING SCREEN ────────────────────────────── */
+  #loading {
+    position: fixed; inset: 0;
+    background: var(--bg);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 20px; z-index: 999;
+  }
+  .loader-ring {
+    width: 56px; height: 56px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── SCREENS ───────────────────────────────────── */
+  .screen { display: none; min-height: 100vh; }
+  .screen.active { display: flex; flex-direction: column; }
+
+  /* ══ START SCREEN ══════════════════════════════════ */
+  #screen-start {
+    align-items: center; justify-content: center;
+    padding: 40px 20px;
+    background: radial-gradient(ellipse at 20% 20%, #0f3460 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, #16213e 0%, transparent 60%),
+                var(--bg);
+  }
+  .start-inner { max-width: 600px; width: 100%; text-align: center; }
+  .start-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(233,69,96,.15);
+    border: 1px solid rgba(233,69,96,.3);
+    color: var(--accent); font-size: 12px; font-weight: 700;
+    letter-spacing: .12em; padding: 6px 16px; border-radius: 99px;
+    margin-bottom: 24px; text-transform: uppercase;
+  }
+  .start-title {
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 900; line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: 8px;
+  }
+  .start-title span { color: var(--accent); }
+  .start-subtitle {
+    color: var(--text2); font-size: 15px; margin-bottom: 40px;
+  }
+  .start-stats {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 16px; margin-bottom: 36px;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 12px;
+  }
+  .stat-card .num {
+    font-size: 28px; font-weight: 900;
+    color: var(--accent); line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-card .lbl { font-size: 12px; color: var(--text2); }
+
+  .sections-grid {
+    display: grid; grid-template-columns: repeat(2,1fr);
+    gap: 10px; margin-bottom: 36px; text-align: left;
+  }
+  .section-chip {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 12px 14px;
+  }
+  .section-chip .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .section-chip .info { flex: 1; }
+  .section-chip .name { font-size: 13px; font-weight: 700; }
+  .section-chip .detail { font-size: 11px; color: var(--text2); }
+
+  .btn-primary {
+    width: 100%;
+    background: linear-gradient(135deg, var(--accent) 0%, #c0392b 100%);
+    color: #fff; font-size: 16px; font-weight: 800;
+    padding: 18px 32px; border-radius: var(--radius);
+    letter-spacing: .04em;
+    box-shadow: 0 4px 24px rgba(233,69,96,.35);
+    transition: transform var(--transition), box-shadow var(--transition);
+    margin-bottom: 12px;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(233,69,96,.45); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text2); font-size: 14px; font-weight: 600;
+    padding: 14px 32px; border-radius: var(--radius);
+    transition: background var(--transition), color var(--transition);
+  }
+  .btn-secondary:hover { background: var(--card); color: var(--text); }
+
+  /* ══ EXAM SCREEN ═══════════════════════════════════ */
+  #screen-exam { background: var(--bg); }
+
+  /* Header */
+  .exam-header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 16px;
+  }
+  .exam-header-top {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 52px; gap: 12px;
+  }
+  .exam-logo { font-size: 13px; font-weight: 800; color: var(--accent); letter-spacing: .06em; white-space: nowrap; }
+  .timer-display {
+    font-family: 'Courier New', monospace;
+    font-size: 22px; font-weight: 900;
+    letter-spacing: .04em; color: var(--text);
+    transition: color var(--transition);
+    min-width: 80px; text-align: center;
+  }
+  .timer-display.urgent { color: var(--accent); animation: pulse 1s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
+  .section-badge-header {
+    font-size: 11px; font-weight: 700; padding: 4px 10px;
+    border-radius: 99px; letter-spacing: .08em;
+    white-space: nowrap;
+  }
+
+  /* Progress nav */
+  .progress-nav {
+    padding: 10px 0;
+    overflow-x: auto;
+  }
+  .progress-nav-inner {
+    display: flex; gap: 5px; min-width: max-content;
+  }
+  .nav-dot {
+    width: 28px; height: 28px; border-radius: 6px;
+    font-size: 10px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all var(--transition);
+    flex-shrink: 0;
+  }
+  .nav-dot.unanswered { background: var(--surface2); color: var(--text3); }
+  .nav-dot.answered { background: var(--blue); color: #fff; }
+  .nav-dot.current { border-color: var(--accent); }
+  .nav-dot:hover { transform: scale(1.15); }
+
+  /* Exam main */
+  .exam-main {
+    flex: 1; padding: 0;
+    display: flex; flex-direction: column;
+  }
+
+  /* Standard layout */
+  .question-standard {
+    flex: 1; padding: 24px 20px;
+    max-width: 720px; width: 100%; margin: 0 auto;
+  }
+  .q-meta {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .q-num {
+    background: var(--accent); color: #fff;
+    font-size: 11px; font-weight: 800;
+    padding: 3px 10px; border-radius: 99px; letter-spacing: .06em;
+  }
+  .q-section-tag {
+    font-size: 11px; font-weight: 600; color: var(--text2);
+    border: 1px solid var(--border); padding: 3px 8px; border-radius: 99px;
+  }
+  .q-instruction {
+    color: var(--text2); font-size: 13px; margin-bottom: 16px;
+    padding: 12px; background: var(--card); border-radius: var(--radius-sm);
+    border-left: 3px solid var(--purple);
+  }
+  .q-text {
+    font-size: 18px; font-weight: 700; margin-bottom: 24px;
+    color: var(--text); line-height: 1.5;
+  }
+
+  /* CBT Card (listening) */
+  .audio-player-box {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 20px;
+    margin-bottom: 20px; text-align: center;
+  }
+  .audio-icon { font-size: 40px; margin-bottom: 12px; }
+  .audio-script {
+    font-size: 12px; color: var(--text2); margin-bottom: 14px;
+    background: var(--surface2); padding: 10px; border-radius: 6px;
+    text-align: left; line-height: 1.6;
+  }
+  .audio-controls { display: flex; align-items: center; justify-content: center; gap: 12px; }
+  .btn-play {
+    background: var(--green); color: #fff;
+    font-size: 13px; font-weight: 700;
+    padding: 10px 24px; border-radius: 8px;
+    transition: all var(--transition);
+  }
+  .btn-play:hover:not(:disabled) { background: #16a34a; transform: scale(1.04); }
+  .btn-play:disabled { opacity: .35; cursor: not-allowed; transform: none; }
+  .play-count { font-size: 12px; color: var(--text2); }
+
+  /* Split 2screen layout */
+  .question-split {
+    flex: 1; display: flex;
+    height: calc(100vh - 140px);
+    min-height: 400px;
+  }
+  .split-left {
+    width: 50%; overflow-y: auto;
+    padding: 20px; border-right: 1px solid var(--border);
+    background: var(--surface2);
+  }
+  .split-right {
+    width: 50%; overflow-y: auto;
+    padding: 20px;
+    display: flex; flex-direction: column;
+  }
+  .passage-label {
+    font-size: 10px; font-weight: 800; letter-spacing: .12em;
+    color: var(--gold); margin-bottom: 12px; text-transform: uppercase;
+  }
+  .passage-text {
+    font-size: 14px; line-height: 1.8; color: var(--text);
+    white-space: pre-line;
+  }
+
+  /* Choices */
+  .choices { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+  .choice-btn {
+    display: flex; align-items: flex-start; gap: 12px;
+    background: var(--card); border: 2px solid var(--border);
+    border-radius: var(--radius); padding: 14px 16px;
+    color: var(--text); font-size: 14px; font-weight: 500;
+    text-align: left; transition: all var(--transition);
+    width: 100%;
+  }
+  .choice-btn:hover:not(:disabled) {
+    border-color: var(--blue); background: rgba(59,130,246,.1);
+    transform: translateX(3px);
+  }
+  .choice-btn.selected {
+    border-color: var(--blue); background: rgba(59,130,246,.15);
+    color: #fff;
+  }
+  .choice-btn:disabled { cursor: not-allowed; }
+  .choice-label {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--surface2); color: var(--text2);
+    font-size: 11px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+    transition: all var(--transition);
+  }
+  .choice-btn.selected .choice-label {
+    background: var(--blue); color: #fff;
+  }
+
+  /* Footer */
+  .exam-footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  }
+  .btn-nav {
+    background: var(--card); border: 1px solid var(--border);
+    color: var(--text); font-size: 13px; font-weight: 700;
+    padding: 10px 20px; border-radius: var(--radius-sm);
+    transition: all var(--transition);
+    min-width: 80px;
+  }
+  .btn-nav:hover { background: var(--surface2); border-color: var(--text3); }
+  .btn-nav:disabled { opacity: .3; cursor: not-allowed; }
+  .btn-finish {
+    background: linear-gradient(135deg, var(--green) 0%, #16a34a 100%);
+    color: #fff; font-size: 13px; font-weight: 800;
+    padding: 10px 20px; border-radius: var(--radius-sm);
+    box-shadow: 0 4px 16px rgba(34,197,94,.3);
+    transition: all var(--transition);
+  }
+  .btn-finish:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(34,197,94,.4); }
+  .q-progress-text { font-size: 12px; color: var(--text2); text-align: center; flex: 1; }
+
+  /* ══ RESULT SCREEN ═════════════════════════════════ */
+  #screen-result {
+    background: radial-gradient(ellipse at 50% 0%, #0f3460 0%, transparent 60%), var(--bg);
+    padding: 32px 20px 60px;
+    align-items: center;
+  }
+  .result-inner { max-width: 760px; width: 100%; }
+
+  .result-verdict {
+    text-align: center; margin-bottom: 36px;
+    padding: 32px 24px;
+    background: var(--card); border-radius: 20px;
+    border: 1px solid var(--border);
+    position: relative; overflow: hidden;
+  }
+  .result-verdict::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(233,69,96,.08) 0%, transparent 70%);
+  }
+  .verdict-icon { font-size: 56px; margin-bottom: 8px; }
+  .verdict-label {
+    font-size: 11px; font-weight: 800; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--text2); margin-bottom: 4px;
+  }
+  .verdict-text {
+    font-size: clamp(36px,8vw,56px); font-weight: 900;
+    letter-spacing: -.02em; line-height: 1;
+  }
+  .verdict-text.pass { color: var(--green); }
+  .verdict-text.fail { color: var(--accent); }
+  .verdict-reason {
+    font-size: 14px; color: var(--text2); margin-top: 8px;
+  }
+  .verdict-score {
+    display: inline-flex; align-items: baseline; gap: 4px;
+    margin-top: 16px; background: var(--surface2);
+    padding: 8px 20px; border-radius: 99px;
+  }
+  .verdict-score .big { font-size: 28px; font-weight: 900; }
+  .verdict-score .slash { font-size: 18px; color: var(--text2); }
+  .verdict-score .small { font-size: 18px; font-weight: 700; }
+  .verdict-score .pct { font-size: 13px; color: var(--text2); margin-left: 4px; }
+
+  /* Section score bars */
+  .section-scores { margin-bottom: 32px; }
+  .section-score-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px 20px;
+    margin-bottom: 10px;
+  }
+  .section-score-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .section-score-name { font-size: 13px; font-weight: 700; }
+  .section-score-nums { font-size: 13px; font-weight: 700; }
+  .section-score-nums.pass { color: var(--green); }
+  .section-score-nums.fail { color: var(--accent); }
+  .score-bar-track {
+    height: 8px; background: var(--surface2); border-radius: 99px;
+    position: relative; overflow: visible;
+  }
+  .score-bar-fill {
+    height: 100%; border-radius: 99px;
+    transition: width 1s cubic-bezier(.34,1.56,.64,1);
+  }
+  .score-bar-fill.pass { background: linear-gradient(90deg, var(--green) 0%, #4ade80 100%); }
+  .score-bar-fill.fail { background: linear-gradient(90deg, var(--accent) 0%, #fb7185 100%); }
+  .cutoff-marker {
+    position: absolute; top: -4px; bottom: -4px;
+    width: 2px; background: var(--accent);
+    border-radius: 1px;
+  }
+  .cutoff-label {
+    position: absolute; top: -20px;
+    transform: translateX(-50%);
+    font-size: 9px; color: var(--accent);
+    white-space: nowrap; font-weight: 700;
+  }
+
+  /* Untested message */
+  .untested-box {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 20px;
+    margin-bottom: 28px;
+    border-left: 3px solid var(--gold);
+  }
+  .untested-box h3 { font-size: 14px; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+  .untested-box p { font-size: 13px; color: var(--text2); line-height: 1.6; }
+
+  /* Review section */
+  .review-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 16px; flex-wrap: wrap; gap: 10px;
+  }
+  .review-header h2 { font-size: 18px; font-weight: 900; }
+  .ruby-toggle {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--card); border: 1px solid var(--border);
+    padding: 8px 14px; border-radius: var(--radius-sm);
+    font-size: 12px; font-weight: 700; cursor: pointer;
+    color: var(--text2); transition: all var(--transition);
+  }
+  .ruby-toggle.active { border-color: var(--purple); color: var(--purple); background: rgba(167,139,250,.1); }
+  .toggle-dot {
+    width: 28px; height: 16px; border-radius: 8px;
+    background: var(--surface2); border: 1px solid var(--border);
+    position: relative; transition: background var(--transition);
+  }
+  .toggle-dot::after {
+    content: ''; position: absolute; top: 2px; left: 2px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--text3);
+    transition: transform var(--transition), background var(--transition);
+  }
+  .ruby-toggle.active .toggle-dot { background: rgba(167,139,250,.3); border-color: var(--purple); }
+  .ruby-toggle.active .toggle-dot::after { transform: translateX(12px); background: var(--purple); }
+
+  .review-cards { display: flex; flex-direction: column; gap: 16px; }
+  .review-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); overflow: hidden;
+    animation: fadeInUp .35s ease both;
+  }
+  @keyframes fadeInUp {
+    from { opacity:0; transform:translateY(12px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  .review-card-header {
+    display: flex; align-items: center; gap: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .review-result-icon { font-size: 16px; }
+  .review-q-id { font-size: 11px; font-weight: 800; color: var(--text3); letter-spacing: .06em; }
+  .review-section-tag { font-size: 11px; color: var(--text2); }
+  .review-card-body { padding: 16px; }
+  .review-instruction { font-size: 12px; color: var(--purple); margin-bottom: 6px; }
+  .review-q-text { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+  .review-passage {
+    font-size: 12px; color: var(--text2); background: var(--surface2);
+    border-radius: 6px; padding: 10px; margin-bottom: 12px;
+    white-space: pre-line; max-height: 120px; overflow-y: auto;
+    border-left: 3px solid var(--gold);
+  }
+  .review-choices { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .review-choice {
+    font-size: 13px; padding: 8px 12px; border-radius: 6px;
+    border: 1px solid var(--border); display: flex; align-items: center; gap: 8px;
+  }
+  .review-choice.correct-answer {
+    background: rgba(34,197,94,.12); border-color: var(--green); color: var(--green);
+  }
+  .review-choice.user-wrong {
+    background: rgba(233,69,96,.12); border-color: var(--accent); color: var(--accent);
+  }
+  .review-choice.neutral { color: var(--text2); }
+
+  /* Explanation tabs */
+  .expl-tabs {
+    display: flex; gap: 4px; margin-bottom: 10px;
+    border-bottom: 1px solid var(--border); padding-bottom: 8px;
+  }
+  .expl-tab {
+    font-size: 11px; font-weight: 800; padding: 4px 12px;
+    border-radius: 99px; cursor: pointer;
+    background: transparent; color: var(--text3);
+    border: 1px solid transparent;
+    transition: all var(--transition);
+    letter-spacing: .06em;
+  }
+  .expl-tab.active {
+    background: var(--surface2); border-color: var(--border); color: var(--text);
+  }
+  .expl-content { font-size: 13px; color: var(--text2); line-height: 1.7; min-height: 40px; }
+  .expl-pending { color: var(--text3); font-style: italic; }
+
+  /* Bottom CTA */
+  .result-cta {
+    display: flex; flex-direction: column; gap: 10px;
+    margin-top: 32px;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--surface2); }
+  ::-webkit-scrollbar-thumb { background: var(--surface); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+
+  /* ruby display */
+  ruby rt { font-size: .55em; color: var(--purple); }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .start-stats { grid-template-columns: repeat(3,1fr); gap: 8px; }
+    .sections-grid { grid-template-columns: 1fr; }
+    .question-split { flex-direction: column; height: auto; }
+    .split-left, .split-right { width: 100%; height: auto; max-height: 40vh; }
+    .split-left { border-right: none; border-bottom: 1px solid var(--border); }
+    .nav-dot { width: 24px; height: 24px; font-size: 9px; }
+  }
+
+  /* Misc utilities */
+  .hidden { display: none !important; }
+  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+  .mt-8 { margin-top: 8px; }
+  .section-color-vocab  { color: #60a5fa; }
+  .section-color-conv   { color: #34d399; }
+  .section-color-listen { color: #f59e0b; }
+  .section-color-read   { color: #c084fc; }
+  .dot-vocab  { background: #60a5fa; }
+  .dot-conv   { background: #34d399; }
+  .dot-listen { background: #f59e0b; }
+  .dot-read   { background: #c084fc; }
+  .bar-vocab  { background: linear-gradient(90deg,#3b82f6,#60a5fa); }
+  .bar-conv   { background: linear-gradient(90deg,#10b981,#34d399); }
+  .bar-listen { background: linear-gradient(90deg,#d97706,#f59e0b); }
+  .bar-read   { background: linear-gradient(90deg,#9333ea,#c084fc); }
+</style>
+</head>
+<body>
+
+<!-- Loading -->
+<div id="loading">
+  <div class="loader-ring"></div>
+  <p style="color:var(--text2);font-size:13px;">問題データを読み込んでいます…</p>
+</div>
+
+<!-- ── START SCREEN ─────────────────────────────── -->
+<div id="screen-start" class="screen">
+  <div class="start-inner">
+    <div class="start-badge">🇯🇵 JFT-Basic A1 Level</div>
+    <h1 class="start-title">CBT <span>模擬試験</span></h1>
+    <p class="start-subtitle">日本語基礎テスト（JFT-Basic）を完全再現した本番形式の模擬テストです</p>
+
+    <div class="start-stats">
+      <div class="stat-card">
+        <div class="num">40</div><div class="lbl">出題数</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">60</div><div class="lbl">分（制限）</div>
+      </div>
+      <div class="stat-card">
+        <div class="num">65<span style="font-size:16px">%</span></div><div class="lbl">合格基準</div>
+      </div>
+    </div>
+
+    <div class="sections-grid">
+      <div class="section-chip">
+        <div class="dot dot-vocab"></div>
+        <div class="info"><div class="name section-color-vocab">文字・語彙</div><div class="detail">25問中10問出題 / 足切:6問</div></div>
+      </div>
+      <div class="section-chip">
+        <div class="dot dot-conv"></div>
+        <div class="info"><div class="name section-color-conv">会話・表現</div><div class="detail">25問中10問出題 / 足切:6問</div></div>
+      </div>
+      <div class="section-chip">
+        <div class="dot dot-listen"></div>
+        <div class="info"><div class="name section-color-listen">聴解</div><div class="detail">25問中12問出題 / 足切:8問</div></div>
+      </div>
+      <div class="section-chip">
+        <div class="dot dot-read"></div>
+        <div class="info"><div class="name section-color-read">読解</div><div class="detail">25問中8問出題 / 足切:5問</div></div>
+      </div>
+    </div>
+
+    <button class="btn-primary" id="btn-start">試験を開始する　→</button>
+    <button class="btn-secondary hidden" id="btn-resume">前回の続きから再開する</button>
+  </div>
+</div>
+
+<!-- ── EXAM SCREEN ──────────────────────────────── -->
+<div id="screen-exam" class="screen">
+  <header class="exam-header">
+    <div class="exam-header-top">
+      <div class="exam-logo">JFT-CBT</div>
+      <div class="timer-display" id="timer">60:00</div>
+      <div class="section-badge-header" id="section-badge"></div>
+    </div>
+    <nav class="progress-nav" id="progress-nav">
+      <div class="progress-nav-inner" id="progress-nav-inner"></div>
+    </nav>
+  </header>
+
+  <main class="exam-main" id="exam-main">
+    <!-- Question rendered here -->
+  </main>
+
+  <footer class="exam-footer">
+    <button class="btn-nav" id="btn-prev">← 前へ</button>
+    <div class="q-progress-text" id="q-progress-text"></div>
+    <button class="btn-nav" id="btn-next">次へ →</button>
+    <button class="btn-finish hidden" id="btn-finish">✓ 試験を終了</button>
+  </footer>
+</div>
+
+<!-- ── RESULT SCREEN ────────────────────────────── -->
+<div id="screen-result" class="screen">
+  <div class="result-inner">
+    <!-- Verdict -->
+    <div class="result-verdict" id="result-verdict"></div>
+    <!-- Section scores -->
+    <div class="section-scores" id="section-scores"></div>
+    <!-- Untested message -->
+    <div class="untested-box" id="untested-box"></div>
+    <!-- Review -->
+    <div class="review-header">
+      <h2>復習モード</h2>
+      <button class="ruby-toggle" id="ruby-toggle">
+        <span>ふりがな</span>
+        <div class="toggle-dot"></div>
+      </button>
+    </div>
+    <div class="review-cards" id="review-cards"></div>
+    <!-- CTA -->
+    <div class="result-cta">
+      <button class="btn-primary" id="btn-retry">もう一度受験する</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════════════════════════════
+//  JFT-Basic CBT System  ·  Engine v1.0 [🔧 配管修正・完全同期版]
+// ════════════════════════════════════════════════════════
+
+const LS_KEY = 'jft_cbt_session';
+const SECTION_CONFIG = {
+  '文字・語彙': { count: 10, cutoff: 6,  color: 'vocab',  label: '文字・語彙' },
+  '会話・表現': { count: 10, cutoff: 6,  color: 'conv',   label: '会話・表現' },
+  '聴解':       { count: 12, cutoff: 8,  color: 'listen', label: '聴解' },
+  '読解':       { count: 8,  cutoff: 5,  color: 'read',   label: '読解' },
+};
+const TOTAL_Q    = 40;
+const TOTAL_TIME = 60 * 60; // seconds
+const PASS_SCORE = 26;
+
+let allQuestions = [];
+let examQuestions = [];
+let answers = {};
+let currentIdx = 0;
+let timeRemaining = TOTAL_TIME;
+let timerInterval = null;
+let rubyOn = false;
+let reviewLangState = {};
+let playCounts = {};
+
+(async function init() {
+  try {
+    const res = await fetch('questions.json');
+    allQuestions = await res.json();
+    allQuestions = allQuestions.map(q => ({
+      ...q,
+      is_parent: q.is_parent === true || q.is_parent === 'True' || q.is_parent === 'true',
+      parent_text: (q.parent_text === 'None' || q.parent_text === null || q.parent_text === 'null') ? null : q.parent_text,
+      correct_answer: Number(q.correct_answer),
+    }));
+    buildGroupPassageMap();
+    hide('loading');
+    checkResume();
+    show('screen-start', 'flex');
+  } catch(e) {
+    document.getElementById('loading').innerHTML =
+      `<p style="color:var(--accent); padding:20px;">⚠ questions.json の読み込みに失敗しました。<br>同じフォルダに正しい形式の questions.json を配置してください。</p>`;
+  }
+})();
+
+const groupPassageMap = {};
+function buildGroupPassageMap() {
+  allQuestions.forEach(q => {
+    if (q.section === '読解' && q.group_id && q.parent_text && q.parent_text.trim() !== '') {
+      groupPassageMap[q.group_id] = q.parent_text;
+    }
+  });
+}
+function getPassage(q) {
+  if (!q.group_id) return '';
+  return groupPassageMap[q.group_id] || '';
+}
+
+// ── RESUME CHECK ─────────────────────────────────────────
+function checkResume() {
+  const saved = loadSession();
+  if (saved && saved.examQuestions && saved.answers !== undefined) {
+    document.getElementById('btn-resume').classList.remove('hidden');
+  }
+}
+
+// ── FISHER-YATES SHUFFLE ─────────────────────────────────
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// ── QUESTION SAMPLING ────────────────────────────────────
+function sampleQuestions() {
+  const result = [];
+
+  // ① 文字・語彙 — 10 random from 25
+  const vocab = allQuestions.filter(q => q.section === '文字・語彙');
+  result.push(...shuffle(vocab).slice(0, 10));
+
+  // ② 会話・表現 — 10 random from 25
+  const conv = allQuestions.filter(q => q.section === '会話・表現');
+  result.push(...shuffle(conv).slice(0, 10));
+
+  // ③ 聴解 — 12 random from 25
+  const listen = allQuestions.filter(q => q.section === '聴解');
+  result.push(...shuffle(listen).slice(0, 12));
+
+  // ④ 読解 — grouped sampling to reach 8
+  const readingSelected = sampleReading(8);
+  result.push(...readingSelected);
+
+  return result;
+}
+
+function sampleReading(targetCount) {
+  const allReading = allQuestions.filter(q => q.section === '読解');
+  const parents = allReading.filter(q => q.is_parent);
+  const shuffledParents = shuffle(parents);
+  const selected = [];
+  for (const parent of shuffledParents) {
+    if (selected.length >= targetCount) break;
+    selected.push(parent);
+    const children = allReading.filter(q => q.group_id === parent.group_id && !q.is_parent);
+    selected.push(...children);
+  }
+  return selected.slice(0, targetCount);
+}
+
+// ── SESSION PERSISTENCE ──────────────────────────────────
+function saveSession() {
+  const data = { examQuestions, answers, currentIdx, timeRemaining };
+  try { localStorage.setItem(LS_KEY, JSON.stringify(data)); } catch(e) {}
+}
+function loadSession() {
+  try { return JSON.parse(localStorage.getItem(LS_KEY)); } catch(e) { return null; }
+}
+function clearSession() {
+  try { localStorage.removeItem(LS_KEY); } catch(e) {}
+}
+
+// ── START EXAM ───────────────────────────────────────────
+document.getElementById('btn-start').addEventListener('click', () => {
+  examQuestions = sampleQuestions();
+  answers = {};
+  currentIdx = 0;
+  timeRemaining = TOTAL_TIME;
+  playCounts = {};
+  reviewLangState = {};
+  saveSession();
+  launchExam();
+});
+
+document.getElementById('btn-resume').addEventListener('click', () => {
+  const saved = loadSession();
+  examQuestions = saved.examQuestions;
+  answers = saved.answers || {};
+  currentIdx = saved.currentIdx || 0;
+  timeRemaining = saved.timeRemaining !== undefined ? saved.timeRemaining : TOTAL_TIME;
+  playCounts = {};
+  reviewLangState = {};
+  launchExam();
+});
+
+function launchExam() {
+  hide('screen-start');
+  show('screen-exam', 'flex');
+  buildNavDots();
+  renderQuestion();
+  startTimer();
+}
+
+// ── TIMER ────────────────────────────────────────────────
+function startTimer() {
+  if (timerInterval) clearInterval(timerInterval);
+  updateTimerDisplay();
+  timerInterval = setInterval(() => {
+    timeRemaining--;
+    saveSession();
+    updateTimerDisplay();
+    if (timeRemaining <= 0) {
+      clearInterval(timerInterval);
+      finishExam(true);
+    }
+  }, 1000);
+}
+function updateTimerDisplay() {
+  const el = document.getElementById('timer');
+  const m = Math.floor(timeRemaining / 60).toString().padStart(2,'0');
+  const s = (timeRemaining % 60).toString().padStart(2,'0');
+  el.textContent = `${m}:${s}`;
+  el.classList.toggle('urgent', timeRemaining <= 300);
+}
+
+// ── NAV DOTS ─────────────────────────────────────────────
+function buildNavDots() {
+  const container = document.getElementById('progress-nav-inner');
+  container.innerHTML = '';
+  examQuestions.forEach((q, i) => {
+    const d = document.createElement('button');
+    d.className = 'nav-dot unanswered';
+    d.textContent = i + 1;
+    d.title = `Q${i+1}: ${q.section}`;
+    d.addEventListener('click', () => { currentIdx = i; renderQuestion(); });
+    container.appendChild(d);
+  });
+}
+function updateNavDots() {
+  const dots = document.querySelectorAll('.nav-dot');
+  dots.forEach((d, i) => {
+    d.classList.remove('unanswered','answered','current');
+    d.classList.add(answers[i] != null ? 'answered' : 'unanswered');
+    if (i === currentIdx) d.classList.add('current');
+  });
+  // Scroll current dot into view
+  dots[currentIdx]?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+
+function renderQuestion() {
+  if (!examQuestions[currentIdx]) return;
+  const q = examQuestions[currentIdx];
+  const main = document.getElementById('exam-main');
+  const cfg = SECTION_CONFIG[q.section] || { color: 'vocab' };
+  const badge = document.getElementById('section-badge');
+  badge.textContent = q.section;
+  badge.className = `section-badge-header section-color-${cfg.color}`;
+  badge.style.border = '1px solid currentColor';
+  badge.style.borderRadius = '99px';
+  badge.style.padding = '3px 10px';
+  badge.style.fontSize = '11px';
+  badge.style.fontWeight = '700';
+  document.getElementById('btn-prev').disabled = currentIdx === 0;
+  const isLast = currentIdx === examQuestions.length - 1;
+  document.getElementById('btn-next').classList.toggle('hidden', isLast);
+  document.getElementById('btn-finish').classList.toggle('hidden', !isLast);
+  document.getElementById('q-progress-text').textContent = `${currentIdx + 1} / ${examQuestions.length}`;
+  updateNavDots();
+  const layout = q.layout_type;
+  if (layout === 'split_2screen') {
+    renderSplit(q, main);
+  } else if (layout === 'cbt_card') {
+    renderCbtCard(q, main);
+  } else {
+    renderStandard(q, main);
+  }
+}
+
+function getChoices(q) {
+  return [q.choice_1, q.choice_2, q.choice_3, q.choice_4].filter(c => c && c.trim() !== '');
+}
+
+function renderChoices(q, container) {
+  const choices = getChoices(q);
+  const labels = ['①','②','③','④'];
+  const choicesDiv = document.createElement('div');
+  choicesDiv.className = 'choices';
+  choices.forEach((c, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn' + (answers[currentIdx] === i+1 ? ' selected' : '');
+    if (q.section === '聴解') {
+      btn.disabled = (playCounts[currentIdx] || 0) === 0;
+    }
+    btn.innerHTML = `<span class="choice-label">${labels[i]}</span><span>${c}</span>`;
+    btn.addEventListener('click', () => {
+      answers[currentIdx] = i + 1;
+      saveSession();
+      renderQuestion();
+    });
+    choicesDiv.appendChild(btn);
+  });
+  container.appendChild(choicesDiv);
+}
+
+function renderStandard(q, container) {
+  container.innerHTML = '';
+  const wrap = document.createElement('div');
+  wrap.className = 'question-standard';
+
+  // Meta
+  const meta = document.createElement('div');
+  meta.className = 'q-meta';
+  meta.innerHTML = `<span class="q-num">Q${currentIdx+1}</span><span class="q-section-tag">${q.section} · ${q.source_lesson}</span>`;
+  wrap.appendChild(meta);
+
+  // Instruction
+  if (q.instruction) {
+    const instr = document.createElement('div');
+    instr.className = 'q-instruction';
+    instr.textContent = q.instruction;
+    wrap.appendChild(instr);
+  }
+
+  // Question text
+  const qt = document.createElement('div');
+  qt.className = 'q-text';
+  qt.textContent = q.question_text || q.instruction;
+  wrap.appendChild(qt);
+
+  renderChoices(q, wrap);
+  container.appendChild(wrap);
+}
+
+function renderCbtCard(q, container) {
+  container.innerHTML = '';
+  const wrap = document.createElement('div');
+  wrap.className = 'question-standard';
+
+  const meta = document.createElement('div');
+  meta.className = 'q-meta';
+  meta.innerHTML = `<span class="q-num">Q${currentIdx+1}</span><span class="q-section-tag">聴解 · ${q.source_lesson}</span>`;
+  wrap.appendChild(meta);
+
+  if (q.instruction) {
+    const instr = document.createElement('div');
+    instr.className = 'q-instruction';
+    // Extract script from instruction [音声スクリプト:...]
+    const scriptMatch = q.instruction.match(/【音声スクリプト：(.*?)】/s);
+    const scriptText = scriptMatch ? scriptMatch[1] : '';
+    const mainInstr = q.instruction.replace(/【音声スクリプト：.*?】/s, '').trim();
+    instr.textContent = mainInstr;
+    wrap.appendChild(instr);
+
+    // Audio player box
+    const cnt = playCounts[currentIdx] || 0;
+    const remaining = 2 - cnt;
+    const audioBox = document.createElement('div');
+    audioBox.className = 'audio-player-box';
+    audioBox.innerHTML = `
+      <div class="audio-icon">🎧</div>
+      ${scriptText ? `<div class="audio-script">📝 スクリプト：${scriptText}</div>` : ''}
+      <div class="audio-controls">
+        <button class="btn-play" id="btn-play-${currentIdx}" ${remaining <= 0 ? 'disabled' : ''}>
+          ${remaining <= 0 ? '再生完了' : `▶ 音声を再生 (残り${remaining}回)`}
+        </button>
+        <span class="play-count">${cnt}/2</span>
+      </div>`;
+    wrap.appendChild(audioBox);
+
+    const playBtn = audioBox.querySelector(`#btn-play-${currentIdx}`);
+    playBtn.addEventListener('click', () => {
+      if (!playCounts[currentIdx]) playCounts[currentIdx] = 0;
+      if (playCounts[currentIdx] < 2) {
+        playCounts[currentIdx]++;
+        renderQuestion();
+      }
+    });
+  }
+
+  const qt = document.createElement('div');
+  qt.className = 'q-text';
+  qt.textContent = q.question_text;
+  wrap.appendChild(qt);
+
+  renderChoices(q, wrap);
+  container.appendChild(wrap);
+}
+
+function renderSplit(q, container) {
+  container.innerHTML = '';
+  const wrap = document.createElement('div');
+  wrap.className = 'question-split';
+
+  // Left: passage
+  const left = document.createElement('div');
+  left.className = 'split-left';
+  const passage = getPassage(q);
+  const passageLabel = document.createElement('div');
+  passageLabel.className = 'passage-label';
+  passageLabel.textContent = '📄 案内文・本文';
+  left.appendChild(passageLabel);
+  const passageText = document.createElement('div');
+  passageText.className = 'passage-text';
+  passageText.textContent = passage || '（本文データ準備中）';
+  left.appendChild(passageText);
+
+  // Right: question + choices
+  const right = document.createElement('div');
+  right.className = 'split-right';
+
+  const meta = document.createElement('div');
+  meta.className = 'q-meta';
+  meta.style.marginBottom = '12px';
+  meta.innerHTML = `<span class="q-num">Q${currentIdx+1}</span><span class="q-section-tag">読解 · ${q.source_lesson}</span>`;
+  right.appendChild(meta);
+
+  if (q.instruction) {
+    const instr = document.createElement('div');
+    instr.className = 'q-instruction';
+    instr.style.marginBottom = '12px';
+    instr.textContent = q.instruction;
+    right.appendChild(instr);
+  }
+
+  const qt = document.createElement('div');
+  qt.className = 'q-text';
+  qt.style.fontSize = '16px';
+  qt.textContent = q.question_text || '下の問題に答えてください。';
+  right.appendChild(qt);
+
+  renderChoices(q, right);
+
+  wrap.appendChild(left);
+  wrap.appendChild(right);
+  container.appendChild(wrap);
+}
+
+function nextQuestion() {
+  if (currentIdx < examQuestions.length - 1) { currentIdx++; renderQuestion(); }
+}
+document.getElementById('btn-next').addEventListener('click', nextQuestion);
+document.getElementById('btn-prev').addEventListener('click', () => {
+  if (currentIdx > 0) { currentIdx--; renderQuestion(); }
+});
+document.getElementById('btn-finish').addEventListener('click', () => {
+  const unanswered = examQuestions.length - Object.keys(answers).length;
+  if (unanswered > 0) {
+    if (!confirm(`まだ ${unanswered} 問が未解答です。試験を終了しますか？`)) return;
+  }
+  finishExam(false);
+});
+
+// ── FINISH & SCORING ─────────────────────────────────────
+function finishExam(timedOut) {
+  clearInterval(timerInterval);
+  clearSession();
+  hide('screen-exam');
+
+  // Score by section
+  const sectionScores = {};
+  Object.keys(SECTION_CONFIG).forEach(s => { sectionScores[s] = { correct: 0, total: 0 }; });
+  let totalCorrect = 0;
+
+  examQuestions.forEach((q, i) => {
+    const sec = q.section;
+    if (sectionScores[sec]) {
+      sectionScores[sec].total++;
+      if (answers[i] === q.correct_answer) {
+        sectionScores[sec].correct++;
+        totalCorrect++;
+      }
+    }
+  });
+
+  // Determine verdict
+  let failedSection = null;
+  for (const [sec, cfg] of Object.entries(SECTION_CONFIG)) {
+    if (sectionScores[sec].correct < cfg.cutoff) { failedSection = sec; break; }
+  }
+  const passed = !failedSection && totalCorrect >= PASS_SCORE;
+
+  renderResult({ sectionScores, totalCorrect, passed, failedSection, timedOut });
+  show('screen-result', 'flex');
+  window.scrollTo(0, 0);
+}
+
+// ── RENDER RESULT ────────────────────────────────────────
+function renderResult({ sectionScores, totalCorrect, passed, failedSection, timedOut }) {
+  const verdictEl = document.getElementById('result-verdict');
+  let reasonText = '';
+  if (!passed) {
+    if (failedSection) {
+      reasonText = `「${failedSection}」セクションの足切り基準（${SECTION_CONFIG[failedSection].cutoff}問）未満による一発不合格`;
+    } else {
+      reasonText = `総得点不足による不合格（合格基準: ${PASS_SCORE}問 / 40問）`;
+    }
+  }
+  if (timedOut) reasonText = '⏱ 制限時間終了 · ' + reasonText;
+  const pct = Math.round(totalCorrect / TOTAL_Q * 100);
+  verdictEl.innerHTML = `
+    <div class="verdict-icon">${passed ? '🎉' : '📚'}</div>
+    <div class="verdict-label">総合判定</div>
+    <div class="verdict-text ${passed ? 'pass' : 'fail'}">${passed ? '合 格' : '不合格'}</div>
+    ${reasonText ? `<div class="verdict-reason" style="color:var(--accent);font-weight:700;margin-top:8px;">${reasonText}</div>` : ''}
+    <div class="verdict-score">
+      <span class="big" style="color:${passed?'var(--green)':'var(--accent)'}">${totalCorrect}</span>
+      <span class="slash">/</span>
+      <span class="small">${TOTAL_Q}</span>
+      <span class="pct">${pct}%</span>
+    </div>`;
+
+  const scoresEl = document.getElementById('section-scores');
+  scoresEl.innerHTML = '';
+  for (const [sec, cfg] of Object.entries(SECTION_CONFIG)) {
+    const { correct, total } = sectionScores[sec];
+    const isPass = correct >= cfg.cutoff;
+    const sPct = total ? Math.round(correct / total * 100) : 0;
+    const cutoffPct = Math.round(cfg.cutoff / total * 100);
+    const card = document.createElement('div');
+    card.className = 'section-score-card';
+    card.innerHTML = `
+      <div class="section-score-header">
+        <span class="section-score-name section-color-${cfg.color}">${sec}</span>
+        <span class="section-score-nums ${isPass?'pass':'fail'}">${correct}/${total} (${sPct}%) ${isPass ? '✓ クリア' : '✗ 足切警告'}</span>
+      </div>
+      <div class="score-bar-track">
+        <div class="score-bar-fill ${isPass?'pass':'fail'} bar-${cfg.color}" style="width:0%" data-target="${sPct}%"></div>
+        <div class="cutoff-marker" style="left:${cutoffPct}%">
+          <div class="cutoff-label">足切(${cfg.cutoff}問)</div>
+        </div>
+      </div>`;
+    scoresEl.appendChild(card);
+  }
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.score-bar-fill').forEach(b => {
+      b.style.width = b.dataset.target;
+    });
+  });
+
+  const testedIds = new Set(examQuestions.map(q => q.question_id));
+  const untested = allQuestions.filter(q => !testedIds.has(q.question_id));
+  const untestedBox = document.getElementById('untested-box');
+  if (untested.length > 0) {
+    const sample = shuffle(untested).slice(0, 3);
+    const lessons = [...new Set(sample.map(q => q.source_lesson))].slice(0, 2);
+    const ids = sample.map(q => q.question_id).join('・');
+    untestedBox.style.display = 'block';
+    untestedBox.innerHTML = `
+      <h3>📦 プールにはまだ解いていない問題が眠っています！</h3>
+      <p>今回出題されなかった <strong style="color:var(--gold)">${untested.length}問</strong> がデータベースに残っています。<br>
+      例えば、まだあなたが挑戦していない「${lessons.join('・')}」の問題（${ids} など）があります。<br>
+      繰り返し挑戦して、出題プール完全制覇を目指しましょう！💪</p>`;
+  } else {
+    untestedBox.style.display = 'none';
+  }
+
+  renderReviewCards();
+}
+
+// ── REVIEW CARDS ─────────────────────────────────────────
+function renderReviewCards() {
+  const container = document.getElementById('review-cards');
+  container.innerHTML = '';
+  examQuestions.forEach((q, i) => {
+    container.appendChild(buildReviewCard(q, i));
+  });
+}
+
+function buildReviewCard(q, idx) {
+  const userAnswer = answers[idx];
+  const correct = q.correct_answer;
+  const isCorrect = userAnswer === correct;
+  const choices = getChoices(q);
+  const labels = ['①','②','③','④'];
+  const lang = reviewLangState[idx] || 'jp';
+
+  const card = document.createElement('div');
+  card.className = 'review-card';
+  card.style.animationDelay = `${idx * 0.03}s`;
+  card.dataset.idx = idx;
+
+  const header = document.createElement('div');
+  header.className = 'review-card-header';
+  header.innerHTML = `
+    <span class="review-result-icon">${isCorrect ? '✅' : '❌'}</span>
+    <span class="review-q-id">${q.question_id} · Q${idx+1}</span>
+    <span class="review-section-tag section-color-${SECTION_CONFIG[q.section]?.color || 'vocab'}">${q.section}</span>
+    ${!isCorrect && userAnswer ? `<span style="font-size:11px;color:var(--accent);margin-left:auto">あなたの回答: ${labels[userAnswer-1]}</span>` : ''}
+    ${!userAnswer ? `<span style="font-size:11px;color:var(--text3);margin-left:auto">未解答</span>` : ''}`;
+  card.appendChild(header);
+
+  const body = document.createElement('div');
+  body.className = 'review-card-body';
+
+  if (q.instruction) {
+    const instr = document.createElement('div');
+    instr.className = 'review-instruction';
+    instr.textContent = q.instruction.replace(/【音声スクリプト：.*?】/s, '').trim();
+    body.appendChild(instr);
+  }
+
+  const passage = getPassage(q);
+  if (passage) {
+    const pt = document.createElement('div');
+    pt.className = 'review-passage';
+    pt.textContent = passage;
+    body.appendChild(pt);
+  }
+
+  const qtDiv = document.createElement('div');
+  qtDiv.className = 'review-q-text';
+  const displayPlain = q.question_text || q.instruction || '';
+  qtDiv.dataset.plain = displayPlain;
+  qtDiv.dataset.ruby = q.question_text_ruby || '';
+  // Ruby fallback: only use ruby if field is non-empty
+  qtDiv.innerHTML = (rubyOn && q.question_text_ruby && q.question_text_ruby.trim() !== '')
+    ? q.question_text_ruby
+    : displayPlain;
+  body.appendChild(qtDiv);
+
+  const choicesDiv = document.createElement('div');
+  choicesDiv.className = 'review-choices';
+  choices.forEach((c, i) => {
+    const div = document.createElement('div');
+    const isCorrectChoice = (i + 1) === correct;
+    const isUserChoice = (i + 1) === userAnswer;
+    let cls = 'review-choice neutral';
+    if (isCorrectChoice) cls = 'review-choice correct-answer';
+    else if (isUserChoice && !isCorrect) cls = 'review-choice user-wrong';
+    div.className = cls;
+    div.innerHTML = `<span>${labels[i]}</span><span>${c}</span>${isCorrectChoice ? '<span style="margin-left:auto;font-size:11px">✓ 正解</span>' : ''}`;
+    choicesDiv.appendChild(div);
+  });
+  body.appendChild(choicesDiv);
+
+  const tabs = document.createElement('div');
+  tabs.className = 'expl-tabs';
+  ['jp','en','tl'].forEach(l => {
+    const tab = document.createElement('button');
+    tab.className = 'expl-tab' + (lang === l ? ' active' : '');
+    tab.textContent = l === 'jp' ? 'JP' : l === 'en' ? 'EN' : 'TL';
+    tab.dataset.lang = l;
+    tab.addEventListener('click', () => {
+      reviewLangState[idx] = l;
+      tabs.querySelectorAll('.expl-tab').forEach(t => t.classList.toggle('active', t.dataset.lang === l));
+      exContent.innerHTML = getExplanation(q, l);
+    });
+    tabs.appendChild(tab);
+  });
+  body.appendChild(tabs);
+
+  const exContent = document.createElement('div');
+  exContent.className = 'expl-content';
+  exContent.innerHTML = getExplanation(q, lang);
+  body.appendChild(exContent);
+
+  card.appendChild(body);
+  return card;
+}
+
+function getExplanation(q, lang) {
+  const baseExpl = q.explanation || '（解説データなし）';
+  if (lang === 'jp') {
+    return baseExpl;
+  } else if (lang === 'en') {
+    if (q.explanation_en && q.explanation_en.trim() !== '') return q.explanation_en;
+    return `<span class="expl-pending">[Translation pending]</span><br><span style="opacity:0.7">${baseExpl}</span>`;
+  } else if (lang === 'tl') {
+    if (q.explanation_tl && q.explanation_tl.trim() !== '') return q.explanation_tl;
+    return `<span class="expl-pending">[Pagsasalin sa paglaon]</span><br><span style="opacity:0.7">${baseExpl}</span>`;
+  }
+  return '';
+}
+
+document.getElementById('ruby-toggle').addEventListener('click', () => {
+  rubyOn = !rubyOn;
+  document.getElementById('ruby-toggle').classList.toggle('active', rubyOn);
+  document.querySelectorAll('.review-q-text').forEach(el => {
+    const ruby = el.dataset.ruby;
+    const plain = el.dataset.plain;
+    if (rubyOn && ruby && ruby.trim() !== '') {
+      el.innerHTML = ruby;
+    } else {
+      el.textContent = plain;
+    }
+  });
+});
+
+// ── RETRY ────────────────────────────────────────────────
+document.getElementById('btn-retry').addEventListener('click', () => {
+  hide('screen-result');
+  clearSession();
+  examQuestions = sampleQuestions();
+  answers = {};
+  currentIdx = 0;
+  timeRemaining = TOTAL_TIME;
+  playCounts = {};
+  reviewLangState = {};
+  saveSession();
+  launchExam();
+});
+
+// ── HELPERS ──────────────────────────────────────────────
+function show(id, display='block') {
+  const el = document.getElementById(id);
+  if (el) { el.style.display = display; el.classList.add('active'); }
+}
+function hide(id) {
+  const el = document.getElementById(id);
+  if (el) { el.style.display = 'none'; el.classList.remove('active'); }
+}
+</script>
+</body>
+</html>
