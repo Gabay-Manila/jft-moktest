@@ -553,9 +553,7 @@
   .bar-conv   { background: linear-gradient(90deg,#10b981,#34d399); }
   .bar-listen { background: linear-gradient(90deg,#d97706,#f59e0b); }
   .bar-read   { background: linear-gradient(90deg,#9333ea,#c084fc); }
-</style>
-</head>
-<body>
+
   /* ── LEVEL SELECTOR ────────────────────────────── */
   .level-selector {
     display: flex; gap: 10px; margin-bottom: 28px; justify-content: center;
@@ -598,6 +596,7 @@
 
   /* Dynamic section chips */
   #section-chips-container { display: contents; }
+
 </style>
 </head>
 <body>
@@ -1121,24 +1120,27 @@ function renderCbtCard(q, container) {
   if (q.instruction) {
     const instr = document.createElement('div');
     instr.className = 'q-instruction';
-    instr.textContent = q.instruction.replace(/【音声スクリプト：.*?】/s,'').trim();
+    // 【音声スクリプト：...】を除いた指示文だけ表示
+    const instrText = q.instruction.replace(/【音声スクリプト：[\s\S]*?】/g, '').trim();
+    instr.textContent = instrText || '音声を聴いて、質問に答えてください。';
     wrap.appendChild(instr);
   }
 
   const cnt       = playCounts[currentIdx] || 0;
   const remaining = 2 - cnt;
 
-  // Script text: stored in media_file field
-  const scriptText = q.media_file || q.question_text || '';
+  // 音声スクリプト: instruction の【音声スクリプト：...】から抽出
+  const scriptMatch = (q.instruction || '').match(/【音声スクリプト：([\s\S]*?)】/);
+  const scriptText  = scriptMatch ? scriptMatch[1].trim() : (q.question_text || '');
 
   const audioBox = document.createElement('div');
   audioBox.className = 'audio-player-box';
 
-  // Show script preview
+  // スクリプトプレビュー表示（受験者には見せない → 本番はコメントアウト可）
   if (scriptText) {
     const scriptDiv = document.createElement('div');
     scriptDiv.className = 'audio-script';
-    scriptDiv.textContent = `📝 ${scriptText}`;
+    scriptDiv.textContent = `🎧 スクリプト（開発用）: ${scriptText}`;
     audioBox.appendChild(scriptDiv);
   }
 
