@@ -963,7 +963,10 @@ document.getElementById('btn-resume').addEventListener('click', async () => {
   document.getElementById('loading').style.display = 'flex';
   try {
     await loadQuestions();
-    examQuestions   = saved.examQuestions;
+    // correct_answer をNumber型に確実に再正規化（localStorage経由で文字列化対策）
+    examQuestions   = (saved.examQuestions || []).map(q => ({
+      ...q, correct_answer: Number(q.correct_answer)
+    }));
     answers         = saved.answers || {};
     currentIdx      = saved.currentIdx || 0;
     timeRemaining   = saved.timeRemaining ?? TOTAL_TIME;
@@ -1063,10 +1066,11 @@ function getChoices(q) {
 }
 
 function renderChoices(q, container) {
-  const choices = getChoices(q);
-  const labels  = ['①','②','③','④'];
-  const div     = document.createElement('div');
-  div.className = 'choices';
+  const choices  = getChoices(q);
+  const labels   = ['①','②','③','④'];
+  const correct  = Number(q.correct_answer);   // 型を確実にNumber化
+  const div      = document.createElement('div');
+  div.className  = 'choices';
   choices.forEach((c, i) => {
     const btn = document.createElement('button');
     btn.className = 'choice-btn' + (answers[currentIdx] === i+1 ? ' selected' : '');
@@ -1131,7 +1135,14 @@ function renderCbtCard(q, container) {
 
   // 音声スクリプト: instruction の【音声スクリプト：...】から抽出
   const scriptMatch = (q.instruction || '').match(/【音声スクリプト：([\s\S]*?)】/);
-  const scriptText  = scriptMatch ? scriptMatch[1].trim() : (q.question_text || '');
+  const rawScript   = scriptMatch ? scriptMatch[1].trim() : (q.question_text || '');
+  // 読み仮名カッコ（ひらがな）・英語注釈を除去してクリーンなテキストにする
+  const scriptText  = rawScript
+    .replace(/（[ぁ-んァ-ン\s・ー]+）/g, '')   // （くじはん）などの読み仮名
+    .replace(/\([ぁ-んァ-ン\s・ー]+\)/g, '')    // (くじはん) 半角括弧版
+    .replace(/【[^】]*】/g, '')                  // 【残った括弧タグ】
+    .replace(/\s+/g, ' ')
+    .trim();
 
   const audioBox = document.createElement('div');
   audioBox.className = 'audio-player-box';
@@ -1296,7 +1307,7 @@ function finishExam(timedOut) {
   examQuestions.forEach((q, i) => {
     if (sectionScores[q.section]) {
       sectionScores[q.section].total++;
-      if (answers[i] === q.correct_answer) {
+      if (answers[i] === Number(q.correct_answer)) {   // 型保証
         sectionScores[q.section].correct++;
         totalCorrect++;
       }
@@ -1396,7 +1407,7 @@ function renderReviewCards() {
 
 function buildReviewCard(q, idx) {
   const userAnswer = answers[idx];
-  const correct    = q.correct_answer;
+  const correct    = Number(q.correct_answer);   // 型保証
   const isCorrect  = userAnswer === correct;
   const choices    = getChoices(q);
   const labels     = ['①','②','③','④'];
