@@ -527,7 +527,36 @@
   /* ruby display */
   ruby rt { font-size: .55em; color: var(--purple); }
 
-  /* LEVEL SELECTOR */
+  /* Responsive */
+  @media (max-width: 480px) {
+    .start-stats { grid-template-columns: repeat(3,1fr); gap: 8px; }
+    .sections-grid { grid-template-columns: 1fr; }
+    .question-split { flex-direction: column; height: auto; }
+    .split-left, .split-right { width: 100%; height: auto; max-height: 40vh; }
+    .split-left { border-right: none; border-bottom: 1px solid var(--border); }
+    .nav-dot { width: 24px; height: 24px; font-size: 9px; }
+  }
+
+  /* Misc utilities */
+  .hidden { display: none !important; }
+  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+  .mt-8 { margin-top: 8px; }
+  .section-color-vocab  { color: #60a5fa; }
+  .section-color-conv   { color: #34d399; }
+  .section-color-listen { color: #f59e0b; }
+  .section-color-read   { color: #c084fc; }
+  .dot-vocab  { background: #60a5fa; }
+  .dot-conv   { background: #34d399; }
+  .dot-listen { background: #f59e0b; }
+  .dot-read   { background: #c084fc; }
+  .bar-vocab  { background: linear-gradient(90deg,#3b82f6,#60a5fa); }
+  .bar-conv   { background: linear-gradient(90deg,#10b981,#34d399); }
+  .bar-listen { background: linear-gradient(90deg,#d97706,#f59e0b); }
+  .bar-read   { background: linear-gradient(90deg,#9333ea,#c084fc); }
+</style>
+</head>
+<body>
+  /* ── LEVEL SELECTOR ────────────────────────────── */
   .level-selector {
     display: flex; gap: 10px; margin-bottom: 28px; justify-content: center;
   }
@@ -567,47 +596,26 @@
   .level-card.a2 .lv-check { background: var(--accent); }
   .level-card.active .lv-check { display: flex; }
 
-  /* Responsive */
-  @media (max-width: 480px) {
-    .start-stats { grid-template-columns: repeat(3,1fr); gap: 8px; }
-    .sections-grid { grid-template-columns: 1fr; }
-    .question-split { flex-direction: column; height: auto; }
-    .split-left, .split-right { width: 100%; height: auto; max-height: 40vh; }
-    .split-left { border-right: none; border-bottom: 1px solid var(--border); }
-    .nav-dot { width: 24px; height: 24px; font-size: 9px; }
-  }
-
-  /* Misc utilities */
-  .hidden { display: none !important; }
-  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
-  .mt-8 { margin-top: 8px; }
-  .section-color-vocab  { color: #60a5fa; }
-  .section-color-conv   { color: #34d399; }
-  .section-color-listen { color: #f59e0b; }
-  .section-color-read   { color: #c084fc; }
-  .dot-vocab  { background: #60a5fa; }
-  .dot-conv   { background: #34d399; }
-  .dot-listen { background: #f59e0b; }
-  .dot-read   { background: #c084fc; }
-  .bar-vocab  { background: linear-gradient(90deg,#3b82f6,#60a5fa); }
-  .bar-conv   { background: linear-gradient(90deg,#10b981,#34d399); }
-  .bar-listen { background: linear-gradient(90deg,#d97706,#f59e0b); }
-  .bar-read   { background: linear-gradient(90deg,#9333ea,#c084fc); }
+  /* Dynamic section chips */
+  #section-chips-container { display: contents; }
 </style>
 </head>
 <body>
 
+<!-- Loading -->
 <div id="loading">
   <div class="loader-ring"></div>
   <p style="color:var(--text2);font-size:13px;">問題データを読み込んでいます…</p>
 </div>
 
+<!-- ── START SCREEN ─────────────────────────────── -->
 <div id="screen-start" class="screen">
   <div class="start-inner">
     <div class="start-badge" id="start-badge">🇯🇵 JFT-Basic A1 Level</div>
     <h1 class="start-title">CBT <span>模擬試験</span></h1>
     <p class="start-subtitle">日本語基礎テスト（JFT-Basic）を完全再現した本番形式の模擬テストです</p>
 
+    <!-- Level Selector -->
     <div class="level-selector">
       <div class="level-card a1 active" id="lvcard-a1" onclick="selectLevel('A1')">
         <div class="lv-check">✓</div>
@@ -636,13 +644,15 @@
     </div>
 
     <div class="sections-grid" id="section-chips-container">
-      </div>
+      <!-- rendered by JS based on level -->
+    </div>
 
-    <button class="btn-primary" id="btn-start">試験を開始する →</button>
+    <button class="btn-primary" id="btn-start">試験を開始する　→</button>
     <button class="btn-secondary hidden" id="btn-resume">前回の続きから再開する</button>
   </div>
 </div>
 
+<!-- ── EXAM SCREEN ──────────────────────────────── -->
 <div id="screen-exam" class="screen">
   <header class="exam-header">
     <div class="exam-header-top">
@@ -665,6 +675,7 @@
   </footer>
 </div>
 
+<!-- ── RESULT SCREEN ────────────────────────────── -->
 <div id="screen-result" class="screen">
   <div class="result-inner">
     <div class="result-verdict" id="result-verdict"></div>
@@ -693,6 +704,9 @@
 
 // ── VoiceEngine (Web Speech API) ─────────────────────
 const VoiceEngine = (() => {
+  let onEndCallback = null;
+  let onStartCallback = null;
+
   function speak(text, lang = 'ja-JP', rate = 0.80, onStart, onEnd) {
     if (!('speechSynthesis' in window)) {
       if (onEnd) onEnd();
@@ -723,7 +737,7 @@ const PASS_SCORE = 26;
 // Level configs
 const LEVEL_CONFIG = {
   A1: {
-    dataUrl: 'public/data/questions.json',
+    dataUrl: 'questions.json',
     label:   'A1 Level',
     sections: {
       '文字・語彙': { count: 10, cutoff: 6,  color: 'vocab',  total: 25 },
@@ -733,7 +747,7 @@ const LEVEL_CONFIG = {
     },
   },
   A2: {
-    dataUrl: 'public/data/questions_a2.json',
+    dataUrl: 'questions_a2.json',
     label:   'A2 Level',
     sections: {
       '文字・語彙': { count: 8,  cutoff: 5,  color: 'vocab',  total: 27 },
@@ -747,7 +761,7 @@ const LEVEL_CONFIG = {
 // ── STATE ────────────────────────────────────────────
 let currentLevel    = 'A1';
 let allQuestions    = [];      // raw loaded data
-let parentTextCache = {};      // group_id -> parent_text
+let parentTextCache = {};      // group_id -> parent_text  ← STEP1
 let examPool        = [];      // questions only (is_parent=false)
 let examQuestions   = [];      // 40-item exam set
 let answers         = {};
@@ -774,7 +788,7 @@ function selectLevel(lv) {
   document.getElementById('start-badge').textContent =
     lv === 'A1' ? '🇯🇵 JFT-Basic A1 Level' : '🇯🇵 JFT-Basic A2 Level';
   renderSectionChips(lv);
-  
+  // Clear any saved session for different level
   const saved = loadSession();
   if (saved && saved.level !== lv) {
     document.getElementById('btn-resume').classList.add('hidden');
@@ -786,6 +800,7 @@ function selectLevel(lv) {
 function renderSectionChips(lv) {
   const cfg = LEVEL_CONFIG[lv].sections;
   const container = document.getElementById('section-chips-container');
+  const colorMap = { vocab:'vocab', conv:'conv', listen:'listen', read:'read' };
   container.innerHTML = Object.entries(cfg).map(([sec, c]) => `
     <div class="section-chip">
       <div class="dot dot-${c.color}"></div>
@@ -794,6 +809,7 @@ function renderSectionChips(lv) {
         <div class="detail">${c.total}問中${c.count}問出題 / 足切:${c.cutoff}問</div>
       </div>
     </div>`).join('');
+  // Update total question count display
   const total = Object.values(cfg).reduce((s, c) => s + c.count, 0);
   document.getElementById('stat-questions').textContent = total;
 }
@@ -804,6 +820,7 @@ async function loadQuestions() {
   const res  = await fetch(url);
   const raw  = await res.json();
 
+  // Normalize
   allQuestions = raw.map(q => ({
     ...q,
     is_parent:      q.is_parent === true || q.is_parent === 'True' || q.is_parent === 'true',
@@ -813,10 +830,12 @@ async function loadQuestions() {
   }));
 
   // ── STEP1: 親テキストキャッシュ ─────────────────────
+  // 親レコード（is_parent=true）をキャッシュに格納し、examPoolから除外
   parentTextCache = {};
   examPool = [];
   allQuestions.forEach(q => {
     if (q.is_parent) {
+      // 親レコードはpassageキャッシュに格納
       if (q.group_id && q.parent_text) {
         parentTextCache[q.group_id] = q.parent_text;
       }
@@ -825,6 +844,7 @@ async function loadQuestions() {
     }
   });
 
+  // 子レコードのparent_textもキャッシュに追加（子側に格納されている場合）
   allQuestions.forEach(q => {
     if (!q.is_parent && q.group_id && q.parent_text) {
       if (!parentTextCache[q.group_id]) {
@@ -834,7 +854,7 @@ async function loadQuestions() {
   });
 }
 
-// ── GET PASSAGE ──────────────────────────
+// ── GET PASSAGE (STEP1 fix) ──────────────────────────
 function getPassage(q) {
   if (!q.group_id) return '';
   return parentTextCache[q.group_id] || '';
@@ -866,11 +886,12 @@ function sampleQuestions() {
   const result = [];
 
   for (const [sec, c] of Object.entries(cfg)) {
-    if (sec === '読解') continue; 
+    if (sec === '読解') continue; // handled separately
     const pool = examPool.filter(q => q.section === sec);
     result.push(...shuffle(pool).slice(0, c.count));
   }
 
+  // 読解: grouped sampling
   const readingCfg = cfg['読解'];
   if (readingCfg) {
     result.push(...sampleReading(readingCfg.count));
@@ -880,7 +901,10 @@ function sampleQuestions() {
 }
 
 function sampleReading(targetCount) {
+  // Use parentTextCache keys as groups — sample from child (non-parent) questions
   const readingPool = examPool.filter(q => q.section === '読解');
+
+  // Group children by group_id
   const groups = {};
   readingPool.forEach(q => {
     if (q.group_id) {
@@ -889,6 +913,7 @@ function sampleReading(targetCount) {
     }
   });
 
+  // Shuffle group order
   const groupIds = shuffle(Object.keys(groups));
   const selected = [];
   for (const gid of groupIds) {
@@ -951,7 +976,8 @@ document.getElementById('btn-resume').addEventListener('click', async () => {
 });
 
 function launchExam() {
-  document.getElementById('exam-logo').textContent = `JFT-CBT ${currentLevel}`;
+  document.getElementById('exam-logo').textContent =
+    `JFT-CBT ${currentLevel}`;
   hide('screen-start');
   show('screen-exam', 'flex');
   buildNavDots();
@@ -1011,18 +1037,24 @@ function renderQuestion() {
   const badge = document.getElementById('section-badge');
   badge.textContent   = q.section;
   badge.className     = `section-badge-header section-color-${sc.color}`;
+  badge.style.border  = '1px solid currentColor';
+  badge.style.borderRadius = '99px';
+  badge.style.padding = '3px 10px';
+  badge.style.fontSize= '11px';
+  badge.style.fontWeight='700';
 
   document.getElementById('btn-prev').disabled = currentIdx === 0;
   const isLast = currentIdx === examQuestions.length - 1;
   document.getElementById('btn-next').classList.toggle('hidden', isLast);
   document.getElementById('btn-finish').classList.toggle('hidden', !isLast);
-  document.getElementById('q-progress-text').textContent = `${currentIdx + 1} / ${examQuestions.length}`;
+  document.getElementById('q-progress-text').textContent =
+    `${currentIdx + 1} / ${examQuestions.length}`;
 
   updateNavDots();
 
   const main = document.getElementById('exam-main');
   if      (q.layout_type === 'split_2screen') renderSplit(q, main);
-  else if (q.layout_type === 'cbt_card')       renderCbtCard(q, main);
+  else if (q.layout_type === 'cbt_card')      renderCbtCard(q, main);
   else                                         renderStandard(q, main);
 }
 
@@ -1095,10 +1127,20 @@ function renderCbtCard(q, container) {
 
   const cnt       = playCounts[currentIdx] || 0;
   const remaining = 2 - cnt;
+
+  // Script text: stored in media_file field
   const scriptText = q.media_file || q.question_text || '';
 
   const audioBox = document.createElement('div');
   audioBox.className = 'audio-player-box';
+
+  // Show script preview
+  if (scriptText) {
+    const scriptDiv = document.createElement('div');
+    scriptDiv.className = 'audio-script';
+    scriptDiv.textContent = `📝 ${scriptText}`;
+    audioBox.appendChild(scriptDiv);
+  }
 
   const controls = document.createElement('div');
   controls.className = 'audio-controls';
@@ -1121,20 +1163,23 @@ function renderCbtCard(q, container) {
   playBtn.addEventListener('click', () => {
     if ((playCounts[currentIdx] || 0) >= 2) return;
 
+    // 即座にUIをロック（準備中表示）
     playBtn.disabled  = true;
     playBtn.textContent = '⏳ 音声準備中...';
     playBtn.style.opacity = '0.6';
 
-    const textToSpeak = scriptText;
+    const textToSpeak = scriptText || q.question_text || '';
 
     VoiceEngine.speak(
       textToSpeak,
       'ja-JP',
       0.80,
+      // onStart: 喋り始めたら
       () => {
         playBtn.textContent = '🔊 再生中（連打禁止）';
         playBtn.style.opacity = '1';
       },
+      // onEnd: 喋り終わったら
       () => {
         if (!playCounts[currentIdx]) playCounts[currentIdx] = 0;
         playCounts[currentIdx]++;
@@ -1148,6 +1193,7 @@ function renderCbtCard(q, container) {
           playBtn.disabled = true;
         }
         countSpan.textContent = `${playCounts[currentIdx]}/2`;
+        // 選択肢のdisabledを解除するためにre-render
         renderQuestion();
       }
     );
@@ -1173,9 +1219,10 @@ function renderSplit(q, container) {
   const wrap = document.createElement('div');
   wrap.className = 'question-split';
 
+  // Left: passage from cache (STEP1 fix)
   const left    = document.createElement('div');
   left.className = 'split-left';
-  const passage  = getPassage(q);
+  const passage  = getPassage(q);   // ← parentTextCacheから安全に逆引き
 
   const passLabel = document.createElement('div');
   passLabel.className = 'passage-label';
@@ -1187,6 +1234,7 @@ function renderSplit(q, container) {
   passText.textContent = passage || '（本文データ読み込み中…）';
   left.appendChild(passText);
 
+  // Right: question
   const right = document.createElement('div');
   right.className = 'split-right';
 
@@ -1316,6 +1364,7 @@ function renderResult({ sectionScores, totalCorrect, passed, failedSection, time
     document.querySelectorAll('.score-bar-fill').forEach(b => { b.style.width = b.dataset.target; });
   });
 
+  // Untested message
   const testedIds = new Set(examQuestions.map(q => q.question_id));
   const untested  = examPool.filter(q => !testedIds.has(q.question_id));
   const untestedBox = document.getElementById('untested-box');
@@ -1408,6 +1457,7 @@ function buildReviewCard(q, idx) {
   });
   body.appendChild(choicesDiv);
 
+  // Explanation tabs
   const tabs = document.createElement('div');
   tabs.className = 'expl-tabs';
   ['jp','en','tl'].forEach(l => {
@@ -1436,8 +1486,12 @@ function buildReviewCard(q, idx) {
 function getExplanation(q, lang) {
   const base = q.explanation || '（解説データなし）';
   if (lang === 'jp') return base;
-  if (lang === 'en') return q.explanation_en?.trim() ? q.explanation_en : `<span class="expl-pending">[Translation pending]</span><br><span style="opacity:.7">${base}</span>`;
-  if (lang === 'tl') return q.explanation_tl?.trim() ? q.explanation_tl : `<span class="expl-pending">[Pagsasalin sa paglaon]</span><br><span style="opacity:.7">${base}</span>`;
+  if (lang === 'en') return q.explanation_en?.trim()
+    ? q.explanation_en
+    : `<span class="expl-pending">[Translation pending]</span><br><span style="opacity:.7">${base}</span>`;
+  if (lang === 'tl') return q.explanation_tl?.trim()
+    ? q.explanation_tl
+    : `<span class="expl-pending">[Pagsasalin sa paglaon]</span><br><span style="opacity:.7">${base}</span>`;
   return '';
 }
 
