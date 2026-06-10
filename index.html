@@ -250,6 +250,34 @@
     background: var(--surface2); padding: 10px; border-radius: 6px;
     text-align: left; line-height: 1.6;
   }
+  .audio-script--hidden { display: none !important; }
+
+  /* Share button */
+  .btn-share {
+    width: 100%;
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--text2); font-size: 14px; font-weight: 700;
+    padding: 14px 32px; border-radius: var(--radius);
+    transition: all var(--transition); cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .btn-share:hover { background: var(--card); color: var(--text); border-color: var(--text3); }
+  .btn-share.copied { border-color: var(--green); color: var(--green); }
+
+  /* Toast notification */
+  .toast {
+    position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
+    background: var(--green); color: #fff;
+    font-size: 14px; font-weight: 700;
+    padding: 12px 28px; border-radius: 99px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    opacity: 0; pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease;
+    z-index: 999; white-space: nowrap;
+  }
+  .toast.show {
+    opacity: 1; transform: translateX(-50%) translateY(0);
+  }
   .audio-controls { display: flex; align-items: center; justify-content: center; gap: 12px; }
   .btn-play {
     background: var(--green); color: #fff;
@@ -698,9 +726,13 @@
     <div class="review-cards" id="review-cards"></div>
     <div class="result-cta">
       <button class="btn-primary" id="btn-retry">もう一度受験する</button>
+      <button class="btn-share" id="btn-share">📋 結果をコピーして共有する</button>
     </div>
   </div>
 </div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
 
 <script>
 // ════════════════════════════════════════════════════════
@@ -1074,13 +1106,13 @@ function getChoices(q) {
 }
 
 function renderChoices(q, container) {
-  const choices  = getChoices(q);
-  const labels   = ['①','②','③','④'];
-  const correct  = Number(q.correct_answer);   // 型を確実にNumber化
-  const div      = document.createElement('div');
-  div.className  = 'choices';
+  const choices = getChoices(q);
+  const labels  = ['①','②','③','④'];
+  const div     = document.createElement('div');
+  div.className = 'choices';
   choices.forEach((c, i) => {
     const btn = document.createElement('button');
+    // 試験中は選択状態（青）のみ表示。正誤（緑・赤）は復習モードのみ
     btn.className = 'choice-btn' + (answers[currentIdx] === i+1 ? ' selected' : '');
     if (q.section === '聴解') btn.disabled = (playCounts[currentIdx] || 0) === 0;
     btn.innerHTML = `<span class="choice-label">${labels[i]}</span><span>${c}</span>`;
@@ -1129,37 +1161,45 @@ function renderCbtCard(q, container) {
     <span class="q-section-tag">聴解 · ${q.source_lesson}</span>`;
   wrap.appendChild(meta);
 
-  if (q.instruction) {
-    const instr = document.createElement('div');
-    instr.className = 'q-instruction';
-    // 【音声スクリプト：...】を除いた指示文だけ表示
-    const instrText = q.instruction.replace(/【音声スクリプト：[\s\S]*?】/g, '').trim();
-    instr.textContent = instrText || '音声を聴いて、質問に答えてください。';
-    wrap.appendChild(instr);
-  }
+  // ── スクリプト抽出（A1/A2両対応）────────────────
+  const instrRaw = q.instruction || '';
+  const scriptMatch = instrRaw.match(/【音声スクリプト：([\s\S]+?)】/);
 
-  const cnt       = playCounts[currentIdx] || 0;
-  const remaining = 2 - cnt;
+  // 読み上げ用スクリプト：【】内のセリフのみ
+  const rawScript = scriptMatch
+    ? scriptMatch[1]
+    : '';   // A2など【】がない場合は空（読み上げなし）
 
-  // 音声スクリプト: instruction の【音声スクリプト：...】から抽出
-  const scriptMatch = (q.instruction || '').match(/【音声スクリプト：([\s\S]*?)】/);
-  const rawScript   = scriptMatch ? scriptMatch[1].trim() : (q.question_text || '');
-  // 読み仮名カッコ（ひらがな）・英語注釈を除去してクリーンなテキストにする
-  const scriptText  = rawScript
-    .replace(/（[ぁ-んァ-ン\s・ー]+）/g, '')   // （くじはん）などの読み仮名
-    .replace(/\([ぁ-んァ-ン\s・ー]+\)/g, '')    // (くじはん) 半角括弧版
-    .replace(/【[^】]*】/g, '')                  // 【残った括弧タグ】
+  // 読み仮名・括弧注釈を除去してクリーンテキストに
+  const scriptText = rawScript
+    .replace(/（[ぁ-んァ-ン\s・ーa-zA-Z0-9]+）/g, '')
+    .replace(/\([ぁ-んァ-ン\s・ーa-zA-Z0-9]+\)/g, '')
     .replace(/\s+/g, ' ')
     .trim();
+
+  // 問題文：【】以降のテキスト、またはquestion_text
+  const questionText = scriptMatch
+    ? instrRaw.replace(/【音声スクリプト：[\s\S]+?】/, '').trim()
+    : (q.question_text || instrRaw);
+
+  // ── 問題指示文 ───────────────────────────────────
+  const instr = document.createElement('div');
+  instr.className = 'q-instruction';
+  instr.textContent = '音声を聴いて、質問に答えてください。';
+  wrap.appendChild(instr);
+
+  // ── 音声プレイヤー ───────────────────────────────
+  const cnt       = playCounts[currentIdx] || 0;
+  const remaining = 2 - cnt;
 
   const audioBox = document.createElement('div');
   audioBox.className = 'audio-player-box';
 
-  // スクリプトプレビュー表示（受験者には見せない → 本番はコメントアウト可）
+  // スクリプト（非表示・音声読み上げ用）
   if (scriptText) {
     const scriptDiv = document.createElement('div');
-    scriptDiv.className = 'audio-script';
-    scriptDiv.textContent = `🎧 スクリプト（開発用）: ${scriptText}`;
+    scriptDiv.className = 'audio-script audio-script--hidden';
+    scriptDiv.textContent = scriptText;
     audioBox.appendChild(scriptDiv);
   }
 
@@ -1169,7 +1209,12 @@ function renderCbtCard(q, container) {
   const playBtn = document.createElement('button');
   playBtn.className = 'btn-play';
   playBtn.id = `play-btn-${currentIdx}`;
-  if (remaining <= 0) {
+
+  if (!scriptText) {
+    // A2など音声スクリプトがない場合
+    playBtn.textContent = '🔇 音声データなし';
+    playBtn.disabled = true;
+  } else if (remaining <= 0) {
     playBtn.textContent = '✓ 再生完了';
     playBtn.disabled = true;
   } else {
@@ -1178,57 +1223,53 @@ function renderCbtCard(q, container) {
 
   const countSpan = document.createElement('span');
   countSpan.className = 'play-count';
-  countSpan.textContent = `${cnt}/2`;
+  countSpan.textContent = scriptText ? `${cnt}/2` : '-';
 
   // ── STEP2-3: 音声イベント配管 ────────────────────
-  playBtn.addEventListener('click', () => {
-    if ((playCounts[currentIdx] || 0) >= 2) return;
+  if (scriptText) {
+    playBtn.addEventListener('click', () => {
+      if ((playCounts[currentIdx] || 0) >= 2) return;
+      playBtn.disabled = true;
+      playBtn.textContent = '⏳ 音声準備中...';
+      playBtn.style.opacity = '0.6';
 
-    // 即座にUIをロック（準備中表示）
-    playBtn.disabled  = true;
-    playBtn.textContent = '⏳ 音声準備中...';
-    playBtn.style.opacity = '0.6';
-
-    const textToSpeak = scriptText || q.question_text || '';
-
-    VoiceEngine.speak(
-      textToSpeak,
-      'ja-JP',
-      0.80,
-      // onStart: 喋り始めたら
-      () => {
-        playBtn.textContent = '🔊 再生中（連打禁止）';
-        playBtn.style.opacity = '1';
-      },
-      // onEnd: 喋り終わったら
-      () => {
-        if (!playCounts[currentIdx]) playCounts[currentIdx] = 0;
-        playCounts[currentIdx]++;
-        const newRemaining = 2 - playCounts[currentIdx];
-        if (newRemaining > 0) {
-          playBtn.textContent = `▶ 音声を再生（残り${newRemaining}回）`;
-          playBtn.disabled = false;
+      VoiceEngine.speak(
+        scriptText, 'ja-JP', 0.80,
+        () => {
+          playBtn.textContent = '🔊 再生中（連打禁止）';
           playBtn.style.opacity = '1';
-        } else {
-          playBtn.textContent = '✓ 再生完了';
-          playBtn.disabled = true;
+        },
+        () => {
+          if (!playCounts[currentIdx]) playCounts[currentIdx] = 0;
+          playCounts[currentIdx]++;
+          const newRemaining = 2 - playCounts[currentIdx];
+          if (newRemaining > 0) {
+            playBtn.textContent = `▶ 音声を再生（残り${newRemaining}回）`;
+            playBtn.disabled = false;
+            playBtn.style.opacity = '1';
+          } else {
+            playBtn.textContent = '✓ 再生完了';
+            playBtn.disabled = true;
+          }
+          countSpan.textContent = `${playCounts[currentIdx]}/2`;
+          renderQuestion();
         }
-        countSpan.textContent = `${playCounts[currentIdx]}/2`;
-        // 選択肢のdisabledを解除するためにre-render
-        renderQuestion();
-      }
-    );
-  });
+      );
+    });
+  }
 
   controls.appendChild(playBtn);
   controls.appendChild(countSpan);
   audioBox.appendChild(controls);
   wrap.appendChild(audioBox);
 
-  const qt = document.createElement('div');
-  qt.className = 'q-text';
-  qt.textContent = q.question_text;
-  wrap.appendChild(qt);
+  // ── 問題文（1回だけ表示） ────────────────────────
+  if (questionText) {
+    const qt = document.createElement('div');
+    qt.className = 'q-text';
+    qt.textContent = questionText;
+    wrap.appendChild(qt);
+  }
 
   renderChoices(q, wrap);
   container.appendChild(wrap);
@@ -1544,6 +1585,151 @@ document.getElementById('btn-retry').addEventListener('click', async () => {
     launchExam();
   } catch(e) { hide('loading'); }
 });
+
+// ── TOAST HELPER ─────────────────────────────────────
+function showToast(message, duration = 2800) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), duration);
+}
+
+// ── SHARE RESULT ─────────────────────────────────────
+document.getElementById('btn-share').addEventListener('click', () => {
+
+  // 結果画面でのみ動作（examQuestionsが空なら何もしない）
+  if (!examQuestions || examQuestions.length === 0) {
+    showToast('⚠ 試験を受けてから共有してください');
+    return;
+  }
+
+  const cfg     = LEVEL_CONFIG[currentLevel].sections;
+  const TOTAL_Q = Object.values(cfg).reduce((s, c) => s + c.count, 0);
+
+  // ── スコア集計 ────────────────────────────────────
+  let totalCorrect = 0;
+  const sectionScores = {};
+  Object.keys(cfg).forEach(s => { sectionScores[s] = { correct: 0, total: 0 }; });
+
+  examQuestions.forEach((q, i) => {
+    if (sectionScores[q.section]) {
+      sectionScores[q.section].total++;
+      if (answers[i] === Number(q.correct_answer)) {
+        sectionScores[q.section].correct++;
+        totalCorrect++;
+      }
+    }
+  });
+
+  // ── 合否判定 ──────────────────────────────────────
+  let failedSection = null;
+  for (const [sec, c] of Object.entries(cfg)) {
+    if ((sectionScores[sec]?.correct || 0) < c.cutoff) {
+      failedSection = sec; break;
+    }
+  }
+  const passed = !failedSection && totalCorrect >= PASS_SCORE;
+  const pct    = Math.round(totalCorrect / TOTAL_Q * 100);
+
+  // ── セクション別ライン ────────────────────────────
+  const sectionLines = Object.entries(cfg).map(([sec, c]) => {
+    const sc     = sectionScores[sec] || { correct: 0, total: c.count };
+    const isPass = sc.correct >= c.cutoff;
+    const bar    = '█'.repeat(sc.correct) + '░'.repeat(sc.total - sc.correct);
+    return `  ${isPass ? '✅' : '❌'} ${sec}：${sc.correct}/${sc.total}問 [${bar}]`;
+  });
+
+  // ── 正誤＋解説ライン ─────────────────────────────
+  const markRow = examQuestions.map((q, i) => {
+    if (answers[i] == null) return '➖';
+    return answers[i] === Number(q.correct_answer) ? '⭕' : '❌';
+  }).join('');
+
+  const detailLines = examQuestions.map((q, i) => {
+    const mark      = answers[i] == null ? '➖' : answers[i] === Number(q.correct_answer) ? '⭕' : '❌';
+    const choices   = [q.choice_1, q.choice_2, q.choice_3, q.choice_4].filter(c => c && c.trim());
+    const labels    = ['①','②','③','④'];
+    const correct   = Number(q.correct_answer);
+    const userAns   = answers[i];
+    const correctTxt= choices[correct - 1] || '';
+    const userTxt   = userAns ? (choices[userAns - 1] || '?') : '未解答';
+    const expl      = q.explanation || '';
+
+    const lines = [
+      `Q${i+1} ${mark} [${q.section}]`,
+      `　${q.question_text || q.instruction || ''}`,
+      `　正解：${labels[correct-1]} ${correctTxt}${userAns && userAns !== correct ? `　あなた：${labels[userAns-1]} ${userTxt}` : ''}`,
+    ];
+    if (expl) lines.push(`　💡 ${expl}`);
+    return lines.join('\n');
+  }).join('\n\n');
+
+  // ── テキスト組み立て ──────────────────────────────
+  const now       = new Date();
+  const dateStr   = `${now.getFullYear()}/${String(now.getMonth()+1).padStart(2,'0')}/${String(now.getDate()).padStart(2,'0')}`;
+  const shareText = [
+    `━━━━━━━━━━━━━━━━━━━━`,
+    `📝 JFT模試・結果報告`,
+    `━━━━━━━━━━━━━━━━━━━━`,
+    `📅 ${dateStr}　レベル：${currentLevel}`,
+    ``,
+    `${passed ? '🎉 判定：合格！' : '📚 判定：不合格'}`,
+    `🏆 スコア：${totalCorrect} / ${TOTAL_Q}問（${pct}%）`,
+    ``,
+    `📊 セクション別：`,
+    ...sectionLines,
+    ``,
+    `📋 正誤一覧：${markRow}`,
+    ``,
+    `━━ 問題別・解説 ━━`,
+    detailLines,
+    ``,
+    `🔗 https://jft-moktest.vercel.app`,
+    `━━━━━━━━━━━━━━━━━━━━`,
+  ].join('\n');
+
+  // ── クリップボードにコピー ────────────────────────
+  const btn = document.getElementById('btn-share');
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(shareText)
+      .then(() => {
+        btn.innerHTML = '✅ コピーしました！SNSに貼り付けてください';
+        btn.classList.add('copied');
+        showToast('📋 クリップボードにコピーしました！');
+        setTimeout(() => {
+          btn.innerHTML = '📋 結果をコピーして共有する';
+          btn.classList.remove('copied');
+        }, 3000);
+      })
+      .catch(() => fallbackCopy(shareText, btn));
+  } else {
+    fallbackCopy(shareText, btn);
+  }
+});
+
+// clipboard API非対応ブラウザ向けフォールバック
+function fallbackCopy(text, btn) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.cssText = 'position:fixed;top:-9999px;left:-9999px;opacity:0;';
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  try {
+    document.execCommand('copy');
+    btn.innerHTML = '✅ コピーしました！';
+    btn.classList.add('copied');
+    showToast('📋 クリップボードにコピーしました！');
+    setTimeout(() => {
+      btn.innerHTML = '📋 結果をコピーして共有する';
+      btn.classList.remove('copied');
+    }, 3000);
+  } catch(e) {
+    // 最終フォールバック: テキストをそのまま表示
+    prompt('以下のテキストをコピーしてください：', text);
+  }
+  document.body.removeChild(ta);
+}
 
 // ── HELPERS ──────────────────────────────────────────
 function show(id, display='block') {
