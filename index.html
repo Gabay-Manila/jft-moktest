@@ -1165,17 +1165,18 @@ function renderCbtCard(q, container) {
   const instrRaw = q.instruction || '';
   const scriptMatch = instrRaw.match(/【音声スクリプト：([\s\S]+?)】/);
 
-  // 読み上げ用スクリプト：【】内のセリフのみ
-  const rawScript = scriptMatch
-    ? scriptMatch[1]
-    : '';   // A2など【】がない場合は空（読み上げなし）
-
-  // 読み仮名・括弧注釈を除去してクリーンテキストに
-  const scriptText = rawScript
+  // 読み上げテキストの優先順位:
+  // 1. q.reading_text（ふりがな専用フィールド）← 最優先
+  // 2. 【音声スクリプト：...】から抽出してカッコ除去したもの
+  const rawScript = scriptMatch ? scriptMatch[1] : '';
+  const cleanedScript = rawScript
     .replace(/（[ぁ-んァ-ン\s・ーa-zA-Z0-9]+）/g, '')
     .replace(/\([ぁ-んァ-ン\s・ーa-zA-Z0-9]+\)/g, '')
     .replace(/\s+/g, ' ')
     .trim();
+  const scriptText = (q.reading_text && q.reading_text.trim())
+    ? q.reading_text.trim()
+    : cleanedScript;
 
   // 問題文：【】以降のテキスト、またはquestion_text
   const questionText = scriptMatch
