@@ -856,6 +856,25 @@ function renderSectionChips(lv) {
 // ── LOAD QUESTIONS ───────────────────────────────────
 async function loadQuestions() {
   const url = LEVEL_CONFIG[currentLevel].dataUrl;
+
+  // ── GA4: レベル別模擬試験スタートイベント ──────────
+  // 課題1対応: A1/A2の内訳をtest_levelパラメータで区別
+  if (currentLevel === 'A1') {
+    if (typeof gtag === 'function') {
+      gtag('event', 'start_jft_test', {
+        'test_level': 'A1',
+        'page_title': 'JFT-Basic CBT 模擬試験 (A1)'
+      });
+    }
+  } else if (currentLevel === 'A2') {
+    if (typeof gtag === 'function') {
+      gtag('event', 'start_jft_test', {
+        'test_level': 'A2',
+        'page_title': 'JFT-Basic CBT 模擬試験 (A2)'
+      });
+    }
+  }
+
   const res  = await fetch(url);
   const raw  = await res.json();
 
