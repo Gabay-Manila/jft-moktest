@@ -350,12 +350,12 @@
     width: 100%;
   }
   .choice-btn:hover:not(:disabled) {
-    border-color: var(--accent-fill); background: rgba(46,139,118,.08);
+    border-color: var(--ink-2); background: var(--cream-deep);
     transform: translateX(3px);
   }
   .choice-btn.selected {
-    border-color: var(--accent-fill); background: rgba(46,139,118,.14);
-    color: var(--ink);
+    border-color: var(--ink); background: var(--cream-deep);
+    color: var(--ink); font-weight: 700;
   }
   .choice-btn:disabled { cursor: not-allowed; }
   .choice-label {
@@ -367,7 +367,7 @@
     transition: all var(--transition);
   }
   .choice-btn.selected .choice-label {
-    background: var(--accent-fill); color: var(--cream);
+    background: var(--ink); color: var(--cream);
   }
 
   /* Footer */
