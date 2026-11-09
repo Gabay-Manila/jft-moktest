@@ -3,7 +3,7 @@
   "source": "edtech-nihongo",
   "core_target": 30,
   "total_target": 60,
-  "note": "field lessons beyond L36 are not yet authored"
+  "note": "L01-L36 converted from edtech-nihongo; L37-L42 care-field (ruby + TL); L43-L60 not yet authored"
  },
  "lessons": [
   {
@@ -11,11 +11,11 @@
    "track": "core",
    "level": "A1",
    "title": {
-    "jp": "第1課　スターター（Set 1-1）",
+    "jp": "第（だい）1課（か）　スターター（Set 1-1）",
     "en": "Lesson 1: Starter, Set 1 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Greetings are fixed phrases tied to time of day. おはようございます covers early morning through late morning. Country/place name + から きました means 'I came from 〜'. This is the standard pattern for stating origin. 〜が すきです means 'I like 〜'. が marks the thing being liked — it is not the doer of an action. Noun + を ください is the simplest polite way to request or order something. すみません softens almost any statement, including admitting you didn't understand something."
    },
    "vocab": [
@@ -133,7 +133,7 @@
     },
     {
      "q": {
-      "jp": "ご注文は？",
+      "jp": "ご注文（ちゅうもん）は？",
       "en": "A fast-food staff member asks what you'd like to order. You want a cheeseburger."
      },
      "c": [
@@ -170,11 +170,11 @@
    "track": "core",
    "level": "A1",
    "title": {
-    "jp": "第2課　スターター（Set 1-2）",
+    "jp": "第（だい）2課（か）　スターター（Set 1-2）",
     "en": "Lesson 2: Starter, Set 1 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "いくらですか？ asks the price. Number + えん gives the answer, e.g. ごひゃくえん = 500 yen. This is a set phrase — memorize it as one chunk rather than analyzing its grammar piece by piece. This is the standard polite thank-you — safe to use in almost any context. 〜は どこですか asks 'where is 〜?'. Answer with a place word like あそこ (over there) or こちら (this way). かして ください = 'please lend (it to) me'. The asker always uses かす, never かりる, in this request."
    },
    "vocab": [
@@ -271,7 +271,7 @@
      ],
      "a": 3,
      "fb": {
-      "en": "お先に失礼します is said almost automatically when leaving a Japanese workplace before others — even close coworkers expect to hear it."
+      "en": "お先（さき）に失礼（しつれい）します is said almost automatically when leaving a Japanese workplace before others — even close coworkers expect to hear it."
      }
     },
     {
@@ -329,11 +329,11 @@
    "track": "core",
    "level": "A1",
    "title": {
-    "jp": "第3課　スターター（Set 1-3）",
+    "jp": "第（だい）3課（か）　スターター（Set 1-3）",
     "en": "Lesson 3: Starter, Set 1 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "〜が すきです works with any noun you like — swap in food, hobbies, shows, anything. Reuses 〜は どこですか — once you know this pattern, you can ask about any place by swapping the noun. 〜を ください is the action phrase for 'please give me this' — the simplest way to buy something. Verb stem + たいです expresses a wish: いきたいです = 'want to go'. Match the question's grammar in your answer. Adding は after a topic and trailing off (おなまえは？) is a natural, slightly soft way to ask a question in conversation."
    },
    "vocab": [
@@ -488,11 +488,11 @@
    "track": "core",
    "level": "A1",
    "title": {
-    "jp": "第4課　スターター（Set 2-1）",
+    "jp": "第（だい）4課（か）　スターター（Set 2-1）",
     "en": "Lesson 4: Starter, Set 2 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Greetings are tied to time of day: おはよう (morning), こんにちは (daytime), こんばんは (evening/night). い-adjective + です directly states a simple quality, like describing the weather. にん is the counter for people — distinct from つ (objects), じ (time), and かい (floors). はは refers to your own mother when speaking to others; おかあさん is used for someone else's mother, or to address your own directly. Body part + が いたいです describes pain: 'my 〜 hurts'."
    },
    "vocab": [
@@ -558,7 +558,7 @@
    "quiz": [
     {
      "q": {
-      "jp": "ひるま、しらない人に　あいさつします。なんと　いいますか？",
+      "jp": "ひるま、しらない人（ひと）に　あいさつします。なんと　いいますか？",
       "en": "It's midday and you greet a shop clerk you don't know well."
      },
      "c": [
@@ -643,11 +643,11 @@
    "track": "core",
    "level": "A1",
    "title": {
-    "jp": "第5課　スターター（Set 2-2）",
+    "jp": "第（だい）5課（か）　スターター（Set 2-2）",
     "en": "Lesson 5: Starter, Set 2 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "てつだって ください = 'please help (me)' — the same 〜て ください request pattern applied to a new verb. Direction words like みぎ/ひだり work as short, complete answers to 'where is it?' questions. Reinforces 〜を ください — the same ordering phrase works for drinks as well as food. どうですか asks for a simple opinion or impression; answer with a plain い-adjective. なんですか asks a simple 'what is it?' — common for jobs, names, and other basic facts."
    },
    "vocab": [
@@ -802,11 +802,11 @@
    "track": "core",
    "level": "A1",
    "title": {
-    "jp": "第6課　スターター（Set 2-3）",
+    "jp": "第（だい）6課（か）　スターター（Set 2-3）",
     "en": "Lesson 6: Starter, Set 2 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "いただきます (before) and ごちそうさまでした (after) are a fixed pair — don't mix up the timing. おめでとうございます is the standard congratulatory phrase — used for birthdays, achievements, and celebrations alike. Use the plain past つかれました to describe a state you've already fallen into, like today's tiredness — not the non-past つかれます. なにを しますか asks about plans; ゆっくりします is a common way to say 'I'll relax / take it easy'. ようび asks about days of the week — distinct from じ (time), にち (date/day count), and がつ (month)."
    },
    "vocab": [
@@ -961,11 +961,11 @@
    "track": "core",
    "level": "A1",
    "title": {
-    "jp": "第7課　スターター（Set 3-1）",
+    "jp": "第（だい）7課（か）　スターター（Set 3-1）",
     "en": "Lesson 7: Starter, Set 3 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "なんじですか asks the time; answer with number + じ, e.g. さんじ = 3 o'clock. すきじゃないです (or すきではないです) is the negative form of すきです: 'don't like'. Color + noun + は ありますか asks if a particular colored item is available. Noun + ですね comments on something you both can see, inviting agreement. Reinforces なんですか for jobs — simply state the job name + です."
    },
    "vocab": [
@@ -1120,11 +1120,11 @@
    "track": "core",
    "level": "A1",
    "title": {
-    "jp": "第8課　スターター（Set 3-2）",
+    "jp": "第（だい）8課（か）　スターター（Set 3-2）",
     "en": "Lesson 8: Starter, Set 3 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Verb + のが すきです expresses liking an activity: 'I like reading (books)'. 〜ぐらい softens a number to mean 'about/approximately' — useful when an exact answer isn't needed. Reinforces the つ counters with a new item — みっつ for three general objects, like apples. すみません、おくれました is the standard apology for arriving late. Reuses the 〜ませんか invitation pattern with a new verb, たべる (to eat), answered with 〜ましょう."
    },
    "vocab": [
@@ -1275,11 +1275,11 @@
    "track": "core",
    "level": "A1",
    "title": {
-    "jp": "第9課　スターター（Set 3-3）",
+    "jp": "第（だい）9課（か）　スターター（Set 3-3）",
     "en": "Lesson 9: Starter, Set 3 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "また + time word is a simple, casual way to say 'see you 〜' — また あした = 'see you tomorrow'. Reinforces 〜が すきです with a new topic — seasons. ありません is the negative of あります — used to say something (like free time) doesn't exist. Simple い-adjective answers describe size or appearance directly. さい is the counter for age — distinct from ぷん (minutes), にち (days), and かい (floors/times)."
    },
    "vocab": [
@@ -1434,11 +1434,11 @@
    "track": "core",
    "level": "A2.1",
    "title": {
-    "jp": "第10課　初級１（Set 1-1）",
+    "jp": "第（だい）10課（か）　初級（しょきゅう）１（Set 1-1）",
     "en": "Lesson 10: Elementary 1, Set 1 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "〜は〜に います states where a living thing is located. います is for people/animals; あります is for objects and places. 〜て ください is the basic polite request form. かして ください = 'please lend (it to) me' — the verb is かす, not かりる. よっつ is the counter for four general objects. Use あります (not います) because rooms aren't living things. 〜から〜まで marks a range: 'starting point から, ending point まで'. Works for both time and place. じ (point in time), じかん (duration), and がつ (calendar month) sound alike but mean very different things — listen carefully."
    },
    "vocab": [
@@ -1593,11 +1593,11 @@
    "track": "core",
    "level": "A2.1",
    "title": {
-    "jp": "第11課　初級１（Set 1-2）",
+    "jp": "第（だい）11課（か）　初級（しょきゅう）１（Set 1-2）",
     "en": "Lesson 11: Elementary 1, Set 1 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "あります confirms location for objects, not います — batteries are things, not living beings. Large numbers + えん express prices, e.g. さんぜん = 3,000. はい、わかりました is the standard polite response when accepting an instruction. 〜て ください reused here: まって ください = 'please wait a moment'. やすませて ください is a causative-request pattern: 'please let me 〜' — common phrasing when calling in sick."
    },
    "vocab": [
@@ -1752,11 +1752,11 @@
    "track": "core",
    "level": "A2.1",
    "title": {
-    "jp": "第12課　初級１（Set 1-3）",
+    "jp": "第（だい）12課（か）　初級（しょきゅう）１（Set 1-3）",
     "en": "Lesson 12: Elementary 1, Set 1 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Simple confirmation with あります for an object's presence — reusing the あります/います distinction. ばんせん is specifically the counter for platform numbers — distinct from かい (floor), じ (time), and がつ (month). Noun + に します states your choice or decision — common at restaurants and shops with multiple options. Reinforces 〜えん for prices, contrasted again with the similar-sounding じかん/かい/にん counters. Handing something back with これ、ありがとうございました is natural and polite — you don't need a separate 'return' verb in casual speech."
    },
    "vocab": [
@@ -1907,12 +1907,12 @@
    "track": "core",
    "level": "A2.1",
    "title": {
-    "jp": "第13課　初級１（Set 2-1）",
+    "jp": "第（だい）13課（か）　初級（しょきゅう）１（Set 2-1）",
     "en": "Lesson 13: Elementary 1, Set 2 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
-    "en": "〜てもいいですか asks for permission to change something, like a meeting time. こわれている (て-form + いる) describes an ongoing broken state, not just the one-time act of breaking. Stating your main job duty is as simple as noun + です. あります/ありません tests for the existence of overtime work — あります is used since 残業 isn't a living thing. いつですか asks 'when'; days of the week answer directly."
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
+    "en": "〜てもいいですか asks for permission to change something, like a meeting time. こわれている (て-form + いる) describes an ongoing broken state, not just the one-time act of breaking. Stating your main job duty is as simple as noun + です. あります/ありません tests for the existence of overtime work — あります is used since 残業（ざんぎょう） isn't a living thing. いつですか asks 'when'; days of the week answer directly."
    },
    "vocab": [
     {
@@ -2062,11 +2062,11 @@
    "track": "core",
    "level": "A2.1",
    "title": {
-    "jp": "第14課　初級１（Set 2-2）",
+    "jp": "第（だい）14課（か）　初級（しょきゅう）１（Set 2-2）",
     "en": "Lesson 14: Elementary 1, Set 2 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "なにで asks the means of transportation; method + で + verb answers it. Reinforces 〜てもいいですか for permission, now with つかう (to use). Reinforces あります for object location, this time with ロッカー as the place. This is a flexible, essential phrase — memorize it as one chunk rather than translating it literally. 〜て くれて ありがとうございます thanks someone specifically for doing something for your benefit."
    },
    "vocab": [
@@ -2180,7 +2180,7 @@
     },
     {
      "q": {
-      "jp": "あたらしい　社員が　きました。なんと　いいますか？",
+      "jp": "あたらしい　社員（しゃいん）が　きました。なんと　いいますか？",
       "en": "It's a new employee's first day, and you greet them."
      },
      "c": [
@@ -2191,7 +2191,7 @@
      ],
      "a": 2,
      "fb": {
-      "en": "よろしくお願いします is said constantly in Japanese workplaces — when meeting someone, starting a task together, or asking for ongoing cooperation."
+      "en": "よろしくお願（ねが）いします is said constantly in Japanese workplaces — when meeting someone, starting a task together, or asking for ongoing cooperation."
      }
     },
     {
@@ -2217,11 +2217,11 @@
    "track": "core",
    "level": "A2.1",
    "title": {
-    "jp": "第15課　初級１（Set 2-3）",
+    "jp": "第（だい）15課（か）　初級（しょきゅう）１（Set 2-3）",
     "en": "Lesson 15: Elementary 1, Set 2 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "〜く なりませんか asks if something can change to a different state — here, becoming cheaper. Past-tense しました confirms a completed action, like a reservation already made. 〜かもしれません expresses a possibility: 'might 〜' — useful for talking about uncertain outcomes like delays. ほっとしました expresses relief after finishing something stressful or demanding. Politely declining with すみません、よていが あります avoids a blunt 'no' while still being clear."
    },
    "vocab": [
@@ -2364,11 +2364,11 @@
    "track": "core",
    "level": "A2.1",
    "title": {
-    "jp": "第16課　初級１（Set 3-1）",
+    "jp": "第（だい）16課（か）　初級（しょきゅう）１（Set 3-1）",
     "en": "Lesson 16: Elementary 1, Set 3 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Reinforces 〜てもいいですか for asking permission — this time to leave early. まだ〜ません expresses 'not yet' — useful when you're still learning something new. A simple yes/no confirmation about whether a date is a holiday. 〜までに marks a deadline: 'by 〜'. できました confirms the task was completed in time. なんばんですか asks for a number, like a phone extension."
    },
    "vocab": [
@@ -2515,11 +2515,11 @@
    "track": "core",
    "level": "A2.1",
    "title": {
-    "jp": "第17課　初級１（Set 3-2）",
+    "jp": "第（だい）17課（か）　初級（しょきゅう）１（Set 3-2）",
     "en": "Lesson 17: Elementary 1, Set 3 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Place + の ちかくです describes a location as 'near 〜'. すみません、まちがえました is the direct, simple way to apologize for an error. Reinforces 〜てもいいですか with a new verb, とる (to take). もっと + adjective + ありますか asks if a 'more 〜' version is available — stronger than もうすこし. かげつ is the counter for counting months as a duration — different from がつ, the calendar month name."
    },
    "vocab": [
@@ -2666,11 +2666,11 @@
    "track": "core",
    "level": "A2.1",
    "title": {
-    "jp": "第18課　初級１（Set 3-3）",
+    "jp": "第（だい）18課（か）　初級（しょきゅう）１（Set 3-3）",
     "en": "Lesson 18: Elementary 1, Set 3 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "もし〜なら sets a conditional — 'if it's necessary' — common when agreeing to flexible requests. ひきつぎます describes formally handing off work responsibilities before being away. Asking about ふくそうの きまり (dress code) is useful early on at any new job. おせわになっております is a fixed business phrase, roughly 'thank you for your continued support' — used to open many work emails. きゅうに やすみたいです clearly and politely explains an urgent need for unplanned leave."
    },
    "vocab": [
@@ -2817,11 +2817,11 @@
    "track": "core",
    "level": "A2.2",
    "title": {
-    "jp": "第19課　初級２（Set 1-1）",
+    "jp": "第（だい）19課（か）　初級（しょきゅう）２（Set 1-1）",
     "en": "Lesson 19: Elementary 2, Set 1 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "〜は〜に いきますか confirms a destination — a common pattern when checking transportation routes. 〜ですね adds a soft 'isn't it?' tone — very natural when making a casual observation out loud. どんな + noun + が すきですか asks for a category or type of preference, not just a yes/no. 〜ませんか is a gentle way to invite someone. A happy acceptance pairs naturally with 〜ましょう ('let's'). もうすこし + adjective + のは ありますか asks if a slightly different version is available."
    },
    "vocab": [
@@ -2950,7 +2950,7 @@
      ],
      "a": 2,
      "fb": {
-      "en": "After-work social drinks (飲み会) are an important bonding ritual in many Japanese workplaces."
+      "en": "After-work social drinks (飲（の）み会（かい）) are an important bonding ritual in many Japanese workplaces."
      }
     },
     {
@@ -2976,11 +2976,11 @@
    "track": "core",
    "level": "A2.2",
    "title": {
-    "jp": "第20課　初級２（Set 1-2）",
+    "jp": "第（だい）20課（か）　初級（しょきゅう）２（Set 1-2）",
     "en": "Lesson 20: Elementary 2, Set 1 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Verb stem + に いきました describes 'went to (do) 〜' — a purpose-of-movement pattern for past trips. Verb stem + たいです expresses a desire: いきたいです = 'want to go'. なにを しますか asks about future/intended actions, answered with verb + ます (non-past). 〜てもいいですか asks for permission: 'may I 〜?'. Useful for requesting time off or anything needing approval. おすすめの + noun + は ありますか asks if there's a recommended option for that category."
    },
    "vocab": [
@@ -3077,7 +3077,7 @@
      ],
      "a": 1,
      "fb": {
-      "en": "Hot springs (温泉) are a beloved way to relax in Japan, and expressing a wish to go is everyday conversational Japanese."
+      "en": "Hot springs (温泉（おんせん）) are a beloved way to relax in Japan, and expressing a wish to go is everyday conversational Japanese."
      }
     },
     {
@@ -3135,11 +3135,11 @@
    "track": "core",
    "level": "A2.2",
    "title": {
-    "jp": "第21課　初級２（Set 1-3）",
+    "jp": "第（だい）21課（か）　初級（しょきゅう）２（Set 1-3）",
     "en": "Lesson 21: Elementary 2, Set 1 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Method + で + duration + かかります describes how long something takes by a given means of transport. 〜なら is simpler and more casual than ば/たら — note the contrast with 〜でも ('even if'), which would give a different meaning. できますか asks about ability/possibility: 'can you do 〜?'. A direct, simple way to request a service. います is always used for people/family members — あります would be incorrect here since family are living things. 〜てもらえますか is a soft, polite way to ask someone to do something for your benefit — gentler than a direct command."
    },
    "vocab": [
@@ -3294,11 +3294,11 @@
    "track": "core",
    "level": "A2.2",
    "title": {
-    "jp": "第22課　初級２（Set 2-1）",
+    "jp": "第（だい）22課（か）　初級（しょきゅう）２（Set 2-1）",
     "en": "Lesson 22: Elementary 2, Set 2 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "もどりたいです + どう いきますか combines 'I want to go back' with asking how — a useful recovery phrase when lost. Stating what you lost, then asking ありますか, is the simplest way to report a lost item. いいえ、まだまだです is the standard modest reply to a compliment in Japanese. ぜひ adds enthusiasm to accepting an invitation: 'I'd definitely like to'. Past-tense い-adjective (たのしかった) describes how something was, distinct from the non-past たのしい."
    },
    "vocab": [
@@ -3453,11 +3453,11 @@
    "track": "core",
    "level": "A2.2",
    "title": {
-    "jp": "第23課　初級２（Set 2-2）",
+    "jp": "第（だい）23課（か）　初級（しょきゅう）２（Set 2-2）",
     "en": "Lesson 23: Elementary 2, Set 2 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "どうぞ is used when offering or handing something to someone, like a coupon. えっ + comment is a natural way to express mild surprise out loud. Reinforces 〜かもしれません (might 〜) for talking about possible lateness due to traffic. だいじょうぶです is a flexible way to confirm something is fine or permitted. 〜て います describes an ongoing habit or regular activity, like a weekend hobby."
    },
    "vocab": [
@@ -3612,11 +3612,11 @@
    "track": "core",
    "level": "A2.2",
    "title": {
-    "jp": "第24課　初級２（Set 2-3）",
+    "jp": "第（だい）24課（か）　初級（しょきゅう）２（Set 2-3）",
     "en": "Lesson 24: Elementary 2, Set 2 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Thanking someone first with ありがとうございます、でも〜 softens a decline, even when tired. かい is the counter for occurrences/times — しゅうに みっかい = 'three times a week'. Reinforces できますか for asking about a service's availability. Reinforces 〜のほうが〜 comparisons, now applied to transportation choices. あいていますか asks if a seat is free; どうぞ politely invites someone to take it."
    },
    "vocab": [
@@ -3767,11 +3767,11 @@
    "track": "core",
    "level": "A2.2",
    "title": {
-    "jp": "第25課　初級２（Set 3-1）",
+    "jp": "第（だい）25課（か）　初級（しょきゅう）２（Set 3-1）",
     "en": "Lesson 25: Elementary 2, Set 3 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "〜を おねがいします is a simple, polite way to request a service, like a top-up. Symptom + が あります reports a physical condition simply, the same pattern as あたまが いたいです. 〜が はいっていない describes an ingredient's absence — useful for dietary requests. 〜の ために states a purpose or goal: 'for the sake of 〜' — here, saving for a trip. 〜が いいです expresses a preference: 'I'd prefer 〜' — softer than 〜が ほしいです."
    },
    "vocab": [
@@ -3922,11 +3922,11 @@
    "track": "core",
    "level": "A2.2",
    "title": {
-    "jp": "第26課　初級２（Set 3-2）",
+    "jp": "第（だい）26課（か）　初級（しょきゅう）２（Set 3-2）",
     "en": "Lesson 26: Elementary 2, Set 3 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "おめでとうございます reused for a workplace achievement, like a promotion. どう〜たら いいですか asks 'how should I 〜?' — a flexible pattern for asking for guidance. 〜そうです reports information you heard or read, like a weather forecast — 'it seems it'll be sunny'. Reinforces 〜おねがいします for making a reservation request. Stating the exact number of minutes you'll be late is clearer and more considerate than a vague apology."
    },
    "vocab": [
@@ -4073,11 +4073,11 @@
    "track": "core",
    "level": "A2.2",
    "title": {
-    "jp": "第27課　初級２（Set 3-3）",
+    "jp": "第（だい）27課（か）　初級（しょきゅう）２（Set 3-3）",
     "en": "Lesson 27: Elementary 2, Set 3 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "もう すこし ゆっくり おねがいします politely asks someone to slow down — useful for listening comprehension. 〜て います again describes a regular ongoing habit, like a daily exercise routine. Confirming a shared problem (like a power outage) with も is a natural way to check if others are affected too. もえる/もえない + ごみ distinguishes trash categories — an important distinction to know. おしえて ください reused here for asking someone to tell you information, like a password."
    },
    "vocab": [
@@ -4232,11 +4232,11 @@
    "track": "core",
    "level": "A2/B1",
    "title": {
-    "jp": "第28課　初中級（Set 1-1）",
+    "jp": "第（だい）28課（か）　初中級（しょちゅうきゅう）（Set 1-1）",
     "en": "Lesson 28: Pre-Intermediate, Set 1 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Clause + から + result gives a reason: 'Because X, Y'. から attaches directly after a plain-form clause. Past-tense (た form) verb + ことが あります expresses past experience: 'have done 〜 before'. Adjective + が + contrasting adjective links two opposing ideas: 'fun, but difficult'. 〜て いただけますか is more formal than 〜て ください — appropriate for requests to superiors or customers. A と B、どちらが〜 asks for a comparison; answer with 'X のほうが〜です' ('X is more 〜')."
    },
    "vocab": [
@@ -4387,11 +4387,11 @@
    "track": "core",
    "level": "A2/B1",
    "title": {
-    "jp": "第29課　初中級（Set 1-2）",
+    "jp": "第（だい）29課（か）　初中級（しょちゅうきゅう）（Set 1-2）",
     "en": "Lesson 29: Pre-Intermediate, Set 1 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "もし + verb/adjective ば-form sets up a hypothetical condition: 'if 〜, then 〜'. Past-tense (た form) + ほうが いいです gives advice: 'you should do 〜'. Verb negative (ない form) + なければ なりません expresses obligation: 'must do 〜 / have to 〜'. Verb て-form + から describes a clear sequence: 'after doing X, then Y' — different from から meaning 'because'. 〜て くれました expresses that someone did you a favor. あげる is for giving to others, もらう for receiving — they are not interchangeable."
    },
    "vocab": [
@@ -4546,11 +4546,11 @@
    "track": "core",
    "level": "A2/B1",
    "title": {
-    "jp": "第30課　初中級（Set 1-3）",
+    "jp": "第（だい）30課（か）　初中級（しょちゅうきゅう）（Set 1-3）",
     "en": "Lesson 30: Pre-Intermediate, Set 1 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Plain-form clause + だ + と いっていました reports what someone else said, rather than stating it as your own fact. 〜ましょうか offers or suggests a joint action — more inviting in tone than 〜ますか. i-adjective stem + く なりました expresses a change of state: 'became 〜'. Note さむい drops い and adds く. The potential form (e.g. はなせる from はなす) expresses ability: 'can do 〜', distinct from the plain non-past form. Leaving a sentence unfinished after ちょっと〜あって… politely implies 'I can't' without directly refusing."
    },
    "vocab": [
@@ -4605,7 +4605,7 @@
      "Someone asks if you can speak Japanese now. You can, a little."
     ],
     [
-     "すみません、今日は　ちょっと　よていが　あって…",
+     "すみません、今日（きょう）は　ちょっと　よていが　あって…",
      "A coworker invites you for drinks tonight, but you already have plans. You decline politely without sounding blunt."
     ]
    ],
@@ -4676,11 +4676,11 @@
     },
     {
      "q": {
-      "jp": "今日　いっしょに　のみに　いきませんか？と　さそわれました。よていが　あります。なんと　こたえますか？",
+      "jp": "今日（きょう）　いっしょに　のみに　いきませんか？と　さそわれました。よていが　あります。なんと　こたえますか？",
       "en": "A coworker invites you for drinks tonight, but you already have plans. You decline politely without sounding blunt."
      },
      "c": [
-      "すみません、今日は　ちょっと　よていが　あって…",
+      "すみません、今日（きょう）は　ちょっと　よていが　あって…",
       "のみました",
       "いきません",
       "いいですね、いきましょう"
@@ -4697,11 +4697,11 @@
    "track": "field",
    "level": "A2/B1",
    "title": {
-    "jp": "第31課　初中級（Set 2-1）",
+    "jp": "第（だい）31課（か）　初中級（しょちゅうきゅう）（Set 2-1）",
     "en": "Lesson 31: Pre-Intermediate, Set 2 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "〜て おきます describes doing something now in preparation for later — different from simply doing the action. Verb stem + ながら + another verb describes two actions happening at the same time by the same person. 〜のに expresses an unexpected or disappointing contrast: 'even though X, Y happened' — a different nuance from が. い-adjective stem + すぎる expresses excess: 'too 〜'. からすぎます = 'too spicy'. 〜させて ください asks for permission to do something yourself, often when you want to take the initiative."
    },
    "vocab": [
@@ -4852,11 +4852,11 @@
    "track": "field",
    "level": "A2/B1",
    "title": {
-    "jp": "第32課　初中級（Set 2-2）",
+    "jp": "第（だい）32課（か）　初中級（しょちゅうきゅう）（Set 2-2）",
     "en": "Lesson 32: Pre-Intermediate, Set 2 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "Noun + という + noun introduces something by name, especially when the listener might not know it. Verb past (た form) + ところです emphasizes that something just happened, very recently. 〜はずです expresses a confident expectation based on reasoning or known information — not a random guess. 〜ように します expresses a conscious effort to make something happen: 'I'll try to make sure that 〜'. 〜ことに なりました describes a decision made by circumstances or others — contrast with 〜ことに しました, a decision you made yourself."
    },
    "vocab": [
@@ -4995,12 +4995,12 @@
    "track": "field",
    "level": "A2/B1",
    "title": {
-    "jp": "第33課　初中級（Set 2-3）",
+    "jp": "第（だい）33課（か）　初中級（しょちゅうきゅう）（Set 2-3）",
     "en": "Lesson 33: Pre-Intermediate, Set 2 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
-    "en": "〜た ばかりです emphasizes that very little time has passed since the action: 'just did 〜'. 〜について marks the topic being discussed: 'about/regarding 〜'. The passive form (e.g. ほめられる from ほめる) shifts focus onto the receiver of the action: 'I was praised (by my boss)'. 〜と おもいます states a personal opinion or belief — answering with the same pattern keeps the tone consistent when asked this way. 〜らしい expresses a conclusion based on what you've heard or observed indirectly — distinct from と思います, your own opinion."
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
+    "en": "〜た ばかりです emphasizes that very little time has passed since the action: 'just did 〜'. 〜について marks the topic being discussed: 'about/regarding 〜'. The passive form (e.g. ほめられる from ほめる) shifts focus onto the receiver of the action: 'I was praised (by my boss)'. 〜と おもいます states a personal opinion or belief — answering with the same pattern keeps the tone consistent when asked this way. 〜らしい expresses a conclusion based on what you've heard or observed indirectly — distinct from と思（おも）います, your own opinion."
    },
    "vocab": [
     {
@@ -5138,11 +5138,11 @@
    "track": "field",
    "level": "A2/B1",
    "title": {
-    "jp": "第34課　初中級（Set 3-1）",
+    "jp": "第（だい）34課（か）　初中級（しょちゅうきゅう）（Set 3-1）",
     "en": "Lesson 34: Pre-Intermediate, Set 3 (1/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "〜ば〜ほど expresses a proportional relationship: 'the more you do X, the more Y happens'. 〜たびに describes something that happens every single time a certain event occurs. 〜たまま describes a state left unchanged since an action was completed — the window was left open without being closed again. 〜させてもらえますか combines the causative (させる, 'let someone do') with もらう (receiving a favor) for a humble, polite request. 〜ことに しました marks a decision you made yourself — contrast with 〜ことに なりました, often decided by circumstances or others."
    },
    "vocab": [
@@ -5277,12 +5277,12 @@
    "track": "field",
    "level": "A2/B1",
    "title": {
-    "jp": "第35課　初中級（Set 3-2）",
+    "jp": "第（だい）35課（か）　初中級（しょちゅうきゅう）（Set 3-2）",
     "en": "Lesson 35: Pre-Intermediate, Set 3 (2/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
-    "en": "〜て しまいました adds a nuance of regret or unintended consequence to a completed action. Verb (plain non-past) + まえに describes doing something before another action — the verb stays non-past even in past contexts. Verb (past form) + あとで describes doing something after another action has finished. もうします is a humble (謙譲語) version of いいます, typically used in formal or business self-introductions. おっしゃる is the respectful (尊敬語) version of 言う, used when talking about what a respected person said."
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
+    "en": "〜て しまいました adds a nuance of regret or unintended consequence to a completed action. Verb (plain non-past) + まえに describes doing something before another action — the verb stays non-past even in past contexts. Verb (past form) + あとで describes doing something after another action has finished. もうします is a humble (謙譲語（けんじょうご）) version of いいます, typically used in formal or business self-introductions. おっしゃる is the respectful (尊敬語（そんけいご）) version of 言（い）う, used when talking about what a respected person said."
    },
    "vocab": [
     {
@@ -5416,11 +5416,11 @@
    "track": "field",
    "level": "A2/B1",
    "title": {
-    "jp": "第36課　初中級（Set 3-3）",
+    "jp": "第（だい）36課（か）　初中級（しょちゅうきゅう）（Set 3-3）",
     "en": "Lesson 36: Pre-Intermediate, Set 3 (3/3)"
    },
    "explain": {
-    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "jp": "場面（ばめん）ごとの表現（ひょうげん）を学（まな）びます。例文（れいぶん）と語彙（ごい）を確認（かくにん）してから、小（しょう）テストに進（すす）みましょう。",
     "en": "〜なくても いいです is the opposite of 〜なければ なりません: 'you don't have to 〜'. 〜ように expresses a purpose: 'so that 〜 can happen' — here, speaking slowly so beginners can understand. 〜だけ で いいです limits a request to exactly what's needed: 'just 〜 is fine'. 〜とおりに describes doing something exactly as instructed or shown. 〜あいだに marks something that happened at some point within a time window — often used when something occurs while you were away or busy."
    },
    "vocab": [
@@ -5550,6 +5550,1008 @@
      "a": 3,
      "fb": {
       "en": "Reporting something that happened during a window of time you were away is common after returning to the office."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L37",
+   "track": "field",
+   "level": "A2",
+   "domain": "care",
+   "title": {
+    "jp": "第（だい）37課（か）　申（もう）し送（おく）り",
+    "en": "Lesson 37: Shift handover",
+    "tl": "Paglilipat ng impormasyon sa susunod na shift"
+   },
+   "explain": {
+    "jp": "交代（こうたい）のとき、利用者（りようしゃ）の様子（ようす）を次（つぎ）の人（ひと）に伝（つた）えます。",
+    "en": "At shift change, tell the next staff how each resident is doing. Use ～ました for what happened, ～ています for the present state, and ～ので to give a reason.",
+    "tl": "Sa pagpapalit ng shift, ibalita sa susunod na staff ang kalagayan ng bawat residente. Sabihin din ang dahilan."
+   },
+   "vocab": [
+    {
+     "jp": "申（もう）し送（おく）り",
+     "en": "handover",
+     "tl": "paglilipat ng ulat"
+    },
+    {
+     "jp": "様子（ようす）",
+     "en": "condition, state",
+     "tl": "kalagayan"
+    },
+    {
+     "jp": "食欲（しょくよく）",
+     "en": "appetite",
+     "tl": "gana sa pagkain"
+    },
+    {
+     "jp": "熱（ねつ）",
+     "en": "fever",
+     "tl": "lagnat"
+    },
+    {
+     "jp": "変化（へんか）",
+     "en": "change",
+     "tl": "pagbabago"
+    },
+    {
+     "jp": "注意（ちゅうい）",
+     "en": "caution",
+     "tl": "pag-iingat"
+    },
+    {
+     "jp": "記録（きろく）",
+     "en": "record",
+     "tl": "talaan"
+    },
+    {
+     "jp": "利用者（りようしゃ）",
+     "en": "resident, service user",
+     "tl": "residente"
+    }
+   ],
+   "ex": [
+    [
+     "田中（たなか）さんは、朝（あさ）ごはんを全部（ぜんぶ）食（た）べました。",
+     "Mr. Tanaka ate all of his breakfast.",
+     "Kinain lahat ni G. Tanaka ang almusal niya."
+    ],
+    [
+     "午後（ごご）から熱（ねつ）があるので、注意（ちゅうい）してください。",
+     "He has had a fever since the afternoon, so please be careful.",
+     "May lagnat siya mula hapon, kaya mag-ingat po."
+    ],
+    [
+     "夜（よる）はよく寝（ね）ていました。",
+     "He was sleeping well at night.",
+     "Mahimbing ang tulog niya sa gabi."
+    ],
+    [
+     "変化（へんか）があったら、記録（きろく）に書（か）いてください。",
+     "If there is any change, write it in the record.",
+     "Kung may pagbabago, isulat sa talaan."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "朝（あさ）、利用者（りようしゃ）の熱（ねつ）が高（たか）かったです。次（つぎ）の人（ひと）に何（なん）と言（い）いますか。",
+      "en": "The resident had a high fever this morning. What do you tell the next staff?"
+     },
+     "c": [
+      "熱（ねつ）がありました。注意（ちゅうい）してください。",
+      "熱（ねつ）は昨日（きのう）です。",
+      "熱（ねつ）がありません。大丈夫（だいじょうぶ）です。",
+      "熱（ねつ）を食（た）べました。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "ありました reports what was present; ください asks the next person to act.",
+      "tl": "Ang \"ありました\" ay nag-uulat; ang \"ください\" ay pakiusap."
+     }
+    },
+    {
+     "q": {
+      "jp": "「食欲（しょくよく）」の意味（いみ）は？",
+      "en": "What does 「食欲（しょくよく）」 mean?"
+     },
+     "c": [
+      "appetite",
+      "temperature",
+      "sleep",
+      "weight"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "食（しょく）= eat, 欲（よく）= desire: appetite.",
+      "tl": "Gana sa pagkain."
+     }
+    },
+    {
+     "q": {
+      "jp": "昨夜（さくや）、利用者（りようしゃ）はよく寝（ね）ていました。正（ただ）しい申（もう）し送（おく）りは？",
+      "en": "The resident slept well last night. Which handover is correct?"
+     },
+     "c": [
+      "昨夜（さくや）はよく歩（ある）いていました。",
+      "昨夜（さくや）はよく書（か）いていました。",
+      "昨夜（さくや）はよく寝（ね）ていました。",
+      "昨夜（さくや）はよく食（た）べていました。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "寝（ね）ています = sleeping. Match the verb to the fact.",
+      "tl": "Itugma ang pandiwa sa katotohanan: 寝（ね）る = matulog."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「食欲（しょくよく）が（　）ので、少（すこ）し残（のこ）しました。」",
+      "en": "Complete: He left some food because his appetite (was absent)."
+     },
+     "c": [
+      "ないで",
+      "なかった",
+      "なかっ",
+      "なくて"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "ので follows the plain form: なかった + ので.",
+      "tl": "Ang ので ay sumusunod sa plain form: なかったので."
+     }
+    },
+    {
+     "q": {
+      "jp": "変化（へんか）があったとき、どこに書（か）きますか。",
+      "en": "Where do you write it when there is a change?"
+     },
+     "c": [
+      "料理（りょうり）",
+      "記録（きろく）",
+      "電車（でんしゃ）",
+      "天気（てんき）"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Changes go in the care record (記録（きろく）).",
+      "tl": "Isulat ang pagbabago sa talaan (記録（きろく）)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L38",
+   "track": "field",
+   "level": "A2",
+   "domain": "care",
+   "title": {
+    "jp": "第（だい）38課（か）　体位変換（たいいへんかん）と移乗（いじょう）",
+    "en": "Lesson 38: Repositioning and transfers",
+    "tl": "Pagpapalit ng posisyon at paglilipat"
+   },
+   "explain": {
+    "jp": "利用者（りようしゃ）に声（こえ）をかけてから、体（からだ）を動（うご）かします。",
+    "en": "Always tell the resident what you will do before moving them. Practise ～ますね (announcing), ～てもいいですか (asking permission) and ～ないでください (please do not).",
+    "tl": "Laging sabihan muna ang residente bago siya igalaw. Humingi ng pahintulot at maging magalang."
+   },
+   "vocab": [
+    {
+     "jp": "体位変換（たいいへんかん）",
+     "en": "repositioning",
+     "tl": "pagpapalit ng posisyon"
+    },
+    {
+     "jp": "移乗（いじょう）",
+     "en": "transfer (e.g. bed to wheelchair)",
+     "tl": "paglipat"
+    },
+    {
+     "jp": "車椅子（くるまいす）",
+     "en": "wheelchair",
+     "tl": "wheelchair"
+    },
+    {
+     "jp": "手（て）すり",
+     "en": "handrail",
+     "tl": "hawakan"
+    },
+    {
+     "jp": "痛（いた）い",
+     "en": "painful",
+     "tl": "masakit"
+    },
+    {
+     "jp": "支（ささ）える",
+     "en": "to support",
+     "tl": "sumuporta"
+    },
+    {
+     "jp": "ブレーキ",
+     "en": "brake",
+     "tl": "preno"
+    },
+    {
+     "jp": "立（た）つ",
+     "en": "to stand",
+     "tl": "tumayo"
+    }
+   ],
+   "ex": [
+    [
+     "これから、車椅子（くるまいす）に移（うつ）りますね。",
+     "I will now help you move to the wheelchair.",
+     "Lilipat na po tayo sa wheelchair."
+    ],
+    [
+     "痛（いた）いところはありませんか。",
+     "Is there anywhere that hurts?",
+     "May masakit po ba sa inyo?"
+    ],
+    [
+     "立（た）つとき、ブレーキをかけてください。",
+     "When standing, please apply the brake.",
+     "Kapag tatayo, ilagay ang preno."
+    ],
+    [
+     "急（きゅう）に動（うご）かないでください。",
+     "Please do not move suddenly.",
+     "Huwag po kayong biglang gumalaw."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "移乗（いじょう）の前（まえ）に、まず何（なに）をしますか。",
+      "en": "What do you do first before a transfer?"
+     },
+     "c": [
+      "声（こえ）をかけます。",
+      "何（なに）も言（い）いません。",
+      "部屋（へや）を出（で）ます。",
+      "すぐ立（た）たせます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Announce first (声（こえ）をかける) to keep the resident safe and respected.",
+      "tl": "Sabihan muna ang residente para ligtas at may paggalang."
+     }
+    },
+    {
+     "q": {
+      "jp": "「車椅子（くるまいす）」の意味（いみ）は？",
+      "en": "What does 「車椅子（くるまいす）」 mean?"
+     },
+     "c": [
+      "wheelchair",
+      "shoes",
+      "walker",
+      "bed"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "車（くるま）= vehicle, 椅子（いす）= chair.",
+      "tl": "Wheelchair."
+     }
+    },
+    {
+     "q": {
+      "jp": "利用者（りようしゃ）が立（た）つ前（まえ）に、車椅子（くるまいす）が動（うご）かないようにします。何（なに）をしますか。",
+      "en": "Before the resident stands, you stop the wheelchair from moving. What do you do?"
+     },
+     "c": [
+      "ブレーキを外（はず）します。",
+      "タイヤを洗（あら）います。",
+      "ブレーキをかけます。",
+      "手（て）すりを外（はず）します。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "ブレーキをかける = apply the brake.",
+      "tl": "Ilagay ang preno bago tumayo."
+     }
+    },
+    {
+     "q": {
+      "jp": "「急（きゅう）に動（うご）かないでください」の意味（いみ）は？",
+      "en": "What does this mean?"
+     },
+     "c": [
+      "Please stay in bed.",
+      "Please move quickly.",
+      "Please do not move suddenly.",
+      "Please move later."
+     ],
+     "a": 2,
+     "fb": {
+      "en": "～ないでください = please do not ...",
+      "tl": "Ang ～ないでください ay \"huwag po\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "立（た）つのを手伝（てつだ）うとき、体（からだ）を（　）ます。（　）に入（はい）る言葉（ことば）は？",
+      "en": "Complete: When helping someone stand, you ___ their body."
+     },
+     "c": [
+      "書（か）き",
+      "洗（あら）い",
+      "支（ささ）え",
+      "食（た）べ"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "支（ささ）えます = support.",
+      "tl": "支（ささ）える = sumuporta."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L39",
+   "track": "field",
+   "level": "A2",
+   "domain": "care",
+   "title": {
+    "jp": "第（だい）39課（か）　食事（しょくじ）の介助（かいじょ）",
+    "en": "Lesson 39: Meal assistance",
+    "tl": "Pagtulong sa pagkain"
+   },
+   "explain": {
+    "jp": "食事（しょくじ）の姿勢（しせい）と、食（た）べやすい大（おお）きさを確認（かくにん）します。",
+    "en": "Check posture and food size before the meal. Practise ～やすい (easy to ...) and ～ましょう (let us ...). Watch for choking and stop the meal if it happens.",
+    "tl": "Tiyaking tama ang posisyon at laki ng pagkain. Mag-ingat sa pagkabulunan; ihinto ang pagkain kung mangyari ito."
+   },
+   "vocab": [
+    {
+     "jp": "姿勢（しせい）",
+     "en": "posture",
+     "tl": "posisyon ng katawan"
+    },
+    {
+     "jp": "飲（の）み込（こ）む",
+     "en": "to swallow",
+     "tl": "lunukin"
+    },
+    {
+     "jp": "むせる",
+     "en": "to choke, cough",
+     "tl": "mabulunan"
+    },
+    {
+     "jp": "刻（きざ）み食（しょく）",
+     "en": "chopped food",
+     "tl": "tinadtad na pagkain"
+    },
+    {
+     "jp": "とろみ",
+     "en": "thickener",
+     "tl": "pampalapot"
+    },
+    {
+     "jp": "水分（すいぶん）",
+     "en": "fluids",
+     "tl": "likido"
+    },
+    {
+     "jp": "残（のこ）す",
+     "en": "to leave (food)",
+     "tl": "iwanan"
+    },
+    {
+     "jp": "歯（は）",
+     "en": "teeth",
+     "tl": "ngipin"
+    }
+   ],
+   "ex": [
+    [
+     "背中（せなか）をまっすぐにして食（た）べましょう。",
+     "Let us eat with a straight back.",
+     "Kumain tayo nang tuwid ang likod."
+    ],
+    [
+     "ゆっくり飲（の）み込（こ）んでください。",
+     "Please swallow slowly.",
+     "Dahan-dahan po ninyong lunukin."
+    ],
+    [
+     "食（た）べやすい大（おお）きさに切（き）りました。",
+     "I cut it to an easy-to-eat size.",
+     "Hiniwa ko sa sukat na madaling kainin."
+    ],
+    [
+     "むせたら、すぐに教（おし）えてください。",
+     "If you choke, tell me right away.",
+     "Kapag nabulunan kayo, sabihin agad."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "食事（しょくじ）の前（まえ）に確認（かくにん）することは？",
+      "en": "What do you check before a meal?"
+     },
+     "c": [
+      "天気（てんき）",
+      "給料（きゅうりょう）",
+      "姿勢（しせい）",
+      "電話（でんわ）"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Posture (姿勢（しせい）) affects safe swallowing.",
+      "tl": "Ang tamang posisyon ay mahalaga sa ligtas na paglunok."
+     }
+    },
+    {
+     "q": {
+      "jp": "利用者（りようしゃ）がむせました。まず何（なに）をしますか。",
+      "en": "The resident is choking. What do you do first?"
+     },
+     "c": [
+      "水（みず）を急（いそ）いで飲（の）ませます。",
+      "食事（しょくじ）を止（と）めます。",
+      "部屋（へや）を出（で）ます。",
+      "もっと食（た）べさせます。"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Stop the meal and call for help if needed.",
+      "tl": "Ihinto ang pagkain at tumawag ng tulong."
+     }
+    },
+    {
+     "q": {
+      "jp": "「食（た）べやすい」の意味（いみ）は？",
+      "en": "What does 「食（た）べやすい」 mean?"
+     },
+     "c": [
+      "delicious",
+      "easy to eat",
+      "hard to eat",
+      "too hot"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "verb stem + やすい = easy to ...",
+      "tl": "Madaling kainin."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「ゆっくり（　）ください。」",
+      "en": "Complete: Please swallow slowly."
+     },
+     "c": [
+      "飲（の）み込（こ）んだ",
+      "飲（の）み込（こ）んで",
+      "飲（の）み込（こ）み",
+      "飲（の）み込（こ）む"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "て-form + ください makes a polite request.",
+      "tl": "て-form + ください = pakiusap."
+     }
+    },
+    {
+     "q": {
+      "jp": "「水分（すいぶん）」の意味（いみ）は？",
+      "en": "What does 「水分（すいぶん）」 mean?"
+     },
+     "c": [
+      "rice",
+      "fluids",
+      "salt",
+      "spoon"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Residents need enough fluids to stay healthy.",
+      "tl": "Likido; kailangan ng sapat na tubig."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L40",
+   "track": "field",
+   "level": "A2",
+   "domain": "care",
+   "title": {
+    "jp": "第（だい）40課（か）　入浴（にゅうよく）と排泄（はいせつ）の介助（かいじょ）",
+    "en": "Lesson 40: Bathing and toileting assistance",
+    "tl": "Pagtulong sa pagligo at pag-ihi/pagdumi"
+   },
+   "explain": {
+    "jp": "プライバシーを守（まも）り、恥（は）ずかしい気持（きも）ちに配慮（はいりょ）します。",
+    "en": "Protect privacy and be considerate of embarrassment. Practise ～ましょうか (offering help), ～ますね (announcing) and ～やすい (easy to slip).",
+    "tl": "Igalang ang privacy at damdamin ng residente. Mag-alok ng tulong nang magalang."
+   },
+   "vocab": [
+    {
+     "jp": "入浴（にゅうよく）",
+     "en": "bathing",
+     "tl": "pagligo"
+    },
+    {
+     "jp": "排泄（はいせつ）",
+     "en": "toileting",
+     "tl": "pag-ihi at pagdumi"
+    },
+    {
+     "jp": "お湯（ゆ）",
+     "en": "hot water",
+     "tl": "maligamgam na tubig"
+    },
+    {
+     "jp": "温度（おんど）",
+     "en": "temperature (of water)",
+     "tl": "temperatura"
+    },
+    {
+     "jp": "滑（すべ）る",
+     "en": "to slip",
+     "tl": "madulas"
+    },
+    {
+     "jp": "着替（きが）え",
+     "en": "changing clothes",
+     "tl": "pagpapalit ng damit"
+    },
+    {
+     "jp": "恥（は）ずかしい",
+     "en": "embarrassed",
+     "tl": "nahihiya"
+    },
+    {
+     "jp": "カーテン",
+     "en": "curtain",
+     "tl": "kurtina"
+    }
+   ],
+   "ex": [
+    [
+     "お湯（ゆ）の温度（おんど）は、大丈夫（だいじょうぶ）ですか。",
+     "Is the water temperature all right?",
+     "Ayos lang po ba ang init ng tubig?"
+    ],
+    [
+     "床（ゆか）が滑（すべ）りやすいので、気（き）をつけてください。",
+     "The floor is slippery, so please be careful.",
+     "Madulas ang sahig, kaya mag-ingat po."
+    ],
+    [
+     "トイレに行（い）きましょうか。",
+     "Shall we go to the toilet?",
+     "Pumunta na po ba tayo sa banyo?"
+    ],
+    [
+     "カーテンを閉（し）めますね。",
+     "I will close the curtain.",
+     "Isasara ko po ang kurtina."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "入浴（にゅうよく）の前（まえ）に、お湯（ゆ）の何（なに）を確認（かくにん）しますか。",
+      "en": "What do you check about the water before bathing?"
+     },
+     "c": [
+      "名前（なまえ）",
+      "温度（おんど）",
+      "値段（ねだん）",
+      "色（いろ）"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Check the temperature to prevent burns.",
+      "tl": "Tiyakin ang temperatura para hindi mapaso."
+     }
+    },
+    {
+     "q": {
+      "jp": "床（ゆか）が滑（すべ）りやすいです。どうしますか。",
+      "en": "The floor is slippery. What do you do?"
+     },
+     "c": [
+      "気（き）をつけます。",
+      "急（いそ）ぎます。",
+      "電気（でんき）を消（け）します。",
+      "走（はし）ります。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "気（き）をつける = be careful.",
+      "tl": "Mag-ingat."
+     }
+    },
+    {
+     "q": {
+      "jp": "利用者（りようしゃ）にトイレをすすめます。何（なん）と言（い）いますか。",
+      "en": "You want to offer the toilet. What do you say?"
+     },
+     "c": [
+      "トイレに行（い）きましょうか。",
+      "トイレは昨日（きのう）ですか。",
+      "トイレを食（た）べましょうか。",
+      "トイレは高（たか）いですか。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "～ましょうか offers help politely.",
+      "tl": "Ang ～ましょうか ay magalang na alok."
+     }
+    },
+    {
+     "q": {
+      "jp": "「恥（は）ずかしい」の意味（いみ）は？",
+      "en": "What does 「恥（は）ずかしい」 mean?"
+     },
+     "c": [
+      "sleepy",
+      "cold",
+      "hungry",
+      "embarrassed"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Be aware: many residents feel embarrassed during care.",
+      "tl": "Maraming residente ang nahihiya habang inaalagaan."
+     }
+    },
+    {
+     "q": {
+      "jp": "着替（きが）えのとき、プライバシーを守（まも）るために何（なに）をしますか。",
+      "en": "What do you do to protect privacy while changing clothes?"
+     },
+     "c": [
+      "ドアを開（あ）けます。",
+      "窓（まど）を開（あ）けます。",
+      "カーテンを閉（し）めます。",
+      "大（おお）きい声（こえ）で話（はな）します。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Close the curtain or door.",
+      "tl": "Isara ang kurtina o pinto."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L41",
+   "track": "field",
+   "level": "A2",
+   "domain": "care",
+   "title": {
+    "jp": "第（だい）41課（か）　体温（たいおん）・血圧（けつあつ）をはかる",
+    "en": "Lesson 41: Taking vital signs",
+    "tl": "Pagsukat ng vital signs"
+   },
+   "explain": {
+    "jp": "体温（たいおん）や血圧（けつあつ）をはかって、数字（すうじ）を正（ただ）しく記録（きろく）します。",
+    "en": "Measure and record numbers accurately. Practise ～より高（たか）い/低（ひく）い (higher/lower than) and いつもより (than usual). Report abnormal values immediately.",
+    "tl": "Sukatin at itala nang tama ang mga numero. Iulat agad ang hindi normal."
+   },
+   "vocab": [
+    {
+     "jp": "体温（たいおん）",
+     "en": "body temperature",
+     "tl": "temperatura ng katawan"
+    },
+    {
+     "jp": "血圧（けつあつ）",
+     "en": "blood pressure",
+     "tl": "presyon ng dugo"
+    },
+    {
+     "jp": "脈（みゃく）",
+     "en": "pulse",
+     "tl": "pulso"
+    },
+    {
+     "jp": "呼吸（こきゅう）",
+     "en": "breathing",
+     "tl": "paghinga"
+    },
+    {
+     "jp": "平熱（へいねつ）",
+     "en": "normal temperature",
+     "tl": "karaniwang temperatura"
+    },
+    {
+     "jp": "高（たか）い",
+     "en": "high",
+     "tl": "mataas"
+    },
+    {
+     "jp": "低（ひく）い",
+     "en": "low",
+     "tl": "mababa"
+    },
+    {
+     "jp": "苦（くる）しい",
+     "en": "hard to breathe, distressed",
+     "tl": "hirap, masikip"
+    }
+   ],
+   "ex": [
+    [
+     "体温（たいおん）は三十七度（さんじゅうななど）二分（にぶ）です。",
+     "Body temperature is 37.2 degrees.",
+     "37.2 degrees ang temperatura."
+    ],
+    [
+     "いつもより血圧（けつあつ）が高（たか）いです。",
+     "Blood pressure is higher than usual.",
+     "Mas mataas ang presyon kaysa karaniwan."
+    ],
+    [
+     "息（いき）が苦（くる）しいと言（い）っています。",
+     "He says it is hard to breathe.",
+     "Sabi niya ay nahihirapan siyang huminga."
+    ],
+    [
+     "変（へん）だと思（おも）ったら、すぐ看護師（かんごし）に伝（つた）えてください。",
+     "If something seems wrong, tell the nurse right away.",
+     "Kung may kakaiba, sabihin agad sa nurse."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "「血圧（けつあつ）」の意味（いみ）は？",
+      "en": "What does 「血圧（けつあつ）」 mean?"
+     },
+     "c": [
+      "blood pressure",
+      "weight",
+      "pulse",
+      "body temperature"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "血（けつ）= blood, 圧（あつ）= pressure.",
+      "tl": "Presyon ng dugo."
+     }
+    },
+    {
+     "q": {
+      "jp": "体温（たいおん）が三十八度（さんじゅうはちど）です。平熱（へいねつ）は三十六度（さんじゅうろくど）です。正（ただ）しいのは？",
+      "en": "Temperature is 38; normal is 36. Which is correct?"
+     },
+     "c": [
+      "平熱（へいねつ）と同（おな）じです。",
+      "平熱（へいねつ）より低（ひく）いです。",
+      "平熱（へいねつ）より高（たか）いです。",
+      "熱（ねつ）はありません。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Than: より. 38 is higher than 36.",
+      "tl": "Ang より ay \"kaysa\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "利用者（りようしゃ）が「息（いき）が苦（くる）しい」と言（い）っています。まず何（なに）をしますか。",
+      "en": "A resident says breathing is hard. What do you do first?"
+     },
+     "c": [
+      "すぐ看護師（かんごし）に伝（つた）えます。",
+      "何（なに）もしません。",
+      "記録（きろく）しないで帰（かえ）ります。",
+      "明日（あした）まで待（ま）ちます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Report abnormal signs immediately.",
+      "tl": "Iulat agad ang hindi normal."
+     }
+    },
+    {
+     "q": {
+      "jp": "「いつもより」の意味（いみ）は？",
+      "en": "What does 「いつもより」 mean?"
+     },
+     "c": [
+      "at night",
+      "compared with usual",
+      "only once",
+      "every day"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "いつもより高（たか）い = higher than usual.",
+      "tl": "Mas mataas kaysa karaniwan."
+     }
+    },
+    {
+     "q": {
+      "jp": "血圧（けつあつ）の記録（きろく）で、大切（たいせつ）なことは？",
+      "en": "What matters when recording blood pressure?"
+     },
+     "c": [
+      "書（か）かないこと",
+      "名前（なまえ）を書（か）かないこと",
+      "数字（すうじ）を正（ただ）しく書（か）くこと",
+      "色（いろ）をたくさん使（つか）うこと"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Accurate numbers are the evidence for the next staff.",
+      "tl": "Ang tamang numero ang batayan ng susunod na staff."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L42",
+   "track": "field",
+   "level": "A2",
+   "domain": "care",
+   "title": {
+    "jp": "第（だい）42課（か）　ヒヤリハットと事故（じこ）の報告（ほうこく）",
+    "en": "Lesson 42: Reporting near-misses and accidents",
+    "tl": "Pag-uulat ng near-miss at aksidente"
+   },
+   "explain": {
+    "jp": "何（なに）があったか、いつ、どこで、どうなったかを順番（じゅんばん）に伝（つた）えます。",
+    "en": "Report in order: when, where, what happened, and the result. Practise ～てしまいました (an unwanted event) and ～ようとしました (tried to). Report even small incidents.",
+    "tl": "Iulat nang maayos: kailan, saan, ano ang nangyari. Iulat kahit maliit na pangyayari."
+   },
+   "vocab": [
+    {
+     "jp": "事故（じこ）",
+     "en": "accident",
+     "tl": "aksidente"
+    },
+    {
+     "jp": "ヒヤリハット",
+     "en": "near miss",
+     "tl": "muntik nang aksidente"
+    },
+    {
+     "jp": "転（ころ）ぶ",
+     "en": "to fall down",
+     "tl": "matumba"
+    },
+    {
+     "jp": "けが",
+     "en": "injury",
+     "tl": "sugat o pinsala"
+    },
+    {
+     "jp": "報告（ほうこく）",
+     "en": "report",
+     "tl": "ulat"
+    },
+    {
+     "jp": "すぐに",
+     "en": "immediately",
+     "tl": "agad"
+    },
+    {
+     "jp": "原因（げんいん）",
+     "en": "cause",
+     "tl": "sanhi"
+    },
+    {
+     "jp": "防（ふせ）ぐ",
+     "en": "to prevent",
+     "tl": "pigilan"
+    }
+   ],
+   "ex": [
+    [
+     "廊下（ろうか）で利用者（りようしゃ）が転（ころ）んでしまいました。",
+     "A resident fell in the hallway.",
+     "Natumba ang residente sa pasilyo."
+    ],
+    [
+     "すぐに看護師（かんごし）に報告（ほうこく）しました。",
+     "I reported it to the nurse right away.",
+     "Agad kong iniulat sa nurse."
+    ],
+    [
+     "立（た）とうとして、ふらつきました。",
+     "He tried to stand and became unsteady.",
+     "Sinubukan niyang tumayo pero nawalan ng balanse."
+    ],
+    [
+     "小（ちい）さいことでも、必（かなら）ず報告（ほうこく）してください。",
+     "Even small things, please always report.",
+     "Kahit maliit na bagay, siguraduhing iulat."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "「ヒヤリハット」の意味（いみ）は？",
+      "en": "What does 「ヒヤリハット」 mean?"
+     },
+     "c": [
+      "a meeting",
+      "a holiday",
+      "a near miss (almost an accident)",
+      "a type of food"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Reporting near misses prevents real accidents.",
+      "tl": "Ang pag-uulat ng near miss ay pumipigil sa tunay na aksidente."
+     }
+    },
+    {
+     "q": {
+      "jp": "事故（じこ）があったとき、まず何（なに）をしますか。",
+      "en": "What do you do first when there is an accident?"
+     },
+     "c": [
+      "すぐに報告（ほうこく）します。",
+      "黙（だま）っています。",
+      "自分（じぶん）だけで直（なお）します。",
+      "明日（あした）書（か）きます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Report immediately; do not handle it alone.",
+      "tl": "Iulat agad; huwag mag-isa."
+     }
+    },
+    {
+     "q": {
+      "jp": "報告（ほうこく）の順番（じゅんばん）で正（ただ）しいのは？",
+      "en": "Which report is complete?"
+     },
+     "c": [
+      "どうなったかだけ",
+      "名前（なまえ）だけ",
+      "何（なに）も言（い）わない",
+      "いつ・どこで・何（なに）が・どうなったか"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Give when, where, what and the result.",
+      "tl": "Sabihin ang kailan, saan, ano, at kinalabasan."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「利用者（りようしゃ）が転（ころ）んで（　）。」",
+      "en": "Complete: The resident fell (unfortunately)."
+     },
+     "c": [
+      "しますました",
+      "しないました",
+      "しまいました",
+      "しまうます"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "～てしまいました = something unwanted happened.",
+      "tl": "Ang ～てしまいました ay hindi inaasahang pangyayari."
+     }
+    },
+    {
+     "q": {
+      "jp": "小（ちい）さいけがでも、報告（ほうこく）しますか。",
+      "en": "Do you report even a small injury?"
+     },
+     "c": [
+      "見（み）られなかったら報告（ほうこく）しません。",
+      "はい、必（かなら）ず報告（ほうこく）します。",
+      "気分（きぶん）がいいときだけ報告（ほうこく）します。",
+      "いいえ、報告（ほうこく）しません。"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Always report, even small injuries.",
+      "tl": "Laging iulat, kahit maliit."
      }
     }
    ]
