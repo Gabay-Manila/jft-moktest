@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JFT-Basic CBT 模擬試験</title>
+<title>JFT-Basic CBT模擬試験 ＆ 自律学習 v2</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#2E8B76">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -647,9 +647,42 @@
   /* Dynamic section chips */
   #section-chips-container { display: contents; }
 
+#yl-top{position:sticky;top:0;z-index:60;background:var(--cream);border-bottom:1px solid var(--stone-line);padding:8px 12px 0}
+.yl-hd{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+#yl-ttl{font-family:'Shippori Mincho',serif;font-weight:700;font-size:1.05rem;flex:1}
+#yl-clk{font-size:.85rem;color:var(--accent-text);font-weight:700}
+.yl-lang button{background:none;border:0;font:inherit;color:var(--ink);opacity:.5;cursor:pointer;padding:4px 6px}
+.yl-lang button.on{opacity:1;font-weight:700;color:var(--accent-text)}
+#yl-nav{display:flex;width:100%}
+#yl-nav button{flex:1;padding:10px 4px;background:none;border:0;border-bottom:3px solid var(--stone-line);font:700 .95rem 'Zen Kaku Gothic New',sans-serif;color:var(--ink);cursor:pointer}
+#yl-nav button.on{border-color:var(--accent-fill);color:var(--accent-text)}
+.yl-view{max-width:760px;margin:0 auto;padding:16px;display:none}
+.yl-card{background:#fff;border:1px solid var(--stone-line);border-radius:10px;padding:16px;margin:12px 0}
+.yl-ls{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.yl-ls[disabled]{opacity:.55;cursor:not-allowed}
+.yl-deep{background:var(--cream-deep);border-radius:8px;padding:10px 12px;margin:8px 0}
+.yl-btn{background:var(--accent-fill);color:#fff;border:0;border-radius:8px;padding:10px 18px;font:700 1rem 'Zen Kaku Gothic New',sans-serif;cursor:pointer}
+.yl-btn.sub{background:none;color:var(--accent-text);border:1.5px solid var(--accent-fill)}
+.yl-opt{display:block;width:100%;text-align:left;margin:6px 0;padding:10px 12px;border:1.5px solid var(--stone-line);border-radius:8px;background:#fff;font:inherit;color:var(--ink);cursor:pointer}
+.yl-opt.ok{border-color:var(--accent-fill);background:#DCEEE8}.yl-opt.ng{border-color:var(--danger);background:#F3DCDC}
+.yl-bar{height:10px;background:var(--stone);border-radius:5px;overflow:hidden}.yl-bar i{display:block;height:100%;background:var(--accent-fill)}
+.yl-chip{display:inline-block;padding:2px 10px;margin:2px 0;border-radius:12px;background:var(--cream-deep);color:var(--accent-text);font-size:.85rem;font-weight:700}
+.yl-big{font-family:'Shippori Mincho',serif;font-size:2.4rem;color:var(--accent-text);line-height:1.2}
+.yl-lbl{font-family:'Shippori Mincho',serif;font-weight:700}
+.yl-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.yl-en{color:var(--ink-2);font-size:.92rem}.yl-warn{color:var(--danger-text);font-weight:700}
+.yl-tbl{width:100%;border-collapse:collapse}.yl-tbl td{padding:6px 8px;border-bottom:1px solid var(--stone-line)}
+.yl-in{border:1px solid var(--stone-line);border-radius:6px;padding:4px 8px;font:inherit;min-width:12em}
+.yl-rank{margin-top:14px;padding:12px;border-top:1px solid var(--stone-line);text-align:center}
+button:focus-visible{outline:3px solid var(--accent-text);outline-offset:2px}
+@media print{@page{size:A4 portrait;margin:14mm}
+ #yl-top,.yl-np,.screen,#loading,.toast{display:none!important}
+ body{background:#fff}.yl-view{max-width:none;padding:0}.yl-card{break-inside:avoid;border-color:#999}.yl-in{border:0;border-bottom:1px solid #999}}
 </style>
 </head>
 <body>
+<div id="yl-top"><div class="yl-hd"><div id="yl-ttl"></div><span id="yl-clk"></span><div class="yl-lang" role="group" aria-label="language"><button id="l-jp">JP</button>|<button id="l-en">EN</button></div></div><nav id="yl-nav"></nav></div>
+<div id="yl-learn" class="yl-view"></div><div id="yl-report" class="yl-view"></div>
 
 <!-- Loading -->
 <div id="loading">
@@ -844,20 +877,20 @@ const LEVEL_CONFIG = {
     dataUrl: 'questions.json',
     label:   'A1 Level',
     sections: {
-      '文字・語彙': { count: 10, cutoff: 6,  color: 'vocab',  total: 25 },
-      '会話・表現': { count: 10, cutoff: 6,  color: 'conv',   total: 25 },
-      '聴解':       { count: 12, cutoff: 8,  color: 'listen', total: 25 },
-      '読解':       { count: 8,  cutoff: 5,  color: 'read',   total: 25 },
+      '文字・語彙': { count: 10, cutoff: 5,  color: 'vocab',  total: 25 },
+      '会話・表現': { count: 10, cutoff: 5,  color: 'conv',   total: 25 },
+      '聴解':       { count: 12, cutoff: 6,  color: 'listen', total: 25 },
+      '読解':       { count: 8,  cutoff: 4,  color: 'read',   total: 25 },
     },
   },
   A2: {
     dataUrl: 'questions_a2.json',
     label:   'A2 Level',
     sections: {
-      '文字・語彙': { count: 8,  cutoff: 5,  color: 'vocab',  total: 27 },
-      '文法':       { count: 8,  cutoff: 5,  color: 'conv',   total: 26 },
-      '会話・表現': { count: 6,  cutoff: 4,  color: 'listen', total: 16 },
-      '読解':       { count: 8,  cutoff: 5,  color: 'read',   total: 19 },
+      '文字・語彙': { count: 8,  cutoff: 4,  color: 'vocab',  total: 27 },
+      '文法':       { count: 8,  cutoff: 4,  color: 'conv',   total: 26 },
+      '会話・表現': { count: 6,  cutoff: 3,  color: 'listen', total: 16 },
+      '読解':       { count: 8,  cutoff: 4,  color: 'read',   total: 19 },
     },
   },
 };
@@ -1849,6 +1882,125 @@ function hide(id) {
   const el = document.getElementById(id);
   if (el) { el.style.display = 'none'; el.classList.remove('active'); }
 }
+</script>
+<script>
+(function(){
+const K='jftv2';
+let S=Object.assign({lang:'jp',course:150,sec:0,clear:{},best:null,last:null,name:''},(()=>{try{return JSON.parse(localStorage.getItem(K))||{}}catch(e){return {}}})());
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
+const U={
+ t1:['カリキュラム学習','Learning Lounge'],t2:['CBT模擬試験','Exam Hall'],t3:['マイレポート','Progress Report'],
+ total:['累計学習時間','Total study time'],goal:['目標','Goal'],c150:['150時間コース（A1目標）','150h course (A1)'],c300:['300時間コース（A2.2目標）','300h course (A2.2)'],
+ start:['小テストに進む','Take the quiz'],back:['← 一覧へ','← Back'],next:['次へ','Next'],retry:['もう一度','Try again'],
+ pass80:['80%以上で次の課が開きます','Score 80%+ to unlock the next lesson'],cleared:['クリア','Cleared'],soon:['準備中','Coming soon'],
+ vocab:['語彙','Vocabulary'],lessons:['クリア済み課数','Lessons cleared'],best:['模試 過去最高','Best mock score'],latest:['最新判定','Latest rank'],
+ none:['未受験','Not taken'],print:['A4レポート出力（印刷/PDF）','Print A4 report (PDF)'],name:['氏名','Name'],date:['出力日','Date'],
+ load:['教材を読み込めませんでした（curriculum_jft.json）','Could not load curriculum_jft.json'],
+ r1:['【特定技能1号 基準達成】','[Specified Skilled Worker 1: standard met]'],r2:['【育成就労 転籍目安基準達成】','[Ikusei Shuro transfer guideline met]'],
+ r3:['【育成就労 就労開始前基準達成】','[Ikusei Shuro pre-employment standard met]'],r0:['基準未達：要再学習。各セクションの弱点を復習しましょう。','Below standard: please review your weak sections.'],
+ cutw:['セクション足切り未達のため、合計点に関わらず不合格です','Below a section cut-off: fail regardless of total score'],
+ est:['250点換算（正答率×250）','Scaled to 250 (accuracy x 250)']
+};
+const t=k=>U[k][S.lang=='en'?1:0];
+const RANKS=[[200,'A2.2','r1'],[175,'A2.1','r2'],[145,'A1','r3']];
+const rankOf=n=>{for(const r of RANKS)if(n>=r[0])return r;return null};
+const fmt=s=>{const h=Math.floor(s/3600),m=Math.floor(s%3600/60);return S.lang=='en'?`${h}h ${m}m`:`${h}時間${m}分`};
+const L=o=>(o&&(o[S.lang]||o.jp||o.en))||'';
+let CUR=[],tab='exam',lesson=null,quiz=null,lastScreen='screen-start',loadErr=false;
+const $=id=>document.getElementById(id);
+function beep(){try{const c=window.__ylc=window.__ylc||new (window.AudioContext||window.webkitAudioContext)();const o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.value=437;g.gain.setValueAtTime(.2,c.currentTime);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+.4);o.connect(g).connect(c.destination);o.start();o.stop(c.currentTime+.4)}catch(e){}}
+const list=()=>S.course==150?CUR.filter(l=>l.track=='core'):CUR;
+const target=()=>S.course==150?30:60;
+const open_=i=>{const a=list();return i==0||(S.clear[a[i-1].id]||0)>=80};
+function head(){
+ $('yl-ttl').textContent=S.lang=='en'?'JFT-Basic CBT Mock Exam & Self-Study':'JFT-Basic CBT模擬試験 ＆ 自律学習 v2';
+ $('l-jp').className=S.lang=='jp'?'on':'';$('l-en').className=S.lang=='en'?'on':'';
+ $('yl-nav').innerHTML=[['exam','t2'],['learn','t1'],['report','t3']].map(([k,n])=>`<button class="${tab==k?'on':''}" data-yt="${k}">${t(n)}</button>`).join('');
+ $('yl-clk').textContent=fmt(S.sec);
+}
+function render(){head();if(tab=='learn')$('yl-learn').innerHTML=vLearn();if(tab=='report')$('yl-report').innerHTML=vReport()}
+function vLearn(){
+ if(loadErr)return `<p class="yl-warn">${t('load')}</p>`;
+ const goal=S.course*3600,p=Math.min(100,S.sec/goal*100);
+ let h=`<div class="yl-card"><div class="yl-row"><div><div class="yl-lbl">${t('total')}</div><div class="yl-big" id="yl-clock">${fmt(S.sec)}</div></div><div>${t('goal')}: ${S.course}h</div></div>
+ <div class="yl-bar" role="progressbar" aria-valuenow="${p.toFixed(0)}" aria-valuemin="0" aria-valuemax="100"><i id="yl-pb" style="width:${p}%"></i></div>
+ <div style="margin-top:10px"><button class="yl-btn ${S.course==150?'':'sub'}" data-yc="150">${t('c150')}</button> <button class="yl-btn ${S.course==300?'':'sub'}" data-yc="300">${t('c300')}</button></div></div>`;
+ const a=list();
+ if(quiz){const c=a[lesson],n=c.quiz.length;
+  if(quiz.i>=n){const pct=Math.round(quiz.ok/n*100);return h+`<div class="yl-card"><div class="yl-big">${pct}%</div><p>${pct>=80?t('cleared')+' ✓':t('pass80')}</p><button class="yl-btn" data-ya="list">${t('back')}</button> <button class="yl-btn sub" data-ya="quiz">${t('retry')}</button></div>`}
+  const q=c.quiz[quiz.i];
+  return h+`<div class="yl-card"><span class="yl-chip">${quiz.i+1} / ${n}</span><h3>${L(q.q)}</h3><p class="yl-en">${q.q.en||''}</p>${q.c.map((o,k)=>`<button class="yl-opt ${quiz.pick==null?'':k==q.a?'ok':k==quiz.pick?'ng':''}" data-yo="${k}" ${quiz.pick==null?'':'disabled'}>${o}</button>`).join('')}${quiz.pick!=null?`<p class="yl-en">${(q.fb&&q.fb.en)||''}</p><button class="yl-btn" data-ya="qnext">${t('next')}</button>`:''}</div>`}
+ if(lesson!==null){const c=a[lesson];
+  return h+`<button class="yl-btn sub" data-ya="list">${t('back')}</button><div class="yl-card"><h2>${L(c.title)}</h2><p>${L(c.explain)}</p>${(c.vocab||[]).length?`<div class="yl-lbl">${t('vocab')}</div><p>${c.vocab.map(v=>`<span class="yl-chip">${v.jp} · ${v.en}</span>`).join(' ')}</p>`:''}${c.ex.map(e=>`<div class="yl-deep">${e[0]}<div class="yl-en">${e[1]}</div></div>`).join('')}<p class="yl-en">${t('pass80')}</p><button class="yl-btn" data-ya="quiz">${t('start')}</button></div>`}
+ let rows=a.map((c,i)=>{const u=open_(i),b=S.clear[c.id];
+  return `<button class="yl-card yl-ls" data-yl="${i}" ${u?'':'disabled'}><span>${u?'📖':'🔒'}</span><span style="flex:1"><b>${L(c.title)}</b></span>${b>=80?`<span class="yl-chip">${t('cleared')} ${b}%</span>`:b!=null?`<span class="yl-chip">${b}%</span>`:''}</button>`}).join('');
+ for(let i=a.length;i<target();i++)rows+=`<div class="yl-card yl-ls" style="opacity:.5"><span>🔒</span><span style="flex:1">${S.lang=='en'?'Lesson':'第'}${i+1}${S.lang=='en'?'':'課'} · ${t('soon')}</span></div>`;
+ return h+rows;
+}
+function vReport(){
+ const a=CUR.filter(l=>l.track=='core'||S.course==300),n=a.filter(c=>(S.clear[c.id]||0)>=80).length,b=S.best,l=S.last,d=new Date().toISOString().slice(0,10);
+ const rk=l?(l.rank?`${l.rank} ${t(RANKS.find(r=>r[1]==l.rank)[2])}`:'—'+(l.cut?' '+t('cutw'):'')):t('none');
+ return `<div class="yl-card"><h2>${t('t3')}</h2><p>${t('name')}: <input id="yl-name" class="yl-in" value="${(S.name||'').replace(/"/g,'&quot;')}"> &nbsp; ${t('date')}: ${d}</p>
+ <table class="yl-tbl"><tr><td>${t('total')}</td><td><b>${fmt(S.sec)}</b> / ${S.course}h</td></tr>
+ <tr><td>${t('lessons')}</td><td><b>${n}</b> / ${target()}</td></tr>
+ <tr><td>${t('best')}</td><td><b>${b?b.score+' / 250 ('+b.level+')':t('none')}</b> <small>${t('est')}</small></td></tr>
+ <tr><td>${t('latest')}</td><td><b>${rk}</b></td></tr></table>
+ <p class="yl-grid">${a.map(c=>`<span class="yl-chip">${c.id} ${(S.clear[c.id]||0)>=80?'✓':'·'}</span>`).join(' ')}</p>
+ <button class="yl-btn yl-np" data-ya="print">${t('print')}</button></div><p style="text-align:right">Yoshida EdTech Works</p>`;
+}
+function setTab(k){
+ if(k!=='exam'&&tab=='exam'){const a=document.querySelector('.screen.active');if(a)lastScreen=a.id}
+ tab=k;
+ document.querySelectorAll('.screen').forEach(e=>{e.style.display='none';e.classList.remove('active')});
+ $('yl-learn').style.display=k=='learn'?'block':'none';$('yl-report').style.display=k=='report'?'block':'none';
+ if(k=='exam')show(lastScreen||'screen-start','flex');
+ if(k!='exam')lesson=lesson,render();else head();
+}
+document.addEventListener('click',e=>{
+ const el=e.target.closest('button');if(!el)return;const d=el.dataset;
+ if(el.id=='l-jp'||el.id=='l-en'){S.lang=el.id.slice(2);save();return render()}
+ if(d.yt)return setTab(d.yt);
+ if(d.yc){S.course=+d.yc;lesson=null;quiz=null;save();return render()}
+ if(d.yl!==undefined){lesson=+d.yl;quiz=null;return render()}
+ if(d.yo!==undefined&&quiz){const q=list()[lesson].quiz[quiz.i];quiz.pick=+d.yo;if(quiz.pick===q.a){quiz.ok++;beep()}return render()}
+ switch(d.ya){
+  case'list':lesson=null;quiz=null;break;
+  case'quiz':quiz={i:0,ok:0,pick:null};break;
+  case'qnext':{quiz.i++;quiz.pick=null;const c=list()[lesson];if(quiz.i>=c.quiz.length){const p=Math.round(quiz.ok/c.quiz.length*100);S.clear[c.id]=Math.max(S.clear[c.id]||0,p);save();if(p>=80)beep()}break}
+  case'print':return window.print();
+  default:return}
+ render();
+});
+document.addEventListener('input',e=>{if(e.target.id=='yl-name'){S.name=e.target.value;save()}});
+/* 累計時間：アプリが表示されている間はすべて加算（学習・小テスト・模試） */
+let tk=0;
+setInterval(()=>{if(document.hidden)return;S.sec++;
+ const c=$('yl-clock');if(c)c.textContent=fmt(S.sec);const pb=$('yl-pb');if(pb)pb.style.width=Math.min(100,S.sec/(S.course*3600)*100)+'%';
+ $('yl-clk').textContent=fmt(S.sec);if(++tk%10==0)save()},1000);
+addEventListener('pagehide',save);
+/* 試験中はヘッダー非表示（本番CBTの再現） */
+new MutationObserver(()=>{$('yl-top').style.display=$('screen-exam').classList.contains('active')?'none':''}).observe($('screen-exam'),{attributes:true,attributeFilter:['class','style']});
+/* 3段階判定：既存finishExamの後に判定パネルを追加 */
+const _fe=window.finishExam;
+window.finishExam=function(to){
+ _fe(to);
+ try{
+  const cfg=LEVEL_CONFIG[currentLevel].sections,by={};Object.keys(cfg).forEach(s=>by[s]=0);let ok=0;
+  examQuestions.forEach((q,i)=>{if(answers[i]===Number(q.correct_answer)){ok++;if(by[q.section]!==undefined)by[q.section]++}});
+  const cut=Object.keys(cfg).filter(s=>by[s]<cfg[s].cutoff);
+  const score=Math.round(ok/examQuestions.length*250),r=cut.length?null:rankOf(score);
+  const rec={score,rank:r?r[1]:null,cut:cut.length>0,level:currentLevel,date:new Date().toISOString().slice(0,10)};
+  S.last=rec;if(!S.best||score>S.best.score)S.best={score,level:currentLevel,date:rec.date};save();
+  const msg=r?`${U[r[2]][0]}<br><small>${U[r[2]][1]}</small>`:(cut.length?`${U.cutw[0]}<br><small>${U.cutw[1]}</small>`:`${U.r0[0]}<br><small>${U.r0[1]}</small>`);
+  $('result-verdict').insertAdjacentHTML('beforeend',`<div class="yl-rank"><div class="yl-lbl">${U.est[0]}</div><div class="yl-big">${score} / 250</div><span class="yl-chip">${r?r[1]:'—'}</span><p style="font-weight:700;color:${r?'var(--accent-text)':'var(--danger-text)'}">${msg}</p><button class="yl-btn sub" data-yt="learn">${S.lang=='en'?'Review weak points in Learning Lounge':'弱点をカリキュラム学習で復習する'}</button></div>`);
+ }catch(e){console.error(e)}
+};
+/* 起動 */
+fetch('curriculum_jft.json').then(r=>r.json()).then(j=>{CUR=j.lessons||[]}).catch(()=>{loadErr=true}).finally(()=>{
+  setTab(tab);
+});
+})();
+
 </script>
 </body>
 </html>
