@@ -3,7 +3,7 @@
   "source": "edtech-nihongo",
   "core_target": 30,
   "total_target": 60,
-  "note": "L01-L36 converted from edtech-nihongo; L37-L42 care-field (ruby + TL); L43-L60 not yet authored"
+  "note": "All 60 lessons authored: L01-L36 from edtech-nihongo; L37-L44 care; L45-L50 factory; L51-L56 life; L57-L60 exam strategy (ruby+TL)"
  },
  "lessons": [
   {
@@ -6552,6 +6552,3012 @@
      "fb": {
       "en": "Always report, even small injuries.",
       "tl": "Laging iulat, kahit maliit."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L43",
+   "track": "field",
+   "level": "A2",
+   "domain": "care",
+   "title": {
+    "jp": "第（だい）43課（か）　声（こえ）かけと傾聴（けいちょう）",
+    "en": "Lesson 43: Speaking with residents and listening",
+    "tl": "Pakikipag-usap at pakikinig sa residente"
+   },
+   "explain": {
+    "jp": "利用者（りようしゃ）の話（はなし）をよく聞（き）いて、やさしく声（こえ）をかけます。",
+    "en": "Listen carefully and speak gently. Practise ～ですね (showing empathy), ～たいですか (asking wishes) and short, calm sentences. This is especially important for residents with dementia.",
+    "tl": "Makinig nang mabuti at magsalita nang magiliw. Para sa may dementia, gumamit ng maikli at mahinahong pangungusap."
+   },
+   "vocab": [
+    {
+     "jp": "傾聴（けいちょう）",
+     "en": "active listening",
+     "tl": "aktibong pakikinig"
+    },
+    {
+     "jp": "気持（きも）ち",
+     "en": "feelings",
+     "tl": "damdamin"
+    },
+    {
+     "jp": "不安（ふあん）",
+     "en": "anxiety",
+     "tl": "pag-aalala"
+    },
+    {
+     "jp": "家族（かぞく）",
+     "en": "family",
+     "tl": "pamilya"
+    },
+    {
+     "jp": "認知症（にんちしょう）",
+     "en": "dementia",
+     "tl": "dementia"
+    },
+    {
+     "jp": "落（お）ち着（つ）く",
+     "en": "to calm down",
+     "tl": "huminahon"
+    },
+    {
+     "jp": "うなずく",
+     "en": "to nod",
+     "tl": "tumango"
+    },
+    {
+     "jp": "笑顔（えがお）",
+     "en": "smile",
+     "tl": "ngiti"
+    }
+   ],
+   "ex": [
+    [
+     "お困（こま）りのことはありませんか。",
+     "Is there anything troubling you?",
+     "May bumabagabag po ba sa inyo?"
+    ],
+    [
+     "寂（さび）しいですね。",
+     "You must feel lonely.",
+     "Nakakalungkot po siguro."
+    ],
+    [
+     "何（なに）がしたいですか。",
+     "What would you like to do?",
+     "Ano po ang gusto ninyong gawin?"
+    ],
+    [
+     "ゆっくり話（はな）してください。ちゃんと聞（き）いています。",
+     "Please speak slowly. I am listening.",
+     "Dahan-dahan po. Nakikinig ako."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "利用者（りようしゃ）が「寂（さび）しい」と言（い）いました。どう答（こた）えますか。",
+      "en": "A resident says they feel lonely. How do you respond?"
+     },
+     "c": [
+      "そうですか。さようなら。",
+      "寂（さび）しくないです。",
+      "寂（さび）しいですね。お話（はなし）を聞（き）かせてください。",
+      "大丈夫（だいじょうぶ）です。私（わたし）は忙（いそが）しいです。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Repeat the feeling (～ですね) to show you understand.",
+      "tl": "Ulitin ang damdamin para ipakitang naiintindihan mo."
+     }
+    },
+    {
+     "q": {
+      "jp": "「傾聴（けいちょう）」の意味（いみ）は？",
+      "en": "What does 「傾聴（けいちょう）」 mean?"
+     },
+     "c": [
+      "giving medicine",
+      "listening carefully",
+      "talking loudly",
+      "writing a report"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "傾聴（けいちょう）= listening with full attention.",
+      "tl": "Ang ibig sabihin: makinig nang buong atensyon."
+     }
+    },
+    {
+     "q": {
+      "jp": "認知症（にんちしょう）の利用者（りようしゃ）に話（はな）すとき、大切（たいせつ）なことは？",
+      "en": "What matters when speaking with a resident with dementia?"
+     },
+     "c": [
+      "早（はや）く話（はな）すこと",
+      "何（なに）も言（い）わないこと",
+      "短（みじか）く、ゆっくり話（はな）すこと",
+      "大（おお）きい声（こえ）で怒（おこ）ること"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Short, slow, calm sentences help understanding.",
+      "tl": "Maikli, mabagal at mahinahon ang pananalita."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「何（なに）が（　）ですか。」",
+      "en": "Complete: What would you like to do?"
+     },
+     "c": [
+      "する",
+      "したい",
+      "して",
+      "した"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "～たいですか asks what someone wants to do.",
+      "tl": "Ang ～たいですか ay nagtatanong ng gusto."
+     }
+    },
+    {
+     "q": {
+      "jp": "家族（かぞく）に「様子（ようす）はどうですか」と聞（き）かれました。まず何（なに）をしますか。",
+      "en": "A family member asks how the resident is. What do you do first?"
+     },
+     "c": [
+      "見（み）たことを正直（しょうじき）に伝（つた）えます。",
+      "何（なに）も言（い）わずに帰（かえ）ります。",
+      "知（し）らないふりをします。",
+      "「大丈夫（だいじょうぶ）です」とだけ言（い）います。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Tell what you observed. For medical matters, refer to the nurse.",
+      "tl": "Sabihin ang nakita mo. Sa medikal na bagay, sa nurse."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L44",
+   "track": "field",
+   "level": "A2",
+   "domain": "care",
+   "title": {
+    "jp": "第（だい）44課（か）　感染（かんせん）予防（よぼう）と衛生（えいせい）",
+    "en": "Lesson 44: Infection prevention and hygiene",
+    "tl": "Pag-iwas sa impeksyon at kalinisan"
+   },
+   "explain": {
+    "jp": "手（て）を洗（あら）って、手袋（てぶくろ）とマスクを正（ただ）しく使（つか）います。",
+    "en": "Wash your hands and use gloves and masks correctly. Practise ～なければなりません (must), ～たら (if/when) and ～てから (after). Hand hygiene before and after care is the basic rule.",
+    "tl": "Maghugas ng kamay at gumamit nang tama ng guwantes at mask. Maghugas bago at pagkatapos mag-alaga."
+   },
+   "vocab": [
+    {
+     "jp": "感染（かんせん）",
+     "en": "infection",
+     "tl": "impeksyon"
+    },
+    {
+     "jp": "手洗（てあら）い",
+     "en": "handwashing",
+     "tl": "paghuhugas ng kamay"
+    },
+    {
+     "jp": "手袋（てぶくろ）",
+     "en": "gloves",
+     "tl": "guwantes"
+    },
+    {
+     "jp": "消毒（しょうどく）",
+     "en": "disinfection",
+     "tl": "pagdidisimpekta"
+    },
+    {
+     "jp": "汚（よご）れる",
+     "en": "to get dirty",
+     "tl": "madumi"
+    },
+    {
+     "jp": "捨（す）てる",
+     "en": "to throw away",
+     "tl": "itapon"
+    },
+    {
+     "jp": "嘔吐（おうと）",
+     "en": "vomiting",
+     "tl": "pagsusuka"
+    },
+    {
+     "jp": "換気（かんき）",
+     "en": "ventilation",
+     "tl": "bentilasyon"
+    }
+   ],
+   "ex": [
+    [
+     "ケアの前（まえ）と後（あと）に、手（て）を洗（あら）わなければなりません。",
+     "You must wash your hands before and after care.",
+     "Kailangang maghugas ng kamay bago at pagkatapos mag-alaga."
+    ],
+    [
+     "手袋（てぶくろ）が汚（よご）れたら、すぐに捨（す）ててください。",
+     "If the gloves get dirty, throw them away at once.",
+     "Kapag narumihan ang guwantes, itapon agad."
+    ],
+    [
+     "部屋（へや）の換気（かんき）をしましょう。",
+     "Let us ventilate the room.",
+     "Magpapasok tayo ng hangin sa kuwarto."
+    ],
+    [
+     "嘔吐（おうと）したら、手袋（てぶくろ）をして片付（かたづ）けます。",
+     "If someone vomits, put on gloves and clean up.",
+     "Kapag may sumuka, magsuot ng guwantes at maglinis."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "「手洗（てあら）い」はいつしますか。",
+      "en": "When do you wash your hands?"
+     },
+     "c": [
+      "忙（いそが）しくないときだけ",
+      "しなくてもいいです",
+      "ケアの前（まえ）と後（あと）",
+      "ケアの後（あと）だけ"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Before and after every care task.",
+      "tl": "Bago at pagkatapos ng bawat pag-aalaga."
+     }
+    },
+    {
+     "q": {
+      "jp": "「感染（かんせん）」の意味（いみ）は？",
+      "en": "What does 「感染（かんせん）」 mean?"
+     },
+     "c": [
+      "infection",
+      "injury",
+      "medicine",
+      "exercise"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "感染（かんせん）= infection.",
+      "tl": "Impeksyon."
+     }
+    },
+    {
+     "q": {
+      "jp": "手袋（てぶくろ）が汚（よご）れました。どうしますか。",
+      "en": "The gloves got dirty. What do you do?"
+     },
+     "c": [
+      "洗（あら）って使（つか）います。",
+      "すぐに捨（す）てます。",
+      "机（つくえ）の上（うえ）に置（お）きます。",
+      "そのまま使（つか）います。"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Dirty gloves spread germs; replace them.",
+      "tl": "Ang maruming guwantes ay nagkakalat ng mikrobyo."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「手（て）を洗（あら）わ（　）。」",
+      "en": "Complete: You must wash your hands."
+     },
+     "c": [
+      "なくてもいいです",
+      "なければなりません",
+      "なかったです",
+      "ないでください"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "～なければなりません = must.",
+      "tl": "Ang ～なければなりません ay \"kailangan\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "嘔吐（おうと）があったとき、まず何（なに）をしますか。",
+      "en": "Someone vomited. What do you do first?"
+     },
+     "c": [
+      "手袋（てぶくろ）をして片付（かたづ）けます。",
+      "そのままにします。",
+      "素手（すで）で片付（かたづ）けます。",
+      "窓（まど）を閉（し）めます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Wear gloves, clean up, then wash hands.",
+      "tl": "Magsuot ng guwantes, maglinis, at maghugas ng kamay."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L45",
+   "track": "field",
+   "level": "A2",
+   "domain": "factory",
+   "title": {
+    "jp": "第（だい）45課（か）　朝礼（ちょうれい）と作業（さぎょう）指示（しじ）",
+    "en": "Lesson 45: Morning meeting and work instructions",
+    "tl": "Pulong sa umaga at mga utos sa trabaho"
+   },
+   "explain": {
+    "jp": "朝礼（ちょうれい）で今日（きょう）の作業（さぎょう）を確認（かくにん）します。わからないときは、聞（き）き返（かえ）します。",
+    "en": "At the morning meeting you confirm the day's work. Practise ～てください (instructions) and asking again: もう一度（いちど）お願（ねが）いします. Never guess when you do not understand.",
+    "tl": "Sa umagang pulong, tiyakin ang gawain. Kung hindi naiintindihan, magtanong ulit. Huwag manghula."
+   },
+   "vocab": [
+    {
+     "jp": "朝礼（ちょうれい）",
+     "en": "morning meeting",
+     "tl": "pulong sa umaga"
+    },
+    {
+     "jp": "作業（さぎょう）",
+     "en": "work task",
+     "tl": "gawain"
+    },
+    {
+     "jp": "指示（しじ）",
+     "en": "instruction",
+     "tl": "utos"
+    },
+    {
+     "jp": "確認（かくにん）",
+     "en": "confirmation",
+     "tl": "pagkumpirma"
+    },
+    {
+     "jp": "担当（たんとう）",
+     "en": "person in charge",
+     "tl": "nakatalaga"
+    },
+    {
+     "jp": "目標（もくひょう）",
+     "en": "target",
+     "tl": "target"
+    },
+    {
+     "jp": "遅刻（ちこく）",
+     "en": "being late",
+     "tl": "pagiging huli"
+    },
+    {
+     "jp": "聞（き）き返（かえ）す",
+     "en": "to ask again",
+     "tl": "magtanong ulit"
+    }
+   ],
+   "ex": [
+    [
+     "今日（きょう）は、Aラインで部品（ぶひん）を作（つく）ります。",
+     "Today we make parts on line A.",
+     "Ngayon, gagawa tayo ng piyesa sa Line A."
+    ],
+    [
+     "わからないときは、聞（き）き返（かえ）してください。",
+     "If you do not understand, please ask again.",
+     "Kapag hindi naiintindihan, magtanong ulit."
+    ],
+    [
+     "もう一度（いちど）お願（ねが）いします。",
+     "One more time, please.",
+     "Pakiulit po."
+    ],
+    [
+     "遅刻（ちこく）するときは、会社（かいしゃ）に連絡（れんらく）してください。",
+     "If you will be late, contact the company.",
+     "Kapag mahuhuli, magsabi sa kumpanya."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "指示（しじ）が聞（き）きとれませんでした。何（なん）と言（い）いますか。",
+      "en": "You could not catch the instruction. What do you say?"
+     },
+     "c": [
+      "わかりました。",
+      "さようなら。",
+      "ありがとうございます。",
+      "もう一度（いちど）お願（ねが）いします。"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Never pretend to understand; ask again.",
+      "tl": "Huwag magkunwaring naiintindihan; magtanong ulit."
+     }
+    },
+    {
+     "q": {
+      "jp": "「担当（たんとう）」の意味（いみ）は？",
+      "en": "What does 「担当（たんとう）」 mean?"
+     },
+     "c": [
+      "schedule",
+      "holiday",
+      "person in charge",
+      "tool"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "担当（たんとう）= the person responsible.",
+      "tl": "Ang nakatalaga o responsable."
+     }
+    },
+    {
+     "q": {
+      "jp": "「遅刻（ちこく）」の意味（いみ）は？",
+      "en": "What does 「遅刻（ちこく）」 mean?"
+     },
+     "c": [
+      "being absent",
+      "leaving early",
+      "being late",
+      "working overtime"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "遅刻（ちこく）= arriving late.",
+      "tl": "Pagiging huli sa pagdating."
+     }
+    },
+    {
+     "q": {
+      "jp": "作業（さぎょう）の前（まえ）に何（なに）を確認（かくにん）しますか。",
+      "en": "What do you confirm before work?"
+     },
+     "c": [
+      "帰（かえ）る時間（じかん）だけ",
+      "友達（ともだち）の名前（なまえ）",
+      "今日（きょう）の作業（さぎょう）と担当（たんとう）",
+      "昼（ひる）ごはんのメニューだけ"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Confirm the task and who is in charge.",
+      "tl": "Tiyakin ang gawain at ang nakatalaga."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「わからないときは、聞（き）き（　）ください。」",
+      "en": "Complete: If you do not understand, ask again."
+     },
+     "c": [
+      "返（かえ）す",
+      "返（かえ）し",
+      "返（かえ）して",
+      "返（かえ）した"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "聞（き）き返（かえ）す + て + ください.",
+      "tl": "Gamitin ang て-form + ください."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L46",
+   "track": "field",
+   "level": "A2",
+   "domain": "factory",
+   "title": {
+    "jp": "第（だい）46課（か）　安全（あんぜん）ルールと保護具（ほごぐ）",
+    "en": "Lesson 46: Safety rules and protective equipment",
+    "tl": "Mga patakaran sa kaligtasan at proteksiyon"
+   },
+   "explain": {
+    "jp": "工場（こうじょう）に入（はい）る前（まえ）に、安全靴（あんぜんぐつ）やヘルメットなどを正（ただ）しく身（み）につけます。",
+    "en": "Before entering the factory, wear safety shoes, a helmet and other gear correctly. Practise ～なければなりません (must), ～てはいけません (must not) and ～ないでください (please do not).",
+    "tl": "Bago pumasok sa pabrika, isuot nang tama ang safety shoes at helmet. Sundin ang mga patakaran."
+   },
+   "vocab": [
+    {
+     "jp": "安全靴（あんぜんぐつ）",
+     "en": "safety shoes",
+     "tl": "safety shoes"
+    },
+    {
+     "jp": "ヘルメット",
+     "en": "helmet",
+     "tl": "helmet"
+    },
+    {
+     "jp": "保護（ほご）メガネ",
+     "en": "safety glasses",
+     "tl": "salamin pangkaligtasan"
+    },
+    {
+     "jp": "手袋（てぶくろ）",
+     "en": "gloves",
+     "tl": "guwantes"
+    },
+    {
+     "jp": "危険（きけん）",
+     "en": "danger",
+     "tl": "panganib"
+    },
+    {
+     "jp": "立（た）ち入（い）り禁止（きんし）",
+     "en": "no entry",
+     "tl": "bawal pumasok"
+    },
+    {
+     "jp": "非常口（ひじょうぐち）",
+     "en": "emergency exit",
+     "tl": "emergency exit"
+    },
+    {
+     "jp": "ルール",
+     "en": "rule",
+     "tl": "patakaran"
+    }
+   ],
+   "ex": [
+    [
+     "工場（こうじょう）では、ヘルメットをかぶらなければなりません。",
+     "In the factory, you must wear a helmet.",
+     "Sa pabrika, kailangang magsuot ng helmet."
+    ],
+    [
+     "ここは、立（た）ち入（い）り禁止（きんし）です。入（はい）ってはいけません。",
+     "This is a no-entry area. You must not enter.",
+     "Bawal pumasok dito."
+    ],
+    [
+     "機械（きかい）が動（うご）いているときは、触（さわ）らないでください。",
+     "Do not touch the machine while it is running.",
+     "Huwag hawakan ang makina habang gumagana."
+    ],
+    [
+     "危（あぶ）ないと思（おも）ったら、すぐに止（と）めてください。",
+     "If you think it is dangerous, stop at once.",
+     "Kapag sa tingin mo ay delikado, ihinto agad."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "「危険（きけん）」の意味（いみ）は？",
+      "en": "What does 「危険（きけん）」 mean?"
+     },
+     "c": [
+      "heavy",
+      "quiet",
+      "safe",
+      "danger"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "危険（きけん）= danger.",
+      "tl": "Panganib."
+     }
+    },
+    {
+     "q": {
+      "jp": "「立（た）ち入（い）り禁止（きんし）」の場所（ばしょ）では、どうしますか。",
+      "en": "What do you do at a no-entry place?"
+     },
+     "c": [
+      "入（はい）ってもいいです。",
+      "走（はし）って入（はい）ります。",
+      "入（はい）りません。",
+      "写真（しゃしん）を撮（と）ります。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "禁止（きんし）= prohibited.",
+      "tl": "Ang 禁止（きんし） ay bawal."
+     }
+    },
+    {
+     "q": {
+      "jp": "工場（こうじょう）に入（はい）る前（まえ）に、足（あし）に何（なに）をはきますか。",
+      "en": "What do you wear on your feet before entering the factory?"
+     },
+     "c": [
+      "ハイヒール",
+      "スリッパ",
+      "サンダル",
+      "安全靴（あんぜんぐつ）"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Safety shoes protect your feet from heavy objects.",
+      "tl": "Pinoprotektahan ng safety shoes ang paa."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「機械（きかい）が動（うご）いているとき、触（さわ）って（　）。」",
+      "en": "Complete: You must not touch the machine while it is running."
+     },
+     "c": [
+      "はいけません",
+      "ください",
+      "もいいです",
+      "ましょう"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "～てはいけません = must not.",
+      "tl": "Ang ～てはいけません ay \"bawal\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "危（あぶ）ないと思（おも）いました。まず何（なに）をしますか。",
+      "en": "You think something is dangerous. What do you do first?"
+     },
+     "c": [
+      "隠（かく）します。",
+      "何（なに）も言（い）わずに帰（かえ）ります。",
+      "そのまま続（つづ）けます。",
+      "作業（さぎょう）を止（と）めて、報告（ほうこく）します。"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Stop work and report at once.",
+      "tl": "Ihinto ang trabaho at iulat agad."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L47",
+   "track": "field",
+   "level": "A2",
+   "domain": "factory",
+   "title": {
+    "jp": "第（だい）47課（か）　機械（きかい）の操作（そうさ）と停止（ていし）",
+    "en": "Lesson 47: Operating and stopping machines",
+    "tl": "Pagpapatakbo at paghinto ng makina"
+   },
+   "explain": {
+    "jp": "スイッチを入（い）れる前（まえ）に、機械（きかい）の周（まわ）りを確認（かくにん）します。異常（いじょう）があったら、すぐ止（と）めます。",
+    "en": "Check around the machine before switching on. If anything is abnormal, stop it at once. Practise ～前（まえ）に (before), ～てから (after) and ～ています (state).",
+    "tl": "Bago buksan, suriin ang paligid ng makina. Kung may kakaiba, ihinto agad."
+   },
+   "vocab": [
+    {
+     "jp": "操作（そうさ）",
+     "en": "operation",
+     "tl": "pagpapatakbo"
+    },
+    {
+     "jp": "スイッチ",
+     "en": "switch",
+     "tl": "switch"
+    },
+    {
+     "jp": "非常停止（ひじょうていし）",
+     "en": "emergency stop",
+     "tl": "emergency stop"
+    },
+    {
+     "jp": "異常（いじょう）",
+     "en": "abnormality",
+     "tl": "hindi normal"
+    },
+    {
+     "jp": "音（おと）",
+     "en": "sound",
+     "tl": "tunog"
+    },
+    {
+     "jp": "煙（けむり）",
+     "en": "smoke",
+     "tl": "usok"
+    },
+    {
+     "jp": "電源（でんげん）",
+     "en": "power supply",
+     "tl": "kuryente"
+    },
+    {
+     "jp": "点検（てんけん）",
+     "en": "inspection",
+     "tl": "inspeksyon"
+    }
+   ],
+   "ex": [
+    [
+     "スイッチを入（い）れる前（まえ）に、周（まわ）りに人（ひと）がいないか確認（かくにん）します。",
+     "Before switching on, check that nobody is around.",
+     "Bago i-on, tiyaking walang tao sa paligid."
+    ],
+    [
+     "変（へん）な音（おと）がしたら、非常停止（ひじょうていし）ボタンを押（お）してください。",
+     "If you hear a strange sound, press the emergency stop button.",
+     "Kapag may kakaibang tunog, pindutin ang emergency stop."
+    ],
+    [
+     "作業（さぎょう）が終（お）わってから、電源（でんげん）を切（き）ります。",
+     "After the work is finished, turn off the power.",
+     "Pagkatapos ng trabaho, patayin ang kuryente."
+    ],
+    [
+     "煙（けむり）が出（で）ています。すぐ止（と）めてください。",
+     "Smoke is coming out. Stop it immediately.",
+     "May lumalabas na usok. Ihinto agad."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "機械（きかい）から変（へん）な音（おと）がします。まず何（なに）をしますか。",
+      "en": "The machine makes a strange sound. What do you do first?"
+     },
+     "c": [
+      "機械（きかい）を止（と）めます。",
+      "音楽（おんがく）をかけます。",
+      "もっと速（はや）く動（うご）かします。",
+      "無視（むし）します。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Stop the machine first, then report.",
+      "tl": "Ihinto muna ang makina, saka iulat."
+     }
+    },
+    {
+     "q": {
+      "jp": "「非常停止（ひじょうていし）」の意味（いみ）は？",
+      "en": "What does 「非常停止（ひじょうていし）」 mean?"
+     },
+     "c": [
+      "emergency stop",
+      "night work",
+      "slow start",
+      "daily check"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "非常（ひじょう）= emergency; 停止（ていし）= stop.",
+      "tl": "Emergency stop."
+     }
+    },
+    {
+     "q": {
+      "jp": "スイッチを入（い）れる前（まえ）に、何（なに）を確認（かくにん）しますか。",
+      "en": "What do you check before switching on?"
+     },
+     "c": [
+      "天気（てんき）",
+      "周（まわ）りに人（ひと）がいないか",
+      "昼（ひる）ごはん",
+      "給料（きゅうりょう）"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Make sure nobody is near the machine.",
+      "tl": "Tiyaking walang tao malapit sa makina."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「作業（さぎょう）が終（お）わって（　）、電源（でんげん）を切（き）ります。」",
+      "en": "Complete: After the work finishes, turn off the power."
+     },
+     "c": [
+      "ので",
+      "から",
+      "のに",
+      "まで"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "～てから = after doing.",
+      "tl": "Ang ～てから ay \"pagkatapos\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "「点検（てんけん）」の意味（いみ）は？",
+      "en": "What does 「点検（てんけん）」 mean?"
+     },
+     "c": [
+      "storage",
+      "packing",
+      "inspection",
+      "delivery"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "点検（てんけん）= checking equipment.",
+      "tl": "Inspeksyon ng kagamitan."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L48",
+   "track": "field",
+   "level": "A2",
+   "domain": "factory",
+   "title": {
+    "jp": "第（だい）48課（か）　品質（ひんしつ）チェックと不良品（ふりょうひん）",
+    "en": "Lesson 48: Quality checks and defective products",
+    "tl": "Pagsusuri ng kalidad at depektibong produkto"
+   },
+   "explain": {
+    "jp": "製品（せいひん）の大（おお）きさや傷（きず）を見（み）て、良（よ）い物（もの）と不良品（ふりょうひん）を分（わ）けます。",
+    "en": "Check product size and scratches, and separate good items from defects. Practise ～すぎる (too much), ～かどうか (whether or not) and ～ば (if).",
+    "tl": "Suriin ang laki at gasgas ng produkto; ihiwalay ang depektibo sa maayos."
+   },
+   "vocab": [
+    {
+     "jp": "品質（ひんしつ）",
+     "en": "quality",
+     "tl": "kalidad"
+    },
+    {
+     "jp": "不良品（ふりょうひん）",
+     "en": "defective product",
+     "tl": "depektibong produkto"
+    },
+    {
+     "jp": "傷（きず）",
+     "en": "scratch",
+     "tl": "gasgas"
+    },
+    {
+     "jp": "寸法（すんぽう）",
+     "en": "dimensions",
+     "tl": "sukat"
+    },
+    {
+     "jp": "測（はか）る",
+     "en": "to measure",
+     "tl": "sukatin"
+    },
+    {
+     "jp": "基準（きじゅん）",
+     "en": "standard",
+     "tl": "pamantayan"
+    },
+    {
+     "jp": "合格（ごうかく）",
+     "en": "pass",
+     "tl": "pasado"
+    },
+    {
+     "jp": "良品（りょうひん）",
+     "en": "good product",
+     "tl": "magandang produkto"
+    }
+   ],
+   "ex": [
+    [
+     "寸法（すんぽう）が基準（きじゅん）より大（おお）きすぎます。",
+     "The dimensions are too large compared with the standard.",
+     "Masyadong malaki ang sukat kaysa sa pamantayan."
+    ],
+    [
+     "傷（きず）があるかどうか、よく見（み）てください。",
+     "Please look carefully to see whether there are scratches.",
+     "Tingnang mabuti kung may gasgas."
+    ],
+    [
+     "この製品（せいひん）は不良品（ふりょうひん）なので、赤（あか）い箱（はこ）に入（い）れます。",
+     "This product is defective, so put it in the red box.",
+     "Depektibo ito, ilagay sa pulang kahon."
+    ],
+    [
+     "基準（きじゅん）に合（あ）っていれば、合格（ごうかく）です。",
+     "If it meets the standard, it passes.",
+     "Kung pasok sa pamantayan, pasado."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "「不良品（ふりょうひん）」の意味（いみ）は？",
+      "en": "What does 「不良品（ふりょうひん）」 mean?"
+     },
+     "c": [
+      "heavy box",
+      "free sample",
+      "new product",
+      "defective product"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "不良（ふりょう）= defective.",
+      "tl": "Depektibong produkto."
+     }
+    },
+    {
+     "q": {
+      "jp": "傷（きず）がある製品（せいひん）は、どうしますか。",
+      "en": "What do you do with a scratched product?"
+     },
+     "c": [
+      "捨（す）てて報告（ほうこく）しません。",
+      "隠（かく）します。",
+      "そのまま出荷（しゅっか）します。",
+      "不良品（ふりょうひん）の箱（はこ）に入（い）れます。"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Separate it and report it.",
+      "tl": "Ihiwalay at iulat."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「寸法（すんぽう）が基準（きじゅん）に合（あ）っている（　）、確認（かくにん）します。」",
+      "en": "Complete: I check whether the dimensions meet the standard."
+     },
+     "c": [
+      "そうです",
+      "かどうか",
+      "たいです",
+      "かもしれない"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "～かどうか = whether or not.",
+      "tl": "Ang ～かどうか ay \"kung ... o hindi\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "「測（はか）る」の意味（いみ）は？",
+      "en": "What does 「測（はか）る」 mean?"
+     },
+     "c": [
+      "to carry",
+      "to measure",
+      "to cut",
+      "to wash"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "測（はか）る = measure size or weight.",
+      "tl": "Sukatin."
+     }
+    },
+    {
+     "q": {
+      "jp": "不良品（ふりょうひん）を見（み）つけました。どうしますか。",
+      "en": "You found a defective product. What do you do?"
+     },
+     "c": [
+      "担当（たんとう）の人（ひと）に報告（ほうこく）します。",
+      "自分（じぶん）の物（もの）にします。",
+      "何（なに）も言（い）いません。",
+      "良品（りょうひん）の箱（はこ）に入（い）れます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Report to the person in charge.",
+      "tl": "Iulat sa nakatalaga."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L49",
+   "track": "field",
+   "level": "A2",
+   "domain": "factory",
+   "title": {
+    "jp": "第（だい）49課（か）　報告（ほうこく）・連絡（れんらく）・相談（そうだん）",
+    "en": "Lesson 49: Report, contact and consult (hou-ren-sou)",
+    "tl": "Ulat, kontak at konsultasyon (hou-ren-sou)"
+   },
+   "explain": {
+    "jp": "仕事（しごと）で困（こま）ったとき、早（はや）めに上司（じょうし）に報告（ほうこく）・連絡（れんらく）・相談（そうだん）します。",
+    "en": "When trouble arises at work, report, contact and consult your supervisor early. Practise ～んですが (introducing a problem), ～てもいいですか (asking permission) and ～たほうがいいです (it is better to ...).",
+    "tl": "Kapag may problema, sabihin agad sa superbisor: mag-ulat, makipag-ugnayan at kumonsulta."
+   },
+   "vocab": [
+    {
+     "jp": "報告（ほうこく）",
+     "en": "report",
+     "tl": "ulat"
+    },
+    {
+     "jp": "連絡（れんらく）",
+     "en": "contact",
+     "tl": "pakikipag-ugnayan"
+    },
+    {
+     "jp": "相談（そうだん）",
+     "en": "consultation",
+     "tl": "konsultasyon"
+    },
+    {
+     "jp": "上司（じょうし）",
+     "en": "supervisor",
+     "tl": "superbisor"
+    },
+    {
+     "jp": "困（こま）る",
+     "en": "to be in trouble",
+     "tl": "mahirapan"
+    },
+    {
+     "jp": "早（はや）めに",
+     "en": "early",
+     "tl": "nang maaga"
+    },
+    {
+     "jp": "間違（まちが）える",
+     "en": "to make a mistake",
+     "tl": "magkamali"
+    },
+    {
+     "jp": "納期（のうき）",
+     "en": "deadline",
+     "tl": "due date"
+    }
+   ],
+   "ex": [
+    [
+     "すみません、ちょっと相談（そうだん）があるんですが。",
+     "Excuse me, I have something to consult about.",
+     "Pasensya na po, may nais akong konsultahin."
+    ],
+    [
+     "間違（まちが）えたら、すぐ報告（ほうこく）したほうがいいです。",
+     "If you make a mistake, it is better to report at once.",
+     "Kung nagkamali, mas mabuting iulat agad."
+    ],
+    [
+     "納期（のうき）に間（ま）に合（あ）わないかもしれません。",
+     "We may not make the deadline.",
+     "Baka hindi tayo umabot sa due date."
+    ],
+    [
+     "体（からだ）の調子（ちょうし）が悪（わる）いので、早（はや）く帰（かえ）ってもいいですか。",
+     "I feel unwell, so may I go home early?",
+     "Masama ang pakiramdam ko, puwede po bang umuwi nang maaga?"
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "仕事（しごと）で間違（まちが）えました。どうしますか。",
+      "en": "You made a mistake at work. What do you do?"
+     },
+     "c": [
+      "次（つぎ）の日（ひ）に忘（わす）れます。",
+      "自分（じぶん）で隠（かく）します。",
+      "すぐに上司（じょうし）に報告（ほうこく）します。",
+      "黙（だま）っています。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Report immediately; early reports prevent bigger problems.",
+      "tl": "Iulat agad para hindi lumala."
+     }
+    },
+    {
+     "q": {
+      "jp": "「相談（そうだん）」の意味（いみ）は？",
+      "en": "What does 「相談（そうだん）」 mean?"
+     },
+     "c": [
+      "vacation",
+      "payment",
+      "consultation",
+      "delivery"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "相談（そうだん）= asking for advice.",
+      "tl": "Pagkonsulta."
+     }
+    },
+    {
+     "q": {
+      "jp": "上司（じょうし）に話（はな）しかけます。最初（さいしょ）に何（なん）と言（い）いますか。",
+      "en": "You approach your supervisor. What do you say first?"
+     },
+     "c": [
+      "今（いま）は忙（いそが）しいから、あとで。",
+      "おい、ちょっと来（き）て。",
+      "ねえ、聞（き）いて。",
+      "すみません、ちょっと相談（そうだん）があるんですが。"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Start politely with すみません.",
+      "tl": "Magsimula nang magalang sa すみません."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「間違（まちが）えたら、すぐ報告（ほうこく）した（　）いいです。」",
+      "en": "Complete: It is better to report at once."
+     },
+     "c": [
+      "ばかり",
+      "ところ",
+      "ほうが",
+      "ために"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "～たほうがいい = it is better to ...",
+      "tl": "Ang ～たほうがいい ay \"mas mabuting ...\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "納期（のうき）に間（ま）に合（あ）わないかもしれません。どうしますか。",
+      "en": "You may miss the deadline. What do you do?"
+     },
+     "c": [
+      "何（なに）も言（い）わずに休（やす）みます。",
+      "他（ほか）の人（ひと）のせいにします。",
+      "納期（のうき）の日（ひ）まで待（ま）ちます。",
+      "早（はや）めに上司（じょうし）に連絡（れんらく）します。"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Contact your supervisor early.",
+      "tl": "Sabihin agad sa superbisor."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L50",
+   "track": "field",
+   "level": "A2",
+   "domain": "factory",
+   "title": {
+    "jp": "第（だい）50課（か）　5Sと整理（せいり）整頓（せいとん）",
+    "en": "Lesson 50: 5S and keeping the workplace tidy",
+    "tl": "Ang 5S at maayos na lugar ng trabaho"
+   },
+   "explain": {
+    "jp": "5Sは、整理（せいり）・整頓（せいとん）・清掃（せいそう）・清潔（せいけつ）・しつけです。毎日（まいにち）、職場（しょくば）をきれいにします。",
+    "en": "5S stands for sort, set in order, shine, standardise and sustain (the five Japanese words all begin with S). Practise ～たら (after/when), ～ておきます (do in advance) and ～ないでください (please do not).",
+    "tl": "Ang 5S ay: ayusin, ayusin ang lugar, linisin, panatilihin ang kalinisan at disiplina. Gawin araw-araw."
+   },
+   "vocab": [
+    {
+     "jp": "整理（せいり）",
+     "en": "sorting out",
+     "tl": "pag-aayos ng kailangan at hindi"
+    },
+    {
+     "jp": "整頓（せいとん）",
+     "en": "setting in order",
+     "tl": "maayos na lagayan"
+    },
+    {
+     "jp": "清掃（せいそう）",
+     "en": "cleaning",
+     "tl": "paglilinis"
+    },
+    {
+     "jp": "清潔（せいけつ）",
+     "en": "cleanliness",
+     "tl": "kalinisan"
+    },
+    {
+     "jp": "工具（こうぐ）",
+     "en": "tools",
+     "tl": "kagamitan"
+    },
+    {
+     "jp": "置（お）き場（ば）",
+     "en": "place for things",
+     "tl": "lagayan"
+    },
+    {
+     "jp": "片付（かたづ）ける",
+     "en": "to tidy up",
+     "tl": "ayusin"
+    },
+    {
+     "jp": "床（ゆか）",
+     "en": "floor",
+     "tl": "sahig"
+    }
+   ],
+   "ex": [
+    [
+     "使（つか）ったら、工具（こうぐ）を元（もと）の場所（ばしょ）に戻（もど）してください。",
+     "After using tools, put them back in their place.",
+     "Pagkatapos gamitin, ibalik ang kagamitan sa dating lugar."
+    ],
+    [
+     "床（ゆか）に物（もの）を置（お）かないでください。",
+     "Please do not put things on the floor.",
+     "Huwag maglagay ng gamit sa sahig."
+    ],
+    [
+     "仕事（しごと）が終（お）わる前（まえ）に、機械（きかい）のまわりを掃除（そうじ）しておきます。",
+     "Before work ends, I clean around the machine.",
+     "Bago matapos ang trabaho, nililinis ko ang paligid ng makina."
+    ],
+    [
+     "置（お）き場（ば）が決（き）まっているので、守（まも）ってください。",
+     "The places are fixed, so please follow them.",
+     "May nakatakdang lagayan, kaya sundin ito."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "「整理（せいり）」の意味（いみ）は？",
+      "en": "What does 「整理（せいり）」 mean in 5S?"
+     },
+     "c": [
+      "sorting out what is needed and not needed",
+      "taking a break",
+      "buying tools",
+      "painting the wall"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "整理（せいり）= remove what you do not need.",
+      "tl": "Alisin ang hindi kailangan."
+     }
+    },
+    {
+     "q": {
+      "jp": "工具（こうぐ）を使（つか）いました。そのあと、どうしますか。",
+      "en": "You used a tool. What do you do afterwards?"
+     },
+     "c": [
+      "友達（ともだち）にあげます。",
+      "机（つくえ）の上（うえ）に置（お）いて帰（かえ）ります。",
+      "元（もと）の場所（ばしょ）に戻（もど）します。",
+      "床（ゆか）に置（お）きます。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Return tools to their fixed place (整頓（せいとん）).",
+      "tl": "Ibalik sa nakatakdang lugar."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「床（ゆか）に物（もの）を置（お）か（　）ください。」",
+      "en": "Complete: Please do not put things on the floor."
+     },
+     "c": [
+      "なくて",
+      "なければ",
+      "ないで",
+      "ないと"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "～ないでください = please do not.",
+      "tl": "Ang ～ないでください ay \"huwag po\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "床（ゆか）に油（あぶら）がこぼれています。どうしますか。",
+      "en": "Oil is spilled on the floor. What do you do?"
+     },
+     "c": [
+      "上（うえ）を歩（ある）きます。",
+      "そのままにします。",
+      "すぐに拭（ふ）いて、報告（ほうこく）します。",
+      "見（み）ないふりをします。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Wipe it up immediately and report it to prevent slips.",
+      "tl": "Punasan agad at iulat para walang madulas."
+     }
+    },
+    {
+     "q": {
+      "jp": "5Sの目的（もくてき）は？",
+      "en": "What is the purpose of 5S?"
+     },
+     "c": [
+      "安全（あんぜん）で働（はたら）きやすい職場（しょくば）にすること",
+      "給料（きゅうりょう）を上（あ）げること",
+      "休（やす）みを増（ふ）やすこと",
+      "工場（こうじょう）を大（おお）きくすること"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "A safe, easy-to-work-in workplace.",
+      "tl": "Ligtas at madaling pagtrabahuhan."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L51",
+   "track": "field",
+   "level": "A2",
+   "domain": "life",
+   "title": {
+    "jp": "第（だい）51課（か）　病院（びょういん）に行（い）く",
+    "en": "Lesson 51: Going to the hospital",
+    "tl": "Pagpunta sa ospital"
+   },
+   "explain": {
+    "jp": "具合（ぐあい）が悪（わる）いとき、症状（しょうじょう）を病院（びょういん）で説明（せつめい）します。",
+    "en": "Explain your symptoms at the hospital. Practise ～が痛（いた）いです (it hurts), ～から (since) and ～ています (state). Bring your insurance card.",
+    "tl": "Ipaliwanag ang sintomas sa ospital. Dalhin ang health insurance card."
+   },
+   "vocab": [
+    {
+     "jp": "症状（しょうじょう）",
+     "en": "symptom",
+     "tl": "sintomas"
+    },
+    {
+     "jp": "保険証（ほけんしょう）",
+     "en": "health insurance card",
+     "tl": "health insurance card"
+    },
+    {
+     "jp": "受付（うけつけ）",
+     "en": "reception",
+     "tl": "reception"
+    },
+    {
+     "jp": "予約（よやく）",
+     "en": "appointment",
+     "tl": "reserbasyon"
+    },
+    {
+     "jp": "薬（くすり）",
+     "en": "medicine",
+     "tl": "gamot"
+    },
+    {
+     "jp": "処方箋（しょほうせん）",
+     "en": "prescription",
+     "tl": "reseta"
+    },
+    {
+     "jp": "頭痛（ずつう）",
+     "en": "headache",
+     "tl": "sakit ng ulo"
+    },
+    {
+     "jp": "吐（は）き気（け）",
+     "en": "nausea",
+     "tl": "pagduduwal"
+    }
+   ],
+   "ex": [
+    [
+     "昨日（きのう）から頭（あたま）が痛（いた）いです。",
+     "My head has hurt since yesterday.",
+     "Masakit ang ulo ko mula kahapon."
+    ],
+    [
+     "保険証（ほけんしょう）を持（も）ってきました。",
+     "I brought my insurance card.",
+     "Dala ko ang health insurance card ko."
+    ],
+    [
+     "この薬（くすり）は、一日（いちにち）三回（さんかい）、食事（しょくじ）の後（あと）に飲（の）んでください。",
+     "Take this medicine three times a day after meals.",
+     "Inumin ito tatlong beses sa isang araw pagkatapos kumain."
+    ],
+    [
+     "熱（ねつ）と吐（は）き気（け）があります。",
+     "I have a fever and nausea.",
+     "May lagnat at pagduduwal ako."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "病院（びょういん）の受付（うけつけ）で、最初（さいしょ）に出（だ）すものは？",
+      "en": "What do you hand in first at hospital reception?"
+     },
+     "c": [
+      "学生証（がくせいしょう）",
+      "手紙（てがみ）",
+      "財布（さいふ）の中（なか）のお金（かね）",
+      "保険証（ほけんしょう）"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "The insurance card (保険証（ほけんしょう）) is needed at reception.",
+      "tl": "Kailangan ang health insurance card sa reception."
+     }
+    },
+    {
+     "q": {
+      "jp": "「症状（しょうじょう）」の意味（いみ）は？",
+      "en": "What does 「症状（しょうじょう）」 mean?"
+     },
+     "c": [
+      "symptom",
+      "medicine",
+      "appointment",
+      "doctor"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "症状（しょうじょう）= how your body feels when sick.",
+      "tl": "Sintomas."
+     }
+    },
+    {
+     "q": {
+      "jp": "頭（あたま）が痛（いた）いとき、医者（いしゃ）に何（なん）と言（い）いますか。",
+      "en": "What do you tell the doctor when your head hurts?"
+     },
+     "c": [
+      "頭（あたま）が高（たか）いです。",
+      "頭（あたま）が安（やす）いです。",
+      "頭（あたま）を食（た）べます。",
+      "頭（あたま）が痛（いた）いです。"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "身体（からだ）の部分（ぶぶん）＋が痛（いた）いです.",
+      "tl": "Bahagi ng katawan + が痛（いた）いです."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「薬（くすり）は食事（しょくじ）の（　）飲（の）んでください。」",
+      "en": "Complete: Take the medicine after meals."
+     },
+     "c": [
+      "上（うえ）を",
+      "後（あと）に",
+      "前（まえ）で",
+      "中（なか）が"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "～の後（あと）に = after ...",
+      "tl": "Ang ～の後（あと）に ay \"pagkatapos ng\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "「処方箋（しょほうせん）」はどこで使（つか）いますか。",
+      "en": "Where do you use a prescription?"
+     },
+     "c": [
+      "駅（えき）",
+      "薬局（やっきょく）",
+      "銀行（ぎんこう）",
+      "市役所（しやくしょ）"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Take the prescription to a pharmacy.",
+      "tl": "Dalhin ang reseta sa botika."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L52",
+   "track": "field",
+   "level": "A2",
+   "domain": "life",
+   "title": {
+    "jp": "第（だい）52課（か）　役所（やくしょ）の手続（てつづ）き",
+    "en": "Lesson 52: Procedures at the city office",
+    "tl": "Mga proseso sa munisipyo"
+   },
+   "explain": {
+    "jp": "住所（じゅうしょ）の変更（へんこう）や在留（ざいりゅう）カードの手続（てつづ）きは、役所（やくしょ）に行（い）きます。",
+    "en": "Address changes and other procedures are done at the city office. Practise ～たいんですが (I would like to ...) and ～てください (please ...). Bring your residence card.",
+    "tl": "Para sa pagbabago ng address at iba pa, pumunta sa munisipyo. Dalhin ang residence card."
+   },
+   "vocab": [
+    {
+     "jp": "役所（やくしょ）",
+     "en": "city office",
+     "tl": "munisipyo"
+    },
+    {
+     "jp": "手続（てつづ）き",
+     "en": "procedure",
+     "tl": "proseso"
+    },
+    {
+     "jp": "在留（ざいりゅう）カード",
+     "en": "residence card",
+     "tl": "residence card"
+    },
+    {
+     "jp": "住所（じゅうしょ）",
+     "en": "address",
+     "tl": "address"
+    },
+    {
+     "jp": "変更（へんこう）",
+     "en": "change",
+     "tl": "pagbabago"
+    },
+    {
+     "jp": "書類（しょるい）",
+     "en": "documents",
+     "tl": "dokumento"
+    },
+    {
+     "jp": "窓口（まどぐち）",
+     "en": "service counter",
+     "tl": "counter"
+    },
+    {
+     "jp": "番号札（ばんごうふだ）",
+     "en": "number ticket",
+     "tl": "number ticket"
+    }
+   ],
+   "ex": [
+    [
+     "引（ひ）っ越（こ）したので、住所（じゅうしょ）の変更（へんこう）をしたいんですが。",
+     "I moved, so I would like to change my address.",
+     "Lumipat ako, nais kong palitan ang address."
+    ],
+    [
+     "まず、番号札（ばんごうふだ）を取（と）ってください。",
+     "First, please take a number ticket.",
+     "Kumuha muna ng number ticket."
+    ],
+    [
+     "在留（ざいりゅう）カードを見（み）せてください。",
+     "Please show me your residence card.",
+     "Pakipakita ang residence card."
+    ],
+    [
+     "この書類（しょるい）に、名前（なまえ）と住所（じゅうしょ）を書（か）いてください。",
+     "Please write your name and address on this form.",
+     "Isulat ang pangalan at address sa dokumentong ito."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "引（ひ）っ越（こ）しをしました。どこで住所（じゅうしょ）を変（か）えますか。",
+      "en": "You moved house. Where do you change your address?"
+     },
+     "c": [
+      "病院（びょういん）",
+      "駅（えき）",
+      "役所（やくしょ）",
+      "スーパー"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Address changes are made at the city office.",
+      "tl": "Sa munisipyo ginagawa ang pagpapalit ng address."
+     }
+    },
+    {
+     "q": {
+      "jp": "「窓口（まどぐち）」の意味（いみ）は？",
+      "en": "What does 「窓口（まどぐち）」 mean?"
+     },
+     "c": [
+      "parking lot",
+      "counter where staff serve you",
+      "front door",
+      "waiting room"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "窓口（まどぐち）= service counter.",
+      "tl": "Counter kung saan ka pagsisilbihan."
+     }
+    },
+    {
+     "q": {
+      "jp": "役所（やくしょ）に着（つ）きました。まず何（なに）をしますか。",
+      "en": "You arrive at the city office. What do you do first?"
+     },
+     "c": [
+      "大（おお）きい声（こえ）で呼（よ）びます。",
+      "番号札（ばんごうふだ）を取（と）ります。",
+      "何（なに）も持（も）たずに帰（かえ）ります。",
+      "窓口（まどぐち）の中（なか）に入（はい）ります。"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Take a number ticket and wait to be called.",
+      "tl": "Kumuha ng number ticket at maghintay."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「住所（じゅうしょ）の変更（へんこう）を（　）んですが。」",
+      "en": "Complete: I would like to change my address."
+     },
+     "c": [
+      "した",
+      "する",
+      "したい",
+      "して"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "～たいんですが = I would like to ... (polite).",
+      "tl": "Ang ～たいんですが ay magalang na pagsasabi ng nais."
+     }
+    },
+    {
+     "q": {
+      "jp": "手続（てつづ）きに必要（ひつよう）なものは？",
+      "en": "What do you need for the procedure?"
+     },
+     "c": [
+      "ゲーム",
+      "在留（ざいりゅう）カード",
+      "お弁当（べんとう）",
+      "傘（かさ）"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Bring your residence card and the required documents.",
+      "tl": "Dalhin ang residence card at mga dokumento."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L53",
+   "track": "field",
+   "level": "A2",
+   "domain": "life",
+   "title": {
+    "jp": "第（だい）53課（か）　銀行（ぎんこう）と送金（そうきん）",
+    "en": "Lesson 53: Banking and sending money",
+    "tl": "Bangko at pagpapadala ng pera"
+   },
+   "explain": {
+    "jp": "口座（こうざ）を作（つく）ったり、フィリピンへお金（かね）を送（おく）ったりします。",
+    "en": "Opening an account and sending money to the Philippines. Practise ～たいです (want to), ～ませんか (invitations) and ～ないでください. Never share your PIN.",
+    "tl": "Magbukas ng account at magpadala ng pera sa Pilipinas. Huwag ibigay ang PIN kaninuman."
+   },
+   "vocab": [
+    {
+     "jp": "口座（こうざ）",
+     "en": "bank account",
+     "tl": "account"
+    },
+    {
+     "jp": "通帳（つうちょう）",
+     "en": "passbook",
+     "tl": "passbook"
+    },
+    {
+     "jp": "暗証番号（あんしょうばんごう）",
+     "en": "PIN",
+     "tl": "PIN"
+    },
+    {
+     "jp": "送金（そうきん）",
+     "en": "remittance",
+     "tl": "padala ng pera"
+    },
+    {
+     "jp": "手数料（てすうりょう）",
+     "en": "fee",
+     "tl": "bayad sa serbisyo"
+    },
+    {
+     "jp": "振込（ふりこ）み",
+     "en": "bank transfer",
+     "tl": "bank transfer"
+    },
+    {
+     "jp": "残高（ざんだか）",
+     "en": "balance",
+     "tl": "balanse"
+    },
+    {
+     "jp": "引（ひ）き出（だ）す",
+     "en": "to withdraw",
+     "tl": "mag-withdraw"
+    }
+   ],
+   "ex": [
+    [
+     "口座（こうざ）を作（つく）りたいんですが。",
+     "I would like to open an account.",
+     "Nais kong magbukas ng account."
+    ],
+    [
+     "フィリピンに送金（そうきん）したいです。手数料（てすうりょう）はいくらですか。",
+     "I want to send money to the Philippines. How much is the fee?",
+     "Gusto kong magpadala sa Pilipinas. Magkano ang bayad?"
+    ],
+    [
+     "暗証番号（あんしょうばんごう）は、人（ひと）に教（おし）えないでください。",
+     "Do not tell your PIN to anyone.",
+     "Huwag sabihin ang PIN kaninuman."
+    ],
+    [
+     "残高（ざんだか）を確認（かくにん）したいです。",
+     "I want to check my balance.",
+     "Gusto kong tingnan ang balanse."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "「暗証番号（あんしょうばんごう）」はどうしますか。",
+      "en": "What should you do with your PIN?"
+     },
+     "c": [
+      "SNSに書（か）きます。",
+      "人（ひと）に教（おし）えません。",
+      "カードに書（か）きます。",
+      "友達（ともだち）に教（おし）えます。"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Never share your PIN, even with friends.",
+      "tl": "Huwag ibigay ang PIN kahit sa kaibigan."
+     }
+    },
+    {
+     "q": {
+      "jp": "「送金（そうきん）」の意味（いみ）は？",
+      "en": "What does 「送金（そうきん）」 mean?"
+     },
+     "c": [
+      "saving money",
+      "sending money",
+      "borrowing money",
+      "counting money"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "送（そう）= send, 金（きん）= money.",
+      "tl": "Pagpapadala ng pera."
+     }
+    },
+    {
+     "q": {
+      "jp": "口座（こうざ）を作（つく）りたいとき、窓口（まどぐち）で何（なん）と言（い）いますか。",
+      "en": "What do you say at the counter to open an account?"
+     },
+     "c": [
+      "口座（こうざ）を食（た）べたいです。",
+      "口座（こうざ）を作（つく）りたいんですが。",
+      "口座（こうざ）に行（い）きます。",
+      "口座（こうざ）が高（たか）いです。"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "～たいんですが is polite and natural.",
+      "tl": "Magalang at natural ang ～たいんですが."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「手数料（てすうりょう）は（　）ですか。」",
+      "en": "Complete: How much is the fee?"
+     },
+     "c": [
+      "どこ",
+      "いくら",
+      "だれ",
+      "いつ"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "いくら asks the price.",
+      "tl": "Ang いくら ay \"magkano\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "知（し）らない人（ひと）から「お金（かね）を送（おく）って」とメッセージが来（き）ました。どうしますか。",
+      "en": "A stranger messages you asking for money. What do you do?"
+     },
+     "c": [
+      "送（おく）らないで、相談（そうだん）します。",
+      "すぐに送（おく）ります。",
+      "返事（へんじ）をして、名前（なまえ）を書（か）きます。",
+      "暗証番号（あんしょうばんごう）を教（おし）えます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "It may be a scam. Do not send money; consult someone you trust.",
+      "tl": "Maaaring panloloko. Huwag magpadala; kumonsulta sa mapagkakatiwalaan."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L54",
+   "track": "field",
+   "level": "A2",
+   "domain": "life",
+   "title": {
+    "jp": "第（だい）54課（か）　住（す）まいのルールと近所（きんじょ）づきあい",
+    "en": "Lesson 54: Housing rules and neighbours",
+    "tl": "Mga patakaran sa tirahan at kapitbahay"
+   },
+   "explain": {
+    "jp": "大家（おおや）さんや近所（きんじょ）の人（ひと）と、気持（きも）ちよく暮（く）らすためのルールです。",
+    "en": "Rules for living comfortably with your landlord and neighbours. Practise ～ないでください, ～ので (reason) and ～をお願（ねが）いします (a polite request), for example about noise at night.",
+    "tl": "Mga patakaran para sa maayos na pakikisama sa landlord at kapitbahay, lalo na sa ingay sa gabi."
+   },
+   "vocab": [
+    {
+     "jp": "大家（おおや）",
+     "en": "landlord",
+     "tl": "landlord"
+    },
+    {
+     "jp": "家賃（やちん）",
+     "en": "rent",
+     "tl": "upa"
+    },
+    {
+     "jp": "騒音（そうおん）",
+     "en": "noise",
+     "tl": "ingay"
+    },
+    {
+     "jp": "近所（きんじょ）",
+     "en": "neighbourhood",
+     "tl": "kapitbahay"
+    },
+    {
+     "jp": "挨拶（あいさつ）",
+     "en": "greeting",
+     "tl": "pagbati"
+    },
+    {
+     "jp": "契約（けいやく）",
+     "en": "contract",
+     "tl": "kontrata"
+    },
+    {
+     "jp": "鍵（かぎ）",
+     "en": "key",
+     "tl": "susi"
+    },
+    {
+     "jp": "修理（しゅうり）",
+     "en": "repair",
+     "tl": "pagkukumpuni"
+    }
+   ],
+   "ex": [
+    [
+     "家賃（やちん）は、毎月（まいつき）末（まつ）までに払（はら）ってください。",
+     "Please pay the rent by the end of each month.",
+     "Bayaran ang upa bago matapos ang buwan."
+    ],
+    [
+     "夜（よる）は、大（おお）きい音（おと）を出（だ）さないでください。",
+     "Please do not make loud noise at night.",
+     "Huwag mag-ingay sa gabi."
+    ],
+    [
+     "近所（きんじょ）の人（ひと）に会（あ）ったら、挨拶（あいさつ）します。",
+     "When I meet neighbours, I greet them.",
+     "Kapag nakakasalubong ang kapitbahay, nagbabati ako."
+    ],
+    [
+     "エアコンが壊（こわ）れたので、修理（しゅうり）をお願（ねが）いします。",
+     "The air conditioner is broken, so please repair it.",
+     "Sira ang aircon, pakiayos po."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "夜（よる）遅（おそ）く、友達（ともだち）と大（おお）きい声（こえ）で話（はな）してもいいですか。",
+      "en": "May you talk loudly with friends late at night?"
+     },
+     "c": [
+      "いいえ、近所（きんじょ）の迷惑（めいわく）になります。",
+      "はい、いつでもいいです。",
+      "わかりません。",
+      "はい、窓（まど）を開（あ）ければいいです。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Loud noise at night disturbs neighbours (迷惑（めいわく）).",
+      "tl": "Nakakaistorbo ang ingay sa gabi."
+     }
+    },
+    {
+     "q": {
+      "jp": "「家賃（やちん）」の意味（いみ）は？",
+      "en": "What does 「家賃（やちん）」 mean?"
+     },
+     "c": [
+      "contract",
+      "key",
+      "furniture",
+      "rent"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "家賃（やちん）= monthly rent for housing.",
+      "tl": "Buwanang upa sa bahay."
+     }
+    },
+    {
+     "q": {
+      "jp": "部屋（へや）の鍵（かぎ）をなくしました。まず誰（だれ）に連絡（れんらく）しますか。",
+      "en": "You lost your room key. Who do you contact first?"
+     },
+     "c": [
+      "学校（がっこう）",
+      "大家（おおや）さん",
+      "お店（みせ）",
+      "銀行（ぎんこう）"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Contact the landlord (大家（おおや）さん) or the management company.",
+      "tl": "Makipag-ugnayan sa landlord."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「夜（よる）は大（おお）きい音（おと）を出（だ）さ（　）ください。」",
+      "en": "Complete: Do not make loud noise at night."
+     },
+     "c": [
+      "なくて",
+      "ないと",
+      "ないで",
+      "なければ"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "～ないでください = please do not.",
+      "tl": "Ang ～ないでください ay \"huwag po\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "壊（こわ）れた物（もの）を直（なお）してほしいとき、何（なん）と言（い）いますか。",
+      "en": "What do you say when you want something broken to be fixed?"
+     },
+     "c": [
+      "修理（しゅうり）を忘（わす）れます。",
+      "修理（しゅうり）をお願（ねが）いします。",
+      "修理（しゅうり）しないでください。",
+      "修理（しゅうり）はいりません。"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "～をお願（ねが）いします is a polite request.",
+      "tl": "Ang ～をお願（ねが）いします ay magalang na pakiusap."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L55",
+   "track": "field",
+   "level": "A2",
+   "domain": "life",
+   "title": {
+    "jp": "第（だい）55課（か）　ゴミ出（だ）しのルール",
+    "en": "Lesson 55: Garbage disposal rules",
+    "tl": "Mga patakaran sa pagtatapon ng basura"
+   },
+   "explain": {
+    "jp": "ゴミは、種類（しゅるい）ごとに、決（き）まった日（ひ）と場所（ばしょ）に出（だ）します。",
+    "en": "Garbage is sorted by type and put out on set days at set places. Practise ～に出（だ）します (put out on/at), ～ないといけません (must) and ～てから (after).",
+    "tl": "Ihiwalay ang basura ayon sa uri at ilabas sa tamang araw at lugar."
+   },
+   "vocab": [
+    {
+     "jp": "燃（も）えるゴミ",
+     "en": "burnable waste",
+     "tl": "nasusunog na basura"
+    },
+    {
+     "jp": "燃（も）えないゴミ",
+     "en": "non-burnable waste",
+     "tl": "di-nasusunog na basura"
+    },
+    {
+     "jp": "資源（しげん）ゴミ",
+     "en": "recyclables",
+     "tl": "recyclable"
+    },
+    {
+     "jp": "粗大（そだい）ゴミ",
+     "en": "bulky waste",
+     "tl": "malalaking basura"
+    },
+    {
+     "jp": "収集日（しゅうしゅうび）",
+     "en": "collection day",
+     "tl": "araw ng koleksyon"
+    },
+    {
+     "jp": "ゴミ袋（ぶくろ）",
+     "en": "garbage bag",
+     "tl": "supot ng basura"
+    },
+    {
+     "jp": "分別（ぶんべつ）",
+     "en": "sorting by type",
+     "tl": "paghihiwalay"
+    },
+    {
+     "jp": "カレンダー",
+     "en": "calendar",
+     "tl": "kalendaryo"
+    }
+   ],
+   "ex": [
+    [
+     "燃（も）えるゴミは、火曜日（かようび）と金曜日（きんようび）に出（だ）します。",
+     "Burnable waste goes out on Tuesdays and Fridays.",
+     "Ang nasusunog na basura ay inilalabas tuwing Martes at Biyernes."
+    ],
+    [
+     "ペットボトルは、ラベルをはがして出（だ）してください。",
+     "Peel the label off PET bottles before putting them out.",
+     "Tanggalin ang label ng PET bottle bago ilabas."
+    ],
+    [
+     "収集日（しゅうしゅうび）の朝（あさ）八時（はちじ）までに出（だ）します。",
+     "Put it out by 8 a.m. on collection day.",
+     "Ilabas bago mag-8 ng umaga sa araw ng koleksyon."
+    ],
+    [
+     "大（おお）きい家具（かぐ）は、粗大（そだい）ゴミなので、申（もう）し込（こ）みが必要（ひつよう）です。",
+     "Large furniture is bulky waste, so you must apply.",
+     "Ang malalaking kasangkapan ay bulky waste; kailangang mag-apply."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "燃（も）えるゴミは、いつ出（だ）しますか。",
+      "en": "When do you put out burnable waste?"
+     },
+     "c": [
+      "夜中（よなか）",
+      "決（き）まった日（ひ）の朝（あさ）",
+      "日曜日（にちようび）だけ",
+      "いつでも"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Only on the set collection day, in the morning.",
+      "tl": "Sa takdang araw lamang, sa umaga."
+     }
+    },
+    {
+     "q": {
+      "jp": "「分別（ぶんべつ）」の意味（いみ）は？",
+      "en": "What does 「分別（ぶんべつ）」 mean?"
+     },
+     "c": [
+      "throwing waste anywhere",
+      "burning waste",
+      "buying bags",
+      "sorting waste by type"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "分別（ぶんべつ）= separating by type.",
+      "tl": "Paghihiwalay ayon sa uri."
+     }
+    },
+    {
+     "q": {
+      "jp": "ペットボトルを出（だ）すとき、どうしますか。",
+      "en": "What do you do when putting out PET bottles?"
+     },
+     "c": [
+      "川（かわ）に捨（す）てます。",
+      "家（いえ）に置（お）きます。",
+      "そのまま燃（も）えるゴミに入（い）れます。",
+      "ラベルをはがして出（だ）します。"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Remove the label and follow your city rules.",
+      "tl": "Tanggalin ang label at sundin ang patakaran ng lungsod."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「ゴミは決（き）まった日（ひ）に出（だ）さ（　）といけません。」",
+      "en": "Complete: You must put garbage out on the set day."
+     },
+     "c": [
+      "ない",
+      "なかった",
+      "なく",
+      "なくて"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "～ないといけません = must.",
+      "tl": "Ang ～ないといけません ay \"kailangan\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "大（おお）きいソファを捨（す）てたいです。どうしますか。",
+      "en": "You want to throw away a big sofa. What do you do?"
+     },
+     "c": [
+      "粗大（そだい）ゴミとして申（もう）し込（こ）みます。",
+      "燃（も）えるゴミの日（ひ）に出（だ）します。",
+      "隣（となり）の家（いえ）に置（お）きます。",
+      "道（みち）に置（お）きます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Bulky waste requires an application and a fee.",
+      "tl": "Kailangan ng aplikasyon at bayad ang bulky waste."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L56",
+   "track": "field",
+   "level": "A2",
+   "domain": "life",
+   "title": {
+    "jp": "第（だい）56課（か）　地震（じしん）と緊急（きんきゅう）のとき",
+    "en": "Lesson 56: Earthquakes and emergencies",
+    "tl": "Lindol at emerhensiya"
+   },
+   "explain": {
+    "jp": "地震（じしん）や火事（かじ）のとき、まず自分（じぶん）の安全（あんぜん）を守（まも）ります。救急車（きゅうきゅうしゃ）は119番（ばん）です。",
+    "en": "In an earthquake or fire, protect yourself first. Call 119 for an ambulance or fire engine and 110 for the police. Practise ～てください (instructions) and ～ましょう (let us ...).",
+    "tl": "Sa lindol o sunog, unahin ang sariling kaligtasan. 119 para sa ambulansya/bumbero, 110 para sa pulis."
+   },
+   "vocab": [
+    {
+     "jp": "地震（じしん）",
+     "en": "earthquake",
+     "tl": "lindol"
+    },
+    {
+     "jp": "火事（かじ）",
+     "en": "fire",
+     "tl": "sunog"
+    },
+    {
+     "jp": "救急車（きゅうきゅうしゃ）",
+     "en": "ambulance",
+     "tl": "ambulansya"
+    },
+    {
+     "jp": "避難（ひなん）",
+     "en": "evacuation",
+     "tl": "paglikas"
+    },
+    {
+     "jp": "避難所（ひなんじょ）",
+     "en": "evacuation shelter",
+     "tl": "evacuation center"
+    },
+    {
+     "jp": "津波（つなみ）",
+     "en": "tsunami",
+     "tl": "tsunami"
+    },
+    {
+     "jp": "停電（ていでん）",
+     "en": "power outage",
+     "tl": "brownout"
+    },
+    {
+     "jp": "非常袋（ひじょうぶくろ）",
+     "en": "emergency kit",
+     "tl": "emergency bag"
+    }
+   ],
+   "ex": [
+    [
+     "地震（じしん）のときは、机（つくえ）の下（した）に隠（かく）れてください。",
+     "In an earthquake, take cover under a desk.",
+     "Sa lindol, magtago sa ilalim ng mesa."
+    ],
+    [
+     "火事（かじ）です！119番（ばん）に電話（でんわ）してください。",
+     "Fire! Please call 119.",
+     "Sunog! Tumawag sa 119."
+    ],
+    [
+     "揺（ゆ）れが止（と）まったら、避難所（ひなんじょ）へ行（い）きましょう。",
+     "When the shaking stops, let us go to the shelter.",
+     "Kapag tumigil ang yanig, pumunta tayo sa evacuation center."
+    ],
+    [
+     "海（うみ）の近（ちか）くで地震（じしん）があったら、すぐ高（たか）い所（ところ）へ逃（に）げてください。",
+     "If there is an earthquake near the sea, flee to high ground at once.",
+     "Kapag may lindol malapit sa dagat, tumakbo agad sa mataas na lugar."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "救急車（きゅうきゅうしゃ）を呼（よ）ぶ電話番号（でんわばんごう）は？",
+      "en": "What number do you call for an ambulance?"
+     },
+     "c": [
+      "110",
+      "104",
+      "119",
+      "100"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "119 = fire and ambulance; 110 = police.",
+      "tl": "119 = bumbero at ambulansya; 110 = pulis."
+     }
+    },
+    {
+     "q": {
+      "jp": "地震（じしん）で、大（おお）きく揺（ゆ）れています。まず何（なに）をしますか。",
+      "en": "The ground is shaking strongly. What do you do first?"
+     },
+     "c": [
+      "机（つくえ）の下（した）に隠（かく）れて、頭（あたま）を守（まも）ります。",
+      "外（そと）に走（はし）って出（で）ます。",
+      "写真（しゃしん）を撮（と）ります。",
+      "エレベーターに乗（の）ります。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Protect your head and take cover; never use elevators.",
+      "tl": "Protektahan ang ulo at magtago; huwag sumakay ng elevator."
+     }
+    },
+    {
+     "q": {
+      "jp": "「避難所（ひなんじょ）」の意味（いみ）は？",
+      "en": "What does 「避難所（ひなんじょ）」 mean?"
+     },
+     "c": [
+      "supermarket",
+      "police box",
+      "evacuation shelter",
+      "hospital"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "避難所（ひなんじょ）= a place to stay safe after a disaster.",
+      "tl": "Lugar na ligtas pagkatapos ng sakuna."
+     }
+    },
+    {
+     "q": {
+      "jp": "海（うみ）の近（ちか）くで大（おお）きい地震（じしん）がありました。どうしますか。",
+      "en": "There was a big earthquake near the sea. What do you do?"
+     },
+     "c": [
+      "すぐ高（たか）い所（ところ）へ逃（に）げます。",
+      "電車（でんしゃ）を待（ま）ちます。",
+      "海（うみ）を見（み）に行（い）きます。",
+      "家（いえ）で寝（ね）ます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Move to high ground immediately: tsunami risk.",
+      "tl": "Pumunta agad sa mataas na lugar: may panganib ng tsunami."
+     }
+    },
+    {
+     "q": {
+      "jp": "火事（かじ）のとき、煙（けむり）の中（なか）では、どうしますか。",
+      "en": "In a fire, what do you do in smoke?"
+     },
+     "c": [
+      "エレベーターを使（つか）います。",
+      "立（た）って走（はし）ります。",
+      "低（ひく）い姿勢（しせい）で逃（に）げます。",
+      "煙（けむり）を吸（す）います。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Stay low where the air is cleaner and use the stairs.",
+      "tl": "Manatiling mababa at gumamit ng hagdan."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L57",
+   "track": "field",
+   "level": "A2",
+   "domain": "exam",
+   "title": {
+    "jp": "第（だい）57課（か）　文字（もじ）・語彙（ごい）の解（と）き方（かた）",
+    "en": "Lesson 57: Strategies for the vocabulary section",
+    "tl": "Estratehiya sa bahaging bokabularyo"
+   },
+   "explain": {
+    "jp": "文（ぶん）の意味（いみ）と助詞（じょし）を手（て）がかりに、いちばん合（あ）う言葉（ことば）を選（えら）びます。",
+    "en": "Use the meaning of the sentence and the particles as clues, and choose the best-fitting word. Read to the end, eliminate wrong options, and watch for similar-looking kanji. In this mock exam a blank answer counts as incorrect, so always choose the most likely option.",
+    "tl": "Gamitin ang kahulugan ng pangungusap at mga partikula bilang palatandaan. Alisin ang maling sagot. Sa mock exam na ito, ang walang sagot ay mali."
+   },
+   "vocab": [
+    {
+     "jp": "文字（もじ）",
+     "en": "characters, letters",
+     "tl": "titik"
+    },
+    {
+     "jp": "語彙（ごい）",
+     "en": "vocabulary",
+     "tl": "bokabularyo"
+    },
+    {
+     "jp": "文脈（ぶんみゃく）",
+     "en": "context",
+     "tl": "konteksto"
+    },
+    {
+     "jp": "助詞（じょし）",
+     "en": "particle",
+     "tl": "partikula"
+    },
+    {
+     "jp": "選択肢（せんたくし）",
+     "en": "answer choices",
+     "tl": "mga pagpipilian"
+    },
+    {
+     "jp": "消去法（しょうきょほう）",
+     "en": "process of elimination",
+     "tl": "paraan ng pag-aalis"
+    },
+    {
+     "jp": "似（に）ている",
+     "en": "similar",
+     "tl": "magkahawig"
+    },
+    {
+     "jp": "意味（いみ）",
+     "en": "meaning",
+     "tl": "kahulugan"
+    }
+   ],
+   "ex": [
+    [
+     "まず、文（ぶん）を最後（さいご）まで読（よ）みます。",
+     "First, read the sentence to the end.",
+     "Basahin muna ang pangungusap hanggang dulo."
+    ],
+    [
+     "助詞（じょし）に注目（ちゅうもく）します。「から」は始（はじ）まり、「まで」は終（お）わりです。",
+     "Watch the particles: 「から」 marks the start and 「まで」 the end.",
+     "Pansinin ang partikula: ang から ay simula at ang まで ay dulo."
+    ],
+    [
+     "わからない言葉（ことば）は、前後（ぜんご）の言葉（ことば）から意味（いみ）を考（かんが）えます。",
+     "For an unknown word, guess its meaning from the words around it.",
+     "Kung hindi alam ang salita, hulaan mula sa mga salita sa paligid."
+    ],
+    [
+     "似（に）ている漢字（かんじ）に気（き）をつけます。",
+     "Be careful with similar-looking kanji.",
+     "Mag-ingat sa magkahawig na kanji."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「毎朝（まいあさ）、駅（えき）（　）会社（かいしゃ）まで歩（ある）きます。」",
+      "en": "Complete: Every morning I walk (from) the station to the company."
+     },
+     "c": [
+      "から",
+      "が",
+      "に",
+      "を"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "「から～まで」 means from ... to ...",
+      "tl": "Ang 「から～まで」 ay \"mula ... hanggang\"."
+     }
+    },
+    {
+     "q": {
+      "jp": "「とても」に近（ちか）い意味（いみ）の言葉（ことば）は？",
+      "en": "Which word is closest in meaning to 「とても」?"
+     },
+     "c": [
+      "たいへん",
+      "ぜんぜん",
+      "あまり",
+      "すこし"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "たいへん = very, like とても.",
+      "tl": "Ang たいへん ay \"napaka\", tulad ng とても."
+     }
+    },
+    {
+     "q": {
+      "jp": "「ミーティング」の意味（いみ）は？",
+      "en": "What does 「ミーティング」 mean?"
+     },
+     "c": [
+      "break",
+      "lunch",
+      "report",
+      "meeting"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Katakana words are often English loanwords: say them aloud.",
+      "tl": "Karaniwang hiram sa Ingles ang katakana: bigkasin nang malakas."
+     }
+    },
+    {
+     "q": {
+      "jp": "（　）に入（はい）る言葉（ことば）は？「この仕事（しごと）は、しめ切（き）りが（　）。」",
+      "en": "Complete: The deadline for this job is (close)."
+     },
+     "c": [
+      "強（つよ）いです",
+      "近（ちか）いです",
+      "軽（かる）いです",
+      "広（ひろ）いです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Use context: a deadline can be 近（ちか）い (near).",
+      "tl": "Gamitin ang konteksto: ang deadline ay maaaring 近（ちか）い."
+     }
+    },
+    {
+     "q": {
+      "jp": "答（こた）えがわからないとき、どうしますか。",
+      "en": "What do you do when you are unsure of the answer?"
+     },
+     "c": [
+      "違（ちが）う答（こた）えを消（け）して、いちばんよさそうな答（こた）えを選（えら）びます。",
+      "いつも一番目（いちばんめ）を選（えら）びます。",
+      "試験（しけん）をやめます。",
+      "何（なに）も選（えら）ばずに次（つぎ）へ行（い）きます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Eliminate wrong options, then pick the most likely one.",
+      "tl": "Alisin ang maling sagot, piliin ang pinakamalamang."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L58",
+   "track": "field",
+   "level": "A2",
+   "domain": "exam",
+   "title": {
+    "jp": "第（だい）58課（か）　会話（かいわ）・表現（ひょうげん）の解（と）き方（かた）",
+    "en": "Lesson 58: Strategies for the conversation section",
+    "tl": "Estratehiya sa bahaging usapan at ekspresyon"
+   },
+   "explain": {
+    "jp": "場面（ばめん）を考（かんが）えて、いちばん自然（しぜん）な言葉（ことば）を選（えら）びます。",
+    "en": "Think about the situation (who, where, what relationship) and choose the most natural expression. Match the politeness level, learn set phrases as they are, and soften refusals with 「ちょっと…」.",
+    "tl": "Isipin ang sitwasyon at piliin ang pinaka-natural na pananalita. Tugma ang antas ng paggalang; isaulo ang mga set phrase."
+   },
+   "vocab": [
+    {
+     "jp": "場面（ばめん）",
+     "en": "situation",
+     "tl": "sitwasyon"
+    },
+    {
+     "jp": "敬語（けいご）",
+     "en": "polite/honorific language",
+     "tl": "magalang na wika"
+    },
+    {
+     "jp": "丁寧（ていねい）",
+     "en": "polite",
+     "tl": "magalang"
+    },
+    {
+     "jp": "依頼（いらい）",
+     "en": "request",
+     "tl": "pakiusap"
+    },
+    {
+     "jp": "断（ことわ）る",
+     "en": "to decline",
+     "tl": "tumanggi"
+    },
+    {
+     "jp": "謝（あやま）る",
+     "en": "to apologize",
+     "tl": "humingi ng tawad"
+    },
+    {
+     "jp": "返事（へんじ）",
+     "en": "reply",
+     "tl": "sagot"
+    },
+    {
+     "jp": "決（き）まり文句（もんく）",
+     "en": "set phrase",
+     "tl": "set phrase"
+    }
+   ],
+   "ex": [
+    [
+     "場面（ばめん）を考（かんが）えます。だれと、どこで、何（なに）を話（はな）していますか。",
+     "Think about the situation: who, where and about what.",
+     "Isipin ang sitwasyon: sino, saan at tungkol saan."
+    ],
+    [
+     "上司（じょうし）には丁寧（ていねい）に、友達（ともだち）には普通（ふつう）に話（はな）します。",
+     "Speak politely to a supervisor and casually to friends.",
+     "Magalang sa superbisor, kaswal sa kaibigan."
+    ],
+    [
+     "断（ことわ）るときは、「すみません、ちょっと…」と言（い）います。",
+     "When declining, say 「すみません、ちょっと…」.",
+     "Kapag tatanggi, sabihin ang 「すみません、ちょっと…」."
+    ],
+    [
+     "決（き）まり文句（もんく）は、そのまま覚（おぼ）えます。",
+     "Memorise set phrases as they are.",
+     "Isaulo ang mga set phrase nang buo."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "先（さき）に帰（かえ）るとき、同僚（どうりょう）に何（なん）と言（い）いますか。",
+      "en": "What do you say to a colleague when leaving first?"
+     },
+     "c": [
+      "お先（さき）に失礼（しつれい）します。",
+      "いただきます。",
+      "はじめまして。",
+      "おはようございます。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "お先（さき）に失礼（しつれい）します is the set phrase for leaving before others.",
+      "tl": "Set phrase ito kapag mauuna kang umuwi."
+     }
+    },
+    {
+     "q": {
+      "jp": "友達（ともだち）に「今日（きょう）、飲（の）みに行（い）かない？」と誘（さそ）われました。行（い）けません。自然（しぜん）な答（こた）えは？",
+      "en": "A friend invites you for drinks today, but you cannot go. What is a natural reply?"
+     },
+     "c": [
+      "知（し）らない。",
+      "行（い）きたくない。",
+      "だめです。",
+      "ごめん、今日（きょう）はちょっと…。"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Soften a refusal with ちょっと… and an apology.",
+      "tl": "Pahinain ang pagtanggi gamit ang ちょっと… at paghingi ng tawad."
+     }
+    },
+    {
+     "q": {
+      "jp": "上司（じょうし）の話（はなし）が聞（き）きとれませんでした。何（なん）と言（い）いますか。",
+      "en": "You could not catch what your supervisor said. What do you say?"
+     },
+     "c": [
+      "え？何（なに）？",
+      "もっと大（おお）きく言（い）って。",
+      "聞（き）こえない。",
+      "すみません、もう一度（いちど）お願（ねが）いします。"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Use polite expressions with a supervisor.",
+      "tl": "Gumamit ng magalang na pananalita sa superbisor."
+     }
+    },
+    {
+     "q": {
+      "jp": "「お疲（つか）れさまです」はいつ使（つか）いますか。",
+      "en": "When do you use 「お疲（つか）れさまです」?"
+     },
+     "c": [
+      "誕生日（たんじょうび）のとき",
+      "食事（しょくじ）の前（まえ）",
+      "寝（ね）る前（まえ）",
+      "仕事（しごと）の仲間（なかま）に会（あ）ったときや別（わか）れるとき"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "It is a common greeting among people working together.",
+      "tl": "Karaniwang bati ito sa mga magkasamang nagtatrabaho."
+     }
+    },
+    {
+     "q": {
+      "jp": "「敬語（けいご）」の意味（いみ）は？",
+      "en": "What does 「敬語（けいご）」 mean?"
+     },
+     "c": [
+      "polite language for superiors and customers",
+      "a type of food",
+      "a school",
+      "slang"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "敬語（けいご）shows respect to the listener.",
+      "tl": "Nagpapakita ng paggalang sa kausap."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L59",
+   "track": "field",
+   "level": "A2",
+   "domain": "exam",
+   "title": {
+    "jp": "第（だい）59課（か）　聴解（ちょうかい）の解（と）き方（かた）",
+    "en": "Lesson 59: Strategies for the listening section",
+    "tl": "Estratehiya sa bahaging pakikinig"
+   },
+   "explain": {
+    "jp": "音声（おんせい）の前（まえ）に選択肢（せんたくし）を読（よ）み、大切（たいせつ）な言葉（ことば）をメモします。",
+    "en": "Read the answer choices before the audio, and note times, places and numbers. Listen for words of change and contrast (でも, しかし); the final decision often matters. In this app the audio is read aloud by your browser, so practise listening carefully the first time.",
+    "tl": "Basahin ang mga pagpipilian bago ang audio at isulat ang oras, lugar at numero. Pakinggan ang でも / しかし at mga salita ng pagbabago."
+   },
+   "vocab": [
+    {
+     "jp": "聴解（ちょうかい）",
+     "en": "listening comprehension",
+     "tl": "pakikinig"
+    },
+    {
+     "jp": "先読（さきよ）み",
+     "en": "reading ahead",
+     "tl": "pagbasa nang una"
+    },
+    {
+     "jp": "メモ",
+     "en": "note",
+     "tl": "tala"
+    },
+    {
+     "jp": "数字（すうじ）",
+     "en": "number",
+     "tl": "numero"
+    },
+    {
+     "jp": "時刻（じこく）",
+     "en": "time of day",
+     "tl": "oras"
+    },
+    {
+     "jp": "場所（ばしょ）",
+     "en": "place",
+     "tl": "lugar"
+    },
+    {
+     "jp": "変更（へんこう）",
+     "en": "change",
+     "tl": "pagbabago"
+    },
+    {
+     "jp": "情報（じょうほう）",
+     "en": "information",
+     "tl": "impormasyon"
+    }
+   ],
+   "ex": [
+    [
+     "音声（おんせい）の前（まえ）に、選択肢（せんたくし）を読（よ）みます。",
+     "Read the answer choices before the audio.",
+     "Basahin ang mga pagpipilian bago ang audio."
+    ],
+    [
+     "時間（じかん）、場所（ばしょ）、数字（すうじ）は、メモします。",
+     "Note down times, places and numbers.",
+     "Isulat ang oras, lugar at numero."
+    ],
+    [
+     "「でも」「しかし」のあとに、大切（たいせつ）な情報（じょうほう）が来（き）ます。",
+     "Important information comes after 「でも」 and 「しかし」.",
+     "Ang mahalagang impormasyon ay pagkatapos ng でも / しかし."
+    ],
+    [
+     "予定（よてい）が変（か）わることがあります。最後（さいご）まで聞（き）きます。",
+     "Plans may change, so listen to the end.",
+     "Maaaring magbago ang plano; makinig hanggang dulo."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "「会議（かいぎ）は三時（さんじ）でしたが、四時（よじ）に変（か）わりました。」会議（かいぎ）は何時（なんじ）ですか。",
+      "en": "\"The meeting was at 3, but it changed to 4.\" When is the meeting?"
+     },
+     "c": [
+      "二時（にじ）",
+      "四時（よじ）",
+      "五時（ごじ）",
+      "三時（さんじ）"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "The latest information (changed time) is the answer.",
+      "tl": "Ang pinakabagong impormasyon ang sagot."
+     }
+    },
+    {
+     "q": {
+      "jp": "「でも」のあとには、何（なに）が来（き）ますか。",
+      "en": "What typically follows 「でも」?"
+     },
+     "c": [
+      "名前（なまえ）",
+      "必（かなら）ず同（おな）じ内容（ないよう）",
+      "反対（はんたい）の大切（たいせつ）な情報（じょうほう）",
+      "天気（てんき）の話（はなし）"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "でも introduces a contrast, often the key point.",
+      "tl": "Ang でも ay nagpapakilala ng salungat na punto."
+     }
+    },
+    {
+     "q": {
+      "jp": "聴解（ちょうかい）の前（まえ）に、まず何（なに）をしますか。",
+      "en": "What do you do first before the audio starts?"
+     },
+     "c": [
+      "答（こた）えを全部（ぜんぶ）決（き）めます。",
+      "目（め）を閉（と）じます。",
+      "選択肢（せんたくし）を読（よ）みます。",
+      "何（なに）もしません。"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Reading choices first tells you what to listen for.",
+      "tl": "Alamin muna kung ano ang pakikinggan."
+     }
+    },
+    {
+     "q": {
+      "jp": "「駅（えき）で待（ま）ち合（あ）わせは、七時（しちじ）です。場所（ばしょ）は北口（きたぐち）です。」待（ま）ち合（あ）わせの場所（ばしょ）は？",
+      "en": "\"We meet at the station at 7, at the north exit.\" Where do you meet?"
+     },
+     "c": [
+      "東口（ひがしぐち）",
+      "西口（にしぐち）",
+      "北口（きたぐち）",
+      "南口（みなみぐち）"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Listen for the exact place word.",
+      "tl": "Pakinggan ang eksaktong lugar."
+     }
+    },
+    {
+     "q": {
+      "jp": "聴解（ちょうかい）で、メモするといいものは？",
+      "en": "What is useful to note down while listening?"
+     },
+     "c": [
+      "時間（じかん）・場所（ばしょ）・数字（すうじ）",
+      "昨日（きのう）の夕飯（ゆうはん）",
+      "自分（じぶん）の名前（なまえ）",
+      "天気（てんき）"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Times, places and numbers are easy to mix up.",
+      "tl": "Madaling mag-halo ang oras, lugar at numero."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L60",
+   "track": "field",
+   "level": "A2",
+   "domain": "exam",
+   "title": {
+    "jp": "第（だい）60課（か）　読解（どっかい）の解（と）き方（かた）",
+    "en": "Lesson 60: Strategies for the reading section",
+    "tl": "Estratehiya sa bahaging pagbasa"
+   },
+   "explain": {
+    "jp": "お知（し）らせや案内（あんない）を読（よ）んで、日時（にちじ）・場所（ばしょ）・持（も）ち物（もの）などの情報（じょうほう）を探（さが）します。",
+    "en": "Read notices and announcements and find the date and time, place, things to bring and deadline. Read the question first, then scan the passage. In this mock exam you answer 40 questions in 60 minutes, about 1.5 minutes per question.",
+    "tl": "Basahin ang abiso at hanapin ang petsa/oras, lugar, dadalhin at deadline. Basahin muna ang tanong. Mga 1.5 minuto bawat tanong sa mock exam na ito."
+   },
+   "vocab": [
+    {
+     "jp": "読解（どっかい）",
+     "en": "reading comprehension",
+     "tl": "pagbasa at pag-unawa"
+    },
+    {
+     "jp": "お知（し）らせ",
+     "en": "notice",
+     "tl": "abiso"
+    },
+    {
+     "jp": "締（し）め切（き）り",
+     "en": "deadline",
+     "tl": "deadline"
+    },
+    {
+     "jp": "持（も）ち物（もの）",
+     "en": "things to bring",
+     "tl": "dadalhin"
+    },
+    {
+     "jp": "申（もう）し込（こ）み",
+     "en": "application",
+     "tl": "aplikasyon"
+    },
+    {
+     "jp": "対象（たいしょう）",
+     "en": "target, eligible people",
+     "tl": "target / kwalipikado"
+    },
+    {
+     "jp": "日時（にちじ）",
+     "en": "date and time",
+     "tl": "petsa at oras"
+    },
+    {
+     "jp": "時間配分（じかんはいぶん）",
+     "en": "time management",
+     "tl": "pamamahala ng oras"
+    }
+   ],
+   "ex": [
+    [
+     "先（さき）に質問（しつもん）を読（よ）んでから、本文（ほんぶん）を読（よ）みます。",
+     "Read the question first, then the passage.",
+     "Basahin muna ang tanong bago ang teksto."
+    ],
+    [
+     "お知（し）らせでは、日時（にちじ）・場所（ばしょ）・持（も）ち物（もの）・締（し）め切（き）りを探（さが）します。",
+     "In notices, look for date/time, place, things to bring and deadline.",
+     "Sa abiso, hanapin ang petsa/oras, lugar, dadalhin at deadline."
+    ],
+    [
+     "「～ないでください」「～なければなりません」は、ルールの大切（たいせつ）なサインです。",
+     "「～ないでください」 and 「～なければなりません」 signal important rules.",
+     "Mahalagang palatandaan ng patakaran ang mga ito."
+    ],
+    [
+     "この模試（もし）は、四十問（よんじゅうもん）を六十分（ろくじゅっぷん）で解（と）きます。一問（いちもん）の目安（めやす）は、一分半（いっぷんはん）です。",
+     "This mock has 40 questions in 60 minutes: about 1.5 minutes each.",
+     "40 tanong sa 60 minuto: mga 1.5 minuto bawat isa."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "「来週（らいしゅう）の火曜日（かようび）、午後（ごご）二時（にじ）から、避難（ひなん）訓練（くんれん）があります。場所（ばしょ）は一階（いっかい）のホールです。ヘルメットを持（も）ってきてください。」<br>訓練（くんれん）は何曜日（なんようび）ですか。",
+      "en": "\"Next Tuesday from 2 p.m. there is an evacuation drill in the hall on the first floor. Please bring a helmet.\" On which day is the drill?"
+     },
+     "c": [
+      "金曜日（きんようび）",
+      "日曜日（にちようび）",
+      "火曜日（かようび）",
+      "水曜日（すいようび）"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Find the day word in the notice.",
+      "tl": "Hanapin ang salita ng araw sa abiso."
+     }
+    },
+    {
+     "q": {
+      "jp": "「来週（らいしゅう）の火曜日（かようび）、午後（ごご）二時（にじ）から、避難（ひなん）訓練（くんれん）があります。場所（ばしょ）は一階（いっかい）のホールです。ヘルメットを持（も）ってきてください。」<br>場所（ばしょ）はどこですか。",
+      "en": "Where is the drill?"
+     },
+     "c": [
+      "一階（いっかい）のホール",
+      "三階（さんがい）の食堂（しょくどう）",
+      "二階（にかい）の事務所（じむしょ）",
+      "外（そと）の駐車場（ちゅうしゃじょう）"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "The place word is 場所（ばしょ）.",
+      "tl": "Hanapin ang 場所（ばしょ）."
+     }
+    },
+    {
+     "q": {
+      "jp": "「来週（らいしゅう）の火曜日（かようび）、午後（ごご）二時（にじ）から、避難（ひなん）訓練（くんれん）があります。場所（ばしょ）は一階（いっかい）のホールです。ヘルメットを持（も）ってきてください。」<br>持（も）ってくるものは？",
+      "en": "What should you bring?"
+     },
+     "c": [
+      "ヘルメット",
+      "パスポート",
+      "お弁当（べんとう）",
+      "傘（かさ）"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "「持（も）ってきてください」 tells you what to bring.",
+      "tl": "Ang 「持（も）ってきてください」 ang nagsasabi ng dadalhin."
+     }
+    },
+    {
+     "q": {
+      "jp": "四十問（よんじゅうもん）を六十分（ろくじゅっぷん）で解（と）きます。一問（いちもん）にかける時間（じかん）の目安（めやす）は？",
+      "en": "You answer 40 questions in 60 minutes. About how long per question?"
+     },
+     "c": [
+      "約（やく）十分（じゅっぷん）",
+      "時間（じかん）は関係（かんけい）ありません",
+      "約（やく）五秒（ごびょう）",
+      "約（やく）一分半（いっぷんはん）"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "60 ÷ 40 = 1.5 minutes. Keep a steady pace.",
+      "tl": "60 ÷ 40 = 1.5 minuto. Panatilihin ang bilis."
+     }
+    },
+    {
+     "q": {
+      "jp": "読解（どっかい）の問題（もんだい）で、最初（さいしょ）にすることは？",
+      "en": "What should you do first in a reading question?"
+     },
+     "c": [
+      "質問（しつもん）を読（よ）みます。",
+      "答（こた）えを見（み）ます。",
+      "寝（ね）ます。",
+      "本文（ほんぶん）を全部（ぜんぶ）暗記（あんき）します。"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Knowing the question helps you find the key information.",
+      "tl": "Kapag alam ang tanong, mas madaling hanapin ang sagot."
      }
     }
    ]
