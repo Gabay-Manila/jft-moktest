@@ -675,6 +675,7 @@
 .yl-in{border:1px solid var(--stone-line);border-radius:6px;padding:4px 8px;font:inherit;min-width:12em}
 .yl-rank{margin-top:14px;padding:12px;border-top:1px solid var(--stone-line);text-align:center}
 button:focus-visible{outline:3px solid var(--accent-text);outline-offset:2px}
+#yl-learn{line-height:2}#yl-learn rt{display:ruby-text;font-size:.55em;color:var(--accent-text);font-weight:400}.yl-tl{color:var(--accent-text);font-size:.9rem}
 @media print{@page{size:A4 portrait;margin:14mm}
  #yl-top,.yl-np,.screen,#loading,.toast{display:none!important}
  body{background:#fff}.yl-view{max-width:none;padding:0}.yl-card{break-inside:avoid;border-color:#999}.yl-in{border:0;border-bottom:1px solid #999}}
@@ -1899,13 +1900,16 @@ const U={
  r1:['【特定技能1号 基準達成】','[Specified Skilled Worker 1: standard met]'],r2:['【育成就労 転籍目安基準達成】','[Ikusei Shuro transfer guideline met]'],
  r3:['【育成就労 就労開始前基準達成】','[Ikusei Shuro pre-employment standard met]'],r0:['基準未達：要再学習。各セクションの弱点を復習しましょう。','Below standard: please review your weak sections.'],
  cutw:['セクション足切り未達のため、合計点に関わらず不合格です','Below a section cut-off: fail regardless of total score'],
- est:['250点換算（正答率×250）','Scaled to 250 (accuracy x 250)']
+ est:['250点換算（正答数÷40×250・四捨五入）','Scaled to 250 (correct ÷ 40 × 250, rounded)'],
+ a1ok:['A1修了（合格ライン到達）','A1 completed (passing line reached)'],a1ng:['A1未達：正答率65%未満、またはセクション足切り未達です。弱点を復習しましょう。','Not yet: below 65% or below a section cut-off. Review your weak points.'],
+ a2h:['JFT-Basic本試験レベル合格判定','JFT-Basic exam-level pass judgement']
 };
 const t=k=>U[k][S.lang=='en'?1:0];
 const RANKS=[[200,'A2.2','r1'],[175,'A2.1','r2'],[145,'A1','r3']];
 const rankOf=n=>{for(const r of RANKS)if(n>=r[0])return r;return null};
 const fmt=s=>{const h=Math.floor(s/3600),m=Math.floor(s%3600/60);return S.lang=='en'?`${h}h ${m}m`:`${h}時間${m}分`};
-const L=o=>(o&&(o[S.lang]||o.jp||o.en))||'';
+const R=x=>String(x==null?'':x).replace(/([\u4E00-\u9FFF々]+)（([\u3040-\u30FF\u30FCー]+)）/g,'<ruby>$1<rt>$2</rt></ruby>');
+const L=o=>R((o&&(o[S.lang]||o.jp||o.en))||'');
 let CUR=[],tab='exam',lesson=null,quiz=null,lastScreen='screen-start',loadErr=false;
 const $=id=>document.getElementById(id);
 function beep(){try{const c=window.__ylc=window.__ylc||new (window.AudioContext||window.webkitAudioContext)();const o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.value=437;g.gain.setValueAtTime(.2,c.currentTime);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+.4);o.connect(g).connect(c.destination);o.start();o.stop(c.currentTime+.4)}catch(e){}}
@@ -1929,9 +1933,9 @@ function vLearn(){
  if(quiz){const c=a[lesson],n=c.quiz.length;
   if(quiz.i>=n){const pct=Math.round(quiz.ok/n*100);return h+`<div class="yl-card"><div class="yl-big">${pct}%</div><p>${pct>=80?t('cleared')+' ✓':t('pass80')}</p><button class="yl-btn" data-ya="list">${t('back')}</button> <button class="yl-btn sub" data-ya="quiz">${t('retry')}</button></div>`}
   const q=c.quiz[quiz.i];
-  return h+`<div class="yl-card"><span class="yl-chip">${quiz.i+1} / ${n}</span><h3>${L(q.q)}</h3><p class="yl-en">${q.q.en||''}</p>${q.c.map((o,k)=>`<button class="yl-opt ${quiz.pick==null?'':k==q.a?'ok':k==quiz.pick?'ng':''}" data-yo="${k}" ${quiz.pick==null?'':'disabled'}>${o}</button>`).join('')}${quiz.pick!=null?`<p class="yl-en">${(q.fb&&q.fb.en)||''}</p><button class="yl-btn" data-ya="qnext">${t('next')}</button>`:''}</div>`}
+  return h+`<div class="yl-card"><span class="yl-chip">${quiz.i+1} / ${n}</span><h3>${L(q.q)}</h3><p class="yl-en">${R(q.q.en||'')}</p>${q.c.map((o,k)=>`<button class="yl-opt ${quiz.pick==null?'':k==q.a?'ok':k==quiz.pick?'ng':''}" data-yo="${k}" ${quiz.pick==null?'':'disabled'}>${R(o)}</button>`).join('')}${quiz.pick!=null?`<p class="yl-en">${R((q.fb&&q.fb.en)||'')}</p>${q.fb&&q.fb.tl?`<p class="yl-tl">🇵🇭 ${R(q.fb.tl)}</p>`:''}<button class="yl-btn" data-ya="qnext">${t('next')}</button>`:''}</div>`}
  if(lesson!==null){const c=a[lesson];
-  return h+`<button class="yl-btn sub" data-ya="list">${t('back')}</button><div class="yl-card"><h2>${L(c.title)}</h2><p>${L(c.explain)}</p>${(c.vocab||[]).length?`<div class="yl-lbl">${t('vocab')}</div><p>${c.vocab.map(v=>`<span class="yl-chip">${v.jp} · ${v.en}</span>`).join(' ')}</p>`:''}${c.ex.map(e=>`<div class="yl-deep">${e[0]}<div class="yl-en">${e[1]}</div></div>`).join('')}<p class="yl-en">${t('pass80')}</p><button class="yl-btn" data-ya="quiz">${t('start')}</button></div>`}
+  return h+`<button class="yl-btn sub" data-ya="list">${t('back')}</button><div class="yl-card"><h2>${L(c.title)}</h2><p>${L(c.explain)}</p>${c.explain.tl?`<p class="yl-tl">🇵🇭 ${R(c.explain.tl)}</p>`:''}${(c.vocab||[]).length?`<div class="yl-lbl">${t('vocab')}</div><p>${c.vocab.map(v=>`<span class="yl-chip">${R(v.jp)} · ${R(v.en)}${v.tl?' · 🇵🇭 '+R(v.tl):''}</span>`).join(' ')}</p>`:''}${c.ex.map(e=>`<div class="yl-deep">${R(e[0])}<div class="yl-en">${R(e[1])}</div>${e[2]?`<div class="yl-tl">🇵🇭 ${R(e[2])}</div>`:''}</div>`).join('')}<p class="yl-en">${t('pass80')}</p><button class="yl-btn" data-ya="quiz">${t('start')}</button></div>`}
  let rows=a.map((c,i)=>{const u=open_(i),b=S.clear[c.id];
   return `<button class="yl-card yl-ls" data-yl="${i}" ${u?'':'disabled'}><span>${u?'📖':'🔒'}</span><span style="flex:1"><b>${L(c.title)}</b></span>${b>=80?`<span class="yl-chip">${t('cleared')} ${b}%</span>`:b!=null?`<span class="yl-chip">${b}%</span>`:''}</button>`}).join('');
  for(let i=a.length;i<target();i++)rows+=`<div class="yl-card yl-ls" style="opacity:.5"><span>🔒</span><span style="flex:1">${S.lang=='en'?'Lesson':'第'}${i+1}${S.lang=='en'?'':'課'} · ${t('soon')}</span></div>`;
@@ -1939,7 +1943,7 @@ function vLearn(){
 }
 function vReport(){
  const a=CUR.filter(l=>l.track=='core'||S.course==300),n=a.filter(c=>(S.clear[c.id]||0)>=80).length,b=S.best,l=S.last,d=new Date().toISOString().slice(0,10);
- const rk=l?(l.rank?`${l.rank} ${t(RANKS.find(r=>r[1]==l.rank)[2])}`:'—'+(l.cut?' '+t('cutw'):'')):t('none');
+ const rk=l?(l.level=='A1'?(l.done?t('a1ok'):'— '+t('a1ng')):(l.rank?`${l.rank} ${t(RANKS.find(r=>r[1]==l.rank)[2])}`:'— '+(l.cut?t('cutw'):t('r0')))):t('none');
  return `<div class="yl-card"><h2>${t('t3')}</h2><p>${t('name')}: <input id="yl-name" class="yl-in" value="${(S.name||'').replace(/"/g,'&quot;')}"> &nbsp; ${t('date')}: ${d}</p>
  <table class="yl-tbl"><tr><td>${t('total')}</td><td><b>${fmt(S.sec)}</b> / ${S.course}h</td></tr>
  <tr><td>${t('lessons')}</td><td><b>${n}</b> / ${target()}</td></tr>
@@ -1985,14 +1989,23 @@ const _fe=window.finishExam;
 window.finishExam=function(to){
  _fe(to);
  try{
-  const cfg=LEVEL_CONFIG[currentLevel].sections,by={};Object.keys(cfg).forEach(s=>by[s]=0);let ok=0;
+  const cfg=LEVEL_CONFIG[currentLevel].sections,by={};Object.keys(cfg).forEach(k=>by[k]=0);let ok=0;
   examQuestions.forEach((q,i)=>{if(answers[i]===Number(q.correct_answer)){ok++;if(by[q.section]!==undefined)by[q.section]++}});
-  const cut=Object.keys(cfg).filter(s=>by[s]<cfg[s].cutoff);
-  const score=Math.round(ok/examQuestions.length*250),r=cut.length?null:rankOf(score);
-  const rec={score,rank:r?r[1]:null,cut:cut.length>0,level:currentLevel,date:new Date().toISOString().slice(0,10)};
-  S.last=rec;if(!S.best||score>S.best.score)S.best={score,level:currentLevel,date:rec.date};save();
-  const msg=r?`${U[r[2]][0]}<br><small>${U[r[2]][1]}</small>`:(cut.length?`${U.cutw[0]}<br><small>${U.cutw[1]}</small>`:`${U.r0[0]}<br><small>${U.r0[1]}</small>`);
-  $('result-verdict').insertAdjacentHTML('beforeend',`<div class="yl-rank"><div class="yl-lbl">${U.est[0]}</div><div class="yl-big">${score} / 250</div><span class="yl-chip">${r?r[1]:'—'}</span><p style="font-weight:700;color:${r?'var(--accent-text)':'var(--danger-text)'}">${msg}</p><button class="yl-btn sub" data-yt="learn">${S.lang=='en'?'Review weak points in Learning Lounge':'弱点をカリキュラム学習で復習する'}</button></div>`);
+  const cut=Object.keys(cfg).filter(k=>by[k]<cfg[k].cutoff);
+  const score=Math.round(ok/40*250),isA1=currentLevel=='A1';
+  let rec,title,msg,good;
+  if(isA1){
+   const done=ok/40>=0.65&&!cut.length;
+   rec={score,level:'A1',done,cut:cut.length>0,date:new Date().toISOString().slice(0,10)};
+   title=U.est[0];good=done;msg=done?`${U.a1ok[0]}<br><small>${U.a1ok[1]}</small>`:(cut.length?`${U.cutw[0]}<br><small>${U.cutw[1]}</small>`:`${U.a1ng[0]}<br><small>${U.a1ng[1]}</small>`);
+  }else{
+   const r=cut.length?null:rankOf(score);
+   rec={score,level:'A2',rank:r?r[1]:null,cut:cut.length>0,date:new Date().toISOString().slice(0,10)};
+   title=U.a2h[0]+'（'+U.est[0]+'）';good=!!r;msg=r?`${U[r[2]][0]}<br><small>${U[r[2]][1]}</small>`:(cut.length?`${U.cutw[0]}<br><small>${U.cutw[1]}</small>`:`${U.r0[0]}<br><small>${U.r0[1]}</small>`);
+  }
+  S.last=rec;if(!S.best||score>S.best.score)S.best={score,level:rec.level,date:rec.date};save();
+  const chip=isA1?(rec.done?'A1 ✓':'—'):(rec.rank||'—');
+  $('result-verdict').insertAdjacentHTML('beforeend',`<div class="yl-rank"><div class="yl-lbl">${title}</div><div class="yl-big">${score} / 250</div><span class="yl-chip">${chip}</span><p style="font-weight:700;color:${good?'var(--accent-text)':'var(--danger-text)'}">${msg}</p><button class="yl-btn sub" data-yt="learn">${S.lang=='en'?'Review weak points in Learning Lounge':'弱点をカリキュラム学習で復習する'}</button></div>`);
  }catch(e){console.error(e)}
 };
 /* 起動 */
