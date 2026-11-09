@@ -1,0 +1,5558 @@
+{
+ "meta": {
+  "source": "edtech-nihongo",
+  "core_target": 30,
+  "total_target": 60,
+  "note": "field lessons beyond L36 are not yet authored"
+ },
+ "lessons": [
+  {
+   "id": "L01",
+   "track": "core",
+   "level": "A1",
+   "title": {
+    "jp": "第1課　スターター（Set 1-1）",
+    "en": "Lesson 1: Starter, Set 1 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Greetings are fixed phrases tied to time of day. おはようございます covers early morning through late morning. Country/place name + から きました means 'I came from 〜'. This is the standard pattern for stating origin. 〜が すきです means 'I like 〜'. が marks the thing being liked — it is not the doer of an action. Noun + を ください is the simplest polite way to request or order something. すみません softens almost any statement, including admitting you didn't understand something."
+   },
+   "vocab": [
+    {
+     "jp": "おはようございます",
+     "en": "Good morning (polite)"
+    },
+    {
+     "jp": "こんばんは",
+     "en": "Good evening"
+    },
+    {
+     "jp": "さようなら",
+     "en": "Goodbye"
+    },
+    {
+     "jp": "すみません",
+     "en": "Excuse me / Sorry"
+    },
+    {
+     "jp": "おくに",
+     "en": "country (polite)"
+    },
+    {
+     "jp": "どちら",
+     "en": "where / which way"
+    },
+    {
+     "jp": "〜から きました",
+     "en": "came from 〜"
+    },
+    {
+     "jp": "フィリピン",
+     "en": "Philippines"
+    },
+    {
+     "jp": "すき",
+     "en": "like / fond of"
+    },
+    {
+     "jp": "はい / いいえ",
+     "en": "yes / no"
+    }
+   ],
+   "ex": [
+    [
+     "おはようございます",
+     "It's morning. You greet a neighbor in the hallway."
+    ],
+    [
+     "フィリピンから　きました",
+     "Someone asks where you're from. You are from the Philippines."
+    ],
+    [
+     "はい、すきです",
+     "Someone asks if you like udon. You do."
+    ],
+    [
+     "チーズバーガーを　ください",
+     "A fast-food staff member asks what you'd like to order. You want a cheeseburger."
+    ],
+    [
+     "すみません、わかりません",
+     "You didn't catch what someone said and need to admit you don't understand."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "あなたは　なんと　いいますか？",
+      "en": "It's morning. You greet a neighbor in the hallway."
+     },
+     "c": [
+      "こんばんは",
+      "すみません",
+      "おはようございます",
+      "さようなら"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Japanese greetings change with the time of day. Morning greetings are short, frequent, and expected even with people you barely know — like coworkers in a hallway."
+     }
+    },
+    {
+     "q": {
+      "jp": "おくには　どちらですか？",
+      "en": "Someone asks where you're from. You are from the Philippines."
+     },
+     "c": [
+      "ありがとうございます",
+      "はじめまして",
+      "フィリピンから　きました",
+      "にほんごが　すきです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "おくに is a polite way to ask someone's home country. It's one of the very first questions asked in self-introductions in Japan."
+     }
+    },
+    {
+     "q": {
+      "jp": "うどんが　すきですか？",
+      "en": "Someone asks if you like udon. You do."
+     },
+     "c": [
+      "はい、すきです",
+      "いいえ、げんきです",
+      "すみません、わかりません",
+      "はじめまして"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Talking about food preferences is one of the most common small-talk topics in Japan, especially when getting to know coworkers."
+     }
+    },
+    {
+     "q": {
+      "jp": "ご注文は？",
+      "en": "A fast-food staff member asks what you'd like to order. You want a cheeseburger."
+     },
+     "c": [
+      "チーズバーガーを　ください",
+      "チーズバーガーが　あります",
+      "チーズバーガーでした",
+      "チーズバーガーじゃ　ありません"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "〜を ください is the single most useful phrase for ordering food or buying something — it works in restaurants, convenience stores, and markets alike."
+     }
+    },
+    {
+     "q": {
+      "jp": "あなたは　にほんごが　わかりませんでした。なんと　いいますか？",
+      "en": "You didn't catch what someone said and need to admit you don't understand."
+     },
+     "c": [
+      "おねがいします",
+      "どうも　ありがとう",
+      "すみません、わかりません",
+      "おやすみなさい"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "It's completely normal and accepted for beginners to say this — it's far better than guessing or staying silent."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "track": "core",
+   "level": "A1",
+   "title": {
+    "jp": "第2課　スターター（Set 1-2）",
+    "en": "Lesson 2: Starter, Set 1 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "いくらですか？ asks the price. Number + えん gives the answer, e.g. ごひゃくえん = 500 yen. This is a set phrase — memorize it as one chunk rather than analyzing its grammar piece by piece. This is the standard polite thank-you — safe to use in almost any context. 〜は どこですか asks 'where is 〜?'. Answer with a place word like あそこ (over there) or こちら (this way). かして ください = 'please lend (it to) me'. The asker always uses かす, never かりる, in this request."
+   },
+   "vocab": [
+    {
+     "jp": "いくら",
+     "en": "how much"
+    },
+    {
+     "jp": "〜えん",
+     "en": "〜 yen"
+    },
+    {
+     "jp": "おさきに しつれいします",
+     "en": "\"Excuse me for leaving first\" (fixed workplace phrase)"
+    },
+    {
+     "jp": "てつだう",
+     "en": "to help"
+    },
+    {
+     "jp": "ありがとうございます",
+     "en": "thank you (polite)"
+    },
+    {
+     "jp": "トイレ",
+     "en": "restroom / toilet"
+    },
+    {
+     "jp": "どこ",
+     "en": "where"
+    },
+    {
+     "jp": "あそこ",
+     "en": "over there"
+    },
+    {
+     "jp": "かす",
+     "en": "to lend"
+    },
+    {
+     "jp": "ペン",
+     "en": "pen"
+    }
+   ],
+   "ex": [
+    [
+     "ごひゃくえんです",
+     "You want to ask the price of an item in a shop."
+    ],
+    [
+     "おさきに　しつれいします",
+     "It's late at night and you're leaving work before your coworkers."
+    ],
+    [
+     "ありがとうございます",
+     "Someone helped you with something. You want to thank them politely."
+    ],
+    [
+     "あそこです",
+     "You need to find the restroom in an office building."
+    ],
+    [
+     "ペンを　かして　ください",
+     "You want to borrow a pen from a coworker."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "これは　いくらですか？",
+      "en": "You want to ask the price of an item in a shop."
+     },
+     "c": [
+      "おいしいです",
+      "ごひゃくえんです",
+      "どういたしまして",
+      "げんきです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "いくらですか is the question; the answer is simply a number plus えん (yen)."
+     }
+    },
+    {
+     "q": {
+      "jp": "よる　おそく　かいしゃを　でます。なんと　いいますか？",
+      "en": "It's late at night and you're leaving work before your coworkers."
+     },
+     "c": [
+      "ごちそうさまでした",
+      "いただきます",
+      "おはようございます",
+      "おさきに　しつれいします"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "お先に失礼します is said almost automatically when leaving a Japanese workplace before others — even close coworkers expect to hear it."
+     }
+    },
+    {
+     "q": {
+      "jp": "てつだって　もらいました。なんと　いいますか？",
+      "en": "Someone helped you with something. You want to thank them politely."
+     },
+     "c": [
+      "いいえ",
+      "さようなら",
+      "ありがとうございます",
+      "すみません"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "ありがとうございます is appropriate in nearly every formal or service situation in Japan, from a shop clerk to a supervisor."
+     }
+    },
+    {
+     "q": {
+      "jp": "すみません、トイレは　どこですか？",
+      "en": "You need to find the restroom in an office building."
+     },
+     "c": [
+      "げんきです",
+      "さようなら",
+      "あしたです",
+      "あそこです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Finding the restroom is one of the first practical questions any visitor or new employee needs to ask."
+     }
+    },
+    {
+     "q": {
+      "jp": "ペンを　かりたいです。なんと　いいますか？",
+      "en": "You want to borrow a pen from a coworker."
+     },
+     "c": [
+      "ペンを　あげます",
+      "ペンを　かして　ください",
+      "ペンを　かりて　ください",
+      "ペンです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "This recycles a very common beginner mix-up: you ask someone to かす (lend) it to you, not かりる (borrow) — those are two different verbs for two different people in the exchange."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "track": "core",
+   "level": "A1",
+   "title": {
+    "jp": "第3課　スターター（Set 1-3）",
+    "en": "Lesson 3: Starter, Set 1 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜が すきです works with any noun you like — swap in food, hobbies, shows, anything. Reuses 〜は どこですか — once you know this pattern, you can ask about any place by swapping the noun. 〜を ください is the action phrase for 'please give me this' — the simplest way to buy something. Verb stem + たいです expresses a wish: いきたいです = 'want to go'. Match the question's grammar in your answer. Adding は after a topic and trailing off (おなまえは？) is a natural, slightly soft way to ask a question in conversation."
+   },
+   "vocab": [
+    {
+     "jp": "ドラマ",
+     "en": "(TV) drama"
+    },
+    {
+     "jp": "すき",
+     "en": "like / fond of"
+    },
+    {
+     "jp": "えき",
+     "en": "(train) station"
+    },
+    {
+     "jp": "あそこ",
+     "en": "over there"
+    },
+    {
+     "jp": "ほしい",
+     "en": "want (a thing)"
+    },
+    {
+     "jp": "これ",
+     "en": "this"
+    },
+    {
+     "jp": "やすみ",
+     "en": "holiday / day off"
+    },
+    {
+     "jp": "〜たいです",
+     "en": "want to 〜"
+    },
+    {
+     "jp": "おなまえ",
+     "en": "name (polite)"
+    },
+    {
+     "jp": "はじめて",
+     "en": "for the first time"
+    }
+   ],
+   "ex": [
+    [
+     "はい、すきです",
+     "A friend asks if you like Japanese dramas. You do."
+    ],
+    [
+     "えきは　あそこです",
+     "You're lost and want to ask where the train station is."
+    ],
+    [
+     "これを　ください",
+     "You see something in a shop and want to say you'd like to buy it."
+    ],
+    [
+     "はい、いきたいです",
+     "A friend asks if you want to go to Tokyo for the holidays. You do."
+    ],
+    [
+     "おなまえは？",
+     "You're meeting someone for the first time and want to politely ask their name."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "にほんの　ドラマが　すきですか？",
+      "en": "A friend asks if you like Japanese dramas. You do."
+     },
+     "c": [
+      "いいえ、げんきです",
+      "はい、すきです",
+      "ありがとう",
+      "すみません"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "This reuses the すき pattern with a new topic — Japanese TV dramas — a common conversation starter."
+     }
+    },
+    {
+     "q": {
+      "jp": "すみません、えきは　どこですか？",
+      "en": "You're lost and want to ask where the train station is."
+     },
+     "c": [
+      "えきは　おいしいです",
+      "えきは　あしたです",
+      "えきは　げんきです",
+      "えきは　あそこです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Asking for directions to the nearest station is essential for getting around any Japanese city."
+     }
+    },
+    {
+     "q": {
+      "jp": "これが　ほしいです。なんと　いいますか？",
+      "en": "You see something in a shop and want to say you'd like to buy it."
+     },
+     "c": [
+      "これを　ください",
+      "これが　あります",
+      "これでした",
+      "これは　たかいです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "ほしい (want) describes your feeling; ください is what you actually say out loud to the shop staff to get the item."
+     }
+    },
+    {
+     "q": {
+      "jp": "やすみに　とうきょうに　いきたいですか？",
+      "en": "A friend asks if you want to go to Tokyo for the holidays. You do."
+     },
+     "c": [
+      "いいえ、おいしいです",
+      "はい、いきます",
+      "はい、いきたいです",
+      "はい、いきました"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "This checks that you can answer a 'want to' question in the same form it was asked, instead of switching to a plain statement of fact."
+     }
+    },
+    {
+     "q": {
+      "jp": "はじめて　あいました。なんと　ききますか？",
+      "en": "You're meeting someone for the first time and want to politely ask their name."
+     },
+     "c": [
+      "ありがとうございます",
+      "おげんきですか",
+      "おなまえは？",
+      "すみません"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "おなまえは？ is a short, polite way to ask someone's name right after はじめまして (nice to meet you) in a first introduction."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "track": "core",
+   "level": "A1",
+   "title": {
+    "jp": "第4課　スターター（Set 2-1）",
+    "en": "Lesson 4: Starter, Set 2 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Greetings are tied to time of day: おはよう (morning), こんにちは (daytime), こんばんは (evening/night). い-adjective + です directly states a simple quality, like describing the weather. にん is the counter for people — distinct from つ (objects), じ (time), and かい (floors). はは refers to your own mother when speaking to others; おかあさん is used for someone else's mother, or to address your own directly. Body part + が いたいです describes pain: 'my 〜 hurts'."
+   },
+   "vocab": [
+    {
+     "jp": "こんにちは",
+     "en": "hello / good afternoon"
+    },
+    {
+     "jp": "あつい",
+     "en": "hot (weather)"
+    },
+    {
+     "jp": "さむい",
+     "en": "cold"
+    },
+    {
+     "jp": "なんにん",
+     "en": "how many people"
+    },
+    {
+     "jp": "よにん",
+     "en": "four people"
+    },
+    {
+     "jp": "はは",
+     "en": "mother (your own, plain form)"
+    },
+    {
+     "jp": "だれ",
+     "en": "who"
+    },
+    {
+     "jp": "あたま",
+     "en": "head"
+    },
+    {
+     "jp": "いたい",
+     "en": "painful / it hurts"
+    }
+   ],
+   "ex": [
+    [
+     "こんにちは",
+     "It's midday and you greet a shop clerk you don't know well."
+    ],
+    [
+     "はい、あついです",
+     "Someone asks if today's weather is hot. It is."
+    ],
+    [
+     "よにんです",
+     "Someone asks how many people are in your family. There are four."
+    ],
+    [
+     "わたしの　ははです",
+     "You're showing a photo and introducing your mother."
+    ],
+    [
+     "あたまが　いたいです",
+     "You have a headache and want to tell your supervisor."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "ひるま、しらない人に　あいさつします。なんと　いいますか？",
+      "en": "It's midday and you greet a shop clerk you don't know well."
+     },
+     "c": [
+      "おやすみなさい",
+      "こんばんは",
+      "こんにちは",
+      "おはようございます"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "こんにちは covers daytime greetings, roughly from late morning through evening — a different window than morning or night greetings."
+     }
+    },
+    {
+     "q": {
+      "jp": "きょうは　あついですか？",
+      "en": "Someone asks if today's weather is hot. It is."
+     },
+     "c": [
+      "はい、げんきです",
+      "はい、たかいです",
+      "はい、あついです",
+      "はい、さむいです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Talking about the weather is universal small talk, just as common in Japan as anywhere else."
+     }
+    },
+    {
+     "q": {
+      "jp": "かぞくは　なんにんですか？",
+      "en": "Someone asks how many people are in your family. There are four."
+     },
+     "c": [
+      "よかいです",
+      "よにんです",
+      "よじです",
+      "よっつです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Talking about family size is common once conversations move past the basics of introductions."
+     }
+    },
+    {
+     "q": {
+      "jp": "これは　だれですか？",
+      "en": "You're showing a photo and introducing your mother."
+     },
+     "c": [
+      "わたしの　しごとです",
+      "わたしの　なまえです",
+      "わたしの　ははです",
+      "わたしの　くにです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Introducing family members by photo is a natural way friendships deepen beyond small talk."
+     }
+    },
+    {
+     "q": {
+      "jp": "あたまが　いたいです。じょうしに　なんと　いいますか？",
+      "en": "You have a headache and want to tell your supervisor."
+     },
+     "c": [
+      "あたまが　いいです",
+      "あたまが　すきです",
+      "あたまが　いたいです",
+      "あたまが　おおきいです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Describing simple physical discomfort is essential vocabulary for both work and daily life."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "track": "core",
+   "level": "A1",
+   "title": {
+    "jp": "第5課　スターター（Set 2-2）",
+    "en": "Lesson 5: Starter, Set 2 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "てつだって ください = 'please help (me)' — the same 〜て ください request pattern applied to a new verb. Direction words like みぎ/ひだり work as short, complete answers to 'where is it?' questions. Reinforces 〜を ください — the same ordering phrase works for drinks as well as food. どうですか asks for a simple opinion or impression; answer with a plain い-adjective. なんですか asks a simple 'what is it?' — common for jobs, names, and other basic facts."
+   },
+   "vocab": [
+    {
+     "jp": "にもつ",
+     "en": "luggage / baggage"
+    },
+    {
+     "jp": "おもい",
+     "en": "heavy"
+    },
+    {
+     "jp": "てつだう",
+     "en": "to help"
+    },
+    {
+     "jp": "みぎ",
+     "en": "right"
+    },
+    {
+     "jp": "ひだり",
+     "en": "left"
+    },
+    {
+     "jp": "ゆうびんきょく",
+     "en": "post office"
+    },
+    {
+     "jp": "おみず",
+     "en": "water (polite)"
+    },
+    {
+     "jp": "おのみもの",
+     "en": "drink / beverage"
+    },
+    {
+     "jp": "りょうり",
+     "en": "dish / cooking"
+    },
+    {
+     "jp": "おいしい",
+     "en": "delicious"
+    }
+   ],
+   "ex": [
+    [
+     "てつだって　ください",
+     "Your bag is heavy and you want to ask a coworker for help carrying it."
+    ],
+    [
+     "みぎです",
+     "Someone asks where the post office is; you know it's to the right."
+    ],
+    [
+     "おみずを　ください",
+     "At a café, the staff asks what you'd like to drink. You want water."
+    ],
+    [
+     "おいしいです",
+     "You just tasted a dish and want to say it's delicious."
+    ],
+    [
+     "かいしゃいんです",
+     "You're making small talk and want to ask what job someone has."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "にもつが　おもいです。なんと　たのみますか？",
+      "en": "Your bag is heavy and you want to ask a coworker for help carrying it."
+     },
+     "c": [
+      "てつだいません",
+      "てつだって　ください",
+      "てつだいます",
+      "てつだいでした"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Asking for a hand with something heavy is a small but very practical everyday request."
+     }
+    },
+    {
+     "q": {
+      "jp": "すみません、ゆうびんきょくは　どこですか？と　きかれました。みぎに　あります。なんと　こたえますか？",
+      "en": "Someone asks where the post office is; you know it's to the right."
+     },
+     "c": [
+      "みぎです",
+      "まえです",
+      "うしろです",
+      "ひだりです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Simple one-word direction answers are often all you need when pointing someone the right way."
+     }
+    },
+    {
+     "q": {
+      "jp": "おのみものは？",
+      "en": "At a café, the staff asks what you'd like to drink. You want water."
+     },
+     "c": [
+      "おみずでした",
+      "おみずを　ください",
+      "おみずが　あります",
+      "おみずは　たかいです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Ordering drinks uses exactly the same pattern as ordering food."
+     }
+    },
+    {
+     "q": {
+      "jp": "この　りょうりは　どうですか？",
+      "en": "You just tasted a dish and want to say it's delicious."
+     },
+     "c": [
+      "たかいです",
+      "おもいです",
+      "おいしいです",
+      "いたいです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Complimenting food is one of the easiest and most appreciated things you can say at a meal."
+     }
+    },
+    {
+     "q": {
+      "jp": "しごとは　なんですか？",
+      "en": "You're making small talk and want to ask what job someone has."
+     },
+     "c": [
+      "かいしゃでした",
+      "かいしゃに　います",
+      "かいしゃが　すきです",
+      "かいしゃいんです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Asking what someone does for work is a standard question once introductions move past names."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "track": "core",
+   "level": "A1",
+   "title": {
+    "jp": "第6課　スターター（Set 2-3）",
+    "en": "Lesson 6: Starter, Set 2 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "いただきます (before) and ごちそうさまでした (after) are a fixed pair — don't mix up the timing. おめでとうございます is the standard congratulatory phrase — used for birthdays, achievements, and celebrations alike. Use the plain past つかれました to describe a state you've already fallen into, like today's tiredness — not the non-past つかれます. なにを しますか asks about plans; ゆっくりします is a common way to say 'I'll relax / take it easy'. ようび asks about days of the week — distinct from じ (time), にち (date/day count), and がつ (month)."
+   },
+   "vocab": [
+    {
+     "jp": "ごちそうさまでした",
+     "en": "thank you for the meal (said after eating)"
+    },
+    {
+     "jp": "いただきます",
+     "en": "said before eating"
+    },
+    {
+     "jp": "たんじょうび",
+     "en": "birthday"
+    },
+    {
+     "jp": "おめでとうございます",
+     "en": "congratulations"
+    },
+    {
+     "jp": "つかれる",
+     "en": "to get tired"
+    },
+    {
+     "jp": "つかれました",
+     "en": "got tired (past)"
+    },
+    {
+     "jp": "ゆっくりする",
+     "en": "to relax / take it easy"
+    },
+    {
+     "jp": "いえ",
+     "en": "home"
+    },
+    {
+     "jp": "なんようび",
+     "en": "what day of the week"
+    },
+    {
+     "jp": "げつようび",
+     "en": "Monday"
+    }
+   ],
+   "ex": [
+    [
+     "ごちそうさまでした",
+     "You just finished eating a meal someone prepared for you."
+    ],
+    [
+     "おたんじょうび　おめでとうございます",
+     "It's your coworker's birthday today."
+    ],
+    [
+     "つかれました",
+     "After a long day of work, a friend asks how today was. You're tired."
+    ],
+    [
+     "いえで　ゆっくり　します",
+     "A friend asks what you'll do tomorrow. You're going to rest at home."
+    ],
+    [
+     "げつようびです",
+     "Someone asks what day of the week it is today. It's Monday."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "ごはんを　たべおわりました。なんと　いいますか？",
+      "en": "You just finished eating a meal someone prepared for you."
+     },
+     "c": [
+      "ごちそうさまです",
+      "いただきました",
+      "ごちそうさまでした",
+      "いただきます"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "These two meal phrases are said almost automatically by everyone in Japan, at home or in restaurants."
+     }
+    },
+    {
+     "q": {
+      "jp": "きょうは　たんじょうびです。なんと　いいますか？",
+      "en": "It's your coworker's birthday today."
+     },
+     "c": [
+      "おたんじょうび　おめでとうございます",
+      "おめでとう　ございました",
+      "たんじょうびに　いきます",
+      "たんじょうびでした"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Congratulating coworkers on small occasions like birthdays helps build warm relationships."
+     }
+    },
+    {
+     "q": {
+      "jp": "きょうは　どうでしたか？",
+      "en": "After a long day of work, a friend asks how today was. You're tired."
+     },
+     "c": [
+      "つかれません",
+      "つかれが　すきです",
+      "つかれました",
+      "つかれます"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Talking about how your day went, and how tired you are, is everyday conversation after work."
+     }
+    },
+    {
+     "q": {
+      "jp": "あした　なにを　しますか？",
+      "en": "A friend asks what you'll do tomorrow. You're going to rest at home."
+     },
+     "c": [
+      "いえで　ゆっくり　します",
+      "いえで　ゆっくり　でした",
+      "いえに　ゆっくり　あります",
+      "いえが　ゆっくり　すきです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Talking about relaxed plans, like a quiet day at home, is common before or after a busy week."
+     }
+    },
+    {
+     "q": {
+      "jp": "きょうは　なんようびですか？",
+      "en": "Someone asks what day of the week it is today. It's Monday."
+     },
+     "c": [
+      "いちにちです",
+      "げつようびです",
+      "いちじです",
+      "いちがつです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Knowing the days of the week is essential for scheduling work shifts, appointments, and plans."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "track": "core",
+   "level": "A1",
+   "title": {
+    "jp": "第7課　スターター（Set 3-1）",
+    "en": "Lesson 7: Starter, Set 3 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "なんじですか asks the time; answer with number + じ, e.g. さんじ = 3 o'clock. すきじゃないです (or すきではないです) is the negative form of すきです: 'don't like'. Color + noun + は ありますか asks if a particular colored item is available. Noun + ですね comments on something you both can see, inviting agreement. Reinforces なんですか for jobs — simply state the job name + です."
+   },
+   "vocab": [
+    {
+     "jp": "いま",
+     "en": "now"
+    },
+    {
+     "jp": "なんじ",
+     "en": "what time"
+    },
+    {
+     "jp": "からい",
+     "en": "spicy"
+    },
+    {
+     "jp": "すきじゃないです",
+     "en": "don't like"
+    },
+    {
+     "jp": "あおい",
+     "en": "blue"
+    },
+    {
+     "jp": "シャツ",
+     "en": "shirt"
+    },
+    {
+     "jp": "ゆき",
+     "en": "snow"
+    },
+    {
+     "jp": "あめ",
+     "en": "rain"
+    },
+    {
+     "jp": "はれ",
+     "en": "clear weather"
+    },
+    {
+     "jp": "かぜ",
+     "en": "wind"
+    }
+   ],
+   "ex": [
+    [
+     "さんじです",
+     "Someone asks what time it is now. It's 3 o'clock."
+    ],
+    [
+     "いいえ、すきじゃないです",
+     "You want to say you don't like spicy food."
+    ],
+    [
+     "はい、あります",
+     "You're shopping for a shirt and want to know if they have it in blue."
+    ],
+    [
+     "ゆきですね",
+     "It's snowing outside and a friend points it out to you."
+    ],
+    [
+     "かんごしです",
+     "Someone asks your job. You're a nurse."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "いま、なんじですか？",
+      "en": "Someone asks what time it is now. It's 3 o'clock."
+     },
+     "c": [
+      "さんかいです",
+      "さんがつです",
+      "さんにんです",
+      "さんじです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Telling the time is one of the most frequently needed everyday phrases."
+     }
+    },
+    {
+     "q": {
+      "jp": "からい　たべものは　すきですか？",
+      "en": "You want to say you don't like spicy food."
+     },
+     "c": [
+      "いいえ、おいしいです",
+      "はい、すきです",
+      "いいえ、すきじゃないです",
+      "はい、たかいです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Being able to politely say you don't like something is just as useful as saying you do."
+     }
+    },
+    {
+     "q": {
+      "jp": "あおい　シャツは　ありますか？",
+      "en": "You're shopping for a shirt and want to know if they have it in blue."
+     },
+     "c": [
+      "はい、あります",
+      "はい、いきます",
+      "はい、います",
+      "はい、すきです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking if an item comes in a certain color is a very practical shopping phrase."
+     }
+    },
+    {
+     "q": {
+      "jp": "そとを　みて、なんと　いいますか？",
+      "en": "It's snowing outside and a friend points it out to you."
+     },
+     "c": [
+      "ゆきですね",
+      "かぜですね",
+      "はれですね",
+      "あめですよ"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Commenting on the weather you can both see together is natural, easy small talk."
+     }
+    },
+    {
+     "q": {
+      "jp": "しごとは　なんですか？",
+      "en": "Someone asks your job. You're a nurse."
+     },
+     "c": [
+      "かんごしに　います",
+      "かんごしです",
+      "かんごしが　すきです",
+      "かんごしでした"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Stating your job clearly comes up constantly in introductions and small talk."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "track": "core",
+   "level": "A1",
+   "title": {
+    "jp": "第8課　スターター（Set 3-2）",
+    "en": "Lesson 8: Starter, Set 3 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Verb + のが すきです expresses liking an activity: 'I like reading (books)'. 〜ぐらい softens a number to mean 'about/approximately' — useful when an exact answer isn't needed. Reinforces the つ counters with a new item — みっつ for three general objects, like apples. すみません、おくれました is the standard apology for arriving late. Reuses the 〜ませんか invitation pattern with a new verb, たべる (to eat), answered with 〜ましょう."
+   },
+   "vocab": [
+    {
+     "jp": "しゅみ",
+     "en": "hobby"
+    },
+    {
+     "jp": "ほんを よむ",
+     "en": "to read a book"
+    },
+    {
+     "jp": "〜ぐらい",
+     "en": "about / approximately"
+    },
+    {
+     "jp": "タクシー",
+     "en": "taxi"
+    },
+    {
+     "jp": "りんご",
+     "en": "apple"
+    },
+    {
+     "jp": "みっつ",
+     "en": "three (general counter)"
+    },
+    {
+     "jp": "ちこく",
+     "en": "being late"
+    },
+    {
+     "jp": "おくれる",
+     "en": "to be late / delayed"
+    },
+    {
+     "jp": "ひるごはん",
+     "en": "lunch"
+    }
+   ],
+   "ex": [
+    [
+     "ほんを　よむのが　すきです",
+     "A friend asks about your hobby. You like reading books."
+    ],
+    [
+     "さんせんえんぐらいです",
+     "You're taking a taxi and want to ask roughly how much the fare to the airport is."
+    ],
+    [
+     "りんごを　みっつ　ください",
+     "You want to buy 3 apples at a fruit stand."
+    ],
+    [
+     "すみません、おくれました",
+     "You're running late and want to apologize for arriving late to a meeting."
+    ],
+    [
+     "いいですね、たべましょう",
+     "A coworker invites you to eat lunch together. You happily accept."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "しゅみは　なんですか？",
+      "en": "A friend asks about your hobby. You like reading books."
+     },
+     "c": [
+      "ほんでした",
+      "ほんが　あります",
+      "ほんを　よむのが　すきです",
+      "ほんを　かいました"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Talking about hobbies is one of the easiest ways to bond with new acquaintances."
+     }
+    },
+    {
+     "q": {
+      "jp": "くうこうまで　タクシーで　いくらですか？",
+      "en": "You're taking a taxi and want to ask roughly how much the fare to the airport is."
+     },
+     "c": [
+      "さんかいぐらいです",
+      "さんじかんぐらいです",
+      "さんにんぐらいです",
+      "さんせんえんぐらいです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Asking for an approximate fare or price is realistic — exact numbers aren't always known in advance."
+     }
+    },
+    {
+     "q": {
+      "jp": "りんごを　みっつ　かいたいです。なんと　いいますか？",
+      "en": "You want to buy 3 apples at a fruit stand."
+     },
+     "c": [
+      "りんごを　みっつ　あげます",
+      "りんごを　みっつ　ください",
+      "りんごは　みっつでした",
+      "りんごが　みっつ　あります"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Buying a specific quantity of fruit or small items is everyday market shopping."
+     }
+    },
+    {
+     "q": {
+      "jp": "かいぎに　ちこくしました。なんと　いいますか？",
+      "en": "You're running late and want to apologize for arriving late to a meeting."
+     },
+     "c": [
+      "すみません、いそがしいです",
+      "すみません、げんきです",
+      "すみません、おくれました",
+      "すみません、はやいです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Apologizing for lateness politely and quickly is an important workplace habit."
+     }
+    },
+    {
+     "q": {
+      "jp": "いっしょに　ひるごはんを　たべませんか？",
+      "en": "A coworker invites you to eat lunch together. You happily accept."
+     },
+     "c": [
+      "たべません",
+      "ひるごはんでした",
+      "いいえ、たべました",
+      "いいですね、たべましょう"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Lunch invitations from coworkers are a normal part of workplace bonding."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "track": "core",
+   "level": "A1",
+   "title": {
+    "jp": "第9課　スターター（Set 3-3）",
+    "en": "Lesson 9: Starter, Set 3 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "また + time word is a simple, casual way to say 'see you 〜' — また あした = 'see you tomorrow'. Reinforces 〜が すきです with a new topic — seasons. ありません is the negative of あります — used to say something (like free time) doesn't exist. Simple い-adjective answers describe size or appearance directly. さい is the counter for age — distinct from ぷん (minutes), にち (days), and かい (floors/times)."
+   },
+   "vocab": [
+    {
+     "jp": "また　あした",
+     "en": "see you tomorrow"
+    },
+    {
+     "jp": "きせつ",
+     "en": "season"
+    },
+    {
+     "jp": "なつ",
+     "en": "summer"
+    },
+    {
+     "jp": "じかんが ありません",
+     "en": "have no time"
+    },
+    {
+     "jp": "こんしゅう",
+     "en": "this week"
+    },
+    {
+     "jp": "かばん",
+     "en": "bag"
+    },
+    {
+     "jp": "ちいさい",
+     "en": "small"
+    },
+    {
+     "jp": "おおきい",
+     "en": "big"
+    },
+    {
+     "jp": "おいくつですか",
+     "en": "how old are you (polite)"
+    },
+    {
+     "jp": "にじゅっさい",
+     "en": "20 years old"
+    }
+   ],
+   "ex": [
+    [
+     "また　あした",
+     "At the end of the day, you say goodbye to a friend, planning to meet again tomorrow."
+    ],
+    [
+     "なつが　すきです",
+     "Someone asks what your favorite season is. You like summer."
+    ],
+    [
+     "いいえ、じかんが　ありません",
+     "You're very busy this week and want to say you have no free time."
+    ],
+    [
+     "ちいさいです",
+     "You're describing a bag as small."
+    ],
+    [
+     "にじゅっさいです",
+     "Someone politely asks your age. You are 20."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "また　あした　あいます。なんと　いいますか？",
+      "en": "At the end of the day, you say goodbye to a friend, planning to meet again tomorrow."
+     },
+     "c": [
+      "はじめまして",
+      "ごちそうさまでした",
+      "おねがいします",
+      "また　あした"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "また あした is one of the most common casual goodbyes among friends and coworkers."
+     }
+    },
+    {
+     "q": {
+      "jp": "すきな　きせつは　なんですか？",
+      "en": "Someone asks what your favorite season is. You like summer."
+     },
+     "c": [
+      "なつでした",
+      "なつが　すきです",
+      "なつに　いきます",
+      "なつを　あげます"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Talking about favorite seasons is light, easy small talk that comes up often."
+     }
+    },
+    {
+     "q": {
+      "jp": "こんしゅうは　じかんが　ありますか？",
+      "en": "You're very busy this week and want to say you have no free time."
+     },
+     "c": [
+      "いいえ、じかんが　ありません",
+      "いいえ、じかんに　います",
+      "いいえ、じかんが　すきです",
+      "はい、じかんでした"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Saying you don't have free time is a common, polite way to explain you're busy."
+     }
+    },
+    {
+     "q": {
+      "jp": "その　かばんは　どうですか？",
+      "en": "You're describing a bag as small."
+     },
+     "c": [
+      "たかいです",
+      "おおきいです",
+      "ちいさいです",
+      "やすいです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Describing the size of everyday objects is basic, frequently used vocabulary."
+     }
+    },
+    {
+     "q": {
+      "jp": "おいくつですか？",
+      "en": "Someone politely asks your age. You are 20."
+     },
+     "c": [
+      "にじゅうにちです",
+      "にじゅっかいです",
+      "にじゅっさいです",
+      "にじゅっぷんです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "おいくつですか is the polite way to ask someone's age, common in early conversations."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "track": "core",
+   "level": "A2.1",
+   "title": {
+    "jp": "第10課　初級１（Set 1-1）",
+    "en": "Lesson 10: Elementary 1, Set 1 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜は〜に います states where a living thing is located. います is for people/animals; あります is for objects and places. 〜て ください is the basic polite request form. かして ください = 'please lend (it to) me' — the verb is かす, not かりる. よっつ is the counter for four general objects. Use あります (not います) because rooms aren't living things. 〜から〜まで marks a range: 'starting point から, ending point まで'. Works for both time and place. じ (point in time), じかん (duration), and がつ (calendar month) sound alike but mean very different things — listen carefully."
+   },
+   "vocab": [
+    {
+     "jp": "かいぎしつ",
+     "en": "meeting room"
+    },
+    {
+     "jp": "〜に います",
+     "en": "is at / in 〜 (for people, animals)"
+    },
+    {
+     "jp": "かす",
+     "en": "to lend"
+    },
+    {
+     "jp": "かりる",
+     "en": "to borrow"
+    },
+    {
+     "jp": "〜て ください",
+     "en": "please do 〜"
+    },
+    {
+     "jp": "へや",
+     "en": "room"
+    },
+    {
+     "jp": "よっつ",
+     "en": "four (general object counter)"
+    },
+    {
+     "jp": "あります",
+     "en": "to exist / have (for things)"
+    },
+    {
+     "jp": "ひるやすみ",
+     "en": "lunch break"
+    },
+    {
+     "jp": "〜から〜まで",
+     "en": "from 〜 to 〜"
+    }
+   ],
+   "ex": [
+    [
+     "やまださんは　かいぎしつに　います",
+     "Your coworker Yamada is not at his desk. Someone asks where he is. He's in the meeting room."
+    ],
+    [
+     "ホッチキスを　かして　ください",
+     "You need to borrow a stapler from a coworker's desk."
+    ],
+    [
+     "へやが　よっつ　あります",
+     "Someone asks how many rooms your apartment has. You have four."
+    ],
+    [
+     "じゅうにじから　いちじまでです",
+     "A new employee asks what time lunch break is. It runs from 12:00 to 13:00."
+    ],
+    [
+     "ろくじまでです",
+     "You're asked your work schedule today and need to say you finish at 6pm."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "やまださんは　どこですか？",
+      "en": "Your coworker Yamada is not at his desk. Someone asks where he is. He's in the meeting room."
+     },
+     "c": [
+      "やまださんは　げんきです",
+      "やまださんは　かいぎしつに　います",
+      "やまださんは　にほんじんです",
+      "やまださんは　いきました"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Saying where a colleague currently is, is a very common workplace exchange — especially when answering a phone call or a visitor's question."
+     }
+    },
+    {
+     "q": {
+      "jp": "ホッチキスを　かりたいです。なんと　いいますか？",
+      "en": "You need to borrow a stapler from a coworker's desk."
+     },
+     "c": [
+      "ホッチキスを　あげます",
+      "ホッチキスを　かして　ください",
+      "ホッチキスです",
+      "ホッチキスを　かりて　ください"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "This question tests a classic beginner mix-up: かす (to lend) vs かりる (to borrow). You ask someone else to かす (lend) it to you."
+     }
+    },
+    {
+     "q": {
+      "jp": "アパートに　へやが　いくつ　ありますか？",
+      "en": "Someone asks how many rooms your apartment has. You have four."
+     },
+     "c": [
+      "へやが　よっつ　あります",
+      "へやが　よにん　います",
+      "へやは　おおきいです",
+      "へやが　よじです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Japanese uses special counting words depending on what's being counted — rooms use a different counter than people or hours."
+     }
+    },
+    {
+     "q": {
+      "jp": "ひるやすみは　なんじから　なんじまでですか？",
+      "en": "A new employee asks what time lunch break is. It runs from 12:00 to 13:00."
+     },
+     "c": [
+      "じゅうにじはんです",
+      "いちじから　じゅうにじまでです",
+      "げつようびから　きんようびまでです",
+      "じゅうにじから　いちじまでです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Stating work hours and break times accurately is an everyday workplace necessity."
+     }
+    },
+    {
+     "q": {
+      "jp": "きょうは　なんじまで　しごとですか？",
+      "en": "You're asked your work schedule today and need to say you finish at 6pm."
+     },
+     "c": [
+      "ろくがつです",
+      "ろくにんです",
+      "ろくじかんです",
+      "ろくじまでです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "This question targets a classic listening trap: similar-sounding counters with very different meanings."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "track": "core",
+   "level": "A2.1",
+   "title": {
+    "jp": "第11課　初級１（Set 1-2）",
+    "en": "Lesson 11: Elementary 1, Set 1 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "あります confirms location for objects, not います — batteries are things, not living beings. Large numbers + えん express prices, e.g. さんぜん = 3,000. はい、わかりました is the standard polite response when accepting an instruction. 〜て ください reused here: まって ください = 'please wait a moment'. やすませて ください is a causative-request pattern: 'please let me 〜' — common phrasing when calling in sick."
+   },
+   "vocab": [
+    {
+     "jp": "でんち",
+     "en": "battery"
+    },
+    {
+     "jp": "にかい",
+     "en": "2nd floor"
+    },
+    {
+     "jp": "〜えん",
+     "en": "〜 yen"
+    },
+    {
+     "jp": "ジャケット",
+     "en": "jacket"
+    },
+    {
+     "jp": "わかりました",
+     "en": "understood / got it"
+    },
+    {
+     "jp": "けっこうです",
+     "en": "no thank you / that's fine (declining)"
+    },
+    {
+     "jp": "まつ",
+     "en": "to wait"
+    },
+    {
+     "jp": "〜て ください",
+     "en": "please do 〜"
+    },
+    {
+     "jp": "ぐあいが わるい",
+     "en": "feeling unwell"
+    },
+    {
+     "jp": "やすませて ください",
+     "en": "please let me rest / take the day off"
+    }
+   ],
+   "ex": [
+    [
+     "にかいに　あります",
+     "You're shopping and need batteries. They're on the 2nd floor."
+    ],
+    [
+     "さんぜんえんです",
+     "You want to ask the price of a jacket. It's 3,000 yen."
+    ],
+    [
+     "はい、わかりました",
+     "Your manager asks you to make copies. You accept the instruction politely."
+    ],
+    [
+     "ちょっと　まって　ください",
+     "You want to ask a coworker to wait a moment while you finish something."
+    ],
+    [
+     "すみません、きょうは　やすませて　ください",
+     "You're not feeling well and need to call in sick to your workplace."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "でんちは　どこに　ありますか？",
+      "en": "You're shopping and need batteries. They're on the 2nd floor."
+     },
+     "c": [
+      "にかいに　います",
+      "にかいに　あります",
+      "にかいです、げんきです",
+      "でんちは　たかいです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Asking and answering where an item is sold is common when shopping in larger Japanese stores with multiple floors."
+     }
+    },
+    {
+     "q": {
+      "jp": "この　ジャケットは　いくらですか？",
+      "en": "You want to ask the price of a jacket. It's 3,000 yen."
+     },
+     "c": [
+      "さんがつです",
+      "さんぜんえんです",
+      "さんじかんです",
+      "さんにんです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Recognizing number + counter combinations quickly is essential for everyday shopping."
+     }
+    },
+    {
+     "q": {
+      "jp": "じょうしに「コピーを　とって　ください」と　いわれました。なんと　へんじしますか？",
+      "en": "Your manager asks you to make copies. You accept the instruction politely."
+     },
+     "c": [
+      "いいえ、けっこうです",
+      "ごちそうさまでした",
+      "おさきに　しつれいします",
+      "はい、わかりました"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Responding clearly when given an instruction from a superior is an important workplace habit in Japan."
+     }
+    },
+    {
+     "q": {
+      "jp": "ちょっと　まって　ほしいです。なんと　いいますか？",
+      "en": "You want to ask a coworker to wait a moment while you finish something."
+     },
+     "c": [
+      "ちょっと　まちました",
+      "ちょっと　まって　ください",
+      "ちょっと　まちます",
+      "ちょっと　まって　います"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Asking someone to wait briefly comes up constantly in offices, shops, and phone calls."
+     }
+    },
+    {
+     "q": {
+      "jp": "からだの　ぐあいが　わるいです。かいしゃに　なんと　いいますか？",
+      "en": "You're not feeling well and need to call in sick to your workplace."
+     },
+     "c": [
+      "すみません、きょうは　やすませて　ください",
+      "すみません、きょうは　げんきです",
+      "すみません、きょうは　たのしいです",
+      "すみません、きょうは　いそがしいです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Calling in sick politely is an essential phrase every working person needs early on."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "track": "core",
+   "level": "A2.1",
+   "title": {
+    "jp": "第12課　初級１（Set 1-3）",
+    "en": "Lesson 12: Elementary 1, Set 1 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Simple confirmation with あります for an object's presence — reusing the あります/います distinction. ばんせん is specifically the counter for platform numbers — distinct from かい (floor), じ (time), and がつ (month). Noun + に します states your choice or decision — common at restaurants and shops with multiple options. Reinforces 〜えん for prices, contrasted again with the similar-sounding じかん/かい/にん counters. Handing something back with これ、ありがとうございました is natural and polite — you don't need a separate 'return' verb in casual speech."
+   },
+   "vocab": [
+    {
+     "jp": "ベッド",
+     "en": "bed"
+    },
+    {
+     "jp": "のりかえる",
+     "en": "to transfer (trains)"
+    },
+    {
+     "jp": "〜ばんせん",
+     "en": "platform number 〜"
+    },
+    {
+     "jp": "〜に します",
+     "en": "I'll have / decide on 〜"
+    },
+    {
+     "jp": "ランチセット",
+     "en": "lunch set"
+    },
+    {
+     "jp": "やちん",
+     "en": "rent"
+    },
+    {
+     "jp": "〜まんえん",
+     "en": "〜 ten-thousand yen"
+    },
+    {
+     "jp": "かさ",
+     "en": "umbrella"
+    },
+    {
+     "jp": "かえす",
+     "en": "to return (something borrowed)"
+    }
+   ],
+   "ex": [
+    [
+     "はい、あります",
+     "Someone asks if your room has a bed. Yes, it does."
+    ],
+    [
+     "にばんせんです",
+     "You need to transfer to the Yamanote line and are told it's platform 2."
+    ],
+    [
+     "ランチセットに　します",
+     "At a restaurant, the waiter asks what you'll have. You want the lunch set."
+    ],
+    [
+     "ごまんえんです",
+     "Someone asks how much your monthly rent is. It's 50,000 yen."
+    ],
+    [
+     "これ、ありがとうございました",
+     "You borrowed an umbrella from a coworker yesterday and are returning it today."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "へやに　ベッドが　ありますか？",
+      "en": "Someone asks if your room has a bed. Yes, it does."
+     },
+     "c": [
+      "はい、です",
+      "はい、あります",
+      "はい、あげます",
+      "はい、います"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Confirming what furniture or items a room has comes up when describing your home or apartment-hunting."
+     }
+    },
+    {
+     "q": {
+      "jp": "やまのてせんは　なんばんせんですか？",
+      "en": "You need to transfer to the Yamanote line and are told it's platform 2."
+     },
+     "c": [
+      "にかいです",
+      "にがつです",
+      "にじかんです",
+      "にばんせんです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Asking and understanding platform numbers is essential for navigating Japanese train stations."
+     }
+    },
+    {
+     "q": {
+      "jp": "なにに　しますか？",
+      "en": "At a restaurant, the waiter asks what you'll have. You want the lunch set."
+     },
+     "c": [
+      "ランチセットを　あげます",
+      "ランチセットに　します",
+      "ランチセットが　あります",
+      "ランチセットでした"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "〜に します is the natural way to state a choice when ordering or selecting from options, slightly different in nuance from 〜を ください."
+     }
+    },
+    {
+     "q": {
+      "jp": "やちんは　いくらですか？",
+      "en": "Someone asks how much your monthly rent is. It's 50,000 yen."
+     },
+     "c": [
+      "ごにんです",
+      "ごまんえんです",
+      "ごじかんです",
+      "ごかいです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Talking about rent and household costs is practical daily-life vocabulary for anyone living independently."
+     }
+    },
+    {
+     "q": {
+      "jp": "きのう　かりた　かさを　かえします。なんと　いいますか？",
+      "en": "You borrowed an umbrella from a coworker yesterday and are returning it today."
+     },
+     "c": [
+      "これ、かりたいです",
+      "これ、ありがとうございました",
+      "これ、あげます",
+      "これ、かして　ください"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Returning a borrowed item politely is a small but important everyday courtesy."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "track": "core",
+   "level": "A2.1",
+   "title": {
+    "jp": "第13課　初級１（Set 2-1）",
+    "en": "Lesson 13: Elementary 1, Set 2 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜てもいいですか asks for permission to change something, like a meeting time. こわれている (て-form + いる) describes an ongoing broken state, not just the one-time act of breaking. Stating your main job duty is as simple as noun + です. あります/ありません tests for the existence of overtime work — あります is used since 残業 isn't a living thing. いつですか asks 'when'; days of the week answer directly."
+   },
+   "vocab": [
+    {
+     "jp": "うつす",
+     "en": "to move / change (a schedule)"
+    },
+    {
+     "jp": "〜てもいいですか",
+     "en": "may I 〜?"
+    },
+    {
+     "jp": "コピーき",
+     "en": "photocopier"
+    },
+    {
+     "jp": "こわれている",
+     "en": "is broken (ongoing state)"
+    },
+    {
+     "jp": "せっきゃく",
+     "en": "customer service"
+    },
+    {
+     "jp": "おもな",
+     "en": "main"
+    },
+    {
+     "jp": "ざんぎょう",
+     "en": "overtime"
+    },
+    {
+     "jp": "いつ",
+     "en": "when"
+    },
+    {
+     "jp": "すいようび",
+     "en": "Wednesday"
+    }
+   ],
+   "ex": [
+    [
+     "かいぎを　さんじに　うつしても　いいですか",
+     "The meeting room is already booked at 2pm; you ask if you can move the meeting to 3pm."
+    ],
+    [
+     "コピーきが　こわれています",
+     "The photocopier is broken and you want to report it to your supervisor."
+    ],
+    [
+     "せっきゃくです",
+     "Someone asks what your main duty at work is. You handle customer service."
+    ],
+    [
+     "いいえ、ありません",
+     "You ask a coworker if there's overtime today. There isn't."
+    ],
+    [
+     "すいようびです",
+     "Someone asks what day you have off this week. Wednesday."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "かいぎを　さんじに　うつしたいです。なんと　たのみますか？",
+      "en": "The meeting room is already booked at 2pm; you ask if you can move the meeting to 3pm."
+     },
+     "c": [
+      "かいぎを　さんじに　うつしても　いいですか",
+      "かいぎを　さんじに　うつしました",
+      "かいぎが　さんじに　あります",
+      "かいぎは　さんじです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking permission to reschedule something is a common, polite way to handle schedule conflicts at work."
+     }
+    },
+    {
+     "q": {
+      "jp": "コピーきが　こわれています。じょうしに　なんと　いいますか？",
+      "en": "The photocopier is broken and you want to report it to your supervisor."
+     },
+     "c": [
+      "コピーきが　こわれています",
+      "コピーきが　あります",
+      "コピーきは　たかいです",
+      "コピーきを　つかいます"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Reporting broken equipment quickly and clearly keeps the workplace running smoothly."
+     }
+    },
+    {
+     "q": {
+      "jp": "おもな　しごとは　なんですか？",
+      "en": "Someone asks what your main duty at work is. You handle customer service."
+     },
+     "c": [
+      "せっきゃくでした",
+      "せっきゃくです",
+      "せっきゃくに　いきます",
+      "せっきゃくが　すきです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Being able to clearly describe your main work duty is useful in interviews and introductions alike."
+     }
+    },
+    {
+     "q": {
+      "jp": "きょう、ざんぎょうが　ありますか？",
+      "en": "You ask a coworker if there's overtime today. There isn't."
+     },
+     "c": [
+      "はい、します",
+      "いいえ、ありません",
+      "はい、しました",
+      "いいえ、いません"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Asking about overtime is a normal part of planning your evening or commute."
+     }
+    },
+    {
+     "q": {
+      "jp": "こんしゅう、やすみは　いつですか？",
+      "en": "Someone asks what day you have off this week. Wednesday."
+     },
+     "c": [
+      "すいかいです",
+      "すいようびです",
+      "すいじです",
+      "すいぶんです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Coordinating days off with coworkers requires being able to clearly state which day you mean."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "track": "core",
+   "level": "A2.1",
+   "title": {
+    "jp": "第14課　初級１（Set 2-2）",
+    "en": "Lesson 14: Elementary 1, Set 2 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "なにで asks the means of transportation; method + で + verb answers it. Reinforces 〜てもいいですか for permission, now with つかう (to use). Reinforces あります for object location, this time with ロッカー as the place. This is a flexible, essential phrase — memorize it as one chunk rather than translating it literally. 〜て くれて ありがとうございます thanks someone specifically for doing something for your benefit."
+   },
+   "vocab": [
+    {
+     "jp": "じてんしゃ",
+     "en": "bicycle"
+    },
+    {
+     "jp": "なにで",
+     "en": "by what (means)"
+    },
+    {
+     "jp": "でんわ",
+     "en": "telephone"
+    },
+    {
+     "jp": "つかう",
+     "en": "to use"
+    },
+    {
+     "jp": "コピーようし",
+     "en": "printer / copy paper"
+    },
+    {
+     "jp": "ロッカー",
+     "en": "locker / cabinet"
+    },
+    {
+     "jp": "よろしく おねがいします",
+     "en": "nice to meet you / please treat me well (fixed greeting)"
+    },
+    {
+     "jp": "おしえる",
+     "en": "to teach"
+    },
+    {
+     "jp": "〜て くれて ありがとう",
+     "en": "thank you for doing 〜 for me"
+    }
+   ],
+   "ex": [
+    [
+     "じてんしゃで　きます",
+     "Someone asks how you commute to work. By bicycle."
+    ],
+    [
+     "でんわを　つかっても　いいですか",
+     "You want to ask permission to use the office phone for a personal call."
+    ],
+    [
+     "あの　ロッカーに　あります",
+     "You need more printer paper and ask a coworker where it's kept."
+    ],
+    [
+     "よろしく　おねがいします",
+     "It's a new employee's first day, and you greet them."
+    ],
+    [
+     "おしえて　くれて　ありがとうございます",
+     "A coworker taught you how to use a new machine, and you thank them specifically for teaching you."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "かいしゃまで　なにで　きますか？",
+      "en": "Someone asks how you commute to work. By bicycle."
+     },
+     "c": [
+      "じてんしゃが　あります",
+      "じてんしゃで　きます",
+      "じてんしゃでした",
+      "じてんしゃを　ください"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Talking about your commute method is common small talk among coworkers."
+     }
+    },
+    {
+     "q": {
+      "jp": "でんわを　つかいたいです。なんと　たのみますか？",
+      "en": "You want to ask permission to use the office phone for a personal call."
+     },
+     "c": [
+      "でんわが　あります",
+      "でんわを　つかっても　いいですか",
+      "でんわを　つかいました",
+      "でんわを　つかいます"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Asking before using shared office equipment for personal reasons is a basic workplace courtesy."
+     }
+    },
+    {
+     "q": {
+      "jp": "コピーようしは　どこに　ありますか？",
+      "en": "You need more printer paper and ask a coworker where it's kept."
+     },
+     "c": [
+      "あの　ロッカーに　います",
+      "あの　ロッカーに　あります",
+      "あの　ロッカーが　すきです",
+      "あの　ロッカーでした"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Knowing where supplies are kept is part of settling into any new workplace."
+     }
+    },
+    {
+     "q": {
+      "jp": "あたらしい　社員が　きました。なんと　いいますか？",
+      "en": "It's a new employee's first day, and you greet them."
+     },
+     "c": [
+      "ごちそうさまでした",
+      "おめでとうございます",
+      "よろしく　おねがいします",
+      "おさきに　しつれいします"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "よろしくお願いします is said constantly in Japanese workplaces — when meeting someone, starting a task together, or asking for ongoing cooperation."
+     }
+    },
+    {
+     "q": {
+      "jp": "おしえて　もらいました。なんと　いいますか？",
+      "en": "A coworker taught you how to use a new machine, and you thank them specifically for teaching you."
+     },
+     "c": [
+      "おしえて　くれて　ありがとうございます",
+      "おしえました",
+      "おしえて　もらいます",
+      "おしえて　あげました"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Thanking someone specifically for an action they did for you sounds warmer than a generic thank-you."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "track": "core",
+   "level": "A2.1",
+   "title": {
+    "jp": "第15課　初級１（Set 2-3）",
+    "en": "Lesson 15: Elementary 1, Set 2 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜く なりませんか asks if something can change to a different state — here, becoming cheaper. Past-tense しました confirms a completed action, like a reservation already made. 〜かもしれません expresses a possibility: 'might 〜' — useful for talking about uncertain outcomes like delays. ほっとしました expresses relief after finishing something stressful or demanding. Politely declining with すみません、よていが あります avoids a blunt 'no' while still being clear."
+   },
+   "vocab": [
+    {
+     "jp": "やすく なりませんか",
+     "en": "can it become cheaper? (negotiating)"
+    },
+    {
+     "jp": "よやく する",
+     "en": "to book / reserve"
+    },
+    {
+     "jp": "〜かもしれません",
+     "en": "might 〜 (possibility)"
+    },
+    {
+     "jp": "おくれる",
+     "en": "to be late / delayed"
+    },
+    {
+     "jp": "ほっとする",
+     "en": "to feel relieved"
+    },
+    {
+     "jp": "よてい",
+     "en": "plans"
+    },
+    {
+     "jp": "どようび",
+     "en": "Saturday"
+    }
+   ],
+   "ex": [
+    [
+     "わかりました、すこし　やすく　します",
+     "You're negotiating a slightly lower price for a bulk work-supplies order, and the seller agrees."
+    ],
+    [
+     "はい、しました",
+     "You want to confirm the meeting room was already booked for your team."
+    ],
+    [
+     "でんしゃが　おくれるかもしれません",
+     "It's raining heavily, and your train commute might be affected."
+    ],
+    [
+     "ほっとしました",
+     "You finished all your work for the day and feel relieved."
+    ],
+    [
+     "すみません、よていが　あります",
+     "Someone asks if you can work this Saturday. You can't, you already have plans."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "もうすこし　やすく　なりませんか？",
+      "en": "You're negotiating a slightly lower price for a bulk work-supplies order, and the seller agrees."
+     },
+     "c": [
+      "わかりません、やすいです",
+      "わかりました、たかく　します",
+      "わかりました、たかいです",
+      "わかりました、すこし　やすく　します"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Gently negotiating price is common when ordering supplies in bulk for a workplace."
+     }
+    },
+    {
+     "q": {
+      "jp": "かいぎしつは　よやく　しましたか？",
+      "en": "You want to confirm the meeting room was already booked for your team."
+     },
+     "c": [
+      "はい、ありました",
+      "はい、します",
+      "はい、しました",
+      "はい、います"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Confirming whether a booking or reservation was already completed avoids double-booking mistakes."
+     }
+    },
+    {
+     "q": {
+      "jp": "あめが　つよいので、どうしますか？",
+      "en": "It's raining heavily, and your train commute might be affected."
+     },
+     "c": [
+      "でんしゃが　はやいです",
+      "でんしゃが　すきです",
+      "でんしゃは　やすいです",
+      "でんしゃが　おくれるかもしれません"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Talking about possible delays due to weather is practical, everyday workplace conversation."
+     }
+    },
+    {
+     "q": {
+      "jp": "きょうの　しごとが　おわりました。きもちは　どうですか？",
+      "en": "You finished all your work for the day and feel relieved."
+     },
+     "c": [
+      "おどろきました",
+      "こまりました",
+      "ほっとしました",
+      "つまらなかったです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Expressing relief after a demanding task is natural and very relatable."
+     }
+    },
+    {
+     "q": {
+      "jp": "どようびに　しごとが　できますか？",
+      "en": "Someone asks if you can work this Saturday. You can't, you already have plans."
+     },
+     "c": [
+      "はい、すきです",
+      "いいえ、げんきです",
+      "はい、できます",
+      "すみません、よていが　あります"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Declining a request by mentioning existing plans is a natural, non-confrontational way to say no."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "track": "core",
+   "level": "A2.1",
+   "title": {
+    "jp": "第16課　初級１（Set 3-1）",
+    "en": "Lesson 16: Elementary 1, Set 3 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Reinforces 〜てもいいですか for asking permission — this time to leave early. まだ〜ません expresses 'not yet' — useful when you're still learning something new. A simple yes/no confirmation about whether a date is a holiday. 〜までに marks a deadline: 'by 〜'. できました confirms the task was completed in time. なんばんですか asks for a number, like a phone extension."
+   },
+   "vocab": [
+    {
+     "jp": "はやく かえる",
+     "en": "to go home early"
+    },
+    {
+     "jp": "まだ〜ません",
+     "en": "not yet"
+    },
+    {
+     "jp": "つかいかた",
+     "en": "how to use (something)"
+    },
+    {
+     "jp": "しゅくじつ",
+     "en": "national holiday"
+    },
+    {
+     "jp": "〜までに",
+     "en": "by 〜 (a deadline)"
+    },
+    {
+     "jp": "できる",
+     "en": "to be able to / get done"
+    },
+    {
+     "jp": "ないせんばんごう",
+     "en": "extension number"
+    },
+    {
+     "jp": "なんばん",
+     "en": "what number"
+    }
+   ],
+   "ex": [
+    [
+     "さんじゅっぷん　はやく　かえっても　いいですか",
+     "You need to leave 30 minutes early today and ask your supervisor."
+    ],
+    [
+     "すみません、まだ　わかりません",
+     "You're new and don't know how to use the fax machine yet."
+    ],
+    [
+     "はい、しゅくじつです",
+     "You ask if next Monday is a national holiday. It is."
+    ],
+    [
+     "はい、できました",
+     "Your supervisor asks if you finished the report by today's deadline. You did."
+    ],
+    [
+     "ないせんばんごうは　なんばんですか",
+     "You want to ask a coworker for their phone extension number."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "きょう、さんじゅっぷん　はやく　かえりたいです。なんと　たのみますか？",
+      "en": "You need to leave 30 minutes early today and ask your supervisor."
+     },
+     "c": [
+      "さんじゅっぷん　はやく　かえっても　いいですか",
+      "さんじゅっぷん　はやく　かえるでしょう",
+      "さんじゅっぷん　はやく　かえりました",
+      "さんじゅっぷん　はやく　かえります"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking to leave a little early is a routine request in most workplaces."
+     }
+    },
+    {
+     "q": {
+      "jp": "ファックスの　つかいかたが　わかりません。なんと　いいますか？",
+      "en": "You're new and don't know how to use the fax machine yet."
+     },
+     "c": [
+      "すみません、わかります",
+      "すみません、まだ　わかりません",
+      "すみません、わかりました",
+      "すみません、もう　わかります"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Admitting you're still learning something is completely normal, especially in your first weeks at a job."
+     }
+    },
+    {
+     "q": {
+      "jp": "らいしゅうの　げつようびは　しゅくじつですか？",
+      "en": "You ask if next Monday is a national holiday. It is."
+     },
+     "c": [
+      "はい、しゅくじつです",
+      "はい、げつようびでした",
+      "はい、しごとです",
+      "はい、やすみが　すきです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Checking whether a date is a national holiday matters for planning work schedules."
+     }
+    },
+    {
+     "q": {
+      "jp": "レポートは　きょうまでに　できましたか？",
+      "en": "Your supervisor asks if you finished the report by today's deadline. You did."
+     },
+     "c": [
+      "はい、できました",
+      "はい、します",
+      "はい、しました",
+      "はい、できます"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Confirming you met a deadline is one of the most common workplace check-ins."
+     }
+    },
+    {
+     "q": {
+      "jp": "ないせんばんごうを　ききたいです。なんと　ききますか？",
+      "en": "You want to ask a coworker for their phone extension number."
+     },
+     "c": [
+      "ないせんばんごうは　なんばんですか",
+      "ないせんばんごうは　いつですか",
+      "ないせんばんごうは　だれですか",
+      "ないせんばんごうは　どこですか"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking for an internal phone extension is common when you need to reach a colleague directly."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "track": "core",
+   "level": "A2.1",
+   "title": {
+    "jp": "第17課　初級１（Set 3-2）",
+    "en": "Lesson 17: Elementary 1, Set 3 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Place + の ちかくです describes a location as 'near 〜'. すみません、まちがえました is the direct, simple way to apologize for an error. Reinforces 〜てもいいですか with a new verb, とる (to take). もっと + adjective + ありますか asks if a 'more 〜' version is available — stronger than もうすこし. かげつ is the counter for counting months as a duration — different from がつ, the calendar month name."
+   },
+   "vocab": [
+    {
+     "jp": "せき",
+     "en": "seat / desk"
+    },
+    {
+     "jp": "ちかく",
+     "en": "near"
+    },
+    {
+     "jp": "まちがえる",
+     "en": "to make a mistake"
+    },
+    {
+     "jp": "しゃしんを とる",
+     "en": "to take a photo"
+    },
+    {
+     "jp": "もっと",
+     "en": "more"
+    },
+    {
+     "jp": "モニター",
+     "en": "monitor"
+    },
+    {
+     "jp": "しけんきかん",
+     "en": "probation period"
+    },
+    {
+     "jp": "〜かげつ",
+     "en": "〜 months (duration)"
+    }
+   ],
+   "ex": [
+    [
+     "まどの　ちかくです",
+     "Someone asks where your desk is. It's near the window."
+    ],
+    [
+     "すみません、まちがえました",
+     "You made a small mistake on a form and want to apologize to your supervisor."
+    ],
+    [
+     "しゃしんを　とっても　いいですか",
+     "You want to ask permission to take a photo of the whiteboard notes before they're erased."
+    ],
+    [
+     "もっと　おおきい　モニターは　ありますか",
+     "Your monitor is too small, and you ask if you can get a bigger one."
+    ],
+    [
+     "さんかげつです",
+     "Someone asks how long your probation period is. Three months."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "せきは　どこですか？",
+      "en": "Someone asks where your desk is. It's near the window."
+     },
+     "c": [
+      "まどの　ちかくです",
+      "まどに　いきます",
+      "まどが　すきです",
+      "まどの　まえでした"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Describing where your desk is helps visitors or new coworkers find you."
+     }
+    },
+    {
+     "q": {
+      "jp": "しょるいを　まちがえました。なんと　いいますか？",
+      "en": "You made a small mistake on a form and want to apologize to your supervisor."
+     },
+     "c": [
+      "すみません、つくりました",
+      "すみません、まちがえました",
+      "すみません、おくれました",
+      "すみません、わすれました"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Owning up to small mistakes quickly and clearly is valued in any workplace."
+     }
+    },
+    {
+     "q": {
+      "jp": "ホワイトボードを　しゃしんに　とりたいです。なんと　たのみますか？",
+      "en": "You want to ask permission to take a photo of the whiteboard notes before they're erased."
+     },
+     "c": [
+      "しゃしんを　とっても　いいですか",
+      "しゃしんが　あります",
+      "しゃしんを　とりました",
+      "しゃしんを　とります"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking before taking photos at work, especially of shared materials, is a simple courtesy."
+     }
+    },
+    {
+     "q": {
+      "jp": "もっと　おおきい　モニターが　ほしいです。なんと　たのみますか？",
+      "en": "Your monitor is too small, and you ask if you can get a bigger one."
+     },
+     "c": [
+      "もっと　おおきい　モニターを　あげます",
+      "もっと　おおきい　モニターは　ありますか",
+      "もっと　おおきい　モニターでした",
+      "もっと　おおきい　モニターが　すきでした"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Requesting better equipment is a normal, practical workplace conversation."
+     }
+    },
+    {
+     "q": {
+      "jp": "しけんきかんは　どのくらいですか？",
+      "en": "Someone asks how long your probation period is. Three months."
+     },
+     "c": [
+      "さんにんです",
+      "さんじかんです",
+      "さんかいです",
+      "さんかげつです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Knowing how to state your probation length is useful when discussing your employment status."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "track": "core",
+   "level": "A2.1",
+   "title": {
+    "jp": "第18課　初級１（Set 3-3）",
+    "en": "Lesson 18: Elementary 1, Set 3 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "もし〜なら sets a conditional — 'if it's necessary' — common when agreeing to flexible requests. ひきつぎます describes formally handing off work responsibilities before being away. Asking about ふくそうの きまり (dress code) is useful early on at any new job. おせわになっております is a fixed business phrase, roughly 'thank you for your continued support' — used to open many work emails. きゅうに やすみたいです clearly and politely explains an urgent need for unplanned leave."
+   },
+   "vocab": [
+    {
+     "jp": "もし〜なら",
+     "en": "if 〜 (conditional)"
+    },
+    {
+     "jp": "ひつよう",
+     "en": "necessary"
+    },
+    {
+     "jp": "ひきつぐ",
+     "en": "to hand over (work/duties)"
+    },
+    {
+     "jp": "ふくそう",
+     "en": "attire / clothing"
+    },
+    {
+     "jp": "きまり",
+     "en": "rule"
+    },
+    {
+     "jp": "おせわになっております",
+     "en": "standard polite business-email opening phrase"
+    },
+    {
+     "jp": "きゅうな こと",
+     "en": "sudden matter / emergency"
+    },
+    {
+     "jp": "きゅうに",
+     "en": "suddenly"
+    }
+   ],
+   "ex": [
+    [
+     "はい、できます",
+     "Your supervisor asks if you can do overtime today if it's needed. You agree."
+    ],
+    [
+     "たなかさんに　ひきつぎます",
+     "You're going on leave tomorrow and want to hand your tasks over to your coworker, Tanaka."
+    ],
+    [
+     "はい、スーツを　きて　ください",
+     "You ask if there's a dress code for the office. Yes, a suit is required."
+    ],
+    [
+     "おせわになっております",
+     "You're writing a short work email and need a simple, standard polite opening."
+    ],
+    [
+     "すみません、きゅうに　やすみたいです",
+     "You need to ask for leave suddenly because of a family emergency."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "もし　ひつようなら、ざんぎょう　できますか？",
+      "en": "Your supervisor asks if you can do overtime today if it's needed. You agree."
+     },
+     "c": [
+      "はい、します",
+      "はい、できます",
+      "はい、ほしいです",
+      "はい、しました"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Agreeing to flexible overtime, conditionally, is common when discussing your availability."
+     }
+    },
+    {
+     "q": {
+      "jp": "あしたから　やすみです。しごとを　どうしますか？",
+      "en": "You're going on leave tomorrow and want to hand your tasks over to your coworker, Tanaka."
+     },
+     "c": [
+      "たなかさんに　あげます",
+      "たなかさんが　します",
+      "たなかさんに　ひきつぎます",
+      "たなかさんを　たすけます"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Handing over tasks clearly before time off keeps the team running smoothly while you're away."
+     }
+    },
+    {
+     "q": {
+      "jp": "ふくそうの　きまりは　ありますか？",
+      "en": "You ask if there's a dress code for the office. Yes, a suit is required."
+     },
+     "c": [
+      "はい、スーツを　きて　ください",
+      "はい、スーツでした",
+      "はい、スーツを　ください",
+      "はい、スーツが　すきです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking about dress code is a sensible question when starting a new workplace."
+     }
+    },
+    {
+     "q": {
+      "jp": "メールの　さいしょに　なんと　かきますか？",
+      "en": "You're writing a short work email and need a simple, standard polite opening."
+     },
+     "c": [
+      "さようなら",
+      "ごちそうさまでした",
+      "おせわになっております",
+      "おやすみなさい"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "This phrase opens an enormous number of Japanese business emails, almost regardless of context."
+     }
+    },
+    {
+     "q": {
+      "jp": "かぞくに　きゅうな　ことが　ありました。かいしゃに　なんと　れんらくしますか？",
+      "en": "You need to ask for leave suddenly because of a family emergency."
+     },
+     "c": [
+      "すみません、おくれました",
+      "すみません、きょうは　いそがしいです",
+      "すみません、ちこくします",
+      "すみません、きゅうに　やすみたいです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Being able to clearly explain an urgent, unplanned need for leave is important, even with limited Japanese."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "track": "core",
+   "level": "A2.2",
+   "title": {
+    "jp": "第19課　初級２（Set 1-1）",
+    "en": "Lesson 19: Elementary 2, Set 1 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜は〜に いきますか confirms a destination — a common pattern when checking transportation routes. 〜ですね adds a soft 'isn't it?' tone — very natural when making a casual observation out loud. どんな + noun + が すきですか asks for a category or type of preference, not just a yes/no. 〜ませんか is a gentle way to invite someone. A happy acceptance pairs naturally with 〜ましょう ('let's'). もうすこし + adjective + のは ありますか asks if a slightly different version is available."
+   },
+   "vocab": [
+    {
+     "jp": "くうこう",
+     "en": "airport"
+    },
+    {
+     "jp": "いきます",
+     "en": "goes / will go"
+    },
+    {
+     "jp": "たてもの",
+     "en": "building"
+    },
+    {
+     "jp": "〜ですね",
+     "en": "isn't it 〜? (seeking agreement)"
+    },
+    {
+     "jp": "どんな〜",
+     "en": "what kind of 〜"
+    },
+    {
+     "jp": "アクション",
+     "en": "action (genre)"
+    },
+    {
+     "jp": "〜ませんか",
+     "en": "won't you 〜? (soft invitation)"
+    },
+    {
+     "jp": "〜ましょう",
+     "en": "let's 〜"
+    },
+    {
+     "jp": "もうすこし",
+     "en": "a little more"
+    },
+    {
+     "jp": "サイズ",
+     "en": "size"
+    }
+   ],
+   "ex": [
+    [
+     "はい、いきます",
+     "You're on a bus and want to confirm it goes to the airport."
+    ],
+    [
+     "おおきい　たてものですね",
+     "You're commenting on how large a building looks, inviting agreement."
+    ],
+    [
+     "アクションマンガが　すきです",
+     "A friend asks what kind of manga you like. You like action manga."
+    ],
+    [
+     "いいですね、いきましょう",
+     "A coworker invites you for a drink after work. You happily accept."
+    ],
+    [
+     "もうすこし　おおきいのは　ありますか",
+     "In a clothing shop, you want a slightly bigger size than what's shown."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "このバスは　くうこうに　いきますか？",
+      "en": "You're on a bus and want to confirm it goes to the airport."
+     },
+     "c": [
+      "いいえ、おいしいです",
+      "はい、います",
+      "いいえ、たかいです",
+      "はい、いきます"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Double-checking a bus or train's destination before boarding is a very practical survival skill."
+     }
+    },
+    {
+     "q": {
+      "jp": "あの　たてものを　みて、なんと　いいますか？",
+      "en": "You're commenting on how large a building looks, inviting agreement."
+     },
+     "c": [
+      "たてものは　ちいさいですよ",
+      "たてものに　いきました",
+      "たてものが　ありません",
+      "おおきい　たてものですね"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Casual observations shared with a companion while walking around town are very natural small talk."
+     }
+    },
+    {
+     "q": {
+      "jp": "どんな　マンガが　すきですか？",
+      "en": "A friend asks what kind of manga you like. You like action manga."
+     },
+     "c": [
+      "マンガを　かいました",
+      "アクションマンガが　すきです",
+      "マンガでした",
+      "マンガが　あります"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Talking about hobbies and entertainment preferences helps build friendships and casual conversation skills."
+     }
+    },
+    {
+     "q": {
+      "jp": "しごとの　あとで、いっしょに　のみに　いきませんか？",
+      "en": "A coworker invites you for a drink after work. You happily accept."
+     },
+     "c": [
+      "いいえ、けっこうです",
+      "のみました",
+      "いいですね、いきましょう",
+      "いきません"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "After-work social drinks (飲み会) are an important bonding ritual in many Japanese workplaces."
+     }
+    },
+    {
+     "q": {
+      "jp": "もうすこし　おおきい　サイズが　ほしいです。なんと　ききますか？",
+      "en": "In a clothing shop, you want a slightly bigger size than what's shown."
+     },
+     "c": [
+      "おおきい　サイズは　すきです",
+      "もうすこし　ちいさく　しました",
+      "サイズが　わかりません",
+      "もうすこし　おおきいのは　ありますか"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Asking for a different size or color is one of the most useful shopping phrases for everyday life."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L20",
+   "track": "core",
+   "level": "A2.2",
+   "title": {
+    "jp": "第20課　初級２（Set 1-2）",
+    "en": "Lesson 20: Elementary 2, Set 1 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Verb stem + に いきました describes 'went to (do) 〜' — a purpose-of-movement pattern for past trips. Verb stem + たいです expresses a desire: いきたいです = 'want to go'. なにを しますか asks about future/intended actions, answered with verb + ます (non-past). 〜てもいいですか asks for permission: 'may I 〜?'. Useful for requesting time off or anything needing approval. おすすめの + noun + は ありますか asks if there's a recommended option for that category."
+   },
+   "vocab": [
+    {
+     "jp": "〜に いきました",
+     "en": "went to (do) 〜"
+    },
+    {
+     "jp": "みる",
+     "en": "to watch / see"
+    },
+    {
+     "jp": "つかれる",
+     "en": "to get tired"
+    },
+    {
+     "jp": "〜たいです",
+     "en": "want to 〜"
+    },
+    {
+     "jp": "しゅうまつ",
+     "en": "weekend"
+    },
+    {
+     "jp": "かいもの",
+     "en": "shopping"
+    },
+    {
+     "jp": "〜てもいいですか",
+     "en": "may I 〜? (asking permission)"
+    },
+    {
+     "jp": "やすみを とる",
+     "en": "to take a day off"
+    },
+    {
+     "jp": "おすすめ",
+     "en": "recommendation"
+    },
+    {
+     "jp": "ラーメンや",
+     "en": "ramen shop"
+    }
+   ],
+   "ex": [
+    [
+     "えいがを　みに　いきました",
+     "A friend asks about your day off. You went to see a movie."
+    ],
+    [
+     "おんせんに　いきたいです",
+     "You're tired and want to say you'd like to go to a hot spring."
+    ],
+    [
+     "かいものに　いきます",
+     "A coworker asks about your weekend plans. You're going shopping."
+    ],
+    [
+     "あした　やすみを　とっても　いいですか",
+     "You want to ask permission to take tomorrow off work."
+    ],
+    [
+     "はい、いいラーメンやが　あります",
+     "A coworker asks if there's a good restaurant in town. You recommend a ramen shop."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "やすみの　ひ、なにを　しましたか？",
+      "en": "A friend asks about your day off. You went to see a movie."
+     },
+     "c": [
+      "えいがが　すきです",
+      "えいがでした",
+      "えいがを　みます",
+      "えいがを　みに　いきました"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Describing a recent outing is common small talk after weekends or holidays."
+     }
+    },
+    {
+     "q": {
+      "jp": "つかれました。どこに　いきたいですか？",
+      "en": "You're tired and want to say you'd like to go to a hot spring."
+     },
+     "c": [
+      "おんせんに　いきました",
+      "おんせんに　いきたいです",
+      "おんせんが　あります",
+      "おんせんは　あついです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Hot springs (温泉) are a beloved way to relax in Japan, and expressing a wish to go is everyday conversational Japanese."
+     }
+    },
+    {
+     "q": {
+      "jp": "しゅうまつ　なにを　しますか？",
+      "en": "A coworker asks about your weekend plans. You're going shopping."
+     },
+     "c": [
+      "かいものは　たかいです",
+      "かいものに　いきます",
+      "かいものでした",
+      "かいものが　すきでした"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Talking about upcoming plans is one of the most common forms of casual workplace chat."
+     }
+    },
+    {
+     "q": {
+      "jp": "あした　やすみを　とりたいです。なんと　たのみますか？",
+      "en": "You want to ask permission to take tomorrow off work."
+     },
+     "c": [
+      "あした　やすみを　とりました",
+      "あした　やすみでした",
+      "あした　やすみを　とっても　いいですか",
+      "あした　やすみは　だめです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Asking permission politely before taking time off is an important workplace skill."
+     }
+    },
+    {
+     "q": {
+      "jp": "このまちで　おすすめの　レストランは　ありますか？",
+      "en": "A coworker asks if there's a good restaurant in town. You recommend a ramen shop."
+     },
+     "c": [
+      "はい、たべました",
+      "いいえ、たかいです",
+      "はい、レストランです",
+      "はい、いいラーメンやが　あります"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "おすすめ (recommendation) is one of the most useful words for asking locals what's good — food, places, anything."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L21",
+   "track": "core",
+   "level": "A2.2",
+   "title": {
+    "jp": "第21課　初級２（Set 1-3）",
+    "en": "Lesson 21: Elementary 2, Set 1 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Method + で + duration + かかります describes how long something takes by a given means of transport. 〜なら is simpler and more casual than ば/たら — note the contrast with 〜でも ('even if'), which would give a different meaning. できますか asks about ability/possibility: 'can you do 〜?'. A direct, simple way to request a service. います is always used for people/family members — あります would be incorrect here since family are living things. 〜てもらえますか is a soft, polite way to ask someone to do something for your benefit — gentler than a direct command."
+   },
+   "vocab": [
+    {
+     "jp": "どのくらい",
+     "en": "how long / how much"
+    },
+    {
+     "jp": "かかる",
+     "en": "to take (time)"
+    },
+    {
+     "jp": "〜なら",
+     "en": "if 〜 (casual conditional)"
+    },
+    {
+     "jp": "いえ",
+     "en": "home"
+    },
+    {
+     "jp": "こわれる",
+     "en": "to break (intransitive)"
+    },
+    {
+     "jp": "しゅうりする",
+     "en": "to repair"
+    },
+    {
+     "jp": "きょうだい",
+     "en": "siblings"
+    },
+    {
+     "jp": "おとうと",
+     "en": "younger brother"
+    },
+    {
+     "jp": "いもうと",
+     "en": "younger sister"
+    },
+    {
+     "jp": "れいぼう",
+     "en": "air conditioning"
+    }
+   ],
+   "ex": [
+    [
+     "でんしゃで　さんじゅっぷん　かかります",
+     "Someone asks how long your commute to work takes. About 30 minutes by train."
+    ],
+    [
+     "あめなら、いえに　います",
+     "A friend asks what you'll do if it rains tomorrow. You'll stay home."
+    ],
+    [
+     "はい、できます",
+     "Your phone is broken and you want to ask a repair shop if they can fix it."
+    ],
+    [
+     "おとうとと　いもうとが　います",
+     "A friend asks if you have any siblings. You have a younger brother and a younger sister."
+    ],
+    [
+     "すみません、れいぼうを　とめてもらえますか",
+     "Your hotel room is a little cold and you want to politely ask staff to turn off the air conditioning."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "かいしゃまで　どのくらい　かかりますか？",
+      "en": "Someone asks how long your commute to work takes. About 30 minutes by train."
+     },
+     "c": [
+      "でんしゃは　たかいです",
+      "でんしゃで　いきました",
+      "でんしゃが　さんじゅっぷんです",
+      "でんしゃで　さんじゅっぷん　かかります"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Describing how long a commute or trip takes is common small talk and useful for scheduling."
+     }
+    },
+    {
+     "q": {
+      "jp": "あした　あめなら、どうしますか？",
+      "en": "A friend asks what you'll do if it rains tomorrow. You'll stay home."
+     },
+     "c": [
+      "あめでも、いえに　います",
+      "あめでした",
+      "あめなら、いえに　います",
+      "あめが　すきです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "〜なら is a light, very common way to talk about 'if' situations in casual daily conversation."
+     }
+    },
+    {
+     "q": {
+      "jp": "スマホが　こわれました。しゅうりできますか？",
+      "en": "Your phone is broken and you want to ask a repair shop if they can fix it."
+     },
+     "c": [
+      "はい、できます",
+      "はい、します",
+      "はい、しました",
+      "はい、こわれました"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking whether a service is possible is essential when dealing with repairs, deliveries, or any request to a shop."
+     }
+    },
+    {
+     "q": {
+      "jp": "きょうだいは　いますか？",
+      "en": "A friend asks if you have any siblings. You have a younger brother and a younger sister."
+     },
+     "c": [
+      "おとうとと　いもうとでした",
+      "おとうとと　いもうとが　あります",
+      "おとうとと　いもうとを　ください",
+      "おとうとと　いもうとが　います"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Talking about family is a natural step once small talk moves past hobbies and food."
+     }
+    },
+    {
+     "q": {
+      "jp": "へやが　ちょっと　さむいです。なんと　いいますか？",
+      "en": "Your hotel room is a little cold and you want to politely ask staff to turn off the air conditioning."
+     },
+     "c": [
+      "れいぼうが　すきです",
+      "さむいから　げんきです",
+      "れいぼうを　つけました",
+      "すみません、れいぼうを　とめてもらえますか"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Politely asking staff to adjust something for your comfort is a very practical service phrase."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L22",
+   "track": "core",
+   "level": "A2.2",
+   "title": {
+    "jp": "第22課　初級２（Set 2-1）",
+    "en": "Lesson 22: Elementary 2, Set 2 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "もどりたいです + どう いきますか combines 'I want to go back' with asking how — a useful recovery phrase when lost. Stating what you lost, then asking ありますか, is the simplest way to report a lost item. いいえ、まだまだです is the standard modest reply to a compliment in Japanese. ぜひ adds enthusiasm to accepting an invitation: 'I'd definitely like to'. Past-tense い-adjective (たのしかった) describes how something was, distinct from the non-past たのしい."
+   },
+   "vocab": [
+    {
+     "jp": "もどる",
+     "en": "to go back"
+    },
+    {
+     "jp": "まちがえる",
+     "en": "to make a mistake"
+    },
+    {
+     "jp": "わすれる",
+     "en": "to forget / leave behind"
+    },
+    {
+     "jp": "えきいん",
+     "en": "station staff"
+    },
+    {
+     "jp": "じょうず",
+     "en": "skilled"
+    },
+    {
+     "jp": "まだまだ",
+     "en": "not yet / still a long way to go"
+    },
+    {
+     "jp": "まつり",
+     "en": "festival"
+    },
+    {
+     "jp": "ぜひ",
+     "en": "by all means / definitely"
+    },
+    {
+     "jp": "たのしかった",
+     "en": "was fun (past)"
+    },
+    {
+     "jp": "りょこう",
+     "en": "trip"
+    }
+   ],
+   "ex": [
+    [
+     "しんじゅくえきに　もどりたいです。どう　いきますか",
+     "You boarded the wrong train and need to ask how to get back to Shinjuku station."
+    ],
+    [
+     "かさを　わすれました。ありますか",
+     "You left your umbrella at a station and want to ask station staff if it's been found."
+    ],
+    [
+     "いいえ、まだまだです",
+     "Someone compliments your Japanese, saying it's skillful. You respond modestly."
+    ],
+    [
+     "いいですね、ぜひ　いきたいです",
+     "A friend invites you to a local festival this weekend. You're interested."
+    ],
+    [
+     "たのしかったです",
+     "A coworker asks how your recent trip was. It was fun."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "しんじゅくえきに　もどりたいです。なんと　ききますか？",
+      "en": "You boarded the wrong train and need to ask how to get back to Shinjuku station."
+     },
+     "c": [
+      "しんじゅくえきに　もどりたいです。どう　いきますか",
+      "しんじゅくえきでした",
+      "しんじゅくえきを　あげます",
+      "しんじゅくえきが　すきです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Boarding the wrong train happens to everyone — knowing how to recover politely is a real survival skill."
+     }
+    },
+    {
+     "q": {
+      "jp": "かさを　わすれました。えきいんに　なんと　いいますか？",
+      "en": "You left your umbrella at a station and want to ask station staff if it's been found."
+     },
+     "c": [
+      "かさを　かりました",
+      "かさが　あります",
+      "かさを　かいました",
+      "かさを　わすれました。ありますか"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Lost items happen often, and station staff are used to handling these requests."
+     }
+    },
+    {
+     "q": {
+      "jp": "にほんごが　じょうずですね、と　いわれました。なんと　こたえますか？",
+      "en": "Someone compliments your Japanese, saying it's skillful. You respond modestly."
+     },
+     "c": [
+      "いいえ、すきです",
+      "はい、じょうずです",
+      "いいえ、まだまだです",
+      "ありがとう、じょうずですね"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Accepting a compliment too directly can sound boastful in Japanese — modesty is expected."
+     }
+    },
+    {
+     "q": {
+      "jp": "しゅうまつ、まつりに　いきませんか？",
+      "en": "A friend invites you to a local festival this weekend. You're interested."
+     },
+     "c": [
+      "まつりでした",
+      "いいえ、まつりです",
+      "いいですね、ぜひ　いきたいです",
+      "まつりが　あります"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Festivals are a fun, common social activity, and accepting enthusiastically is natural."
+     }
+    },
+    {
+     "q": {
+      "jp": "りょこうは　どうでしたか？",
+      "en": "A coworker asks how your recent trip was. It was fun."
+     },
+     "c": [
+      "たのしくないです",
+      "たのしいです",
+      "たのしみです",
+      "たのしかったです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Recapping a recent trip is common small talk right after a holiday."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L23",
+   "track": "core",
+   "level": "A2.2",
+   "title": {
+    "jp": "第23課　初級２（Set 2-2）",
+    "en": "Lesson 23: Elementary 2, Set 2 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "どうぞ is used when offering or handing something to someone, like a coupon. えっ + comment is a natural way to express mild surprise out loud. Reinforces 〜かもしれません (might 〜) for talking about possible lateness due to traffic. だいじょうぶです is a flexible way to confirm something is fine or permitted. 〜て います describes an ongoing habit or regular activity, like a weekend hobby."
+   },
+   "vocab": [
+    {
+     "jp": "クーポン",
+     "en": "coupon"
+    },
+    {
+     "jp": "どうぞ",
+     "en": "here you go / please"
+    },
+    {
+     "jp": "おもったより",
+     "en": "more than expected"
+    },
+    {
+     "jp": "えっ",
+     "en": "oh! / huh (surprise)"
+    },
+    {
+     "jp": "どうろが こんでいる",
+     "en": "the road is congested"
+    },
+    {
+     "jp": "ちこくする",
+     "en": "to be late"
+    },
+    {
+     "jp": "ペット",
+     "en": "pet"
+    },
+    {
+     "jp": "だいじょうぶ",
+     "en": "alright / fine"
+    },
+    {
+     "jp": "しょどう",
+     "en": "calligraphy"
+    },
+    {
+     "jp": "れんしゅうする",
+     "en": "to practice"
+    }
+   ],
+   "ex": [
+    [
+     "はい、これを　どうぞ",
+     "At a shop, you ask if there's a discount coupon available, and the clerk offers you one."
+    ],
+    [
+     "えっ、たかいですね",
+     "You're surprised that something cost more than you expected."
+    ],
+    [
+     "ちこくするかもしれません",
+     "You're stuck in heavy traffic and might be late as a result."
+    ],
+    [
+     "はい、だいじょうぶです",
+     "You want to ask a café if pets are allowed inside. They are."
+    ],
+    [
+     "しょどうを　れんしゅうして　います",
+     "A friend asks about your hobby club. You practice calligraphy every weekend."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "クーポンは　ありますか？",
+      "en": "At a shop, you ask if there's a discount coupon available, and the clerk offers you one."
+     },
+     "c": [
+      "はい、これを　どうぞ",
+      "はい、すきです",
+      "はい、たかいです",
+      "はい、かいました"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking about coupons or discounts is a normal part of everyday shopping."
+     }
+    },
+    {
+     "q": {
+      "jp": "おもったより　たかかったです。なんと　いいますか？",
+      "en": "You're surprised that something cost more than you expected."
+     },
+     "c": [
+      "えっ、たかいですね",
+      "いいえ、やすいです",
+      "はい、すきです",
+      "ありがとうございます"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "A small exclamation of surprise is a very natural, human reaction to an unexpected price."
+     }
+    },
+    {
+     "q": {
+      "jp": "どうろが　こんでいます。どうなりますか？",
+      "en": "You're stuck in heavy traffic and might be late as a result."
+     },
+     "c": [
+      "ちこくするかもしれません",
+      "たのしいです",
+      "やすいです",
+      "はやく　つきます"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Traffic delays are a universal frustration, and explaining the likely outcome is useful."
+     }
+    },
+    {
+     "q": {
+      "jp": "ペットと　いっしょに　はいっても　いいですか？",
+      "en": "You want to ask a café if pets are allowed inside. They are."
+     },
+     "c": [
+      "はい、だいじょうぶです",
+      "はい、ペットでした",
+      "はい、ペットを　ください",
+      "はい、ペットです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Checking pet policies before entering a café or shop avoids an awkward turn-away at the door."
+     }
+    },
+    {
+     "q": {
+      "jp": "しゅうまつ、なにを　して　いますか？",
+      "en": "A friend asks about your hobby club. You practice calligraphy every weekend."
+     },
+     "c": [
+      "しょどうを　れんしゅうしました",
+      "しょどうを　しました",
+      "しょどうが　すきでした",
+      "しょどうを　れんしゅうして　います"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Talking about a regular weekend hobby is a relaxed, easy conversation topic."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L24",
+   "track": "core",
+   "level": "A2.2",
+   "title": {
+    "jp": "第24課　初級２（Set 2-3）",
+    "en": "Lesson 24: Elementary 2, Set 2 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Thanking someone first with ありがとうございます、でも〜 softens a decline, even when tired. かい is the counter for occurrences/times — しゅうに みっかい = 'three times a week'. Reinforces できますか for asking about a service's availability. Reinforces 〜のほうが〜 comparisons, now applied to transportation choices. あいていますか asks if a seat is free; どうぞ politely invites someone to take it."
+   },
+   "vocab": [
+    {
+     "jp": "でも",
+     "en": "but"
+    },
+    {
+     "jp": "つかれている",
+     "en": "is tired"
+    },
+    {
+     "jp": "バイト",
+     "en": "part-time job"
+    },
+    {
+     "jp": "しゅうに〜かい",
+     "en": "〜 times per week"
+    },
+    {
+     "jp": "はいたつ",
+     "en": "delivery"
+    },
+    {
+     "jp": "きゅうこう",
+     "en": "express train"
+    },
+    {
+     "jp": "ふつう",
+     "en": "local / ordinary train"
+    },
+    {
+     "jp": "あいている",
+     "en": "is empty / available"
+    },
+    {
+     "jp": "どうぞ",
+     "en": "please / go ahead"
+    }
+   ],
+   "ex": [
+    [
+     "ありがとうございます、でも　きょうは　つかれて　います",
+     "A friend invites you out for drinks, but you're too tired tonight and politely decline."
+    ],
+    [
+     "しゅうに　みっかい　あります",
+     "Someone asks about your part-time job schedule. You work three times a week."
+    ],
+    [
+     "はい、できます",
+     "You ask a restaurant if they can deliver food to your hotel."
+    ],
+    [
+     "きゅうこうのほうが　はやいです",
+     "Comparing two train types, you say the express is faster than the local."
+    ],
+    [
+     "はい、どうぞ",
+     "Someone asks if the seat next to you is taken. It's free."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "のみに　いきませんか？と　さそわれました。つかれて　います。なんと　こたえますか？",
+      "en": "A friend invites you out for drinks, but you're too tired tonight and politely decline."
+     },
+     "c": [
+      "いいですね、いきましょう",
+      "ありがとうございます、でも　きょうは　つかれて　います",
+      "のみました",
+      "いきません"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Thanking someone before declining keeps the relationship warm, even when you have to say no."
+     }
+    },
+    {
+     "q": {
+      "jp": "バイトは　しゅうに　なんかい　ありますか？",
+      "en": "Someone asks about your part-time job schedule. You work three times a week."
+     },
+     "c": [
+      "しゅうに　みっつ　あります",
+      "しゅうに　みっかん　あります",
+      "しゅうに　みっかげつ　あります",
+      "しゅうに　みっかい　あります"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Describing how often you work part-time is useful when discussing your weekly schedule."
+     }
+    },
+    {
+     "q": {
+      "jp": "ホテルまで　はいたつできますか？",
+      "en": "You ask a restaurant if they can deliver food to your hotel."
+     },
+     "c": [
+      "はい、します",
+      "はい、しました",
+      "はい、できます",
+      "はい、ほしいです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Asking about delivery options is common when staying somewhere without easy access to restaurants."
+     }
+    },
+    {
+     "q": {
+      "jp": "きゅうこうと　ふつう、どちらが　はやいですか？",
+      "en": "Comparing two train types, you say the express is faster than the local."
+     },
+     "c": [
+      "きゅうこうのほうが　はやいです",
+      "どちらも　おそいです",
+      "きゅうこうは　たかいです",
+      "ふつうのほうが　はやいです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Choosing between express and local trains is a daily decision for many commuters in Japan."
+     }
+    },
+    {
+     "q": {
+      "jp": "この　せきは　あいていますか？",
+      "en": "Someone asks if the seat next to you is taken. It's free."
+     },
+     "c": [
+      "はい、つかれました",
+      "はい、どうぞ",
+      "はい、たかいです",
+      "はい、すきです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Checking if a seat is free is a small, everyday courtesy on trains, buses, and in cafés."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L25",
+   "track": "core",
+   "level": "A2.2",
+   "title": {
+    "jp": "第25課　初級２（Set 3-1）",
+    "en": "Lesson 25: Elementary 2, Set 3 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜を おねがいします is a simple, polite way to request a service, like a top-up. Symptom + が あります reports a physical condition simply, the same pattern as あたまが いたいです. 〜が はいっていない describes an ingredient's absence — useful for dietary requests. 〜の ために states a purpose or goal: 'for the sake of 〜' — here, saving for a trip. 〜が いいです expresses a preference: 'I'd prefer 〜' — softer than 〜が ほしいです."
+   },
+   "vocab": [
+    {
+     "jp": "チャージする",
+     "en": "to top up / recharge"
+    },
+    {
+     "jp": "ICカード",
+     "en": "IC transit card"
+    },
+    {
+     "jp": "ねつ",
+     "en": "fever"
+    },
+    {
+     "jp": "にくが はいっていない",
+     "en": "doesn't contain meat"
+    },
+    {
+     "jp": "やさいりょうり",
+     "en": "vegetable dish"
+    },
+    {
+     "jp": "ちょきんする",
+     "en": "to save money"
+    },
+    {
+     "jp": "〜の ために",
+     "en": "for the purpose of 〜"
+    },
+    {
+     "jp": "ちかい",
+     "en": "close / near"
+    },
+    {
+     "jp": "アパート",
+     "en": "apartment"
+    }
+   ],
+   "ex": [
+    [
+     "チャージを　おねがいします",
+     "Your train IC card balance is low and you need to top it up."
+    ],
+    [
+     "すみません、ねつが　あります",
+     "You have a slight fever and want to tell your supervisor."
+    ],
+    [
+     "はい、やさいりょうりが　あります",
+     "At a restaurant, you ask if they can prepare a dish without meat."
+    ],
+    [
+     "にほん　りょこうの　ためです",
+     "You're saving money for a trip to Japan next year."
+    ],
+    [
+     "えきに　ちかい　アパートが　いいです",
+     "You're apartment hunting and want one close to the station."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "ICカードの　チャージを　したいです。なんと　いいますか？",
+      "en": "Your train IC card balance is low and you need to top it up."
+     },
+     "c": [
+      "チャージでした",
+      "チャージを　しました",
+      "チャージが　あります",
+      "チャージを　おねがいします"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Topping up a transit IC card is a routine task for daily commuting."
+     }
+    },
+    {
+     "q": {
+      "jp": "ねつが　あります。じょうしに　なんと　いいますか？",
+      "en": "You have a slight fever and want to tell your supervisor."
+     },
+     "c": [
+      "すみません、ねつを　あげます",
+      "すみません、ねつが　あります",
+      "すみません、ねつが　すきです",
+      "すみません、ねつでした"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Reporting a fever clearly and early helps your workplace plan around your absence."
+     }
+    },
+    {
+     "q": {
+      "jp": "にくが　はいって　いない　りょうりは　ありますか？",
+      "en": "At a restaurant, you ask if they can prepare a dish without meat."
+     },
+     "c": [
+      "はい、やさいりょうりが　あります",
+      "はい、にくでした",
+      "はい、にくが　すきです",
+      "はい、にくを　ください"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking about dietary options is increasingly common and well understood at restaurants."
+     }
+    },
+    {
+     "q": {
+      "jp": "なんの　ために　おかねを　ちょきんして　いますか？",
+      "en": "You're saving money for a trip to Japan next year."
+     },
+     "c": [
+      "にほん　りょこうでした",
+      "にほん　りょこうを　しました",
+      "にほん　りょこうの　ためです",
+      "にほん　りょこうが　あります"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Talking about savings goals is common when discussing future plans with friends or family."
+     }
+    },
+    {
+     "q": {
+      "jp": "どんな　アパートが　ほしいですか？",
+      "en": "You're apartment hunting and want one close to the station."
+     },
+     "c": [
+      "えきに　ちかい　アパートが　いいです",
+      "えきに　ちかい　アパートでした",
+      "えきに　ちかい　アパートを　あげます",
+      "えきに　ちかい　アパートが　あります"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Stating your priorities clearly helps a real estate agent find the right place faster."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L26",
+   "track": "core",
+   "level": "A2.2",
+   "title": {
+    "jp": "第26課　初級２（Set 3-2）",
+    "en": "Lesson 26: Elementary 2, Set 3 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "おめでとうございます reused for a workplace achievement, like a promotion. どう〜たら いいですか asks 'how should I 〜?' — a flexible pattern for asking for guidance. 〜そうです reports information you heard or read, like a weather forecast — 'it seems it'll be sunny'. Reinforces 〜おねがいします for making a reservation request. Stating the exact number of minutes you'll be late is clearer and more considerate than a vague apology."
+   },
+   "vocab": [
+    {
+     "jp": "しょうしん",
+     "en": "promotion"
+    },
+    {
+     "jp": "ごみ",
+     "en": "trash"
+    },
+    {
+     "jp": "わける",
+     "en": "to sort / separate"
+    },
+    {
+     "jp": "〜そうです",
+     "en": "I heard that 〜 / it seems that 〜 (from a source)"
+    },
+    {
+     "jp": "はれる",
+     "en": "to become sunny / clear"
+    },
+    {
+     "jp": "よやく",
+     "en": "reservation"
+    },
+    {
+     "jp": "おくれる",
+     "en": "to be late"
+    },
+    {
+     "jp": "れんらくする",
+     "en": "to contact"
+    }
+   ],
+   "ex": [
+    [
+     "おめでとうございます",
+     "A coworker was just promoted, and you congratulate them."
+    ],
+    [
+     "ごみは　どう　わければ　いいですか",
+     "You're not sure how to sort your trash and ask your neighbor for guidance."
+    ],
+    [
+     "はれるそうです",
+     "Someone asks about tomorrow's weather forecast. It's expected to be sunny."
+    ],
+    [
+     "よにんで　よやく　おねがいします",
+     "You call a restaurant to reserve a table for 4 people tonight."
+    ],
+    [
+     "すみません、じゅっぷん　おくれます",
+     "You're running late and want to message that you'll arrive in 10 minutes."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "どうりょうが　しょうしんしました。なんと　いいますか？",
+      "en": "A coworker was just promoted, and you congratulate them."
+     },
+     "c": [
+      "おつかれさまでした",
+      "ごめんなさい",
+      "いただきます",
+      "おめでとうございます"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Congratulating a coworker on career milestones is a small but meaningful workplace gesture."
+     }
+    },
+    {
+     "q": {
+      "jp": "ごみの　すてかたが　わかりません。なんと　ききますか？",
+      "en": "You're not sure how to sort your trash and ask your neighbor for guidance."
+     },
+     "c": [
+      "ごみは　なんじですか",
+      "ごみが　すきです",
+      "ごみは　どこに　いますか",
+      "ごみは　どう　わければ　いいですか"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Trash-sorting rules vary a lot by area in Japan, so asking a neighbor is completely normal."
+     }
+    },
+    {
+     "q": {
+      "jp": "あしたの　てんきは　どうですか？",
+      "en": "Someone asks about tomorrow's weather forecast. It's expected to be sunny."
+     },
+     "c": [
+      "はれました",
+      "はれるそうです",
+      "はれが　すきです",
+      "はれを　ください"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Sharing forecast information (which you heard or read, not witnessed yourself) uses a special reporting grammar."
+     }
+    },
+    {
+     "q": {
+      "jp": "こんばん、よにんで　よやく　したいです。なんと　いいますか？",
+      "en": "You call a restaurant to reserve a table for 4 people tonight."
+     },
+     "c": [
+      "よにんを　ください",
+      "よにんが　いました",
+      "よにんでした",
+      "よにんで　よやく　おねがいします"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Making a restaurant reservation by phone is a common practical task while living or traveling in Japan."
+     }
+    },
+    {
+     "q": {
+      "jp": "じゅっぷん　おくれます。なんと　れんらくしますか？",
+      "en": "You're running late and want to message that you'll arrive in 10 minutes."
+     },
+     "c": [
+      "すみません、じゅっぷん　かかりました",
+      "すみません、じゅっぷん　はやいです",
+      "すみません、じゅっぷん　いました",
+      "すみません、じゅっぷん　おくれます"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Giving an exact number of minutes is clearer and more considerate than a vague apology for being late."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L27",
+   "track": "core",
+   "level": "A2.2",
+   "title": {
+    "jp": "第27課　初級２（Set 3-3）",
+    "en": "Lesson 27: Elementary 2, Set 3 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "もう すこし ゆっくり おねがいします politely asks someone to slow down — useful for listening comprehension. 〜て います again describes a regular ongoing habit, like a daily exercise routine. Confirming a shared problem (like a power outage) with も is a natural way to check if others are affected too. もえる/もえない + ごみ distinguishes trash categories — an important distinction to know. おしえて ください reused here for asking someone to tell you information, like a password."
+   },
+   "vocab": [
+    {
+     "jp": "ゆっくり",
+     "en": "slowly"
+    },
+    {
+     "jp": "もう すこし",
+     "en": "a little more"
+    },
+    {
+     "jp": "うんどう",
+     "en": "exercise"
+    },
+    {
+     "jp": "ジョギング",
+     "en": "jogging"
+    },
+    {
+     "jp": "まいあさ",
+     "en": "every morning"
+    },
+    {
+     "jp": "ていでん",
+     "en": "power outage"
+    },
+    {
+     "jp": "もえる ごみ",
+     "en": "burnable trash"
+    },
+    {
+     "jp": "もえない ごみ",
+     "en": "non-burnable trash"
+    },
+    {
+     "jp": "パスワード",
+     "en": "password"
+    },
+    {
+     "jp": "おしえる",
+     "en": "to tell / teach"
+    }
+   ],
+   "ex": [
+    [
+     "もう　すこし　ゆっくり　おねがいします",
+     "Someone is speaking too fast for you to follow, and you ask them to slow down."
+    ],
+    [
+     "まいあさ　ジョギングして　います",
+     "Someone asks about your exercise habit. You jog every morning."
+    ],
+    [
+     "はい、うちも　ていでんしています",
+     "There's a power outage in your building, and you ask a neighbor if their room is affected too."
+    ],
+    [
+     "もえない　ごみです",
+     "You're not sure if a bottle counts as burnable or non-burnable trash."
+    ],
+    [
+     "すみません、パスワードを　おしえて　ください",
+     "You're at a café and want to ask for the wifi password."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "はやくて　わかりません。なんと　たのみますか？",
+      "en": "Someone is speaking too fast for you to follow, and you ask them to slow down."
+     },
+     "c": [
+      "もう　すこし　ゆっくり　おねがいします",
+      "もっと　はやく　おねがいします",
+      "もう　いちど　おねがいします",
+      "もっと　おおきく　おねがいします"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Asking someone to slow down (rather than repeat) is a distinct, very useful listening-comprehension request."
+     }
+    },
+    {
+     "q": {
+      "jp": "うんどうは　して　いますか？",
+      "en": "Someone asks about your exercise habit. You jog every morning."
+     },
+     "c": [
+      "まいあさ　ジョギングして　います",
+      "まいあさ　ジョギングでした",
+      "まいあさ　ジョギングが　すきでした",
+      "まいあさ　ジョギングを　しました"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Talking about daily exercise habits is common, easy small talk about health and routine."
+     }
+    },
+    {
+     "q": {
+      "jp": "ていでんしました。となりの　へやも　ですか？",
+      "en": "There's a power outage in your building, and you ask a neighbor if their room is affected too."
+     },
+     "c": [
+      "はい、うちは　たかいです",
+      "はい、うちも　ていでんしています",
+      "はい、うちは　あついです",
+      "はい、うちは　げんきです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Confirming whether a problem like a power outage is shared helps figure out if it's building-wide."
+     }
+    },
+    {
+     "q": {
+      "jp": "この　びんは　もえる　ごみですか、もえない　ごみですか？",
+      "en": "You're not sure if a bottle counts as burnable or non-burnable trash."
+     },
+     "c": [
+      "ごみが　すきです",
+      "もえる　ごみです",
+      "ごみじゃないです",
+      "もえない　ごみです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Correctly sorting burnable and non-burnable trash is an important, sometimes strictly enforced, rule in Japan."
+     }
+    },
+    {
+     "q": {
+      "jp": "Wi-Fiの　パスワードを　ききたいです。なんと　いいますか？",
+      "en": "You're at a café and want to ask for the wifi password."
+     },
+     "c": [
+      "すみません、パスワードでした",
+      "すみません、パスワードを　おしえて　ください",
+      "すみません、パスワードが　すきです",
+      "すみません、パスワードを　あげます"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Asking for the wifi password is one of the most common requests at any café today."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L28",
+   "track": "core",
+   "level": "A2/B1",
+   "title": {
+    "jp": "第28課　初中級（Set 1-1）",
+    "en": "Lesson 28: Pre-Intermediate, Set 1 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Clause + から + result gives a reason: 'Because X, Y'. から attaches directly after a plain-form clause. Past-tense (た form) verb + ことが あります expresses past experience: 'have done 〜 before'. Adjective + が + contrasting adjective links two opposing ideas: 'fun, but difficult'. 〜て いただけますか is more formal than 〜て ください — appropriate for requests to superiors or customers. A と B、どちらが〜 asks for a comparison; answer with 'X のほうが〜です' ('X is more 〜')."
+   },
+   "vocab": [
+    {
+     "jp": "ふる",
+     "en": "to fall (of rain/snow)"
+    },
+    {
+     "jp": "〜から",
+     "en": "because 〜"
+    },
+    {
+     "jp": "〜たことが あります",
+     "en": "have done 〜 before (experience)"
+    },
+    {
+     "jp": "〜が",
+     "en": "but 〜 (contrast)"
+    },
+    {
+     "jp": "たのしい",
+     "en": "fun / enjoyable"
+    },
+    {
+     "jp": "むずかしい",
+     "en": "difficult"
+    },
+    {
+     "jp": "〜て いただけますか",
+     "en": "could you possibly 〜? (very polite request)"
+    },
+    {
+     "jp": "〜のほうが〜",
+     "en": "〜 is more 〜 (comparative)"
+    },
+    {
+     "jp": "どちら",
+     "en": "which (of two)"
+    }
+   ],
+   "ex": [
+    [
+     "あめが　ふっているから、でかけません",
+     "Explaining why you're not going out: it's raining."
+    ],
+    [
+     "はい、いったことが　あります",
+     "Someone asks if you've ever been to Japan. You have."
+    ],
+    [
+     "たのしいですが、むずかしいです",
+     "A teacher asks for your opinion on studying Japanese. It's fun but difficult."
+    ],
+    [
+     "まどを　あけて　いただけますか",
+     "You politely ask a customer or superior to open the window."
+    ],
+    [
+     "えいごのほうが　やさしいです",
+     "Comparing English and Japanese — you find English easier."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "なぜ　でかけませんか？",
+      "en": "Explaining why you're not going out: it's raining."
+     },
+     "c": [
+      "あめが　ふって、でかけました",
+      "あめが　ふったり、でかけません",
+      "あめが　ふっているから、でかけません",
+      "あめが　ふるなら、でかけます"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Giving a simple cause-and-effect reason is one of the most frequent things you'll need to say in daily conversation."
+     }
+    },
+    {
+     "q": {
+      "jp": "にほんに　いったことが　ありますか？",
+      "en": "Someone asks if you've ever been to Japan. You have."
+     },
+     "c": [
+      "はい、いったことが　あります",
+      "はい、いきましたね",
+      "はい、いっています",
+      "はい、いきます"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Talking about past experiences — travel, food tried, things you've done — comes up constantly once conversations move past the basics."
+     }
+    },
+    {
+     "q": {
+      "jp": "にほんごの　べんきょうは　どうですか？",
+      "en": "A teacher asks for your opinion on studying Japanese. It's fun but difficult."
+     },
+     "c": [
+      "たのしいに　なります",
+      "たのしいと　いいです",
+      "たのしいですが、むずかしいです",
+      "たのしいでした"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Giving a balanced opinion — one good point and one challenge — sounds much more natural than a flat yes/no answer."
+     }
+    },
+    {
+     "q": {
+      "jp": "まどを　あけて　もらいたいです。ていねいに　たのみます。",
+      "en": "You politely ask a customer or superior to open the window."
+     },
+     "c": [
+      "まどが　あいています",
+      "まどを　あけて　くださいね",
+      "まどを　あけます",
+      "まどを　あけて　いただけますか"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "This is the level of politeness you'd use with a customer, client, or someone above you — more formal than a request to a friend."
+     }
+    },
+    {
+     "q": {
+      "jp": "にほんごと　えいご、どちらが　やさしいですか？",
+      "en": "Comparing English and Japanese — you find English easier."
+     },
+     "c": [
+      "にほんごのほうが　やさしいです",
+      "どちらも　やさしいです",
+      "えいごのほうが　やさしいです",
+      "えいごは　やさしくないです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Comparing two things directly is a step up from simple description — useful for opinions and decisions alike."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L29",
+   "track": "core",
+   "level": "A2/B1",
+   "title": {
+    "jp": "第29課　初中級（Set 1-2）",
+    "en": "Lesson 29: Pre-Intermediate, Set 1 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "もし + verb/adjective ば-form sets up a hypothetical condition: 'if 〜, then 〜'. Past-tense (た form) + ほうが いいです gives advice: 'you should do 〜'. Verb negative (ない form) + なければ なりません expresses obligation: 'must do 〜 / have to 〜'. Verb て-form + から describes a clear sequence: 'after doing X, then Y' — different from から meaning 'because'. 〜て くれました expresses that someone did you a favor. あげる is for giving to others, もらう for receiving — they are not interchangeable."
+   },
+   "vocab": [
+    {
+     "jp": "もし〜ば",
+     "en": "if 〜 (conditional)"
+    },
+    {
+     "jp": "いっしょに",
+     "en": "together"
+    },
+    {
+     "jp": "〜たほうがいいです",
+     "en": "you should 〜 (advice)"
+    },
+    {
+     "jp": "はやく",
+     "en": "early"
+    },
+    {
+     "jp": "〜なければ なりません",
+     "en": "must do 〜 (obligation)"
+    },
+    {
+     "jp": "〜てから",
+     "en": "after doing 〜, then 〜"
+    },
+    {
+     "jp": "あさごはん",
+     "en": "breakfast"
+    },
+    {
+     "jp": "〜て くれる",
+     "en": "someone does something for me/us"
+    },
+    {
+     "jp": "あげる",
+     "en": "to give (to others)"
+    },
+    {
+     "jp": "もらう",
+     "en": "to receive"
+    }
+   ],
+   "ex": [
+    [
+     "もし　じかんが　あれば、いっしょに　いきましょう",
+     "Proposing a plan that depends on having free time later."
+    ],
+    [
+     "はやく　ねた　ほうが　いいです",
+     "Giving friendly advice: someone should sleep early before a busy day."
+    ],
+    [
+     "はい、いかなければ　なりません",
+     "Explaining a work obligation: you must go to work even though it's a holiday."
+    ],
+    [
+     "あさごはんを　たべてから、いきます",
+     "Describing your morning routine: you eat breakfast, then go to work."
+    ],
+    [
+     "くれました",
+     "Your friend did you a favor by lending you money. You want to describe this using くれる (someone did something for me)."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "じかんが　あったら、なにを　しましょうか？",
+      "en": "Proposing a plan that depends on having free time later."
+     },
+     "c": [
+      "じかんが　ないので、いきましょう",
+      "じかんが　あるから、いきません",
+      "もし　じかんが　あれば、いっしょに　いきましょう",
+      "じかんが　あっても、いきません"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Hypothetical plans ('if this happens, then let's do that') are common when scheduling with coworkers or friends."
+     }
+    },
+    {
+     "q": {
+      "jp": "あした　はやいので、アドバイスを　ください。",
+      "en": "Giving friendly advice: someone should sleep early before a busy day."
+     },
+     "c": [
+      "はやく　ねた　ほうが　いいです",
+      "はやく　ねないと　いけませんね",
+      "はやく　ねて　いいです",
+      "はやく　ねるなら、いいです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "This is one of the most common ways to give friendly, casual advice in Japanese — gentler than a direct command."
+     }
+    },
+    {
+     "q": {
+      "jp": "きょうは　やすみですが、しごとに　いきますか？",
+      "en": "Explaining a work obligation: you must go to work even though it's a holiday."
+     },
+     "c": [
+      "はい、いかなければ　なりません",
+      "はい、いっても　いいです",
+      "はい、いきたくないです",
+      "はい、いかないでください"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Expressing obligation — things you must do whether you want to or not — is essential for talking about work and rules."
+     }
+    },
+    {
+     "q": {
+      "jp": "あさ、なにを　してから　しごとに　いきますか？",
+      "en": "Describing your morning routine: you eat breakfast, then go to work."
+     },
+     "c": [
+      "あさごはんを　たべるなら、いきます",
+      "あさごはんを　たべるから、いきます",
+      "あさごはんを　たべてから、いきます",
+      "あさごはんを　たべても、いきます"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Describing the order you do things in is essential for talking about daily routines and instructions."
+     }
+    },
+    {
+     "q": {
+      "jp": "ともだちが　おかねを　かして＿＿＿。",
+      "en": "Your friend did you a favor by lending you money. You want to describe this using くれる (someone did something for me)."
+     },
+     "c": [
+      "くれました",
+      "ください",
+      "あげました",
+      "もらいました"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Japanese has three different 'give/receive' verbs depending on who benefits — this is a classic point of confusion for learners."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L30",
+   "track": "core",
+   "level": "A2/B1",
+   "title": {
+    "jp": "第30課　初中級（Set 1-3）",
+    "en": "Lesson 30: Pre-Intermediate, Set 1 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Plain-form clause + だ + と いっていました reports what someone else said, rather than stating it as your own fact. 〜ましょうか offers or suggests a joint action — more inviting in tone than 〜ますか. i-adjective stem + く なりました expresses a change of state: 'became 〜'. Note さむい drops い and adds く. The potential form (e.g. はなせる from はなす) expresses ability: 'can do 〜', distinct from the plain non-past form. Leaving a sentence unfinished after ちょっと〜あって… politely implies 'I can't' without directly refusing."
+   },
+   "vocab": [
+    {
+     "jp": "〜と いっていました",
+     "en": "said that 〜 (reported speech)"
+    },
+    {
+     "jp": "かいぎ",
+     "en": "meeting"
+    },
+    {
+     "jp": "〜ましょうか",
+     "en": "shall we 〜?"
+    },
+    {
+     "jp": "さそう",
+     "en": "to invite"
+    },
+    {
+     "jp": "〜く なりました",
+     "en": "became 〜 (change of state)"
+    },
+    {
+     "jp": "はなせる",
+     "en": "can speak (potential form of はなす)"
+    },
+    {
+     "jp": "よてい",
+     "en": "plans / schedule"
+    },
+    {
+     "jp": "ちょっと〜あって…",
+     "en": "trailing off to soften a refusal"
+    }
+   ],
+   "ex": [
+    [
+     "かいぎは　じゅうじからだと　いっていました",
+     "Reporting what your boss told you earlier: the meeting starts at 10."
+    ],
+    [
+     "いっしょに　いきましょうか",
+     "You want to suggest going out together with a friend."
+    ],
+    [
+     "さむく　なりました",
+     "Describing how the weather has changed recently: it has gotten colder."
+    ],
+    [
+     "はい、ちょっと　はなせます",
+     "Someone asks if you can speak Japanese now. You can, a little."
+    ],
+    [
+     "すみません、今日は　ちょっと　よていが　あって…",
+     "A coworker invites you for drinks tonight, but you already have plans. You decline politely without sounding blunt."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "じょうしは　なんと　いっていましたか？",
+      "en": "Reporting what your boss told you earlier: the meeting starts at 10."
+     },
+     "c": [
+      "かいぎは　じゅうじからだと　いっていました",
+      "かいぎは　じゅうじに　いきました",
+      "かいぎは　じゅうじでした",
+      "かいぎは　じゅうじです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Relaying information someone else said is common when passing on instructions or messages at work."
+     }
+    },
+    {
+     "q": {
+      "jp": "ともだちと　いっしょに　でかけたいです。なんと　さそいますか？",
+      "en": "You want to suggest going out together with a friend."
+     },
+     "c": [
+      "いっしょに　いきたいですか",
+      "いっしょに　いきましたか",
+      "いっしょに　いきますか",
+      "いっしょに　いきましょうか"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "〜ましょうか is a warm, inviting way to propose doing something together, softer than a plain yes/no question."
+     }
+    },
+    {
+     "q": {
+      "jp": "さいきん　てんきは　どう　かわりましたか？",
+      "en": "Describing how the weather has changed recently: it has gotten colder."
+     },
+     "c": [
+      "さむいに　なりました",
+      "さむく　します",
+      "さむく　なりました",
+      "さむいでした"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Talking about gradual change — weather, prices, feelings — comes up constantly in everyday conversation."
+     }
+    },
+    {
+     "q": {
+      "jp": "にほんごが　はなせますか？",
+      "en": "Someone asks if you can speak Japanese now. You can, a little."
+     },
+     "c": [
+      "はい、ちょっと　はなせます",
+      "はい、ちょっと　はなします",
+      "はい、ちょっと　はなしました",
+      "はい、ちょっと　はなしたいです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Talking about what you're able to do is a milestone moment for learners — it shows real progress."
+     }
+    },
+    {
+     "q": {
+      "jp": "今日　いっしょに　のみに　いきませんか？と　さそわれました。よていが　あります。なんと　こたえますか？",
+      "en": "A coworker invites you for drinks tonight, but you already have plans. You decline politely without sounding blunt."
+     },
+     "c": [
+      "すみません、今日は　ちょっと　よていが　あって…",
+      "のみました",
+      "いきません",
+      "いいですね、いきましょう"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Trailing off softly instead of saying a flat 'no' is a very natural, commonly used way to decline in Japanese without sounding rude."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L31",
+   "track": "field",
+   "level": "A2/B1",
+   "title": {
+    "jp": "第31課　初中級（Set 2-1）",
+    "en": "Lesson 31: Pre-Intermediate, Set 2 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜て おきます describes doing something now in preparation for later — different from simply doing the action. Verb stem + ながら + another verb describes two actions happening at the same time by the same person. 〜のに expresses an unexpected or disappointing contrast: 'even though X, Y happened' — a different nuance from が. い-adjective stem + すぎる expresses excess: 'too 〜'. からすぎます = 'too spicy'. 〜させて ください asks for permission to do something yourself, often when you want to take the initiative."
+   },
+   "vocab": [
+    {
+     "jp": "〜て おく",
+     "en": "to do something in advance / for later"
+    },
+    {
+     "jp": "じゅんびする",
+     "en": "to prepare"
+    },
+    {
+     "jp": "〜ながら",
+     "en": "while doing 〜 (simultaneous actions)"
+    },
+    {
+     "jp": "〜のに",
+     "en": "even though 〜 (unexpected contrast)"
+    },
+    {
+     "jp": "おちる",
+     "en": "to fail (a test)"
+    },
+    {
+     "jp": "〜すぎる",
+     "en": "too much 〜"
+    },
+    {
+     "jp": "からい",
+     "en": "spicy"
+    },
+    {
+     "jp": "〜させて ください",
+     "en": "please let me do 〜"
+    },
+    {
+     "jp": "せつめいする",
+     "en": "to explain"
+    }
+   ],
+   "ex": [
+    [
+     "しょるいを　じゅんびして　おきます",
+     "You're preparing documents in advance for tomorrow's meeting."
+    ],
+    [
+     "はい、ききながら　しごとを　します",
+     "You like listening to music while working."
+    ],
+    [
+     "べんきょうしたのに、おちました",
+     "You studied hard, but you still failed the test — an unexpected, disappointing contrast."
+    ],
+    [
+     "からすぎます",
+     "You tasted a dish and it's far too spicy."
+    ],
+    [
+     "せつめいさせて　ください",
+     "You're eager to be the one to explain your idea in the meeting, and ask to be allowed to."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "あしたの　かいぎの　ために、いま　なにを　しますか？",
+      "en": "You're preparing documents in advance for tomorrow's meeting."
+     },
+     "c": [
+      "しょるいを　じゅんびします",
+      "しょるいを　じゅんびして　おきます",
+      "しょるいを　じゅんびして　います",
+      "しょるいを　じゅんびしました"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Preparing things in advance for a future need is a common, practical workplace habit."
+     }
+    },
+    {
+     "q": {
+      "jp": "しごとちゅう、おんがくを　ききますか？",
+      "en": "You like listening to music while working."
+     },
+     "c": [
+      "はい、ききました、しごとです",
+      "はい、ききながら　しごとを　します",
+      "はい、きいて、しごとでした",
+      "はい、きくとき、しごとです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Doing two things at once, like listening to music while working, is a daily reality for many people."
+     }
+    },
+    {
+     "q": {
+      "jp": "べんきょうしましたが、テストは　どうでしたか？",
+      "en": "You studied hard, but you still failed the test — an unexpected, disappointing contrast."
+     },
+     "c": [
+      "べんきょうしたから、おちました",
+      "べんきょうしたら、おちました",
+      "べんきょうしたのに、おちました",
+      "べんきょうしても、うかりました"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Expressing disappointment over an unexpected outcome is a very human, relatable thing to say."
+     }
+    },
+    {
+     "q": {
+      "jp": "この　りょうりは　どうですか？",
+      "en": "You tasted a dish and it's far too spicy."
+     },
+     "c": [
+      "からいです",
+      "からそうです",
+      "からすぎます",
+      "からくないです"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Saying something is 'too much' of a quality is common when food, prices, or anything else goes to an extreme."
+     }
+    },
+    {
+     "q": {
+      "jp": "かいぎで　アイデアを　せつめいしたいです。なんと　たのみますか？",
+      "en": "You're eager to be the one to explain your idea in the meeting, and ask to be allowed to."
+     },
+     "c": [
+      "せつめいして　ください",
+      "せつめいさせられます",
+      "せつめいさせて　ください",
+      "せつめいさせます"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Asking to be allowed to take initiative on something sounds more proactive than a neutral permission request."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L32",
+   "track": "field",
+   "level": "A2/B1",
+   "title": {
+    "jp": "第32課　初中級（Set 2-2）",
+    "en": "Lesson 32: Pre-Intermediate, Set 2 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "Noun + という + noun introduces something by name, especially when the listener might not know it. Verb past (た form) + ところです emphasizes that something just happened, very recently. 〜はずです expresses a confident expectation based on reasoning or known information — not a random guess. 〜ように します expresses a conscious effort to make something happen: 'I'll try to make sure that 〜'. 〜ことに なりました describes a decision made by circumstances or others — contrast with 〜ことに しました, a decision you made yourself."
+   },
+   "vocab": [
+    {
+     "jp": "〜という",
+     "en": "called 〜 / named 〜"
+    },
+    {
+     "jp": "〜たところです",
+     "en": "just did 〜 (very recent completion)"
+    },
+    {
+     "jp": "〜はずです",
+     "en": "should be 〜 / is expected to be 〜"
+    },
+    {
+     "jp": "〜ように します",
+     "en": "try to make sure that 〜"
+    },
+    {
+     "jp": "まにあう",
+     "en": "to be on time / make it in time"
+    },
+    {
+     "jp": "〜ことに なりました",
+     "en": "it has been decided that 〜 (often externally decided)"
+    }
+   ],
+   "ex": [
+    [
+     "きょうとという　まちに　いきました",
+     "You're telling a friend about a city they may not know — Kyoto."
+    ],
+    [
+     "いま、いえに　ついた　ところです",
+     "Someone calls right as you've just arrived home."
+    ],
+    [
+     "はい、もう　いえに　いる　はずです",
+     "Based on the schedule, your colleague should already be home."
+    ],
+    [
+     "じかんに　まにあうように　します",
+     "You want to make sure you arrive on time from now on."
+    ],
+    [
+     "おおさかで　はたらく　ことに　なりました",
+     "It has been decided, by the company, that you'll be transferred to Osaka next month."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "しらない　まちの　なまえを　いう　とき、なんと　いいますか？",
+      "en": "You're telling a friend about a city they may not know — Kyoto."
+     },
+     "c": [
+      "きょうとを　まちに　いきました",
+      "きょうとの　まちに　いきました",
+      "きょうとが　まちに　いきました",
+      "きょうとという　まちに　いきました"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Introducing an unfamiliar place, thing, or person by name is common when the listener may not know it."
+     }
+    },
+    {
+     "q": {
+      "jp": "いえに　ついた　とき、でんわが　かかってきました。なんと　いいますか？",
+      "en": "Someone calls right as you've just arrived home."
+     },
+     "c": [
+      "いま、いえに　つく　ところです",
+      "いま、いえに　ついて　います",
+      "いま、いえに　ついた　ところです",
+      "いま、いえに　つきます"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Saying something just happened, moments ago, is useful for explaining your current situation."
+     }
+    },
+    {
+     "q": {
+      "jp": "どうりょうは　もう　いえに　いますか？",
+      "en": "Based on the schedule, your colleague should already be home."
+     },
+     "c": [
+      "はい、もう　いえに　いきます",
+      "はい、もう　いえに　いて　ください",
+      "はい、もう　いえに　いる　はずです",
+      "はい、もう　いえに　いきました"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Stating a confident expectation, based on known facts like a schedule, is more precise than guessing."
+     }
+    },
+    {
+     "q": {
+      "jp": "これから　どうしますか？",
+      "en": "You want to make sure you arrive on time from now on."
+     },
+     "c": [
+      "じかんに　まにあったら　します",
+      "じかんに　まにあうように　します",
+      "じかんに　まにあう　ところです",
+      "じかんに　まにあうかもしれません"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Describing a conscious effort to improve a habit, like punctuality, is common in workplace conversations."
+     }
+    },
+    {
+     "q": {
+      "jp": "らいげつから　どこで　はたらきますか？",
+      "en": "It has been decided, by the company, that you'll be transferred to Osaka next month."
+     },
+     "c": [
+      "おおさかで　はたらく　ことに　なりました",
+      "おおさかで　はたらいて　みます",
+      "おおさかで　はたらく　はずです",
+      "おおさかで　はたらきたいです"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Describing decisions made by your company or circumstances, rather than by you personally, comes up often at work."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L33",
+   "track": "field",
+   "level": "A2/B1",
+   "title": {
+    "jp": "第33課　初中級（Set 2-3）",
+    "en": "Lesson 33: Pre-Intermediate, Set 2 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜た ばかりです emphasizes that very little time has passed since the action: 'just did 〜'. 〜について marks the topic being discussed: 'about/regarding 〜'. The passive form (e.g. ほめられる from ほめる) shifts focus onto the receiver of the action: 'I was praised (by my boss)'. 〜と おもいます states a personal opinion or belief — answering with the same pattern keeps the tone consistent when asked this way. 〜らしい expresses a conclusion based on what you've heard or observed indirectly — distinct from と思います, your own opinion."
+   },
+   "vocab": [
+    {
+     "jp": "〜たばかり",
+     "en": "just did 〜 (very recent action)"
+    },
+    {
+     "jp": "〜について",
+     "en": "about / regarding 〜"
+    },
+    {
+     "jp": "ほめる",
+     "en": "to praise"
+    },
+    {
+     "jp": "ほめられる",
+     "en": "to be praised (passive)"
+    },
+    {
+     "jp": "〜と おもいます",
+     "en": "I think that 〜"
+    },
+    {
+     "jp": "〜らしい",
+     "en": "seems like 〜 (based on what you've heard)"
+    }
+   ],
+   "ex": [
+    [
+     "いいえ、たべた　ばかりです",
+     "You just ate, so you're full and want to decline a bit more food."
+    ],
+    [
+     "らいげつの　プロジェクトの　ことです",
+     "Your boss says you'll talk about next month's project."
+    ],
+    [
+     "じょうしに　ほめられました",
+     "Your boss praised you in front of the team — describe this from your own point of view."
+    ],
+    [
+     "はい、ふると　おもいます",
+     "Someone asks your opinion on whether it'll rain tomorrow. You think it will."
+    ],
+    [
+     "きびしい　ひとらしいです",
+     "You heard from a coworker, secondhand, that the new manager is very strict."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "もっと　たべませんか？",
+      "en": "You just ate, so you're full and want to decline a bit more food."
+     },
+     "c": [
+      "いいえ、たべる　はずです",
+      "いいえ、たべた　ばかりです",
+      "いいえ、たべる　ところです",
+      "いいえ、たべて　います"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Politely explaining you just ate is a natural way to decline more food without seeming rude."
+     }
+    },
+    {
+     "q": {
+      "jp": "じょうしが「らいげつの　プロジェクトに　ついて　はなしましょう」と　いいました。なにを　はなしますか？",
+      "en": "Your boss says you'll talk about next month's project."
+     },
+     "c": [
+      "らいげつの　プロジェクトの　ことです",
+      "らいげつの　プロジェクトを　あげます",
+      "らいげつの　プロジェクトに　いきます",
+      "らいげつの　プロジェクトでした"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Understanding what topic a conversation will cover helps you prepare your thoughts in advance."
+     }
+    },
+    {
+     "q": {
+      "jp": "じょうしが　あなたを　ほめました。あなたの　たちばで　いうと？",
+      "en": "Your boss praised you in front of the team — describe this from your own point of view."
+     },
+     "c": [
+      "じょうしが　ほめます",
+      "じょうしに　ほめられました",
+      "じょうしに　ほめます",
+      "じょうしを　ほめました"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Talking about something done to you, like being praised, often uses a different verb form than describing the doer's action."
+     }
+    },
+    {
+     "q": {
+      "jp": "あした、あめが　ふると　おもいますか？",
+      "en": "Someone asks your opinion on whether it'll rain tomorrow. You think it will."
+     },
+     "c": [
+      "はい、ふる　はずです",
+      "はい、ふった　ばかりです",
+      "はい、ふって　います",
+      "はい、ふると　おもいます"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Sharing your own opinion or belief, rather than a fact, is common when discussing uncertain things like weather."
+     }
+    },
+    {
+     "q": {
+      "jp": "あたらしい　ぶちょうは　どんな　ひとですか？",
+      "en": "You heard from a coworker, secondhand, that the new manager is very strict."
+     },
+     "c": [
+      "きびしい　ひとと　おもいます",
+      "きびしい　ひとらしいです",
+      "きびしい　ひとに　なりました",
+      "きびしい　ひとに　しました"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Sharing information you heard from someone else, rather than your own opinion, uses a distinct grammar pattern."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L34",
+   "track": "field",
+   "level": "A2/B1",
+   "title": {
+    "jp": "第34課　初中級（Set 3-1）",
+    "en": "Lesson 34: Pre-Intermediate, Set 3 (1/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜ば〜ほど expresses a proportional relationship: 'the more you do X, the more Y happens'. 〜たびに describes something that happens every single time a certain event occurs. 〜たまま describes a state left unchanged since an action was completed — the window was left open without being closed again. 〜させてもらえますか combines the causative (させる, 'let someone do') with もらう (receiving a favor) for a humble, polite request. 〜ことに しました marks a decision you made yourself — contrast with 〜ことに なりました, often decided by circumstances or others."
+   },
+   "vocab": [
+    {
+     "jp": "〜ば〜ほど",
+     "en": "the more 〜, the more 〜"
+    },
+    {
+     "jp": "〜たびに",
+     "en": "every time 〜"
+    },
+    {
+     "jp": "〜たまま",
+     "en": "left as is, unchanged (after doing something)"
+    },
+    {
+     "jp": "〜させてもらえますか",
+     "en": "could you let me 〜? (humble causative request)"
+    },
+    {
+     "jp": "〜ことに しました",
+     "en": "I decided to 〜 (your own decision)"
+    }
+   ],
+   "ex": [
+    [
+     "れんしゅうすれば　するほど、じょうずに　なります",
+     "You believe that the more you practice Japanese, the better you'll get."
+    ],
+    [
+     "にほんに　いく　たびに、ぶんぐを　かいます",
+     "Every time you visit Japan, you buy new stationery."
+    ],
+    [
+     "まどは　あけた　ままでした",
+     "You forgot to close the window, and it stayed open all night, unchanged."
+    ],
+    [
+     "あした　やすませて　もらえますか",
+     "You want to humbly ask your boss to let you take tomorrow off."
+    ],
+    [
+     "せんせいに　なる　ことに　しました",
+     "After thinking it over, you personally decided to become a teacher."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "にほんごの　れんしゅうについて、どう　おもいますか？",
+      "en": "You believe that the more you practice Japanese, the better you'll get."
+     },
+     "c": [
+      "れんしゅうすれば　するほど、じょうずに　なります",
+      "れんしゅうしても、じょうずに　なりません",
+      "れんしゅうするなら、じょうずです",
+      "れんしゅうしたら、じょうずに　なりました"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Expressing a proportional relationship — more effort, more result — is a natural way to talk about progress."
+     }
+    },
+    {
+     "q": {
+      "jp": "にほんに　いくと、いつも　なにを　しますか？",
+      "en": "Every time you visit Japan, you buy new stationery."
+     },
+     "c": [
+      "にほんに　いく　たびに、ぶんぐを　かいます",
+      "にほんに　いく　まま、ぶんぐを　かいます",
+      "にほんに　いく　ばかり、ぶんぐを　かいます",
+      "にほんに　いった　ところで、ぶんぐを　かいます"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Describing a habit that repeats every single time a certain event happens is common in storytelling."
+     }
+    },
+    {
+     "q": {
+      "jp": "まどは　どう　なって　いましたか？",
+      "en": "You forgot to close the window, and it stayed open all night, unchanged."
+     },
+     "c": [
+      "まどは　あける　はずでした",
+      "まどは　あける　ところでした",
+      "まどは　あけた　ままでした",
+      "まどは　あけた　ばかりでした"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Describing something left unchanged since an earlier action — like a forgotten open window — is a useful, specific nuance."
+     }
+    },
+    {
+     "q": {
+      "jp": "じょうしに　ていねいに　たのみます。あした　やすみたいです。",
+      "en": "You want to humbly ask your boss to let you take tomorrow off."
+     },
+     "c": [
+      "あした　やすみを　もらいます",
+      "あした　やすませて　もらえますか",
+      "あした　やすませて　あげます",
+      "あした　やすんで　もらえますか"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "This very polite, humble request pattern is common when asking a superior for a favor like time off."
+     }
+    },
+    {
+     "q": {
+      "jp": "しょうらい、なにに　なりたいですか？けっていしました。",
+      "en": "After thinking it over, you personally decided to become a teacher."
+     },
+     "c": [
+      "せんせいに　なる　はずです",
+      "せんせいに　なる　ことに　しました",
+      "せんせいに　なる　ことに　なりました",
+      "せんせいに　なる　ばかりです"
+     ],
+     "a": 1,
+     "fb": {
+      "en": "Talking about a personal decision you made yourself, like a career choice, comes up in many serious conversations."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L35",
+   "track": "field",
+   "level": "A2/B1",
+   "title": {
+    "jp": "第35課　初中級（Set 3-2）",
+    "en": "Lesson 35: Pre-Intermediate, Set 3 (2/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜て しまいました adds a nuance of regret or unintended consequence to a completed action. Verb (plain non-past) + まえに describes doing something before another action — the verb stays non-past even in past contexts. Verb (past form) + あとで describes doing something after another action has finished. もうします is a humble (謙譲語) version of いいます, typically used in formal or business self-introductions. おっしゃる is the respectful (尊敬語) version of 言う, used when talking about what a respected person said."
+   },
+   "vocab": [
+    {
+     "jp": "〜て しまう",
+     "en": "to end up doing 〜 (often with regret)"
+    },
+    {
+     "jp": "〜まえに",
+     "en": "before doing 〜"
+    },
+    {
+     "jp": "〜たあとで",
+     "en": "after doing 〜"
+    },
+    {
+     "jp": "〜と もうします",
+     "en": "humble form of 'I am called' / 'my name is'"
+    },
+    {
+     "jp": "おっしゃる",
+     "en": "to say (respectful, used for others of higher status)"
+    }
+   ],
+   "ex": [
+    [
+     "かさを　わすれて　しまいました",
+     "You forgot your umbrella on the train and feel annoyed about it."
+    ],
+    [
+     "たべる　まえに　あらいます",
+     "You always wash your hands before eating."
+    ],
+    [
+     "かいぎが　おわった　あとで　みます",
+     "You'll check your email after the meeting ends."
+    ],
+    [
+     "たなかと　もうします",
+     "You're introducing yourself formally in a business setting."
+    ],
+    [
+     "せんせいが　そう　おっしゃいました",
+     "You're respectfully reporting what your teacher said in class."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "かさを　でんしゃに　わすれました。きもちは　どうですか？",
+      "en": "You forgot your umbrella on the train and feel annoyed about it."
+     },
+     "c": [
+      "かさを　わすれる　はずです",
+      "かさを　わすれる　ところです",
+      "かさを　わすれて　しまいました",
+      "かさを　わすれて　います"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Adding a sense of regret to a completed action — like forgetting something — makes your speech sound more natural."
+     }
+    },
+    {
+     "q": {
+      "jp": "いつ　てを　あらいますか？",
+      "en": "You always wash your hands before eating."
+     },
+     "c": [
+      "たべる　あいだに　あらいます",
+      "たべながら　あらいます",
+      "たべた　あとで　あらいます",
+      "たべる　まえに　あらいます"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Sequencing two actions clearly — what happens before what — is essential for describing routines."
+     }
+    },
+    {
+     "q": {
+      "jp": "いつ　メールを　みますか？",
+      "en": "You'll check your email after the meeting ends."
+     },
+     "c": [
+      "かいぎが　おわった　あとで　みます",
+      "かいぎが　おわる　まえに　みます",
+      "かいぎが　おわる　あいだに　みます",
+      "かいぎが　おわりながら　みます"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "The counterpart to まえに, this pattern describes doing something only after another action has finished."
+     }
+    },
+    {
+     "q": {
+      "jp": "しごとで　じこしょうかいします。なんと　いいますか？",
+      "en": "You're introducing yourself formally in a business setting."
+     },
+     "c": [
+      "たなかと　いう",
+      "たなかと　いって　います",
+      "たなかと　もういます",
+      "たなかと　もうします"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Business self-introductions in Japan often use a more humble register than everyday conversation."
+     }
+    },
+    {
+     "q": {
+      "jp": "せんせいが　なんと　いいましたか？ていねいに　いって　ください。",
+      "en": "You're respectfully reporting what your teacher said in class."
+     },
+     "c": [
+      "せんせいが　そう　もうしました",
+      "せんせいが　そう　いいました",
+      "せんせいが　そう　いって　あげました",
+      "せんせいが　そう　おっしゃいました"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Using respectful language when talking about what a teacher or superior said shows appropriate deference."
+     }
+    }
+   ]
+  },
+  {
+   "id": "L36",
+   "track": "field",
+   "level": "A2/B1",
+   "title": {
+    "jp": "第36課　初中級（Set 3-3）",
+    "en": "Lesson 36: Pre-Intermediate, Set 3 (3/3)"
+   },
+   "explain": {
+    "jp": "場面ごとの表現を学びます。例文と語彙を確認してから小テストに進みましょう。",
+    "en": "〜なくても いいです is the opposite of 〜なければ なりません: 'you don't have to 〜'. 〜ように expresses a purpose: 'so that 〜 can happen' — here, speaking slowly so beginners can understand. 〜だけ で いいです limits a request to exactly what's needed: 'just 〜 is fine'. 〜とおりに describes doing something exactly as instructed or shown. 〜あいだに marks something that happened at some point within a time window — often used when something occurs while you were away or busy."
+   },
+   "vocab": [
+    {
+     "jp": "〜なくてもいいです",
+     "en": "don't have to 〜"
+    },
+    {
+     "jp": "〜ように",
+     "en": "so that 〜 (purpose)"
+    },
+    {
+     "jp": "しょしんしゃ",
+     "en": "beginner"
+    },
+    {
+     "jp": "〜だけ",
+     "en": "only 〜"
+    },
+    {
+     "jp": "〜とおりに",
+     "en": "exactly as 〜 / just as instructed"
+    },
+    {
+     "jp": "〜あいだに",
+     "en": "during 〜 / while 〜 (within a time window)"
+    }
+   ],
+   "ex": [
+    [
+     "いいえ、こなくても　いいです",
+     "Your supervisor tells you that you don't have to come in this Saturday."
+    ],
+    [
+     "しょしんしゃが　わかるように、はなします",
+     "You speak slowly on purpose so that beginners can understand you."
+    ],
+    [
+     "いちまいだけで　いいです",
+     "You only need one copy of the document, not more."
+    ],
+    [
+     "じょうしに　いわれた　とおりに　かきました",
+     "You followed your supervisor's instructions exactly when filling out a form."
+    ],
+    [
+     "るすの　あいだに、おきゃくさんから　でんわが　ありました",
+     "While you were out of the office, a client called."
+    ]
+   ],
+   "quiz": [
+    {
+     "q": {
+      "jp": "どようびは　しごとに　きますか？",
+      "en": "Your supervisor tells you that you don't have to come in this Saturday."
+     },
+     "c": [
+      "いいえ、こなければ　なりません",
+      "いいえ、こないで　ください",
+      "いいえ、きても　いいです",
+      "いいえ、こなくても　いいです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Knowing you don't have to do something is just as important as knowing you must — both come up constantly at work."
+     }
+    },
+    {
+     "q": {
+      "jp": "なぜ　ゆっくり　はなしますか？",
+      "en": "You speak slowly on purpose so that beginners can understand you."
+     },
+     "c": [
+      "しょしんしゃが　わかるように、はなします",
+      "しょしんしゃが　わかったら、はなします",
+      "しょしんしゃが　わかっても、はなします",
+      "しょしんしゃが　わかれば、はなします"
+     ],
+     "a": 0,
+     "fb": {
+      "en": "Explaining the purpose behind a deliberate choice, like speaking slowly for beginners, shows thoughtful intent."
+     }
+    },
+    {
+     "q": {
+      "jp": "コピーは　なんまい　ひつようですか？",
+      "en": "You only need one copy of the document, not more."
+     },
+     "c": [
+      "いちまいだけでした",
+      "いちまいだけを　あげます",
+      "いちまいだけが　あります",
+      "いちまいだけで　いいです"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Limiting a request to exactly what you need avoids waste and is a practical, common workplace phrase."
+     }
+    },
+    {
+     "q": {
+      "jp": "しょるいは　どう　かきましたか？",
+      "en": "You followed your supervisor's instructions exactly when filling out a form."
+     },
+     "c": [
+      "じょうしに　いわれる　ように　かきました",
+      "じょうしに　いわれながら　かきました",
+      "じょうしに　いわれた　とおりに　かきました",
+      "じょうしに　いわれる　まえに　かきました"
+     ],
+     "a": 2,
+     "fb": {
+      "en": "Describing precise compliance with instructions is useful when confirming you did a task correctly."
+     }
+    },
+    {
+     "q": {
+      "jp": "るすの　あいだ、なにが　ありましたか？",
+      "en": "While you were out of the office, a client called."
+     },
+     "c": [
+      "るすの　ばかり、おきゃくさんから　でんわが　ありました",
+      "るすの　ときから、おきゃくさんから　でんわが　ありました",
+      "るすの　あとで、おきゃくさんから　でんわが　ありました",
+      "るすの　あいだに、おきゃくさんから　でんわが　ありました"
+     ],
+     "a": 3,
+     "fb": {
+      "en": "Reporting something that happened during a window of time you were away is common after returning to the office."
+     }
+    }
+   ]
+  }
+ ]
+}
