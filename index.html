@@ -1915,6 +1915,8 @@ const R=x=>String(x==null?'':x).replace(/([\u4E00-\u9FFF々]+)（([\u3040-\u30FF
 const L=o=>R((o&&(o[S.lang]||o.jp||o.en))||'');
 let CUR=[],tab='exam',lesson=null,quiz=null,lastScreen='screen-start',loadErr=false;
 const $=id=>document.getElementById(id);
+/* 匿名の操作イベントのみ送信（氏名・学習時間などの個人情報は送らない） */
+function ylEvt(n,p){try{if(typeof gtag==='function')gtag('event',n,p||{})}catch(e){}}
 function beep(){try{const c=window.__ylc=window.__ylc||new (window.AudioContext||window.webkitAudioContext)();const o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.value=437;g.gain.setValueAtTime(.2,c.currentTime);g.gain.exponentialRampToValueAtTime(.001,c.currentTime+.4);o.connect(g).connect(c.destination);o.start();o.stop(c.currentTime+.4)}catch(e){}}
 const list=()=>S.course==150?CUR.filter(l=>l.track=='core'):CUR;
 const target=()=>S.course==150?30:60;
@@ -1997,15 +1999,15 @@ function setTab(k){
 document.addEventListener('click',e=>{
  const el=e.target.closest('button');if(!el)return;const d=el.dataset;
  if(el.id=='l-jp'||el.id=='l-en'){S.lang=el.id.slice(2);save();return render()}
- if(d.yt)return setTab(d.yt);
- if(d.yr){const c=CUR.find(l=>l.id==d.yr);if(c){if(c.track!='core'&&S.course==150){S.course=300;save()}setTab('learn');lesson=list().indexOf(c);quiz=null;render();window.scrollTo(0,0)}return}
+ if(d.yt){ylEvt('yl_tab',{tab:d.yt});return setTab(d.yt)}
+ if(d.yr){ylEvt('yl_review_click',{lesson_id:d.yr,from:e.target.closest('#yl-learn')?'learn_tab':'result'});const c=CUR.find(l=>l.id==d.yr);if(c){if(c.track!='core'&&S.course==150){S.course=300;save()}setTab('learn');lesson=list().indexOf(c);quiz=null;render();window.scrollTo(0,0)}return}
  if(d.yc){S.course=+d.yc;lesson=null;quiz=null;save();return render()}
  if(d.yl!==undefined){lesson=+d.yl;quiz=null;return render()}
  if(d.yo!==undefined&&quiz){const q=list()[lesson].quiz[quiz.i];quiz.pick=+d.yo;if(quiz.pick===q.a){quiz.ok++;beep()}return render()}
  switch(d.ya){
   case'list':lesson=null;quiz=null;break;
   case'quiz':quiz={i:0,ok:0,pick:null};break;
-  case'qnext':{quiz.i++;quiz.pick=null;const c=list()[lesson];if(quiz.i>=c.quiz.length){const p=Math.round(quiz.ok/c.quiz.length*100);S.clear[c.id]=Math.max(S.clear[c.id]||0,p);save();if(p>=80)beep()}break}
+  case'qnext':{quiz.i++;quiz.pick=null;const c=list()[lesson];if(quiz.i>=c.quiz.length){const p=Math.round(quiz.ok/c.quiz.length*100);S.clear[c.id]=Math.max(S.clear[c.id]||0,p);save();ylEvt('yl_lesson_quiz_done',{lesson_id:c.id,pct:p,cleared:p>=80});if(p>=80){beep();ylEvt('yl_lesson_clear',{lesson_id:c.id,pct:p,course:S.course})}}break}
   case'print':return window.print();
   default:return}
  render();
@@ -2040,6 +2042,8 @@ window.finishExam=function(to){
   }
   S.last=rec;if(!S.best||score>S.best.score)S.best={score,level:rec.level,date:rec.date};
   const sug=ylSuggest();S.sug=sug;S.review=sug.items.map(x=>x.id).concat(sug.weak.map(w=>w.lid));save();
+  ylEvt('yl_exam_finish',{level:rec.level,score:score,rank:rec.rank||(isA1&&rec.done?'A1_done':'none'),passed:isA1?!!rec.done:!!rec.rank,cut_fail:!!rec.cut});
+  ylEvt('yl_review_shown',{wrong_count:sug.wrongN,lessons:sug.items.length});
   const chip=isA1?(rec.done?'A1 ✓':'—'):(rec.rank||'—');
   $('result-verdict').insertAdjacentHTML('beforeend',`<div class="yl-rank"><div class="yl-lbl">${title}</div><div class="yl-big">${score} / 250</div><span class="yl-chip">${chip}</span><p style="font-weight:700;color:${good?'var(--accent-text)':'var(--danger-text)'}">${msg}</p><button class="yl-btn sub" data-yt="learn">${S.lang=='en'?'Review weak points in Learning Lounge':'弱点をカリキュラム学習で復習する'}</button>${sugHtml(sug,false)}</div>`);
  }catch(e){console.error(e)}
