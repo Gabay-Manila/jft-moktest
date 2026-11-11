@@ -591,6 +591,65 @@
     .nav-dot { width: 34px; height: 34px; font-size: 10px; }
   }
 
+  /* ── 操作説明（チュートリアル）── */
+  #screen-tutorial { background: var(--cream); }
+  .tut-inner { width: min(760px,100%); margin: 0 auto; padding: 20px 16px 48px; }
+  .tut-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  .tut-title { margin: 0; font-family: 'Shippori Mincho', serif; font-size: 26px; color: var(--ink); }
+  .tut-en { display: block; font-size: 12px; color: var(--ink-2); font-weight: 400; margin-top: 2px; }
+  h2 .tut-en, li .tut-en { display: inline; margin-left: 8px; }
+  .tut-lead { font-size: 15px; line-height: 1.8; margin: 14px 0; }
+  .tut-skip { background: none; border: 0; color: var(--accent-text); font: 700 13px 'Zen Kaku Gothic New', sans-serif; text-decoration: underline; cursor: pointer; padding: 6px 2px; }
+  .tut-card { background: var(--card); border: 1px solid var(--stone-line); border-radius: 12px; padding: 14px 16px; margin: 12px 0; }
+  .tut-card h2 { margin: 0 0 8px; font-family: 'Shippori Mincho', serif; font-size: 18px; color: var(--accent-text); }
+  .tut-card ul { margin: 0; padding-left: 20px; line-height: 1.9; font-size: 14px; }
+  .tut-mock { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: var(--cream-deep); border: 1px solid var(--stone-line); border-radius: 8px; padding: 10px 12px; margin-bottom: 10px; font-weight: 800; font-size: 13px; }
+  .tut-mock .m-logo { color: var(--accent-text); } .tut-mock .m-sec { border: 1px solid currentColor; border-radius: 99px; padding: 2px 10px; font-size: 11px; color: #A9761B; }
+  .tut-mock .m-time { font-family: 'Courier New', monospace; font-size: 18px; }
+  .tut-sw { display: inline-block; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--stone-line); background: var(--card); vertical-align: -2px; margin-right: 4px; }
+  .tut-sw.a { background: var(--accent-fill); border-color: var(--accent-fill); } .tut-sw.f { border-color: #C97A1A; }
+  .tut-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; }
+  .tut-check { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; cursor: pointer; }
+  .tut-check input { width: 20px; height: 20px; accent-color: var(--accent-fill); flex-shrink: 0; margin-top: 2px; }
+
+  /* ── CBT UI（Prometric風：問題一覧・フラグ・終了確認）── */
+  .progress-nav { display: none; }
+  .q-num-header { font-size: 16px; font-weight: 800; color: var(--ink); white-space: nowrap; }
+  .cbt-tools { display: flex; align-items: center; justify-content: center; gap: 12px; flex: 1; flex-wrap: wrap; }
+  .flag-box { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; padding: 9px 12px;
+    border: 1px solid var(--stone-line); border-radius: var(--radius-sm); background: var(--card); cursor: pointer; }
+  .flag-box input { width: 18px; height: 18px; accent-color: #C97A1A; }
+  .flag-box:has(input:checked) { border-color: #C97A1A; background: #FFF1DC; }
+  .nav-dot.flagged { box-shadow: inset 0 -3px 0 #C97A1A; }
+  .cbt-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(43,41,38,.55); display: flex; align-items: center; justify-content: center; padding: 16px; }
+  .cbt-overlay[hidden] { display: none; }
+  .cbt-panel { background: var(--cream); border: 1px solid var(--stone-line); border-radius: 14px; padding: 20px; width: min(720px,100%); max-height: 92vh; overflow-y: auto; }
+  .cbt-panel-sm { width: min(480px,100%); }
+  .cbt-panel h2 { margin: 0; font-family: 'Shippori Mincho', serif; font-size: 20px; }
+  .cbt-ov-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .cbt-ov-timer { font-family: 'Courier New', monospace; font-weight: 900; font-size: 18px; color: var(--accent-text); }
+  .cbt-ov-counts { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 14px; }
+  .cbt-stat { background: var(--card); border: 1px solid var(--stone-line); border-radius: 10px; padding: 8px; text-align: center; font-size: 12px; color: var(--ink-2); }
+  .cbt-stat b { display: block; font-size: 22px; color: var(--ink); font-family: 'Shippori Mincho', serif; }
+  .cbt-stat.warn b { color: var(--danger-text); }
+  .cbt-stat.flag b { color: #A8610F; }
+  .cbt-grid { display: grid; grid-template-columns: repeat(8,1fr); gap: 8px; margin-bottom: 12px; }
+  .cbt-cell { position: relative; aspect-ratio: 1; border: 2px solid var(--stone-line); border-radius: 8px; background: var(--card); color: var(--ink);
+    font-size: 14px; font-weight: 800; cursor: pointer; }
+  .cbt-cell.a { background: var(--accent-fill); border-color: var(--accent-fill); color: var(--cream); }
+  .cbt-cell.f { border-color: #C97A1A; }
+  .cbt-cell.f::after { content: '⚑'; position: absolute; top: 0; right: 3px; font-size: 11px; color: #C97A1A; }
+  .cbt-cell.a.f::after { color: #FFE2B8; }
+  .cbt-cell.cur { box-shadow: 0 0 0 3px var(--ink); }
+  .cbt-legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin-bottom: 14px; }
+  .cbt-legend .lg { display: inline-block; width: 14px; height: 14px; border-radius: 4px; border: 2px solid var(--stone-line); background: var(--card); margin-right: 5px; vertical-align: -2px; }
+  .cbt-legend .lg.a { background: var(--accent-fill); border-color: var(--accent-fill); }
+  .cbt-legend .lg.f { border-color: #C97A1A; }
+  .cbt-ov-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+  .cbt-cf-body { margin: 12px 0 16px; font-size: 15px; line-height: 1.8; }
+  .cbt-cf-body .warn { color: var(--danger-text); font-weight: 800; }
+  @media (max-width: 520px) { .exam-logo { display: none; } .cbt-grid { grid-template-columns: repeat(5,1fr); } .cbt-tools { gap: 6px; } }
+
   /* Misc utilities */
   .hidden { display: none !important; }
   .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
@@ -733,6 +792,7 @@ button:focus-visible{outline:3px solid var(--accent-text);outline-offset:2px}
 
     <button class="btn-primary" id="btn-start">試験を開始する　→</button>
     <button class="btn-secondary hidden" id="btn-resume">前回の続きから再開する</button>
+    <button class="btn-secondary" id="btn-tutorial-preview" type="button">操作説明を見る</button>
   </div>
 </div>
 
@@ -741,8 +801,9 @@ button:focus-visible{outline:3px solid var(--accent-text);outline-offset:2px}
   <header class="exam-header">
     <div class="exam-header-top">
       <div class="exam-logo" id="exam-logo">JFT-CBT</div>
-      <div class="timer-display" id="timer">60:00</div>
+      <div class="q-num-header" id="q-num-header" aria-live="polite"></div>
       <div class="section-badge-header" id="section-badge"></div>
+      <div class="timer-display" id="timer" role="timer" aria-label="残り時間">60:00</div>
     </div>
     <nav class="progress-nav" id="progress-nav">
       <div class="progress-nav-inner" id="progress-nav-inner"></div>
@@ -753,10 +814,108 @@ button:focus-visible{outline:3px solid var(--accent-text);outline-offset:2px}
 
   <footer class="exam-footer">
     <button class="btn-nav" id="btn-prev">← 前へ</button>
-    <div class="q-progress-text" id="q-progress-text"></div>
+    <div class="cbt-tools" id="cbt-tools">
+      <label class="flag-box"><input type="checkbox" id="flag-check"><span>⚑ あとで見直す</span></label>
+      <button class="btn-nav" id="btn-overview" type="button">問題一覧</button>
+    </div>
     <button class="btn-nav" id="btn-next">次へ →</button>
-    <button class="btn-finish hidden" id="btn-finish">✓ 試験を終了</button>
+    <button class="btn-finish hidden" id="btn-finish">✓ 見直し・終了へ</button>
   </footer>
+</div>
+
+<!-- ── TUTORIAL SCREEN ──────────────────────────── -->
+<div id="screen-tutorial" class="screen">
+  <div class="tut-inner">
+    <div class="tut-top">
+      <div>
+        <h1 class="tut-title">試験の操作説明</h1>
+        <div class="tut-en">How to use the exam screen</div>
+      </div>
+      <button class="tut-skip" id="tut-skip" type="button">説明をスキップして直ちに開始 ⏩</button>
+    </div>
+    <p class="tut-lead">試験の前に読んでください。<b>下の「同意して試験を開始する」を押すと、60分のタイマーが始まります。</b><span class="tut-en">Please read before the exam. The 60-minute timer starts when you press “Agree and start”.</span></p>
+
+    <section class="tut-card">
+      <h2>① 画面の見方 <span class="tut-en">Reading the screen</span></h2>
+      <div class="tut-mock" aria-hidden="true">
+        <span class="m-logo">JFT-CBT</span><span class="m-q">問 12 / 40</span><span class="m-sec">聴解</span><span class="m-time">45:12</span>
+      </div>
+      <ul>
+        <li><b>問 12 / 40</b>：いま何問目か。<span class="tut-en">Current question number.</span></li>
+        <li><b>セクション名</b>：文字・語彙／会話・表現／聴解／読解（A2は「文法」もあります）。<span class="tut-en">Section name.</span></li>
+        <li><b>残り時間</b>：止まりません。0になると自動で終了します。<span class="tut-en">Time left. It never stops; the exam ends automatically at 0.</span></li>
+      </ul>
+    </section>
+
+    <section class="tut-card">
+      <h2>② 答え方と「あとで見直す」 <span class="tut-en">Answering and flagging</span></h2>
+      <ul>
+        <li>選択肢 ①〜④ を押して答えます。何回でも変えられます。<span class="tut-en">Tap a choice. You can change it any time.</span></li>
+        <li>「前へ」「次へ」で移動します。<span class="tut-en">Move with Prev / Next.</span></li>
+        <li>自信がない問題は <b>「⚑ あとで見直す」</b> にチェック。あとで一覧から探せます。<span class="tut-en">Check “Review later” for questions you are unsure about.</span></li>
+      </ul>
+    </section>
+
+    <section class="tut-card">
+      <h2>③ 問題一覧とジャンプ <span class="tut-en">Question list and jumping</span></h2>
+      <ul>
+        <li>画面下の <b>「問題一覧」</b> を押すと、1〜40の番号が出ます。<span class="tut-en">Open the list of all 40 questions.</span></li>
+        <li><span class="tut-sw a"></span>回答済み　<span class="tut-sw u"></span>未回答　<span class="tut-sw f"></span>要確認（⚑）</li>
+        <li>番号を押すと、その問題にすぐ移動できます。<span class="tut-en">Tap a number to jump to that question.</span></li>
+        <li>最後の問題で <b>「見直し・終了へ」</b> を押すと、未回答と要確認の数が出ます。確認して <b>「試験を終了する」</b>。<b>終了後は答えを変えられません。</b><span class="tut-en">After you finish, answers cannot be changed.</span></li>
+      </ul>
+    </section>
+
+    <section class="tut-card">
+      <h2>④ 聴解の注意 <span class="tut-en">Listening questions</span></h2>
+      <ul>
+        <li><b>「▶ 音声を再生」</b>を押すと始まります。再生は<b>1問につき最大 <span id="tut-plays">2</span> 回</b>。<span class="tut-en">Audio can be played at most <span class="tut-plays2">2</span> times per question.</span></li>
+        <li>ボタンを押した時点で1回と数えます。<b>一時停止・巻き戻しはできません。</b><span class="tut-en">A play counts when you press the button. No pause or rewind.</span></li>
+        <li>再生中に別の問題へ移ると音声は止まり、その1回は戻りません。<span class="tut-en">If you leave a question during playback, the audio stops and that play is used.</span></li>
+        <li>試験の前に、音量とイヤホンを確認してください。<span class="tut-en">Check your volume and earphones before you start.</span></li>
+      </ul>
+    </section>
+
+    <section class="tut-card">
+      <h2>⑤ この試験 <span class="tut-en">This exam</span></h2>
+      <ul>
+        <li id="tut-info">A1レベル／全40問／制限時間60分</li>
+        <li>合格の目安：全体の正答率65%以上、かつ各セクションが足切りライン以上。<span class="tut-en">Pass guide: 65% overall and every section above its cut-off.</span></li>
+      </ul>
+    </section>
+
+    <div class="tut-actions">
+      <label class="tut-check"><input type="checkbox" id="tut-dont"><span>次回からこの説明を表示しない <span class="tut-en">Do not show this next time (saved on this device)</span></span></label>
+      <button class="btn-primary" id="tut-agree" type="button">同意して試験を開始する　→</button>
+      <button class="btn-secondary hidden" id="tut-close" type="button">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── CBT OVERVIEW / SUBMIT CONFIRM ───────────── -->
+<div id="cbt-overview" class="cbt-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="ov-title">
+  <div class="cbt-panel">
+    <div class="cbt-ov-head"><h2 id="ov-title">問題一覧・見直し</h2><div class="cbt-ov-timer" id="ov-timer"></div></div>
+    <div class="cbt-ov-counts" id="ov-counts"></div>
+    <div class="cbt-grid" id="ov-grid"></div>
+    <div class="cbt-legend"><span><i class="lg a"></i>回答済み</span><span><i class="lg u"></i>未回答</span><span><i class="lg f"></i>要確認（⚑）</span></div>
+    <div class="cbt-ov-actions">
+      <button class="btn-nav" id="ov-back" type="button">試験に戻る</button>
+      <button class="btn-nav" id="ov-unans" type="button">未回答へ</button>
+      <button class="btn-nav" id="ov-flag" type="button">要確認へ</button>
+      <button class="btn-finish" id="ov-finish" type="button">試験を終了する</button>
+    </div>
+  </div>
+</div>
+<div id="cbt-confirm" class="cbt-overlay" hidden role="alertdialog" aria-modal="true" aria-labelledby="cf-title">
+  <div class="cbt-panel cbt-panel-sm">
+    <h2 id="cf-title">試験を終了しますか？</h2>
+    <div class="cbt-cf-body" id="cf-body"></div>
+    <div class="cbt-ov-actions">
+      <button class="btn-nav" id="cf-no" type="button">いいえ、見直しに戻る</button>
+      <button class="btn-finish" id="cf-yes" type="button">はい、終了する</button>
+    </div>
+  </div>
 </div>
 
 <!-- ── RESULT SCREEN ────────────────────────────── -->
@@ -872,6 +1031,8 @@ const LS_KEY       = 'jft_cbt_session';
 const RUBY_LS_KEY   = 'jft_cbt_ruby_visible';
 const TOTAL_TIME   = 60 * 60;
 const PASS_SCORE   = 26;
+// ★CBT挙動の設定：聴解の再生回数上限（本番の仕様に合わせて変更）／上部の問題番号ストリップ表示
+const CBT_CFG = { LISTEN_MAX_PLAYS: 2, SHOW_NAV_DOTS: false };
 
 // Level configs
 const LEVEL_CONFIG = {
@@ -909,6 +1070,8 @@ let timeRemaining   = TOTAL_TIME;
 let timerInterval   = null;
 let reviewLangState = {};
 let playCounts      = {};
+let flags           = {};      // 「あとで見直す」
+let playingIdx      = null;    // 再生中の聴解問題（index）
 
 // ── BOOT ─────────────────────────────────────────────
 (async function init() {
@@ -1093,7 +1256,7 @@ function sampleReading(targetCount) {
 function saveSession() {
   try {
     localStorage.setItem(LS_KEY, JSON.stringify({
-      level: currentLevel, examQuestions, answers, currentIdx, timeRemaining
+      level: currentLevel, examQuestions, answers, currentIdx, timeRemaining, flags, playCounts
     }));
   } catch(e) {}
 }
@@ -1114,10 +1277,11 @@ document.getElementById('btn-start').addEventListener('click', async () => {
     currentIdx      = 0;
     timeRemaining   = TOTAL_TIME;
     playCounts      = {};
+    flags           = {};
+    playingIdx      = null;
     reviewLangState = {};
-    saveSession();
     hide('loading');
-    launchExam();
+    launchExamWithTutorial();
   } catch(e) {
     document.getElementById('loading').innerHTML =
       `<p style="color:var(--danger-text);padding:20px;">⚠ ${LEVEL_CONFIG[currentLevel].dataUrl} の読み込みに失敗しました。</p>`;
@@ -1137,7 +1301,9 @@ document.getElementById('btn-resume').addEventListener('click', async () => {
     answers         = saved.answers || {};
     currentIdx      = saved.currentIdx || 0;
     timeRemaining   = saved.timeRemaining ?? TOTAL_TIME;
-    playCounts      = {};
+    playCounts      = saved.playCounts || {};
+    flags           = saved.flags || {};
+    playingIdx      = null;
     reviewLangState = {};
     hide('loading');
     launchExam();
@@ -1172,6 +1338,7 @@ function updateTimerDisplay() {
   const s  = (timeRemaining % 60).toString().padStart(2,'0');
   el.textContent = `${m}:${s}`;
   el.classList.toggle('urgent', timeRemaining <= 300);
+  const ot = document.getElementById('ov-timer'); if (ot) ot.textContent = `残り時間 ${m}:${s}`;
 }
 
 // ── NAV DOTS ─────────────────────────────────────────
@@ -1191,6 +1358,7 @@ function updateNavDots() {
   document.querySelectorAll('.nav-dot').forEach((d, i) => {
     d.classList.remove('unanswered','answered','current');
     d.classList.add(answers[i] != null ? 'answered' : 'unanswered');
+    d.classList.toggle('flagged', !!flags[i]);
     if (i === currentIdx) d.classList.add('current');
   });
   document.querySelectorAll('.nav-dot')[currentIdx]
@@ -1200,6 +1368,7 @@ function updateNavDots() {
 // ── RENDER QUESTION ──────────────────────────────────
 function renderQuestion() {
   if (!examQuestions[currentIdx]) return;
+  if (playingIdx !== null && playingIdx !== currentIdx) { VoiceEngine.cancel(); playingIdx = null; }
   const q   = examQuestions[currentIdx];
   const cfg = LEVEL_CONFIG[currentLevel].sections;
   const sc  = cfg[q.section] || { color: 'vocab' };
@@ -1217,8 +1386,8 @@ function renderQuestion() {
   const isLast = currentIdx === examQuestions.length - 1;
   document.getElementById('btn-next').classList.toggle('hidden', isLast);
   document.getElementById('btn-finish').classList.toggle('hidden', !isLast);
-  document.getElementById('q-progress-text').textContent =
-    `${currentIdx + 1} / ${examQuestions.length}`;
+  document.getElementById('q-num-header').textContent = `問 ${currentIdx + 1} / ${examQuestions.length}`;
+  const fc = document.getElementById('flag-check'); if (fc) fc.checked = !!flags[currentIdx];
 
   updateNavDots();
 
@@ -1318,9 +1487,12 @@ function renderCbtCard(q, container) {
   instr.textContent = '音声を聴いて、質問に答えてください。';
   wrap.appendChild(instr);
 
-  // ── 音声プレイヤー ───────────────────────────────
-  const cnt       = playCounts[currentIdx] || 0;
-  const remaining = 2 - cnt;
+  // ── 音声プレイヤー（再生回数に上限・巻き戻し/一時停止なし） ──
+  const idx       = currentIdx;
+  const MAXP      = CBT_CFG.LISTEN_MAX_PLAYS;
+  const cnt       = playCounts[idx] || 0;
+  const remaining = MAXP - cnt;
+  const isPlaying = playingIdx === idx;
 
   const audioBox = document.createElement('div');
   audioBox.className = 'audio-player-box';
@@ -1338,11 +1510,13 @@ function renderCbtCard(q, container) {
 
   const playBtn = document.createElement('button');
   playBtn.className = 'btn-play';
-  playBtn.id = `play-btn-${currentIdx}`;
+  playBtn.id = `play-btn-${idx}`;
 
   if (!scriptText) {
-    // A2など音声スクリプトがない場合
     playBtn.textContent = '🔇 音声データなし';
+    playBtn.disabled = true;
+  } else if (isPlaying) {
+    playBtn.textContent = '🔊 再生中…';
     playBtn.disabled = true;
   } else if (remaining <= 0) {
     playBtn.textContent = '✓ 再生完了';
@@ -1353,38 +1527,21 @@ function renderCbtCard(q, container) {
 
   const countSpan = document.createElement('span');
   countSpan.className = 'play-count';
-  countSpan.textContent = scriptText ? `${cnt}/2` : '-';
+  countSpan.textContent = scriptText ? `${cnt}/${MAXP}` : '-';
 
-  // ── STEP2-3: 音声イベント配管 ────────────────────
+  // 再生ボタンを押した時点で1回消費（途中で画面を離れる・再読込しても戻らない）
   if (scriptText) {
     playBtn.addEventListener('click', () => {
-      if ((playCounts[currentIdx] || 0) >= 2) return;
-      playBtn.disabled = true;
-      playBtn.textContent = '⏳ 音声準備中...';
-      playBtn.style.opacity = '0.6';
-
-      VoiceEngine.speak(
-        scriptText, 'ja-JP', 0.80,
-        () => {
-          playBtn.textContent = '🔊 再生中（連打禁止）';
-          playBtn.style.opacity = '1';
-        },
-        () => {
-          if (!playCounts[currentIdx]) playCounts[currentIdx] = 0;
-          playCounts[currentIdx]++;
-          const newRemaining = 2 - playCounts[currentIdx];
-          if (newRemaining > 0) {
-            playBtn.textContent = `▶ 音声を再生（残り${newRemaining}回）`;
-            playBtn.disabled = false;
-            playBtn.style.opacity = '1';
-          } else {
-            playBtn.textContent = '✓ 再生完了';
-            playBtn.disabled = true;
-          }
-          countSpan.textContent = `${playCounts[currentIdx]}/2`;
-          renderQuestion();
-        }
-      );
+      if ((playCounts[idx] || 0) >= MAXP || playingIdx !== null) return;
+      playCounts[idx] = (playCounts[idx] || 0) + 1;
+      playingIdx = idx;
+      saveSession();
+      renderQuestion();
+      VoiceEngine.speak(scriptText, 'ja-JP', 0.80, null, () => {
+        if (playingIdx !== idx) return;
+        playingIdx = null;
+        if (currentIdx === idx) renderQuestion();
+      });
     });
   }
 
@@ -1465,15 +1622,11 @@ document.getElementById('btn-next').addEventListener('click', nextQuestion);
 document.getElementById('btn-prev').addEventListener('click', () => {
   if (currentIdx > 0) { currentIdx--; SoundEngine.transition(); renderQuestion(); }
 });
-document.getElementById('btn-finish').addEventListener('click', () => {
-  const unanswered = examQuestions.length - Object.keys(answers).length;
-  if (unanswered > 0 && !confirm(`まだ${unanswered}問が未解答です。終了しますか？`)) return;
-  SoundEngine.complete();
-  finishExam(false);
-});
+document.getElementById('btn-finish').addEventListener('click', () => openOverview());
 
 // ── FINISH & SCORE ───────────────────────────────────
 function finishExam(timedOut) {
+  if (window.cbtHideOverlays) window.cbtHideOverlays();
   clearInterval(timerInterval);
   VoiceEngine.cancel();
   clearSession();
@@ -1709,10 +1862,11 @@ document.getElementById('btn-retry').addEventListener('click', async () => {
     currentIdx      = 0;
     timeRemaining   = TOTAL_TIME;
     playCounts      = {};
+    flags           = {};
+    playingIdx      = null;
     reviewLangState = {};
-    saveSession();
     hide('loading');
-    launchExam();
+    launchExamWithTutorial();
   } catch(e) { hide('loading'); }
 });
 
@@ -1884,6 +2038,79 @@ function hide(id) {
   const el = document.getElementById(id);
   if (el) { el.style.display = 'none'; el.classList.remove('active'); }
 }
+</script>
+<script id="cbt-ui">
+/* 問題一覧（Overview）・あとで見直す（Flag）・終了確認（Submit）*/
+(function(){
+const $=id=>document.getElementById(id);
+$('progress-nav').style.display=CBT_CFG.SHOW_NAV_DOTS?'':'none';
+function counts(){const n=examQuestions.length;let a=0,f=0;for(let i=0;i<n;i++){if(answers[i]!=null)a++;if(flags[i])f++}return{n,answered:a,unanswered:n-a,flagged:f}}
+function renderOverview(){
+ const c=counts();
+ $('ov-counts').innerHTML=`<div class="cbt-stat"><b>${c.answered}</b>回答済み</div><div class="cbt-stat ${c.unanswered?'warn':''}"><b>${c.unanswered}</b>未回答</div><div class="cbt-stat ${c.flagged?'flag':''}"><b>${c.flagged}</b>要確認</div>`;
+ const g=$('ov-grid');g.innerHTML='';
+ examQuestions.forEach((q,i)=>{
+  const b=document.createElement('button');b.type='button';
+  b.className='cbt-cell'+(answers[i]!=null?' a':'')+(flags[i]?' f':'')+(i===currentIdx?' cur':'');
+  b.textContent=i+1;
+  b.setAttribute('aria-label',`問${i+1} ${answers[i]!=null?'回答済み':'未回答'}${flags[i]?' 要確認':''}`);
+  b.addEventListener('click',()=>{currentIdx=i;closeAll();SoundEngine.transition();renderQuestion()});
+  g.appendChild(b);
+ });
+ $('ov-unans').disabled=!c.unanswered;$('ov-flag').disabled=!c.flagged;
+}
+function openOverview(){renderOverview();$('cbt-overview').hidden=false;$('ov-back').focus()}
+function closeAll(){$('cbt-overview').hidden=true;$('cbt-confirm').hidden=true}
+function firstIdx(fn){for(let i=0;i<examQuestions.length;i++)if(fn(i))return i;return -1}
+function jump(i){if(i<0)return;currentIdx=i;closeAll();SoundEngine.transition();renderQuestion()}
+window.openOverview=openOverview;window.cbtHideOverlays=closeAll;
+$('btn-overview').addEventListener('click',openOverview);
+$('ov-back').addEventListener('click',closeAll);
+$('ov-unans').addEventListener('click',()=>jump(firstIdx(i=>answers[i]==null)));
+$('ov-flag').addEventListener('click',()=>jump(firstIdx(i=>flags[i])));
+$('flag-check').addEventListener('change',e=>{if(e.target.checked)flags[currentIdx]=true;else delete flags[currentIdx];saveSession();updateNavDots()});
+$('ov-finish').addEventListener('click',()=>{
+ const c=counts();let h='';
+ h+=c.unanswered?`<div class="warn">未回答が ${c.unanswered} 問あります。</div>`:'<div>すべての問題に回答しています。</div>';
+ if(c.flagged)h+=`<div class="warn">要確認（あとで見直す）が ${c.flagged} 問あります。</div>`;
+ h+='<div>終了すると、回答を変更することはできません。</div>';
+ $('cf-body').innerHTML=h;$('cbt-confirm').hidden=false;$('cf-no').focus();
+});
+$('cf-no').addEventListener('click',()=>{$('cbt-confirm').hidden=true;$('ov-back').focus()});
+$('cf-yes').addEventListener('click',()=>{closeAll();SoundEngine.complete();finishExam(false)});
+
+/* ── 操作説明（チュートリアル）：開始前に挟む／スキップ／次回から非表示 ── */
+const SKIP_KEY='jft_cbt_skip_tutorial';
+const skipPref=()=>{try{return localStorage.getItem(SKIP_KEY)==='1'}catch(e){return false}};
+const setSkipPref=v=>{try{if(v)localStorage.setItem(SKIP_KEY,'1');else localStorage.removeItem(SKIP_KEY)}catch(e){}};
+let tutMode='start';
+function tutEvt(action){try{if(typeof gtag==='function')gtag('event','tutorial_action',{action:action,dont_show_again:$('tut-dont').checked})}catch(e){}}
+function fillTutorial(){
+ const n=CBT_CFG.LISTEN_MAX_PLAYS;$('tut-plays').textContent=n;document.querySelectorAll('.tut-plays2').forEach(e=>e.textContent=n);
+ const total=Object.values(LEVEL_CONFIG[currentLevel].sections).reduce((a,c)=>a+c.count,0);
+ $('tut-info').textContent=`${currentLevel}レベル／全${total}問／制限時間${TOTAL_TIME/60}分`;
+ $('tut-dont').checked=skipPref();
+ const prev=tutMode==='preview';
+ $('tut-agree').classList.toggle('hidden',prev);$('tut-skip').classList.toggle('hidden',prev);$('tut-close').classList.toggle('hidden',!prev);
+}
+function showTutorial(mode){
+ tutMode=mode;fillTutorial();hide('screen-start');show('screen-tutorial','flex');window.scrollTo(0,0);
+}
+function beginExamFromTutorial(action){
+ setSkipPref($('tut-dont').checked);tutEvt(action);
+ timeRemaining=TOTAL_TIME;saveSession();hide('screen-tutorial');launchExam();
+}
+window.launchExamWithTutorial=function(){
+ if(skipPref()){saveSession();launchExam();return}
+ clearSession();showTutorial('start');   // タイマーはまだ開始しない
+};
+$('tut-agree').addEventListener('click',()=>beginExamFromTutorial('agree'));
+$('tut-skip').addEventListener('click',()=>beginExamFromTutorial('skip'));
+$('tut-close').addEventListener('click',()=>{setSkipPref($('tut-dont').checked);hide('screen-tutorial');show('screen-start','flex')});
+$('tut-dont').addEventListener('change',()=>{if(tutMode==='preview')setSkipPref($('tut-dont').checked)});
+$('btn-tutorial-preview').addEventListener('click',()=>showTutorial('preview'));
+document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(!$('cbt-confirm').hidden)$('cbt-confirm').hidden=true;else if(!$('cbt-overview').hidden)closeAll()});
+})();
 </script>
 <script>
 (function(){
