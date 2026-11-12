@@ -310,7 +310,7 @@
     var css = document.createElement('style');
     css.textContent =
       '#cbt-tel-panel{position:fixed;inset:0;z-index:500;background:rgba(43,41,38,.6);display:flex;align-items:center;justify-content:center;padding:16px;font-family:"Zen Kaku Gothic New",sans-serif}' +
-      '#cbt-tel-panel .box{background:#EFEAE0;color:#2B2926;border:1px solid #DDD6C6;border-radius:14px;padding:18px;width:min(460px,100%)}' +
+      '#cbt-tel-panel .box{background:#EFEAE0;color:#2B2926;border:1px solid #DDD6C6;border-radius:14px;padding:18px;width:min(520px,100%)}' +
       '#cbt-tel-panel h2{margin:0 0 6px;font-size:18px}#cbt-tel-panel p{margin:4px 0;font-size:13px;line-height:1.7}' +
       '#cbt-tel-panel .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}' +
       '#cbt-tel-panel button{font:700 14px "Zen Kaku Gothic New",sans-serif;padding:10px 14px;border-radius:8px;border:1.5px solid #2E8B76;background:#2E8B76;color:#fff;cursor:pointer}' +
@@ -320,16 +320,18 @@
     panel = document.createElement('div');
     panel.id = 'cbt-tel-panel'; panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-modal', 'true');
     panel.innerHTML =
-      '<div class="box"><h2>解答ログ（管理者用）</h2>' +
-      '<p id="cbt-tel-sum"></p><p style="color:#5a554c">このログは、この端末の中にだけ保存されています。氏名などの個人情報は含みません。</p>' +
+      '<div class="box"><h2>解答ログ（学習データ出力） / Answer Logs (Export)</h2>' +
+      '<p id="cbt-tel-sum"></p><p id="cbt-tel-sum-en" style="color:#5a554c"></p>' +
+      '<p style="margin-top:10px">このログは、この端末の中にだけ保存されています。氏名などの個人情報は含みません。</p>' +
+      '<p style="color:#5a554c">Logs are stored only on this device. No personal information is included.</p>' +
       '<div class="msg" id="cbt-tel-msg"></div>' +
-      '<div class="row"><button id="cbt-tel-dl">JSONをダウンロード</button><button class="sub" id="cbt-tel-cp">クリップボードにコピー</button></div>' +
-      '<div class="row"><button class="danger" id="cbt-tel-clr">すべて削除</button><button class="sub" id="cbt-tel-x">閉じる</button></div></div>';
+      '<div class="row"><button id="cbt-tel-dl">JSONをダウンロード / Download JSON</button><button class="sub" id="cbt-tel-cp">クリップボードにコピー / Copy to Clipboard</button></div>' +
+      '<div class="row" style="justify-content:space-between;margin-top:18px;padding-top:12px;border-top:1px solid #DDD6C6"><button class="danger" id="cbt-tel-clr">すべて削除 / Clear All</button><button class="sub" id="cbt-tel-x">閉じる / Close</button></div></div>';
     document.body.appendChild(panel);
     var msg = function (t) { document.getElementById('cbt-tel-msg').textContent = t; };
-    document.getElementById('cbt-tel-dl').onclick = safe(function () { msg('ダウンロードしました：' + exportJSON()); });
-    document.getElementById('cbt-tel-cp').onclick = safe(function () { copyToClipboard().then(function (ok) { msg(ok ? 'コピーしました' : 'コピーできませんでした（ダウンロードをお使いください）'); }); });
-    document.getElementById('cbt-tel-clr').onclick = safe(function () { if (global.confirm('保存されている解答ログをすべて削除します。よろしいですか？')) { clearAll(); refreshPanel(); msg('削除しました'); } });
+    document.getElementById('cbt-tel-dl').onclick = safe(function () { msg('ダウンロードしました / Downloaded: ' + exportJSON()); });
+    document.getElementById('cbt-tel-cp').onclick = safe(function () { copyToClipboard().then(function (ok) { msg(ok ? 'コピーしました / Copied to clipboard' : 'コピーできませんでした（ダウンロードをお使いください） / Copy failed (please use Download JSON)'); }); });
+    document.getElementById('cbt-tel-clr').onclick = safe(function () { if (global.confirm('この端末に保存されている解答ログをすべて削除します。元に戻せません。必要な場合は、先にダウンロードしてください。\nよろしいですか？\n\nThis will delete ALL answer logs saved on this device. It cannot be undone. If you need a copy, download it first.\nContinue?')) { clearAll(); refreshPanel(); msg('削除しました / All logs cleared'); } });
     document.getElementById('cbt-tel-x').onclick = safe(closeAdmin);
     panel.addEventListener('click', function (e) { if (e.target === panel) closeAdmin(); });
     refreshPanel();
@@ -337,6 +339,7 @@
   function refreshPanel() {
     var s = getSummary();
     document.getElementById('cbt-tel-sum').textContent = '保存中：' + s.sessions + ' 回分（うち終了 ' + s.finished + ' 回）／ ' + s.logs + ' 問の記録／約 ' + s.approx_kb + ' KB';
+    document.getElementById('cbt-tel-sum-en').textContent = 'Saved: ' + s.sessions + ' sessions (' + s.finished + ' finished) / ' + s.logs + ' questions / approx. ' + s.approx_kb + ' KB';
     document.getElementById('cbt-tel-msg').textContent = '';
     panel.style.display = 'flex';
   }
