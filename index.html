@@ -1317,6 +1317,7 @@ function launchExam() {
   hide('screen-start');
   show('screen-exam', 'flex');
   buildNavDots();
+  if (window.CBTTelemetry) CBTTelemetry.startSession(currentLevel, examQuestions);
   renderQuestion();
   startTimer();
 }
@@ -1369,6 +1370,7 @@ function updateNavDots() {
 function renderQuestion() {
   if (!examQuestions[currentIdx]) return;
   if (playingIdx !== null && playingIdx !== currentIdx) { VoiceEngine.cancel(); playingIdx = null; }
+  if (window.CBTTelemetry) CBTTelemetry.startQuestionTimer(currentIdx, examQuestions[currentIdx]);
   const q   = examQuestions[currentIdx];
   const cfg = LEVEL_CONFIG[currentLevel].sections;
   const sc  = cfg[q.section] || { color: 'vocab' };
@@ -1415,6 +1417,7 @@ function renderChoices(q, container) {
     btn.innerHTML = `<span class="choice-label">${labels[i]}</span><span>${c}</span>`;
     btn.addEventListener('click', () => {
       answers[currentIdx] = i + 1;
+      if (window.CBTTelemetry) CBTTelemetry.recordChoice(i);
       SoundEngine.select();
       saveSession();
       renderQuestion();
@@ -1534,6 +1537,7 @@ function renderCbtCard(q, container) {
     playBtn.addEventListener('click', () => {
       if ((playCounts[idx] || 0) >= MAXP || playingIdx !== null) return;
       playCounts[idx] = (playCounts[idx] || 0) + 1;
+      if (window.CBTTelemetry) CBTTelemetry.recordAudioPlay();
       playingIdx = idx;
       saveSession();
       renderQuestion();
@@ -1627,6 +1631,7 @@ document.getElementById('btn-finish').addEventListener('click', () => openOvervi
 // ── FINISH & SCORE ───────────────────────────────────
 function finishExam(timedOut) {
   if (window.cbtHideOverlays) window.cbtHideOverlays();
+  if (window.CBTTelemetry) CBTTelemetry.finishSession({ timedOut: !!timedOut });
   clearInterval(timerInterval);
   VoiceEngine.cancel();
   clearSession();
@@ -2039,6 +2044,7 @@ function hide(id) {
   if (el) { el.style.display = 'none'; el.classList.remove('active'); }
 }
 </script>
+<script src="cbt-telemetry.js" defer></script>
 <script id="cbt-ui">
 /* 問題一覧（Overview）・あとで見直す（Flag）・終了確認（Submit）*/
 (function(){
@@ -2059,8 +2065,8 @@ function renderOverview(){
  });
  $('ov-unans').disabled=!c.unanswered;$('ov-flag').disabled=!c.flagged;
 }
-function openOverview(){renderOverview();$('cbt-overview').hidden=false;$('ov-back').focus()}
-function closeAll(){$('cbt-overview').hidden=true;$('cbt-confirm').hidden=true}
+function openOverview(){if(window.CBTTelemetry)CBTTelemetry.pause('overlay');renderOverview();$('cbt-overview').hidden=false;$('ov-back').focus()}
+function closeAll(){const was=!$('cbt-overview').hidden;$('cbt-overview').hidden=true;$('cbt-confirm').hidden=true;if(was&&window.CBTTelemetry)CBTTelemetry.resume('overlay')}
 function firstIdx(fn){for(let i=0;i<examQuestions.length;i++)if(fn(i))return i;return -1}
 function jump(i){if(i<0)return;currentIdx=i;closeAll();SoundEngine.transition();renderQuestion()}
 window.openOverview=openOverview;window.cbtHideOverlays=closeAll;
@@ -2068,7 +2074,7 @@ $('btn-overview').addEventListener('click',openOverview);
 $('ov-back').addEventListener('click',closeAll);
 $('ov-unans').addEventListener('click',()=>jump(firstIdx(i=>answers[i]==null)));
 $('ov-flag').addEventListener('click',()=>jump(firstIdx(i=>flags[i])));
-$('flag-check').addEventListener('change',e=>{if(e.target.checked)flags[currentIdx]=true;else delete flags[currentIdx];saveSession();updateNavDots()});
+$('flag-check').addEventListener('change',e=>{if(e.target.checked)flags[currentIdx]=true;else delete flags[currentIdx];if(window.CBTTelemetry)CBTTelemetry.recordFlag(currentIdx,e.target.checked);saveSession();updateNavDots()});
 $('ov-finish').addEventListener('click',()=>{
  const c=counts();let h='';
  h+=c.unanswered?`<div class="warn">未回答が ${c.unanswered} 問あります。</div>`:'<div>すべての問題に回答しています。</div>';
