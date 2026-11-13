@@ -9407,8 +9407,8 @@
    },
    "explain": {
     "jp": "お知（し）らせや案内（あんない）を読（よ）んで、日時（にちじ）・場所（ばしょ）・持（も）ち物（もの）などの情報（じょうほう）を探（さが）します。",
-    "en": "Read notices and announcements and find the date and time, place, things to bring and deadline. Read the question first, then scan the passage. In this mock exam you answer 40 questions in 60 minutes, about 1.5 minutes per question.",
-    "tl": "Basahin ang abiso at hanapin ang petsa/oras, lugar, dadalhin at deadline. Basahin muna ang tanong. Mga 1.5 minuto bawat tanong sa mock exam na ito."
+    "en": "Read notices and announcements and find the date and time, place, things to bring and deadline. Read the question first, then scan the passage. In this mock exam you have 60 minutes: 40 questions at A1 level and 33 at A2 level, about 1.5 to 1.8 minutes per question.",
+    "tl": "Basahin ang abiso at hanapin ang petsa/oras, lugar, dadalhin at deadline. Basahin muna ang tanong. Mga 1.5 hanggang 2 minuto bawat tanong sa mock exam na ito."
    },
    "vocab": [
     {
@@ -9469,9 +9469,9 @@
      "Mahalagang palatandaan ng patakaran ang mga ito."
     ],
     [
-     "この模試（もし）は、四十問（よんじゅうもん）を六十分（ろくじゅっぷん）で解（と）きます。一問（いちもん）の目安（めやす）は、一分半（いっぷんはん）です。",
-     "This mock has 40 questions in 60 minutes: about 1.5 minutes each.",
-     "40 tanong sa 60 minuto: mga 1.5 minuto bawat isa."
+     "この模試（もし）は、六十分（ろくじゅっぷん）で、A1は四十問（よんじゅうもん）、A2は三十三問（さんじゅうさんもん）を解（と）きます。一問（いちもん）の目安（めやす）は、一分半（いっぷんはん）から二分（にふん）です。",
+     "This mock has 60 minutes: 40 questions at A1 and 33 at A2. About 1.5 to 2 minutes per question.",
+     "60 minuto: 40 tanong sa A1, 33 tanong sa A2. Mga 1.5 hanggang 2 minuto bawat tanong."
     ]
    ],
    "quiz": [
@@ -9528,8 +9528,8 @@
     },
     {
      "q": {
-      "jp": "四十問（よんじゅうもん）を六十分（ろくじゅっぷん）で解（と）きます。一問（いちもん）にかける時間（じかん）の目安（めやす）は？",
-      "en": "You answer 40 questions in 60 minutes. About how long per question?"
+      "jp": "A1の模試（もし）では、四十問（よんじゅうもん）を六十分（ろくじゅっぷん）で解（と）きます。一問（いちもん）にかける時間（じかん）の目安（めやす）は？",
+      "en": "In the A1 mock you answer 40 questions in 60 minutes. About how long per question?"
      },
      "c": [
       "約（やく）十分（じゅっぷん）",
