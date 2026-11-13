@@ -42,3 +42,21 @@ jft-moktest/
 ├── curriculum_jft.json    # 全60課 自律学習カリキュラム・小テストデータ
 ├── manifest.json          # PWA（Progressive Web App）設定ファイル
 └── README.md              # プロジェクト説明書# jft-moktest
+
+🛠 技術スタック / Tech Stack
+Frontend: Vanilla HTML5 / CSS3 / JavaScript (Single-file architecture, Zero external frameworks)
+
+Typography: Shippori Mincho, Zen Kaku Gothic New
+
+Audio & Speech: Web Speech API (ja-JP), Web Audio API (437Hz UI feedback tone)
+
+Storage: Browser localStorage (Offline session resume & local telemetry)
+
+Hosting: Vercel (jft-moktest.vercel.app)
+
+📄 ライセンス・お問い合わせ / License & Contact
+© YOSHIDA EdTech Works. All rights reserved.
+https://yoshida-edtech.vercel.app/
+教育機関・日本語学校・送り出し機関での導入や学習データの活用に関するご相談は、ポータルサイトよりお問い合わせください。
+
+
