@@ -49,6 +49,7 @@
     --sec-conv:   #4B6E8C;
     --sec-listen: #A9822F;
     --sec-read:   #7C5480;
+    --sec-gram:   #5C7A4A;
   }
 
   /* ── RESET ─────────────────────────────────────── */
@@ -659,14 +660,17 @@
   .section-color-conv   { color: var(--sec-conv); }
   .section-color-listen { color: var(--sec-listen); }
   .section-color-read   { color: var(--sec-read); }
+  .section-color-gram   { color: var(--sec-gram); }
   .dot-vocab  { background: var(--sec-vocab); }
   .dot-conv   { background: var(--sec-conv); }
   .dot-listen { background: var(--sec-listen); }
   .dot-read   { background: var(--sec-read); }
+  .dot-gram   { background: var(--sec-gram); }
   .bar-vocab  { background: var(--sec-vocab); }
   .bar-conv   { background: var(--sec-conv); }
   .bar-listen { background: var(--sec-listen); }
   .bar-read   { background: var(--sec-read); }
+  .bar-gram   { background: var(--sec-gram); }
 
   /* ── LEVEL SELECTOR（単一アクセント系統に統一。区別はアイコン/文言のみ） ── */
   .level-selector {
@@ -838,10 +842,10 @@ button:focus-visible{outline:3px solid var(--accent-text);outline-offset:2px}
     <section class="tut-card">
       <h2>① 画面の見方 <span class="tut-en">Reading the screen</span></h2>
       <div class="tut-mock" aria-hidden="true">
-        <span class="m-logo">JFT-CBT</span><span class="m-q">問 12 / 40</span><span class="m-sec">聴解</span><span class="m-time">45:12</span>
+        <span class="m-logo">JFT-CBT</span><span class="m-q">問 12 / <span class="tut-n">40</span></span><span class="m-sec">聴解</span><span class="m-time">45:12</span>
       </div>
       <ul>
-        <li><b>問 12 / 40</b>：いま何問目か。<span class="tut-en">Current question number.</span></li>
+        <li><b>問 12 / <span class="tut-n">40</span></b>：いま何問目か。<span class="tut-en">Current question number.</span></li>
         <li><b>セクション名</b>：文字・語彙／会話・表現／聴解／読解（A2は「文法」もあります）。<span class="tut-en">Section name.</span></li>
         <li><b>残り時間</b>：止まりません。0になると自動で終了します。<span class="tut-en">Time left. It never stops; the exam ends automatically at 0.</span></li>
       </ul>
@@ -859,7 +863,7 @@ button:focus-visible{outline:3px solid var(--accent-text);outline-offset:2px}
     <section class="tut-card">
       <h2>③ 問題一覧とジャンプ <span class="tut-en">Question list and jumping</span></h2>
       <ul>
-        <li>画面下の <b>「問題一覧」</b> を押すと、1〜40の番号が出ます。<span class="tut-en">Open the list of all 40 questions.</span></li>
+        <li>画面下の <b>「問題一覧」</b> を押すと、1〜<span class="tut-n">40</span>の番号が出ます。<span class="tut-en">Open the list of all <span class="tut-n">40</span> questions.</span></li>
         <li><span class="tut-sw a"></span>回答済み　<span class="tut-sw u"></span>未回答　<span class="tut-sw f"></span>要確認（⚑）</li>
         <li>番号を押すと、その問題にすぐ移動できます。<span class="tut-en">Tap a number to jump to that question.</span></li>
         <li>最後の問題で <b>「見直し・終了へ」</b> を押すと、未回答と要確認の数が出ます。確認して <b>「試験を終了する」</b>。<b>終了後は答えを変えられません。</b><span class="tut-en">After you finish, answers cannot be changed.</span></li>
@@ -1030,7 +1034,8 @@ function toRubyHTML(text) {
 const LS_KEY       = 'jft_cbt_session';
 const RUBY_LS_KEY   = 'jft_cbt_ruby_visible';
 const TOTAL_TIME   = 60 * 60;
-const PASS_SCORE   = 26;
+const PASS_SCORE   = 26;   // (旧)A1の基準。判定には passScoreFor() を使う
+function passScoreFor(total) { return Math.ceil(total * 0.65 - 1e-9); }   // 合格基準：出題数の65%（切り上げ）
 // ★CBT挙動の設定：聴解の再生回数上限（本番の仕様に合わせて変更）／上部の問題番号ストリップ表示
 const CBT_CFG = { LISTEN_MAX_PLAYS: 2, SHOW_NAV_DOTS: false };
 
@@ -1051,8 +1056,9 @@ const LEVEL_CONFIG = {
     label:   'A2 Level',
     sections: {
       '文字・語彙': { count: 8,  cutoff: 4,  color: 'vocab',  total: 27 },
-      '文法':       { count: 8,  cutoff: 4,  color: 'conv',   total: 26 },
-      '会話・表現': { count: 6,  cutoff: 3,  color: 'listen', total: 16 },
+      '文法':       { count: 8,  cutoff: 4,  color: 'gram',   total: 26 },
+      '会話・表現': { count: 6,  cutoff: 3,  color: 'conv',   total: 16 },
+      '聴解':       { count: 3,  cutoff: 2,  color: 'listen', total: 3  },   // 足切り＝出題数の50%（切り上げ）
       '読解':       { count: 8,  cutoff: 4,  color: 'read',   total: 19 },
     },
   },
@@ -1656,7 +1662,7 @@ function finishExam(timedOut) {
   for (const [sec, c] of Object.entries(cfg)) {
     if ((sectionScores[sec]?.correct || 0) < c.cutoff) { failedSection = sec; break; }
   }
-  const passed = !failedSection && totalCorrect >= PASS_SCORE;
+  const passed = !failedSection && totalCorrect >= passScoreFor(Object.values(cfg).reduce((s,c) => s + c.count, 0));
 
   renderResult({ sectionScores, totalCorrect, passed, failedSection, timedOut });
   show('screen-result', 'flex');
@@ -1673,7 +1679,7 @@ function renderResult({ sectionScores, totalCorrect, passed, failedSection, time
   if (!passed) {
     reasonText = failedSection
       ? `「${failedSection}」セクションの足切り基準（${cfg[failedSection].cutoff}問）未満`
-      : `総得点不足（合格基準: ${PASS_SCORE}問 / ${TOTAL_Q}問）`;
+      : `総得点不足（合格基準: ${passScoreFor(TOTAL_Q)}問 / ${TOTAL_Q}問）`;
   }
   if (timedOut) reasonText = '⏱ 制限時間終了 · ' + reasonText;
   const pct = Math.round(totalCorrect / TOTAL_Q * 100);
@@ -1917,7 +1923,7 @@ document.getElementById('btn-share').addEventListener('click', () => {
       failedSection = sec; break;
     }
   }
-  const passed = !failedSection && totalCorrect >= PASS_SCORE;
+  const passed = !failedSection && totalCorrect >= passScoreFor(TOTAL_Q);
   const pct    = Math.round(totalCorrect / TOTAL_Q * 100);
 
   // ── セクション別ライン ────────────────────────────
@@ -2095,6 +2101,7 @@ function fillTutorial(){
  const n=CBT_CFG.LISTEN_MAX_PLAYS;$('tut-plays').textContent=n;document.querySelectorAll('.tut-plays2').forEach(e=>e.textContent=n);
  const total=Object.values(LEVEL_CONFIG[currentLevel].sections).reduce((a,c)=>a+c.count,0);
  $('tut-info').textContent=`${currentLevel}レベル／全${total}問／制限時間${TOTAL_TIME/60}分`;
+ document.querySelectorAll('.tut-n').forEach(e=>e.textContent=total);
  $('tut-dont').checked=skipPref();
  const prev=tutMode==='preview';
  $('tut-agree').classList.toggle('hidden',prev);$('tut-skip').classList.toggle('hidden',prev);$('tut-close').classList.toggle('hidden',!prev);
@@ -2136,7 +2143,7 @@ const U={
  cutw:['セクション足切り未達のため、合計点に関わらず不合格です','Below a section cut-off: fail regardless of total score'],
  portal:['YOSHIDA EdTech Works ポータルへ戻る','Back to the YOSHIDA EdTech Works portal'],
  sugT:['復習のおすすめ','Suggested review'],sugW:['弱点セクション','Weak sections'],sugS:['解き方の課','Strategy lesson'],sugC:['間違えた言葉を含む課','Lessons covering words you missed'],sugN:['全問正解です。復習の提案はありません。','Perfect score: no review needed.'],sugChip:['復習おすすめ','Review'],sugOld:['前回の模試からのおすすめ','From your last mock exam'],sugGo:['タップして開く','Tap to open'],
- est:['250点換算（正答数÷40×250・四捨五入）','Scaled to 250 (correct ÷ 40 × 250, rounded)'],
+ est:['250点換算（正答数÷出題数×250・四捨五入）','Scaled to 250 (correct ÷ questions × 250, rounded)'],
  a1ok:['A1修了（合格ライン到達）','A1 completed (passing line reached)'],a1ng:['A1未達：正答率65%未満、またはセクション足切り未達です。弱点を復習しましょう。','Not yet: below 65% or below a section cut-off. Review your weak points.'],
  a2h:['JFT-Basic本試験レベル合格判定','JFT-Basic exam-level pass judgement']
 };
@@ -2262,10 +2269,10 @@ window.finishExam=function(to){
   const cfg=LEVEL_CONFIG[currentLevel].sections,by={};Object.keys(cfg).forEach(k=>by[k]=0);let ok=0;
   examQuestions.forEach((q,i)=>{if(answers[i]===Number(q.correct_answer)){ok++;if(by[q.section]!==undefined)by[q.section]++}});
   const cut=Object.keys(cfg).filter(k=>by[k]<cfg[k].cutoff);
-  const score=Math.round(ok/40*250),isA1=currentLevel=='A1';
+  const score=Math.round(ok/examQuestions.length*250),isA1=currentLevel=='A1';
   let rec,title,msg,good;
   if(isA1){
-   const done=ok/40>=0.65&&!cut.length;
+   const done=ok/examQuestions.length>=0.65&&!cut.length;
    rec={score,level:'A1',done,cut:cut.length>0,date:new Date().toISOString().slice(0,10)};
    title=U.est[0];good=done;msg=done?`${U.a1ok[0]}<br><small>${U.a1ok[1]}</small>`:(cut.length?`${U.cutw[0]}<br><small>${U.cutw[1]}</small>`:`${U.a1ng[0]}<br><small>${U.a1ng[1]}</small>`);
   }else{
